@@ -1,4 +1,4 @@
-# MoreMekanismProcessing
+# More Mekanism Processing
 
 Add mekanism's ore processing to other mod's ores<br>
 It can 1 ore process into up to 5 ingots<br>
