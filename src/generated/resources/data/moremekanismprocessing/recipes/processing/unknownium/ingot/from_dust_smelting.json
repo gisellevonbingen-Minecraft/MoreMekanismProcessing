@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "tag": "forge:dusts/unknownium"
-  },
-  "result": "moremekanismprocessing:unknownium_ingot",
-  "experience": 0.3,
-  "cookingtime": 200
-}

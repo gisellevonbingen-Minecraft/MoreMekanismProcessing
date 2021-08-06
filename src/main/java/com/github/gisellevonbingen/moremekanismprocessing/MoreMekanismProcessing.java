@@ -15,6 +15,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class MoreMekanismProcessing
 {
 	public static final String MODID = "moremekanismprocessing";
+	public static final String MODANME = "More Mekanism Processing";
 	public static final Logger LOGGER = LogManager.getLogger();
 
 	public MoreMekanismProcessing()

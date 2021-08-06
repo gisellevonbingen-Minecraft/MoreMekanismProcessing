@@ -14,10 +14,11 @@ public enum MaterialType
 	Silver(MaterialResultShape.INGOT, "silver", "Silver", 0xD8E4ED),
 	Nickel(MaterialResultShape.INGOT, "nickel", "Nickel", 0xE5E09E),
 	Niter(MaterialResultShape.GEM, "niter", "Niter", 0xC0C0C0),
-	Sulfur(MaterialResultShape.GEM, "sulfur", "Sulfur", 0xE5E09E),
+	Sulfur(MaterialResultShape.GEM, "sulfur", "Sulfur", 0xEFFCCB),
 
 	// Just Test
-	Unknownium(MaterialResultShape.INGOT, "unknownium", "Unknownium", 0xFFFFFF),;
+	// Unknownium(MaterialResultShape.INGOT, "unknownium", "Unknownium", 0xFFFFFF),;
+	;
 
 	private final MaterialResultShape resultShape;
 	private final String baseName;

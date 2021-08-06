@@ -3,13 +3,13 @@ loaderVersion="[36,)"
 license="All rights reserved"
 [[mods]]
 modId="moremekanismprocessing"
-version="${file.jarVersion}"
+version="0.1"
 displayName="More Mekanism Processing"
-logoFile="examplemod.png"
+logoFile=""
 credits="gisellevonbingen"
 authors="gisellevonbingen"
 description='''
-Just Description
+Add mekanism's ore processing to other mod's ores
 '''
 [[dependencies.moremekanismprocessing]]
     modId="forge"
@@ -29,10 +29,3 @@ Just Description
     versionRange="[10.0.20,)"
     ordering="AFTER"
     side="BOTH"
-[[dependencies.moremekanismprocessing]]
-    modId="tconstruct"
-    versionRange="[3.1.1.252,)"
-    mandatory=false
-    ordering="AFTER"
-    side="BOTH"
-    

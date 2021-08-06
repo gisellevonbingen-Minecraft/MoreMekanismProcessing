@@ -5,6 +5,8 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.material.Materi
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.StringTextComponent;
 
 public class MoreMekanismProcessingItemGroups
 {
@@ -15,6 +17,12 @@ public class MoreMekanismProcessingItemGroups
 		{
 			return MaterialState.CRYSTAL.getItemStack(MaterialType.Cobalt);
 		}
+
+		@Override
+		public ITextComponent getDisplayName()
+		{
+			return new StringTextComponent(MoreMekanismProcessing.MODANME);
+		};
 
 	};
 

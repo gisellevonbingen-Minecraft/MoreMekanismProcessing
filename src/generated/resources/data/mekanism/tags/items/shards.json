@@ -5,7 +5,6 @@
     "moremekanismprocessing:shard_silver",
     "moremekanismprocessing:shard_nickel",
     "moremekanismprocessing:shard_niter",
-    "moremekanismprocessing:shard_sulfur",
-    "moremekanismprocessing:shard_unknownium"
+    "moremekanismprocessing:shard_sulfur"
   ]
 }
