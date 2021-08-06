@@ -27,8 +27,7 @@ Depending on the final item of the ore, it is divided into 2 processing trees
 5. Clump
 6. Dirty Dust
 7. Dust
-8. Ingot
-9. Nugget
+8. Ingot and Nugget
 
 ## Gem
 
