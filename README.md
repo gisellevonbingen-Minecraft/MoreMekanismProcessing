@@ -4,7 +4,9 @@ Add mekanism's ore processing to other mod's ores<br>
 It can 1 ore process into up to 5 ingots<br>
 That is so fantastic<br>
 
-## <b>Require [Mekanism](https://www.curseforge.com/minecraft/mc-mods/mekanism)<br>
+## Require Mekanism version 1.16.5-10.0.20.447 ore higher is required
+
+https://www.curseforge.com/minecraft/mc-mods/mekanism
 
 # Storage Block
 
