@@ -44,6 +44,8 @@ Depending on the final item of the ore, it is divided into 2 processing trees
 
 # Support Mods/Ores
 
+* If want to add support mod, ['New Issue'](https://github.com/gisellevonbingen/Minecraft-MoreMekanismProcessing/issues/new) with 'curse forge project' ore 'github' url
+
 ## Thermal Foundation
 
 1. Silver
