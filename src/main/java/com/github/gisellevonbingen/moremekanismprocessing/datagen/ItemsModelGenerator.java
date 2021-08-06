@@ -14,7 +14,6 @@ import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import sun.misc.Unsafe;
 
 public class ItemsModelGenerator extends ItemModelProvider
 {
