@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "moremekanismprocessing:nickel_nugget",
+  "ingredients": [
+    {
+      "item": "moremekanismprocessing:nickel_ingot"
+    }
+  ],
+  "result": {
+    "item": "moremekanismprocessing:nickel_nugget",
+    "count": 9
+  }
+}

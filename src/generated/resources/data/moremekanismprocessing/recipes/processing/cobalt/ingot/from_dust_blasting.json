@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "forge:dusts/cobalt"
+  },
+  "result": "moremekanismprocessing:cobalt_ingot",
+  "experience": 0.3,
+  "cookingtime": 100
+}

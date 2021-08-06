@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "moremekanismprocessing:clump_cobalt",
+    "moremekanismprocessing:clump_silver",
+    "moremekanismprocessing:clump_nickel",
+    "moremekanismprocessing:clump_niter",
+    "moremekanismprocessing:clump_sulfur",
+    "moremekanismprocessing:clump_unknownium"
+  ]
+}

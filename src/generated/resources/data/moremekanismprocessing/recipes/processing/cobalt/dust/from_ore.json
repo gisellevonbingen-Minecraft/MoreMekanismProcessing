@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/cobalt"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_cobalt",
+    "count": 2
+  }
+}

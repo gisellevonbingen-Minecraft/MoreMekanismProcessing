@@ -1,0 +1,38 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All rights reserved"
+[[mods]]
+modId="moremekanismprocessing"
+version="${file.jarVersion}"
+displayName="More Mekanism Processing"
+logoFile="examplemod.png"
+credits="gisellevonbingen"
+authors="gisellevonbingen"
+description='''
+Just Description
+'''
+[[dependencies.moremekanismprocessing]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.moremekanismprocessing]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.moremekanismprocessing]]
+    modId="mekanism"
+    mandatory=true
+    versionRange="[10.0.20,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.moremekanismprocessing]]
+    modId="tconstruct"
+    versionRange="[3.1.1.252,)"
+    mandatory=false
+    ordering="AFTER"
+    side="BOTH"
+    

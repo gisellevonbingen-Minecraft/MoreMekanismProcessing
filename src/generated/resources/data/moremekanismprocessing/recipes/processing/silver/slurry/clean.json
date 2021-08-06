@@ -1,0 +1,15 @@
+{
+  "type": "mekanism:washing",
+  "fluidInput": {
+    "amount": 5,
+    "fluid": "minecraft:water"
+  },
+  "slurryInput": {
+    "amount": 1,
+    "slurry": "mekanism:dirty_silver"
+  },
+  "output": {
+    "slurry": "mekanism:clean_silver",
+    "amount": 1
+  }
+}

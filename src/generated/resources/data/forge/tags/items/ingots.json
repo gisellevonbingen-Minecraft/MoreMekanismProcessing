@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "moremekanismprocessing:cobalt_ingot",
+    "moremekanismprocessing:silver_ingot",
+    "moremekanismprocessing:nickel_ingot",
+    "moremekanismprocessing:unknownium_ingot"
+  ]
+}

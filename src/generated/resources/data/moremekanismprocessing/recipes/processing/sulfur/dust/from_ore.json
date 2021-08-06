@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/sulfur"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_sulfur",
+    "count": 2
+  }
+}

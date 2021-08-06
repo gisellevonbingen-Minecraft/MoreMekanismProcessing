@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/unknownium"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_unknownium",
+    "count": 2
+  }
+}

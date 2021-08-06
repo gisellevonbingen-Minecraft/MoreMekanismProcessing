@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:clumps/sulfur"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dirty_dust_sulfur"
+  }
+}
