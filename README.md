@@ -51,7 +51,7 @@ Depending on the final item of the ore, it is divided into 2 processing trees
 1. Silver
 2. Nickel
 3. Niter
-4. Sulfer
+4. Sulfur
 
 ## Tinkers Construct
 
