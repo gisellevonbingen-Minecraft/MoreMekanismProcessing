@@ -5,7 +5,7 @@ import java.lang.reflect.Field;
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
-import com.github.gisellevonbingen.moremekanismprocessing.util.UnsafeHacks;
+import com.github.gisellevonbingen.moremekanismprocessing.util.UnsafeHelper;
 
 import mekanism.common.Mekanism;
 import net.minecraft.data.DataGenerator;
@@ -27,39 +27,32 @@ public class ItemsModelGenerator extends ItemModelProvider
 	protected void registerModels()
 	{
 		boolean enable = this.existingFileHelper.isEnabled();
-		long offset = 0L;
-		Unsafe unsafe = UnsafeHacks.UNSAFE;
+		Field enableField = null;
 
 		try
 		{
 			try
 			{
-				Field enableField = ExistingFileHelper.class.getDeclaredField("enable");
+				enableField = ExistingFileHelper.class.getDeclaredField("enable");
 				enableField.setAccessible(true);
-				offset = unsafe.objectFieldOffset(enableField);
-				unsafe.putBoolean(this.existingFileHelper, offset, false);
-
-				this.onRegisterModels();
 			}
 			catch (NoSuchFieldException | SecurityException e)
 			{
 				e.printStackTrace();
 			}
 
+			if (enableField != null)
+			{
+				UnsafeHelper.putBoolean(this.existingFileHelper, enableField, false);
+			}
+
+			this.onRegisterModels();
 		}
 		finally
 		{
-			try
+			if (enableField != null)
 			{
-				if (offset != 0)
-				{
-					unsafe.putBoolean(this.existingFileHelper, offset, enable);
-				}
-
-			}
-			catch (SecurityException e)
-			{
-				e.printStackTrace();
+				UnsafeHelper.putBoolean(this.existingFileHelper, enableField, enable);
 			}
 
 		}
