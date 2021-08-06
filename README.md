@@ -8,7 +8,7 @@ That is so fantastic<br>
 
 # Storage Block
 
-<b>This mod not register 'block of ingot'
+This mod not register 'block of ingot'
 
 Each mods can has same block of ingot
   
