@@ -4,7 +4,7 @@ Add mekanism processing to other mod's ores<br>
 It can 1 ore process into up to 5 ingots<br>
 That is so fantastic<br>
 
-# Storgage Block
+# Storage Block
 
 <b>This mod not register 'block of ingot'</b>
 
