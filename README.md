@@ -4,6 +4,8 @@ Add mekanism's ore processing to other mod's ores<br>
 It can 1 ore process into up to 5 ingots<br>
 That is so fantastic<br>
 
+<b>Require [Mekanism](https://github.com/mekanism/mekanism)</b>
+
 # Storage Block
 
 <b>This mod not register 'block of ingot'</b>
@@ -56,3 +58,7 @@ Depending on the final item of the ore, it is divided into 2 processing trees
 # Licence
 
 MIT and while 'Mekanism' allows
+
+# Modpacks
+
+Can use in modpacks under licence
