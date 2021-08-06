@@ -22,25 +22,25 @@ Depending on the final item of the ore, it is divided into 2 processing trees
 
 ## Ingot
 
-1. Ore
-2. Dirty Slurry
-3. Clean Slurry
-4. Shard
-5. Clump
-6. Dirty Dust
-7. Dust
-8. Ingot and Nugget
+* Ore
+* Dirty Slurry
+* Clean Slurry
+* Shard
+* Clump
+* Dirty Dust
+* Dust
+* Ingot and Nugget
 
 ## Gem
 
-1. Ore
-2. Dirty Slurry
-3. Clean Slurry
-4. Shard
-5. Clump
-6. Dirty Dust
-7. Dust
-8. Gem
+* Ore
+* Dirty Slurry
+* Clean Slurry
+* Shard
+* Clump
+* Dirty Dust
+* Dust
+* Gem
 
 # Support Mods/Ores
 
@@ -48,14 +48,14 @@ Depending on the final item of the ore, it is divided into 2 processing trees
 
 ## Thermal Foundation
 
-1. Silver
-2. Nickel
-3. Niter
-4. Sulfur
+* Silver
+* Nickel
+* Niter
+* Sulfur
 
 ## Tinkers Construct
 
-1. Cobalt
+* Cobalt
 
 # Licence
 
