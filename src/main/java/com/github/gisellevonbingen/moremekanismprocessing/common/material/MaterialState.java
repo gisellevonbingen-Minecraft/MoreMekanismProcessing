@@ -3,7 +3,7 @@ package com.github.gisellevonbingen.moremekanismprocessing.common.material;
 import org.apache.commons.lang3.NotImplementedException;
 
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
-import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessingItems;
+import com.github.gisellevonbingen.moremekanismprocessing.common.MoreMekanismProcessingItems;
 
 import mekanism.common.tags.MekanismTags;
 import net.minecraft.item.Item;

@@ -1,9 +1,10 @@
-package com.github.gisellevonbingen.moremekanismprocessing;
+package com.github.gisellevonbingen.moremekanismprocessing.client;
 
 import java.util.Map;
 import java.util.Map.Entry;
 
 import com.github.gisellevonbingen.moremekanismprocessing.client.renderer.color.CommonItemColor;
+import com.github.gisellevonbingen.moremekanismprocessing.common.MoreMekanismProcessingItems;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 

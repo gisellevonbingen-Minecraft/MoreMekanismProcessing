@@ -1,4 +1,4 @@
-package com.github.gisellevonbingen.moremekanismprocessing;
+package com.github.gisellevonbingen.moremekanismprocessing.common;
 
 import java.util.HashMap;
 import java.util.Map;

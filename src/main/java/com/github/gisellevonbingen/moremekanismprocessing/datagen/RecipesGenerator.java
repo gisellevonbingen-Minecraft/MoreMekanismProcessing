@@ -6,7 +6,7 @@ import java.util.function.BiFunction;
 import java.util.function.Consumer;
 
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
-import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessingSlurries;
+import com.github.gisellevonbingen.moremekanismprocessing.common.MoreMekanismProcessingSlurries;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 import com.github.gisellevonbingen.moremekanismprocessing.function.ThreeFunction;
