@@ -1,8 +1,8 @@
 package com.github.gisellevonbingen.moremekanismprocessing.datagen;
 
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
-import com.github.gisellevonbingen.moremekanismprocessing.common.MoreMekanismProcessingSlurries;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
+import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurries;
 
 import mekanism.api.chemical.slurry.Slurry;
 import mekanism.api.datagen.tag.ChemicalTagsProvider.SlurryTagsProvider;

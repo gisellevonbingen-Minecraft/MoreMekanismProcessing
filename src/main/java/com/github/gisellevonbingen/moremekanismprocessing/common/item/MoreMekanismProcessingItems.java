@@ -1,4 +1,4 @@
-package com.github.gisellevonbingen.moremekanismprocessing.common;
+package com.github.gisellevonbingen.moremekanismprocessing.common.item;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
-import com.github.gisellevonbingen.moremekanismprocessing.common.item.ItemStatedMaterial;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 

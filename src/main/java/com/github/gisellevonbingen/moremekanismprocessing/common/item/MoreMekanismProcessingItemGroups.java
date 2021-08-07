@@ -1,4 +1,4 @@
-package com.github.gisellevonbingen.moremekanismprocessing.common;
+package com.github.gisellevonbingen.moremekanismprocessing.common.item;
 
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;

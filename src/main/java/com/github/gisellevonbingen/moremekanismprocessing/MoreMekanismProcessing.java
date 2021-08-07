@@ -4,8 +4,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.github.gisellevonbingen.moremekanismprocessing.client.ClientHandler;
-import com.github.gisellevonbingen.moremekanismprocessing.common.MoreMekanismProcessingItems;
-import com.github.gisellevonbingen.moremekanismprocessing.common.MoreMekanismProcessingSlurries;
+import com.github.gisellevonbingen.moremekanismprocessing.common.item.MoreMekanismProcessingItems;
+import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurries;
 import com.github.gisellevonbingen.moremekanismprocessing.datagen.DataGenerators;
 
 import net.minecraftforge.api.distmarker.Dist;

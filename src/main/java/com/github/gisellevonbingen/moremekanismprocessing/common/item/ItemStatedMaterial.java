@@ -1,6 +1,5 @@
 package com.github.gisellevonbingen.moremekanismprocessing.common.item;
 
-import com.github.gisellevonbingen.moremekanismprocessing.common.MoreMekanismProcessingItemGroups;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 

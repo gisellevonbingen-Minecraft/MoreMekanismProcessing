@@ -1,4 +1,4 @@
-package com.github.gisellevonbingen.moremekanismprocessing.common;
+package com.github.gisellevonbingen.moremekanismprocessing.common.slurry;
 
 import java.util.HashMap;
 import java.util.Map;
