@@ -1,3 +1,4 @@
+Not contains ores with mekanism's default ores same name
 
 # Thermal Foundation
 
@@ -16,7 +17,6 @@
 * Sapphire Gem
 * Amethyst Gem
 * Green Sapphire Gem
-* Copper Ingot
 * Silver Ingot
 * Zinc Ingot
 * Tungsten Ingot
@@ -27,10 +27,10 @@
 * Sapphire Gem
 * Peridot Gem
 * Silver Ingot
+* Electrotine Dust
 
 # Ice and Fire
 
-* Copper Ingot
 * Silver Ingot
 * Sapphire Gem (WIP)
 * Amethyst Gem (WIP)
