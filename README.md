@@ -1,7 +1,8 @@
 # More Mekanism Processing
 
-Add mekanism's ore processing to other mod's ores<br>
-It can 1 ore process into up to 5 ingots<br>
+Add mekanism's ore processing to other mod's ores
+
+It can 1 ore process into up to 5 ingots
 
 ## Mekanism version 1.16.5-10.0.20.447 ore higher is required
 
@@ -51,7 +52,7 @@ e.g.) Project Red's Electrotine
 
 # Support Mods/Ores
 
-* [List of mods/ores](Mods_Ores.md)
+* [List of mods/ores](https://github.com/gisellevonbingen/Minecraft-MoreMekanismProcessing/edit/main/Mods_Ores.md)
 * If want to add support mod, ['New Issue'](https://github.com/gisellevonbingen/Minecraft-MoreMekanismProcessing/issues/new) with 'curse forge project' ore 'github' url
 
 # Licence
