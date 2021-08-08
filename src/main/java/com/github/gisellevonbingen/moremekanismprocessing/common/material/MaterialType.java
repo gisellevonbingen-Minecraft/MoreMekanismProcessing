@@ -22,11 +22,20 @@ public enum MaterialType
 	Amethyst(MaterialResultShape.GEM, "amethyst", "Amethyst", 0xCC33CC),
 	GreenSapphire(MaterialResultShape.GEM, "green_sapphire", "Green Sapphire", 0x33CC33),
 
+	// Project Red
+	// Ruby
+	// Sapphire
+	Peridot(MaterialResultShape.GEM, "peridot", "Peridot", 0x66FF66),
+	// Copper
+	// Tin
+	// Silver
+	Electrotine(MaterialResultShape.DUST, "electrotine", "Electrotine", 0x0CB4F8),
+
 	// Ice and Fire: Dragons
 	// Copper
 	// Silver
-	// Sapphire
-	// Amethyst
+	// Sapphire (WIP)
+	// Amethyst (WIP)
 
 	// EOL
 	;

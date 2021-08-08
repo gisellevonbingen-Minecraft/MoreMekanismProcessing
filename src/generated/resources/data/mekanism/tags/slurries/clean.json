@@ -9,6 +9,8 @@
     "mekanism:clean_ruby",
     "mekanism:clean_sapphire",
     "mekanism:clean_amethyst",
-    "mekanism:clean_green_sapphire"
+    "mekanism:clean_green_sapphire",
+    "mekanism:clean_peridot",
+    "mekanism:clean_electrotine"
   ]
 }

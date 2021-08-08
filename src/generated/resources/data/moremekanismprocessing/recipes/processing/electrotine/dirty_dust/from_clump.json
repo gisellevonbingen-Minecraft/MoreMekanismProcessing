@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:clumps/electrotine"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dirty_dust_electrotine"
+  }
+}

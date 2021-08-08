@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/peridot"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_peridot",
+    "count": 2
+  }
+}

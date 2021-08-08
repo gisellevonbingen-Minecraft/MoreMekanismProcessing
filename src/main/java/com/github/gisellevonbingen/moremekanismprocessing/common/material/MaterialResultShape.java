@@ -1,5 +1,6 @@
 package com.github.gisellevonbingen.moremekanismprocessing.common.material;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -7,21 +8,27 @@ import com.google.common.collect.Lists;
 
 public enum MaterialResultShape
 {
-	INGOT(MaterialState.ORE, MaterialState.CRYSTAL, MaterialState.SHARD, MaterialState.CLUMP, MaterialState.DIRTY_DUST, MaterialState.DUST, MaterialState.INGOT, MaterialState.NUGGET),
-	GEM(MaterialState.ORE, MaterialState.CRYSTAL, MaterialState.SHARD, MaterialState.CLUMP, MaterialState.DIRTY_DUST, MaterialState.DUST, MaterialState.GEM),
+	DUST(null, Lists.newArrayList(MaterialState.ORE, MaterialState.CRYSTAL, MaterialState.SHARD, MaterialState.CLUMP, MaterialState.DIRTY_DUST, MaterialState.DUST)),
+	INGOT(DUST, Lists.newArrayList(MaterialState.INGOT, MaterialState.NUGGET)),
+	GEM(DUST, Lists.newArrayList(MaterialState.GEM)),
 	// EOL
 	;
 
+	private MaterialResultShape parent;
 	private List<MaterialState> processableStates;
 
-	private MaterialResultShape(MaterialState... processableStates)
+	private MaterialResultShape(MaterialResultShape parent, List<MaterialState> processableStates)
 	{
-		this(Lists.newArrayList(processableStates));
-	}
+		this.parent = parent;
+		this.processableStates = new ArrayList<>();
 
-	private MaterialResultShape(List<MaterialState> processableStates)
-	{
-		this.processableStates = Lists.newArrayList(processableStates);
+		if (parent != null)
+		{
+			this.processableStates.addAll(parent.getProcessableStates());
+		}
+
+		this.processableStates.addAll(processableStates);
+
 		this.ensureStatesValid();
 	}
 
@@ -77,6 +84,11 @@ public enum MaterialResultShape
 		}
 
 		return true;
+	}
+
+	public MaterialResultShape getParent()
+	{
+		return this.parent;
 	}
 
 	public List<MaterialState> getProcessableStates()

@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/electrotine"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_electrotine",
+    "count": 2
+  }
+}
