@@ -8,7 +8,9 @@ import com.google.common.collect.Lists;
 public enum MaterialResultShape
 {
 	INGOT(MaterialState.ORE, MaterialState.CRYSTAL, MaterialState.SHARD, MaterialState.CLUMP, MaterialState.DIRTY_DUST, MaterialState.DUST, MaterialState.INGOT, MaterialState.NUGGET),
-	GEM(MaterialState.ORE, MaterialState.CRYSTAL, MaterialState.SHARD, MaterialState.CLUMP, MaterialState.DIRTY_DUST, MaterialState.DUST, MaterialState.GEM),;
+	GEM(MaterialState.ORE, MaterialState.CRYSTAL, MaterialState.SHARD, MaterialState.CLUMP, MaterialState.DIRTY_DUST, MaterialState.DUST, MaterialState.GEM),
+	// EOL
+	;
 
 	private List<MaterialState> processableStates;
 

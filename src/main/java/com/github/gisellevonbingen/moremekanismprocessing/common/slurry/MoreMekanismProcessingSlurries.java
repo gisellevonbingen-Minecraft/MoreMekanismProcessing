@@ -14,7 +14,7 @@ import mekanism.common.registration.impl.SlurryRegistryObject;
 import mekanism.common.registries.MekanismSlurries;
 import net.minecraft.item.Item;
 import net.minecraft.tags.ITag.INamedTag;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.eventbus.api.IEventBus;
 
 public class MoreMekanismProcessingSlurries
 {
@@ -25,14 +25,14 @@ public class MoreMekanismProcessingSlurries
 		return SLURRIES.get(materialType);
 	}
 
-	public static void register()
+	public static void register(IEventBus eventBus)
 	{
-		register(MekanismSlurries.SLURRIES);
+		register(eventBus, MekanismSlurries.SLURRIES);
 	}
 
-	public static void register(SlurryDeferredRegister register)
+	public static void register(IEventBus eventBus, SlurryDeferredRegister register)
 	{
-		register.register(FMLJavaModLoadingContext.get().getModEventBus());
+		register.register(eventBus);
 
 		for (MaterialType materialType : MaterialType.values())
 		{

@@ -11,9 +11,9 @@ import mekanism.common.tags.MekanismTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class SlurryTagsGenerator extends SlurryTagsProvider
+public class SlurryTagGenerator extends SlurryTagsProvider
 {
-	protected SlurryTagsGenerator(DataGenerator gen, ExistingFileHelper existingFileHelper)
+	protected SlurryTagGenerator(DataGenerator gen, ExistingFileHelper existingFileHelper)
 	{
 		super(gen, MoreMekanismProcessing.MODID, existingFileHelper);
 	}

@@ -11,8 +11,8 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.material.Materi
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 
 import net.minecraft.item.Item;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -53,14 +53,14 @@ public class MoreMekanismProcessingItems
 		return list;
 	}
 
-	public static void register()
+	public static void register(IEventBus eventBus)
 	{
-		register(REGISTER);
+		register(eventBus, REGISTER);
 	}
 
-	public static void register(DeferredRegister<Item> register)
+	public static void register(IEventBus eventBus, DeferredRegister<Item> register)
 	{
-		register.register(FMLJavaModLoadingContext.get().getModEventBus());
+		register.register(eventBus);
 
 		for (MaterialType materialType : MaterialType.values())
 		{

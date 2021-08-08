@@ -13,7 +13,7 @@ apply plugin: 'maven-publish'
 
 version = '1.16.5-0.1'
 group = 'com.github.gisellevonbingen.moremekanismprocessing'
-archivesBaseName = 'moremekanismprocessing'
+archivesBaseName = 'MoreMekanismProcessing'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
@@ -77,10 +77,6 @@ repositories {
 		url "https://modmaven.dev"
 	}
 	maven {
-		name "RS"
-		url "https://repo.refinedmods.com"
-	}
-	maven {
 		name "Local"
 		url uri("${projectDir}/libs")
 	}
@@ -95,27 +91,23 @@ dependencies {
     runtimeOnly fg.deobf("mezz.jei:jei-${mezz_jei_version}")
 	
 	// Mekanism
-    compileOnly fg.deobf("mekanism:Mekanism:${mekanism_version}")				// core
+    compileOnly fg.deobf("mekanism:Mekanism:${mekanism_version}")
     runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}")
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:additions")	// Mekanism: Additions
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:generators")// Mekanism: Generators
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:tools")		// Mekanism: Tools
+    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:additions")
+    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:generators")
+    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:tools")
 	
-	// RS
-    compileOnly fg.deobf("com.refinedmods:refinedstorage:${refinedmods_rs_version}:api")
-    runtimeOnly fg.deobf("com.refinedmods:refinedstorage:${refinedmods_rs_version}")
-    
     // TCon
-    compileOnly fg.deobf("com.github.SlimeKnights:Mantle:${slimeknights_mantle_version}")
-    runtimeOnly fg.deobf("com.github.SlimeKnights:Mantle:${slimeknights_mantle_version}")
-    compileOnly fg.deobf("com.github.SlimeKnights:TinkersConstruct:${slimeknights_tcon_version}")
-    runtimeOnly fg.deobf("com.github.SlimeKnights:TinkersConstruct:${slimeknights_tcon_version}")
+    // compileOnly fg.deobf("com.github.SlimeKnights:Mantle:${slimeknights_mantle_version}")
+    // runtimeOnly fg.deobf("com.github.SlimeKnights:Mantle:${slimeknights_mantle_version}")
+    // compileOnly fg.deobf("com.github.SlimeKnights:TinkersConstruct:${slimeknights_tcon_version}")
+    // runtimeOnly fg.deobf("com.github.SlimeKnights:TinkersConstruct:${slimeknights_tcon_version}")
     
     // CoFH
-    compileOnly fg.deobf("com.github.CoFH:CoFHCore:${cofh_core_version}")
-    runtimeOnly fg.deobf("com.github.CoFH:CoFHCore:${cofh_core_version}")
-    compileOnly fg.deobf("com.github.CoFH:ThermalFoundation:${cofh_thermalfoundation_version}")
-    runtimeOnly fg.deobf("com.github.CoFH:ThermalFoundation:${cofh_thermalfoundation_version}")
+    // compileOnly fg.deobf("com.github.CoFH:CoFHCore:${cofh_core_version}")
+    // runtimeOnly fg.deobf("com.github.CoFH:CoFHCore:${cofh_core_version}")
+    // compileOnly fg.deobf("com.github.CoFH:ThermalFoundation:${cofh_thermalfoundation_version}")
+    // runtimeOnly fg.deobf("com.github.CoFH:ThermalFoundation:${cofh_thermalfoundation_version}")
 }
 
 jar {

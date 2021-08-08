@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.github.gisellevonbingen.moremekanismprocessing.client.ClientHandler;
+import com.github.gisellevonbingen.moremekanismprocessing.common.block.MoreMekanismProcessingBlocks;
 import com.github.gisellevonbingen.moremekanismprocessing.common.item.MoreMekanismProcessingItems;
 import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurries;
 import com.github.gisellevonbingen.moremekanismprocessing.datagen.DataGenerators;
@@ -29,8 +30,9 @@ public class MoreMekanismProcessing
 		modEventBus.register(this);
 		modEventBus.register(new DataGenerators());
 
-		MoreMekanismProcessingItems.register();
-		MoreMekanismProcessingSlurries.register();
+		MoreMekanismProcessingBlocks.register(modEventBus);
+		MoreMekanismProcessingItems.register(modEventBus);
+		MoreMekanismProcessingSlurries.register(modEventBus);
 	}
 
 }

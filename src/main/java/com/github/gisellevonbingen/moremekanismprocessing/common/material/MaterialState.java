@@ -47,7 +47,7 @@ public enum MaterialState
 	{
 		if (this != MaterialState.ORE)
 		{
-			return com.github.gisellevonbingen.moremekanismprocessing.common.tag.MoreMekanismProcessingTags.getProcessingItemTag(materialType, this);
+			return com.github.gisellevonbingen.moremekanismprocessing.common.tag.MoreMekanismProcessingTags.Items.getProcessingItemTag(materialType, this);
 		}
 		else
 		{

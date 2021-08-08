@@ -15,9 +15,9 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class ItemsModelGenerator extends ItemModelProvider
+public class ItemModelGenerator extends ItemModelProvider
 {
-	public ItemsModelGenerator(DataGenerator generator, ExistingFileHelper existingFileHelper)
+	public ItemModelGenerator(DataGenerator generator, ExistingFileHelper existingFileHelper)
 	{
 		super(generator, MoreMekanismProcessing.MODID, existingFileHelper);
 	}
@@ -58,7 +58,7 @@ public class ItemsModelGenerator extends ItemModelProvider
 
 	}
 
-	private void onRegisterModels()
+	protected void onRegisterModels()
 	{
 		for (MaterialType materialType : MaterialType.values())
 		{
@@ -76,7 +76,7 @@ public class ItemsModelGenerator extends ItemModelProvider
 
 	}
 
-	private ResourceLocation getTexture(MaterialState materialState)
+	protected ResourceLocation getTexture(MaterialState materialState)
 	{
 		if (materialState == MaterialState.INGOT)
 		{
@@ -93,7 +93,7 @@ public class ItemsModelGenerator extends ItemModelProvider
 
 	}
 
-	private ResourceLocation child(ResourceLocation parent)
+	protected ResourceLocation child(ResourceLocation parent)
 	{
 		return new ResourceLocation(parent.getNamespace(), "item/" + parent.getPath());
 	}

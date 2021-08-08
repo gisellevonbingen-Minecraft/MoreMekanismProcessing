@@ -16,8 +16,18 @@ public enum MaterialType
 	Niter(MaterialResultShape.GEM, "niter", "Niter", 0xC0C0C0),
 	Sulfur(MaterialResultShape.GEM, "sulfur", "Sulfur", 0xEFFCCB),
 
-	// Just Test
-	// Unknownium(MaterialResultShape.INGOT, "unknownium", "Unknownium", 0xFFFFFF),;
+	// Blue Power
+	Ruby(MaterialResultShape.GEM, "ruby", "Ruby", 0xCC0000),
+	Sapphire(MaterialResultShape.GEM, "sapphire", "Sapphire", 0x0000CC),
+	Amethyst(MaterialResultShape.GEM, "amethyst", "Amethyst", 0xCC00CC),
+
+	// Ice and Fire: Dragons
+	// Copper
+	// Silver
+	// Sapphire
+	// Amethyst
+
+	// EOL
 	;
 
 	private final MaterialResultShape resultShape;
