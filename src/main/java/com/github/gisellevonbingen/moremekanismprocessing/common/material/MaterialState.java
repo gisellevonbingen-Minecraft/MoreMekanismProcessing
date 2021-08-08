@@ -4,6 +4,7 @@ import org.apache.commons.lang3.NotImplementedException;
 
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
 import com.github.gisellevonbingen.moremekanismprocessing.common.item.MoreMekanismProcessingItems;
+import com.github.gisellevonbingen.moremekanismprocessing.common.tag.MoreMekanismProcessingTags;
 
 import mekanism.common.tags.MekanismTags;
 import net.minecraft.item.Item;
@@ -47,7 +48,7 @@ public enum MaterialState
 	{
 		if (this != MaterialState.ORE)
 		{
-			return com.github.gisellevonbingen.moremekanismprocessing.common.tag.MoreMekanismProcessingTags.Items.getProcessingItemTag(materialType, this);
+			return MoreMekanismProcessingTags.Items.getProcessingItemTag(materialType, this);
 		}
 		else
 		{

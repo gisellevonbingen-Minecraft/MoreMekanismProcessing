@@ -8,6 +8,7 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.block.MoreMekan
 import com.github.gisellevonbingen.moremekanismprocessing.common.item.MoreMekanismProcessingItems;
 import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurries;
 import com.github.gisellevonbingen.moremekanismprocessing.datagen.DataGenerators;
+import com.github.gisellevonbingen.moremekanismprocessing.integration.MoreMekanismProcessingIntagrations;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,12 +28,13 @@ public class MoreMekanismProcessing
 		DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> ClientHandler::new);
 
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-		modEventBus.register(this);
 		modEventBus.register(new DataGenerators());
 
 		MoreMekanismProcessingBlocks.register(modEventBus);
 		MoreMekanismProcessingItems.register(modEventBus);
 		MoreMekanismProcessingSlurries.register(modEventBus);
+
+		MoreMekanismProcessingIntagrations.initialize();
 	}
 
 }

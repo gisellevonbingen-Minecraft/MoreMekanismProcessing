@@ -1,4 +1,4 @@
-package com.github.gisellevonbingen.moremekanismprocessing.common.integration.iceandfire;
+package com.github.gisellevonbingen.moremekanismprocessing.integration.iceandfire;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -10,15 +10,15 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class IceAndFireBlocks
 {
-	public static final DeferredRegister<Block> REGISTER = DeferredRegister.create(ForgeRegistries.BLOCKS, IntagrationIceAndFire.MODID);
+	public static final DeferredRegister<Block> REGISTER = DeferredRegister.create(ForgeRegistries.BLOCKS, IceAndFireMod.MODID);
 	public static RegistryObject<Block> SapphireOre;
-	public static RegistryObject<Block> AmethystOre;
+	public static RegistryObject<Block> AmythestOre;
 
 	public static void register()
 	{
 		REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
 		SapphireOre = REGISTER.register("sapphire_ore", () -> new Block(AbstractBlock.Properties.of(Material.STONE)));
-		AmethystOre = REGISTER.register("amethest_ore", () -> new Block(AbstractBlock.Properties.of(Material.STONE)));
+		AmythestOre = REGISTER.register("amythest_ore", () -> new Block(AbstractBlock.Properties.of(Material.STONE)));
 	}
 
 }

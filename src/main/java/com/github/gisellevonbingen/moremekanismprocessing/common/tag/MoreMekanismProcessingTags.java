@@ -15,6 +15,15 @@ import net.minecraft.util.ResourceLocation;
 
 public class MoreMekanismProcessingTags
 {
+	public static class Blocks
+	{
+		public static INamedTag<Block> tag(ResourceLocation name)
+		{
+			return BlockTags.bind(name.toString());
+		}
+
+	}
+
 	public static class Items
 	{
 		public static final Map<MaterialType, Map<MaterialState, INamedTag<Item>>> PROCESSING_ITEM_TAGS = new HashMap<>();
@@ -59,15 +68,6 @@ public class MoreMekanismProcessingTags
 		public static INamedTag<Item> tag(ResourceLocation name)
 		{
 			return ItemTags.bind(name.toString());
-		}
-
-	}
-
-	public static class Blocks
-	{
-		public static INamedTag<Block> tag(ResourceLocation name)
-		{
-			return BlockTags.bind(name.toString());
 		}
 
 	}

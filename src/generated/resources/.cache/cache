@@ -81,6 +81,9 @@ ae7377af623d46abc2667a63b109514c322ded9f assets/moremekanismprocessing/models/it
 ae7377af623d46abc2667a63b109514c322ded9f assets/moremekanismprocessing/models/item/tungsten_nugget.json
 8f9feea69bf435a6de04842c9159c52f3f7e813d assets/moremekanismprocessing/models/item/zinc_ingot.json
 ae7377af623d46abc2667a63b109514c322ded9f assets/moremekanismprocessing/models/item/zinc_nugget.json
+a8478641fdf297e88861aed751be893490dc2658 data/forge/tags/blocks/ores.json
+26aba9da470eb10ea895b8f17fbd82c28c22851f data/forge/tags/blocks/ores/amethyst.json
+576a874d9d186c596d3aba663b160aa5d6357602 data/forge/tags/blocks/ores/sapphire.json
 e91c8093f41b92023a067d51e0c9de7782ef70dc data/forge/tags/items/dusts.json
 6f2d0b41dd40330c91eb30badfb4d049de63ada1 data/forge/tags/items/dusts/amethyst.json
 191fb7612ab88e53c6db77546e3a6824e5c3d4c9 data/forge/tags/items/dusts/cobalt.json
@@ -115,8 +118,8 @@ fa8dc55881cac03f6b32562bc84f96282d6fbfd0 data/forge/tags/items/nuggets/cobalt.js
 c7019c85b181a33988c8b01dd56f3b6a8aa384d0 data/forge/tags/items/nuggets/silver.json
 7cf5575a0379b61ba2c970af66d7a1544789b979 data/forge/tags/items/nuggets/tungsten.json
 47598c2843c7ed4cb6fedd522866839a14eb7dfb data/forge/tags/items/nuggets/zinc.json
-74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores.json
-74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/amethyst.json
+a8478641fdf297e88861aed751be893490dc2658 data/forge/tags/items/ores.json
+26aba9da470eb10ea895b8f17fbd82c28c22851f data/forge/tags/items/ores/amethyst.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/cobalt.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/electrotine.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/green_sapphire.json
@@ -124,7 +127,7 @@ c7019c85b181a33988c8b01dd56f3b6a8aa384d0 data/forge/tags/items/nuggets/silver.js
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/niter.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/peridot.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/ruby.json
-74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/sapphire.json
+576a874d9d186c596d3aba663b160aa5d6357602 data/forge/tags/items/ores/sapphire.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/silver.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/sulfur.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/tungsten.json

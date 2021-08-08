@@ -1,5 +1,7 @@
 package com.github.gisellevonbingen.moremekanismprocessing.datagen;
 
+import com.github.gisellevonbingen.moremekanismprocessing.integration.MoreMekanismProcessingIntagrations;
+
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,6 +25,7 @@ public class DataGenerators
 			generator.addProvider(new SlurryTagGenerator(generator, existingFileHelper));
 			generator.addProvider(new RecipesGenerator(generator));
 			generator.addProvider(new LanguagesGenerator(generator));
+
 		}
 
 		if (event.includeClient())
@@ -30,6 +33,7 @@ public class DataGenerators
 			generator.addProvider(new ItemModelGenerator(generator, existingFileHelper));
 		}
 
+		MoreMekanismProcessingIntagrations.getMods().forEach(m -> m.addDataGenerator(event));
 	}
 
 }
