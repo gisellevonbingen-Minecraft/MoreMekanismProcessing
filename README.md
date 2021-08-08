@@ -21,29 +21,33 @@ That's reason
 
 # Processing Tree
 
-Depending on the final item of the ore, it is divided into 2 processing trees
+Depending on the final item of the ore, it is divided into 3 processing trees
+
+## Dust
+
+* Ore
+* Dirty Slurry
+* Clean Slurry
+* Shard
+* Clump
+* Dirty Dust
+* Dust
+
+Ingot not exist ores's processing finish into dust
+
+e.g.) Project Red's Electrotine
 
 ## Ingot
 
-* Ore
-* Dirty Slurry
-* Clean Slurry
-* Shard
-* Clump
-* Dirty Dust
-* Dust
-* Ingot and Nugget
+* Extends from 'Dust'
+* Dust smelting into Ingot
+* Ingot can split to nuggets
 
 ## Gem
 
-* Ore
-* Dirty Slurry
-* Clean Slurry
-* Shard
-* Clump
-* Dirty Dust
-* Dust
-* Gem
+* Extends from 'Dust'
+* Dust enriching into Gem
+
 
 # Support Mods/Ores
 
