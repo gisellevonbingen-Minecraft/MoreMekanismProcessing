@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "tag": "forge:dusts/sulfur"
-  },
-  "result": "moremekanismprocessing:gem_sulfur",
-  "experience": 0.3,
-  "cookingtime": 200
-}

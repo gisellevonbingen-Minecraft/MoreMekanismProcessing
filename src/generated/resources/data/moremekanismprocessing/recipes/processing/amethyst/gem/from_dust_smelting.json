@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "tag": "forge:dusts/amethyst"
-  },
-  "result": "moremekanismprocessing:gem_amethyst",
-  "experience": 0.3,
-  "cookingtime": 200
-}

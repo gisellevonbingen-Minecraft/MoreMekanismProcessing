@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:dusts/green_sapphire"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:gem_green_sapphire"
+  }
+}

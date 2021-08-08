@@ -1,0 +1,17 @@
+{
+  "type": "mekanism:dissolution",
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/green_sapphire"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:sulfuric_acid"
+  },
+  "output": {
+    "slurry": "mekanism:dirty_green_sapphire",
+    "amount": 1000,
+    "chemicalType": "slurry"
+  }
+}

@@ -17,9 +17,10 @@ public enum MaterialType
 	Sulfur(MaterialResultShape.GEM, "sulfur", "Sulfur", 0xEFFCCB),
 
 	// Blue Power
-	Ruby(MaterialResultShape.GEM, "ruby", "Ruby", 0xCC0000),
-	Sapphire(MaterialResultShape.GEM, "sapphire", "Sapphire", 0x0000CC),
-	Amethyst(MaterialResultShape.GEM, "amethyst", "Amethyst", 0xCC00CC),
+	Ruby(MaterialResultShape.GEM, "ruby", "Ruby", 0xCC3333),
+	Sapphire(MaterialResultShape.GEM, "sapphire", "Sapphire", 0x3333CC),
+	Amethyst(MaterialResultShape.GEM, "amethyst", "Amethyst", 0xCC33CC),
+	GreenSapphire(MaterialResultShape.GEM, "green_sapphire", "Green Sapphire", 0x33CC33),
 
 	// Ice and Fire: Dragons
 	// Copper

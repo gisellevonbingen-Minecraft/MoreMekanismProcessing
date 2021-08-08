@@ -120,12 +120,14 @@ public class RecipesGenerator extends RecipeProvider
 
 			if (this.canProcess(MaterialState.DUST, MaterialState.INGOT) == true)
 			{
-				this.buildCrushingCook(MaterialState.INGOT);
+				this.buildCook(MaterialState.DUST, MaterialState.INGOT);
+				this.buildItemToItemStack(MaterialState.INGOT, MaterialState.DUST, 1, ItemStackToItemStackRecipeBuilder::crushing);
 			}
 
 			if (this.canProcess(MaterialState.DUST, MaterialState.GEM) == true)
 			{
-				this.buildCrushingCook(MaterialState.GEM);
+				this.buildItemToItemStack(MaterialState.DUST, MaterialState.GEM, 1, ItemStackToItemStackRecipeBuilder::enriching);
+				this.buildItemToItemStack(MaterialState.GEM, MaterialState.DUST, 1, ItemStackToItemStackRecipeBuilder::crushing);
 			}
 
 			if (this.canProcess(MaterialState.INGOT, MaterialState.NUGGET) == true)
