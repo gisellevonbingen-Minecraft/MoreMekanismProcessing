@@ -5,6 +5,9 @@
     "moremekanismprocessing:shard_silver",
     "moremekanismprocessing:shard_nickel",
     "moremekanismprocessing:shard_niter",
-    "moremekanismprocessing:shard_sulfur"
+    "moremekanismprocessing:shard_sulfur",
+    "moremekanismprocessing:shard_ruby",
+    "moremekanismprocessing:shard_sapphire",
+    "moremekanismprocessing:shard_amethyst"
   ]
 }

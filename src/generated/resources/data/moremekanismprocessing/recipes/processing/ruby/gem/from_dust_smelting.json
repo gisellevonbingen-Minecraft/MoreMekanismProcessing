@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:dusts/ruby"
+  },
+  "result": "moremekanismprocessing:gem_ruby",
+  "experience": 0.3,
+  "cookingtime": 200
+}

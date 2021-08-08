@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "ingredient": {
+      "tag": "forge:gems/ruby"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_ruby"
+  }
+}

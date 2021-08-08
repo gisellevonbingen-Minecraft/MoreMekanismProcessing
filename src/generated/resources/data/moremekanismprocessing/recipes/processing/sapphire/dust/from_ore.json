@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/sapphire"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_sapphire",
+    "count": 2
+  }
+}

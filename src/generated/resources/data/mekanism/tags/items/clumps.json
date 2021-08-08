@@ -5,6 +5,9 @@
     "moremekanismprocessing:clump_silver",
     "moremekanismprocessing:clump_nickel",
     "moremekanismprocessing:clump_niter",
-    "moremekanismprocessing:clump_sulfur"
+    "moremekanismprocessing:clump_sulfur",
+    "moremekanismprocessing:clump_ruby",
+    "moremekanismprocessing:clump_sapphire",
+    "moremekanismprocessing:clump_amethyst"
   ]
 }

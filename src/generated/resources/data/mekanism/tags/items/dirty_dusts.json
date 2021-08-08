@@ -5,6 +5,9 @@
     "moremekanismprocessing:dirty_dust_silver",
     "moremekanismprocessing:dirty_dust_nickel",
     "moremekanismprocessing:dirty_dust_niter",
-    "moremekanismprocessing:dirty_dust_sulfur"
+    "moremekanismprocessing:dirty_dust_sulfur",
+    "moremekanismprocessing:dirty_dust_ruby",
+    "moremekanismprocessing:dirty_dust_sapphire",
+    "moremekanismprocessing:dirty_dust_amethyst"
   ]
 }

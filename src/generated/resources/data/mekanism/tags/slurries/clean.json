@@ -5,6 +5,9 @@
     "mekanism:clean_silver",
     "mekanism:clean_nickel",
     "mekanism:clean_niter",
-    "mekanism:clean_sulfur"
+    "mekanism:clean_sulfur",
+    "mekanism:clean_ruby",
+    "mekanism:clean_sapphire",
+    "mekanism:clean_amethyst"
   ]
 }

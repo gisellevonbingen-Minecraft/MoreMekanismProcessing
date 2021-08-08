@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/amethyst"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_amethyst",
+    "count": 2
+  }
+}

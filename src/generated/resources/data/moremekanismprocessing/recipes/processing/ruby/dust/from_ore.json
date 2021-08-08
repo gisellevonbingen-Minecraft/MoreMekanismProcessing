@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/ruby"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_ruby",
+    "count": 2
+  }
+}

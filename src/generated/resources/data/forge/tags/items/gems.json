@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "moremekanismprocessing:gem_niter",
-    "moremekanismprocessing:gem_sulfur"
+    "moremekanismprocessing:gem_sulfur",
+    "moremekanismprocessing:gem_ruby",
+    "moremekanismprocessing:gem_sapphire",
+    "moremekanismprocessing:gem_amethyst"
   ]
 }
