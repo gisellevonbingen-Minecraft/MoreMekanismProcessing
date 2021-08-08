@@ -1,8 +1,12 @@
 # More Mekanism Processing
 
-Add mekanism's ore processing to other mod's ores
+## Add mekanism's ore processing to other mod's ores
 
 It can 1 ore process into up to 5 ingots
+
+## Fix missing tags
+
+I don't know if that was intentional, That ores names is same, but some tags missing
 
 ## Mekanism version 1.16.5-10.0.20.447 ore higher is required
 
@@ -49,11 +53,10 @@ e.g.) Project Red's Electrotine
 * Extends from 'Dust'
 * Dust enriching into Gem
 
-
 # Support Mods/Ores
 
 * [List of mods/ores](https://github.com/gisellevonbingen/Minecraft-MoreMekanismProcessing/blob/main/Mods_Ores.md)
-* If want to add support mod, ['New Issue'](https://github.com/gisellevonbingen/Minecraft-MoreMekanismProcessing/issues/new) with 'curse forge project' ore 'github' url
+* If want to add support mod, ['New Issue'](https://github.com/gisellevonbingen/Minecraft-MoreMekanismProcessing/issues/new) with 'curse forge project' or 'github' url
 
 # Licence
 
