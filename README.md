@@ -51,7 +51,7 @@ e.g.) Project Red's Electrotine
 
 # Support Mods/Ores
 
-* List of mods/ores [Mods_Ores.md](Mods_Ores.md)
+* [List of mods/ores](Mods_Ores.md)
 * If want to add support mod, ['New Issue'](https://github.com/gisellevonbingen/Minecraft-MoreMekanismProcessing/issues/new) with 'curse forge project' ore 'github' url
 
 # Licence
