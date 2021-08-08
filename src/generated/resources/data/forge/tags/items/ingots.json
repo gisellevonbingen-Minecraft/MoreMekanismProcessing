@@ -3,6 +3,8 @@
   "values": [
     "moremekanismprocessing:cobalt_ingot",
     "moremekanismprocessing:silver_ingot",
-    "moremekanismprocessing:nickel_ingot"
+    "moremekanismprocessing:nickel_ingot",
+    "moremekanismprocessing:zinc_ingot",
+    "moremekanismprocessing:tungsten_ingot"
   ]
 }

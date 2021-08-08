@@ -3,6 +3,8 @@
   "values": [
     "moremekanismprocessing:cobalt_nugget",
     "moremekanismprocessing:silver_nugget",
-    "moremekanismprocessing:nickel_nugget"
+    "moremekanismprocessing:nickel_nugget",
+    "moremekanismprocessing:zinc_nugget",
+    "moremekanismprocessing:tungsten_nugget"
   ]
 }

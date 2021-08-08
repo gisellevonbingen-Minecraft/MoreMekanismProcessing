@@ -21,6 +21,8 @@ public enum MaterialType
 	Sapphire(MaterialResultShape.GEM, "sapphire", "Sapphire", 0x3333CC),
 	Amethyst(MaterialResultShape.GEM, "amethyst", "Amethyst", 0xCC33CC),
 	GreenSapphire(MaterialResultShape.GEM, "green_sapphire", "Green Sapphire", 0x33CC33),
+	Zinc(MaterialResultShape.INGOT, "zinc", "Zinc", 0xCCCC8E),
+	Tungsten(MaterialResultShape.INGOT, "tungsten", "Tungsten", 0x333333),
 
 	// Project Red
 	// Ruby
