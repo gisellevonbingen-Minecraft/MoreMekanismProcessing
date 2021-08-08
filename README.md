@@ -33,7 +33,7 @@ Depending on the final item of the ore, it is divided into 3 processing trees
 * Dirty Dust
 * Dust
 
-Ingot not exist ores's processing finish into dust
+Ingot not exist ores's processing is finish to dust
 
 e.g.) Project Red's Electrotine
 
