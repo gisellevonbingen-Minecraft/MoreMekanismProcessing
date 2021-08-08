@@ -32,5 +32,9 @@ Not contains ores with mekanism's default ores same name
 # Ice and Fire
 
 * Silver Ingot
-* Sapphire Gem (WIP)
-* Amethyst Gem (WIP)
+* Sapphire Gem (Fix Tags)
+* Amethyst Gem (Fix Tags)
+
+# Extream Reactors 2
+
+* Yellorite Ingot (WIP, Fix Tags)
