@@ -4,8 +4,8 @@ Not contains ores with mekanism's default ores same name
 
 * Silver Ingot
 * Nickel Ingot
-* Niter Ingot
-* Sulfur Ingot
+* Niter Gem
+* Sulfur Gem
 
 # Tinkers Construct
 
