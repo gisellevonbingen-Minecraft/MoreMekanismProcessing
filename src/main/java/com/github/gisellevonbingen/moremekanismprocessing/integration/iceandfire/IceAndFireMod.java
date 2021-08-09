@@ -1,7 +1,6 @@
 package com.github.gisellevonbingen.moremekanismprocessing.integration.iceandfire;
 
 import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationMod;
-import com.github.gisellevonbingen.moremekanismprocessing.util.LauncherUtil;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -19,11 +18,6 @@ public class IceAndFireMod extends IntegrationMod
 	@Override
 	public void initialize()
 	{
-		if (LauncherUtil.isRunData() == true)
-		{
-			IceAndFireBlocks.register();
-			IceAndFireItems.register();
-		}
 
 	}
 

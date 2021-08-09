@@ -22,13 +22,13 @@ public class BlockTagsGenerator extends BlockTagsProvider
 	@Override
 	protected void addTags()
 	{
-		Map<INamedTag<Block>, Block> map = new HashMap<>();
-		map.put(IceAndFireTags.Blocks.ORES_SAPPHIRE, IceAndFireBlocks.SapphireOre.get());
-		map.put(IceAndFireTags.Blocks.ORES_AMETHYST, IceAndFireBlocks.AmythestOre.get());
+		Map<INamedTag<Block>, String> map = new HashMap<>();
+		map.put(IceAndFireTags.Blocks.ORES_SAPPHIRE, "sapphire_ore");
+		map.put(IceAndFireTags.Blocks.ORES_AMETHYST, "amythest_ore");
 
-		for (Entry<INamedTag<Block>, Block> entry : map.entrySet())
+		for (Entry<INamedTag<Block>, String> entry : map.entrySet())
 		{
-			ResourceLocation name = entry.getValue().getRegistryName();
+			ResourceLocation name = new ResourceLocation(IceAndFireMod.MODID, entry.getValue());
 			this.tag(Blocks.ORES).addOptional(name);
 			this.tag(entry.getKey()).addOptional(name);
 		}
