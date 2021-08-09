@@ -1,4 +1,4 @@
-package com.github.gisellevonbingen.moremekanismprocessing.integration.extremereactors;
+package com.github.gisellevonbingen.moremekanismprocessing.integration.biggerreactors;
 
 import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationBlockTagsGenerator;
 import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationMod;
@@ -6,14 +6,9 @@ import com.github.gisellevonbingen.moremekanismprocessing.integration.Integratio
 
 import net.minecraft.util.ResourceLocation;
 
-public class ExtremeReactors2Mod extends IntegrationMod
+public class BiggerReactorsMod extends IntegrationMod
 {
-	public static final String MODID = "bigreactors";
-
-	public ExtremeReactors2Mod()
-	{
-
-	}
+	public static final String MODID = "biggerreactors";
 
 	@Override
 	public void initialize()
