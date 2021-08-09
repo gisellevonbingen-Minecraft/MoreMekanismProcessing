@@ -41,3 +41,10 @@ Not contains ores with mekanism's default ores same name
 
 * Yellorite Ingot (Fix Tags)
 <br>Add 'forge:ores', 'forge:ores/uranium', 'forges:ores/yellorite'
+
+# Silent Gear
+
+* Crimson Ingot
+* Azure Silver Ingot
+* Bort Gem
+* 
