@@ -33,10 +33,11 @@ Not contains ores with mekanism's default ores same name
 
 * Silver Ingot
 * Sapphire Gem (Fix Tags)
-1. Add 'forge:ores/sapphire'
+<br>Add 'forge:ores/sapphire'
 * Amethyst Gem (Fix Tags)
-1. Add 'forge:ores/amethyst'
+<br>Add 'forge:ores/amethyst'
 
 # Extreme Reactors 2
 
-* Yellorite Ingot (WIP, Fix Tags)
+* Yellorite Ingot (Fix Tags)
+<br>Add 'forge:ores', 'forge:ores/uranium', 'forges:ores/yellorite'
