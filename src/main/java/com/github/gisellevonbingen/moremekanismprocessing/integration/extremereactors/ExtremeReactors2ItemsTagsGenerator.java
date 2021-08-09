@@ -1,8 +1,10 @@
-package com.github.gisellevonbingen.moremekanismprocessing.integration.iceandfire;
+package com.github.gisellevonbingen.moremekanismprocessing.integration.extremereactors;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import com.github.gisellevonbingen.moremekanismprocessing.common.tag.MoreMekanismProcessingTags;
 
 import net.minecraft.block.Block;
 import net.minecraft.data.BlockTagsProvider;
@@ -13,11 +15,11 @@ import net.minecraft.tags.ITag.INamedTag;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class ItemsTagsGenerator extends ItemTagsProvider
+public class ExtremeReactors2ItemsTagsGenerator extends ItemTagsProvider
 {
-	public ItemsTagsGenerator(DataGenerator p_i244817_1_, BlockTagsProvider p_i244817_2_, ExistingFileHelper p_i244817_4_)
+	public ExtremeReactors2ItemsTagsGenerator(DataGenerator p_i244817_1_, BlockTagsProvider p_i244817_2_, ExistingFileHelper p_i244817_4_)
 	{
-		super(p_i244817_1_, p_i244817_2_, IceAndFireMod.MODID, p_i244817_4_);
+		super(p_i244817_1_, p_i244817_2_, ExtremeReactors2Mod.MODID, p_i244817_4_);
 	}
 
 	@Override
@@ -25,8 +27,8 @@ public class ItemsTagsGenerator extends ItemTagsProvider
 	{
 		Map<INamedTag<Block>, INamedTag<Item>> map = new HashMap<>();
 		map.put(Tags.Blocks.ORES, Tags.Items.ORES);
-		map.put(IceAndFireTags.Blocks.ORES_SAPPHIRE, IceAndFireTags.Items.ORES_SAPPHIRE);
-		map.put(IceAndFireTags.Blocks.ORES_AMETHYST, IceAndFireTags.Items.ORES_AMETHYST);
+		map.put(MoreMekanismProcessingTags.Blocks.ORES_YELLORITE, MoreMekanismProcessingTags.Items.ORES_YELLORITE);
+		map.put(MoreMekanismProcessingTags.Blocks.ORES_URANIUM, MoreMekanismProcessingTags.Items.ORES_URANIUM);
 
 		for (Entry<INamedTag<Block>, INamedTag<Item>> entry : map.entrySet())
 		{

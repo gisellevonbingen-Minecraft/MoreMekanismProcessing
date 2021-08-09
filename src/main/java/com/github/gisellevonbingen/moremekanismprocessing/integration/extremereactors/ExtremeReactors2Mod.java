@@ -1,4 +1,4 @@
-package com.github.gisellevonbingen.moremekanismprocessing.integration.iceandfire;
+package com.github.gisellevonbingen.moremekanismprocessing.integration.extremereactors;
 
 import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationMod;
 
@@ -6,11 +6,11 @@ import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 
-public class IceAndFireMod extends IntegrationMod
+public class ExtremeReactors2Mod extends IntegrationMod
 {
-	public static final String MODID = "iceandfire";
+	public static final String MODID = "bigreactors";
 
-	public IceAndFireMod()
+	public ExtremeReactors2Mod()
 	{
 
 	}
@@ -31,9 +31,9 @@ public class IceAndFireMod extends IntegrationMod
 
 		if (event.includeServer() == true)
 		{
-			IceAndFireBlockTagsGenerator blockTagsGenerator = new IceAndFireBlockTagsGenerator(generator, existingFileHelper);
+			ExtremeReactors2BlockTagsGenerator blockTagsGenerator = new ExtremeReactors2BlockTagsGenerator(generator, existingFileHelper);
 			generator.addProvider(blockTagsGenerator);
-			generator.addProvider(new IceAndFireItemsTagsGenerator(generator, blockTagsGenerator, existingFileHelper));
+			generator.addProvider(new ExtremeReactors2ItemsTagsGenerator(generator, blockTagsGenerator, existingFileHelper));
 		}
 
 	}

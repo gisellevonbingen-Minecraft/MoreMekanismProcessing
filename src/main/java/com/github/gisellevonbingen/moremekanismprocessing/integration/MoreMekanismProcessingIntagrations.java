@@ -3,6 +3,7 @@ package com.github.gisellevonbingen.moremekanismprocessing.integration;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.github.gisellevonbingen.moremekanismprocessing.integration.extremereactors.ExtremeReactors2Mod;
 import com.github.gisellevonbingen.moremekanismprocessing.integration.iceandfire.IceAndFireMod;
 import com.google.common.collect.Lists;
 
@@ -25,6 +26,7 @@ public class MoreMekanismProcessingIntagrations
 	{
 		List<IntegrationMod> mods = new ArrayList<>();
 		mods.add(new IceAndFireMod());
+		mods.add(new ExtremeReactors2Mod());
 
 		return mods;
 	}

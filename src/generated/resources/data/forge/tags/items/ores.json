@@ -2,11 +2,11 @@
   "replace": false,
   "values": [
     {
-      "id": "iceandfire:sapphire_ore",
+      "id": "bigreactors:yellorite_ore",
       "required": false
     },
     {
-      "id": "iceandfire:amythest_ore",
+      "id": "bigreactors:yellorite_ore",
       "required": false
     }
   ]

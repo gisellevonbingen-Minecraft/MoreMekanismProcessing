@@ -12,9 +12,9 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.Tags.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class BlockTagsGenerator extends BlockTagsProvider
+public class IceAndFireBlockTagsGenerator extends BlockTagsProvider
 {
-	public BlockTagsGenerator(DataGenerator p_i244820_1_, ExistingFileHelper p_i244820_3_)
+	public IceAndFireBlockTagsGenerator(DataGenerator p_i244820_1_, ExistingFileHelper p_i244820_3_)
 	{
 		super(p_i244820_1_, IceAndFireMod.MODID, p_i244820_3_);
 	}
@@ -28,7 +28,7 @@ public class BlockTagsGenerator extends BlockTagsProvider
 
 		for (Entry<INamedTag<Block>, String> entry : map.entrySet())
 		{
-			ResourceLocation name = new ResourceLocation(IceAndFireMod.MODID, entry.getValue());
+			ResourceLocation name = new ResourceLocation(this.modId, entry.getValue());
 			this.tag(Blocks.ORES).addOptional(name);
 			this.tag(entry.getKey()).addOptional(name);
 		}

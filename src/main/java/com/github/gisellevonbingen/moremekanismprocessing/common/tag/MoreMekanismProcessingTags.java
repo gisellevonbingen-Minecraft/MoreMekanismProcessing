@@ -15,17 +15,20 @@ import net.minecraft.util.ResourceLocation;
 
 public class MoreMekanismProcessingTags
 {
+	public static final ResourceLocation NAME_ORES_YELLORITE = new ResourceLocation("forge", "ores/yellorite");
+	public static final ResourceLocation NAME_ORES_URANIUM = new ResourceLocation("forge", "ores/uranium");
+
 	public static class Blocks
 	{
-		public static INamedTag<Block> tag(ResourceLocation name)
-		{
-			return BlockTags.bind(name.toString());
-		}
-
+		public static final INamedTag<Block> ORES_YELLORITE = BlockTags.createOptional(NAME_ORES_YELLORITE);
+		public static final INamedTag<Block> ORES_URANIUM = BlockTags.createOptional(NAME_ORES_URANIUM);
 	}
 
 	public static class Items
 	{
+		public static final INamedTag<Item> ORES_YELLORITE = ItemTags.createOptional(NAME_ORES_YELLORITE);
+		public static final INamedTag<Item> ORES_URANIUM = ItemTags.createOptional(NAME_ORES_URANIUM);
+		
 		public static final Map<MaterialType, Map<MaterialState, INamedTag<Item>>> PROCESSING_ITEM_TAGS = new HashMap<>();
 
 		static
@@ -50,7 +53,7 @@ public class MoreMekanismProcessingTags
 				{
 					if (materialState != MaterialState.ORE)
 					{
-						INamedTag<Item> tag = tag(materialType, materialState);
+						INamedTag<Item> tag = ItemTags.bind(materialState.getStateTagName(materialType).toString());
 						map2.put(materialState, tag);
 					}
 
@@ -58,16 +61,6 @@ public class MoreMekanismProcessingTags
 
 			}
 
-		}
-
-		public static INamedTag<Item> tag(MaterialType materialType, MaterialState materialState)
-		{
-			return tag(materialState.getStateTagName(materialType));
-		}
-
-		public static INamedTag<Item> tag(ResourceLocation name)
-		{
-			return ItemTags.bind(name.toString());
 		}
 
 	}
