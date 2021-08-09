@@ -47,4 +47,3 @@ Not contains ores with mekanism's default ores same name
 * Crimson Ingot
 * Azure Silver Ingot
 * Bort Gem
-* 
