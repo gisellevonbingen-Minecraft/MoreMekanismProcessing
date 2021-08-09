@@ -1,39 +1,53 @@
 package com.github.gisellevonbingen.moremekanismprocessing.integration;
 
-import java.util.Map;
-import java.util.Map.Entry;
-
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
 
 import net.minecraft.block.Block;
-import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.ItemTagsProvider;
 import net.minecraft.item.Item;
 import net.minecraft.tags.ITag.INamedTag;
+import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class IntegrationItemTagsGenerator extends ItemTagsProvider
 {
-	public IntegrationItemTagsGenerator(DataGenerator p_i244817_1_, BlockTagsProvider p_i244817_2_, ExistingFileHelper p_i244817_4_)
+	protected final IntegrationBlockTagsGenerator blockTagsGenerator;
+
+	public IntegrationItemTagsGenerator(DataGenerator generator, IntegrationBlockTagsGenerator blockTagsGenerator, ExistingFileHelper existingFileHelper)
 	{
-		super(p_i244817_1_, p_i244817_2_, MoreMekanismProcessing.MODID, p_i244817_4_);
+		super(generator, blockTagsGenerator, MoreMekanismProcessing.MODID, existingFileHelper);
+		this.blockTagsGenerator = blockTagsGenerator;
 	}
 
 	@Override
 	protected void addTags()
 	{
-
+		MoreMekanismProcessingIntagrations.getMods().forEach(m -> m.addItemTags(this));
+		this.copyOres();
 	}
 
-	protected void copyOres(Map<INamedTag<Block>, INamedTag<Item>> map)
+	@Override
+	public Builder<Item> tag(INamedTag<Item> tag)
+	{
+		return super.tag(tag);
+	}
+
+	@Override
+	public void copy(INamedTag<Block> blockTag, INamedTag<Item> itemTag)
+	{
+		super.copy(blockTag, itemTag);
+	}
+
+	protected void copyOres()
 	{
 		this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
 
-		for (Entry<INamedTag<Block>, INamedTag<Item>> entry : map.entrySet())
+		for (INamedTag<Block> blockTag : this.blockTagsGenerator.getOreTags())
 		{
-			this.copy(entry.getKey(), entry.getValue());
+			INamedTag<Item> itemTag = ItemTags.bind(blockTag.getName().toString());
+			this.copy(blockTag, (INamedTag<Item>) itemTag);
 		}
 
 	}

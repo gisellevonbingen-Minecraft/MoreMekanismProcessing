@@ -18,4 +18,14 @@ public abstract class IntegrationMod
 
 	}
 
+	public void addBlockTags(IntegrationBlockTagsGenerator generator)
+	{
+
+	}
+
+	public void addItemTags(IntegrationItemTagsGenerator generator)
+	{
+
+	}
+
 }

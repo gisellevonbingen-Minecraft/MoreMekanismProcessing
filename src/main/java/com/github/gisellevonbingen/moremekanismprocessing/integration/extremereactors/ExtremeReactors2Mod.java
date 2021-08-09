@@ -1,10 +1,10 @@
 package com.github.gisellevonbingen.moremekanismprocessing.integration.extremereactors;
 
+import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationBlockTagsGenerator;
 import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationMod;
+import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationTags;
 
-import net.minecraft.data.DataGenerator;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+import net.minecraft.util.ResourceLocation;
 
 public class ExtremeReactors2Mod extends IntegrationMod
 {
@@ -22,20 +22,12 @@ public class ExtremeReactors2Mod extends IntegrationMod
 	}
 
 	@Override
-	public void addDataGenerator(GatherDataEvent event)
+	public void addBlockTags(IntegrationBlockTagsGenerator generator)
 	{
-		super.addDataGenerator(event);
+		super.addBlockTags(generator);
 
-		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-		DataGenerator generator = event.getGenerator();
-
-		if (event.includeServer() == true)
-		{
-			ExtremeReactors2BlockTagsGenerator blockTagsGenerator = new ExtremeReactors2BlockTagsGenerator(generator, existingFileHelper);
-			generator.addProvider(blockTagsGenerator);
-			generator.addProvider(new ExtremeReactors2ItemTagsGenerator(generator, blockTagsGenerator, existingFileHelper));
-		}
-
+		generator.tagOres(IntegrationTags.Blocks.ORES_YELLORITE, new ResourceLocation(MODID, "yellorite_ore"));
+		generator.tagOres(IntegrationTags.Blocks.ORES_URANIUM, new ResourceLocation(MODID, "yellorite_ore"));
 	}
 
 	@Override

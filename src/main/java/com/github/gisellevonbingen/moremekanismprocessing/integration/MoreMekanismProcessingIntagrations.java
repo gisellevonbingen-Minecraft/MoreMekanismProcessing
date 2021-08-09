@@ -13,6 +13,8 @@ public class MoreMekanismProcessingIntagrations
 
 	public static void initialize()
 	{
+		IntegrationTags.initialize();
+
 		MODS.addAll(createIntegrationMods());
 		MODS.forEach(m -> m.initialize());
 	}

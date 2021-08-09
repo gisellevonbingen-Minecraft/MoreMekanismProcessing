@@ -1,10 +1,10 @@
 package com.github.gisellevonbingen.moremekanismprocessing.integration.iceandfire;
 
+import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationBlockTagsGenerator;
 import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationMod;
+import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationTags;
 
-import net.minecraft.data.DataGenerator;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+import net.minecraft.util.ResourceLocation;
 
 public class IceAndFireMod extends IntegrationMod
 {
@@ -22,20 +22,12 @@ public class IceAndFireMod extends IntegrationMod
 	}
 
 	@Override
-	public void addDataGenerator(GatherDataEvent event)
+	public void addBlockTags(IntegrationBlockTagsGenerator generator)
 	{
-		super.addDataGenerator(event);
+		super.addBlockTags(generator);
 
-		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-		DataGenerator generator = event.getGenerator();
-
-		if (event.includeServer() == true)
-		{
-			IceAndFireBlockTagsGenerator blockTagsGenerator = new IceAndFireBlockTagsGenerator(generator, existingFileHelper);
-			generator.addProvider(blockTagsGenerator);
-			generator.addProvider(new IceAndFireItemTagsGenerator(generator, blockTagsGenerator, existingFileHelper));
-		}
-
+		generator.tagOres(IntegrationTags.Blocks.ORES_SAPPHIRE, new ResourceLocation(MODID, "sapphire_ore"));
+		generator.tagOres(IntegrationTags.Blocks.ORES_AMETHYST, new ResourceLocation(MODID, "amythest_ore"));
 	}
 
 	@Override

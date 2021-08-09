@@ -17,13 +17,25 @@ public class IntegrationTags
 	public static final ResourceLocation NAME_ORES_YELLORITE = new ResourceLocation("forge", "ores/yellorite");
 	public static final ResourceLocation NAME_ORES_URANIUM = new ResourceLocation("forge", "ores/uranium");
 
+	public static void initialize()
+	{
+		Blocks.initialize();
+		Items.initialize();
+	}
+
 	public static class Blocks
 	{
 		public static final INamedTag<Block> ORES_SAPPHIRE = BlockTags.createOptional(NAME_ORES_SAPPHIRE);
 		public static final INamedTag<Block> ORES_AMETHYST = BlockTags.createOptional(NAME_ORES_AMETHYST);
-		
+
 		public static final INamedTag<Block> ORES_YELLORITE = BlockTags.createOptional(NAME_ORES_YELLORITE);
 		public static final INamedTag<Block> ORES_URANIUM = BlockTags.createOptional(NAME_ORES_URANIUM);
+
+		public static void initialize()
+		{
+
+		}
+
 	}
 
 	public static class Items
@@ -33,6 +45,12 @@ public class IntegrationTags
 
 		public static final INamedTag<Item> ORES_SAPPHIRE = ItemTags.createOptional(NAME_ORES_SAPPHIRE);
 		public static final INamedTag<Item> ORES_AMETHYST = ItemTags.createOptional(NAME_ORES_AMETHYST);
+
+		public static void initialize()
+		{
+
+		}
+
 	}
 
 }
