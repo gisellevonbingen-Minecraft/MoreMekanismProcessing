@@ -33,7 +33,7 @@ public class IceAndFireMod extends IntegrationMod
 		{
 			IceAndFireBlockTagsGenerator blockTagsGenerator = new IceAndFireBlockTagsGenerator(generator, existingFileHelper);
 			generator.addProvider(blockTagsGenerator);
-			generator.addProvider(new IceAndFireItemsTagsGenerator(generator, blockTagsGenerator, existingFileHelper));
+			generator.addProvider(new IceAndFireItemTagsGenerator(generator, blockTagsGenerator, existingFileHelper));
 		}
 
 	}

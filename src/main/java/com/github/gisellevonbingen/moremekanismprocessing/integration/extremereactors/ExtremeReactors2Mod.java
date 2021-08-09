@@ -33,7 +33,7 @@ public class ExtremeReactors2Mod extends IntegrationMod
 		{
 			ExtremeReactors2BlockTagsGenerator blockTagsGenerator = new ExtremeReactors2BlockTagsGenerator(generator, existingFileHelper);
 			generator.addProvider(blockTagsGenerator);
-			generator.addProvider(new ExtremeReactors2ItemsTagsGenerator(generator, blockTagsGenerator, existingFileHelper));
+			generator.addProvider(new ExtremeReactors2ItemTagsGenerator(generator, blockTagsGenerator, existingFileHelper));
 		}
 
 	}
