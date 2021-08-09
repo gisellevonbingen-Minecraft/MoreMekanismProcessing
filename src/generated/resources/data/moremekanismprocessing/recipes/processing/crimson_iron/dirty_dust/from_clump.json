@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:clumps/crimson_iron"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dirty_dust_crimson_iron"
+  }
+}

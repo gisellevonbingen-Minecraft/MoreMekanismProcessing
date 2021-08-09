@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/crimson_iron"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_crimson_iron",
+    "count": 2
+  }
+}

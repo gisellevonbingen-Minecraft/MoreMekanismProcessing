@@ -5,6 +5,8 @@
     "moremekanismprocessing:silver_ingot",
     "moremekanismprocessing:nickel_ingot",
     "moremekanismprocessing:zinc_ingot",
-    "moremekanismprocessing:tungsten_ingot"
+    "moremekanismprocessing:tungsten_ingot",
+    "moremekanismprocessing:crimson_iron_ingot",
+    "moremekanismprocessing:azure_silver_ingot"
   ]
 }

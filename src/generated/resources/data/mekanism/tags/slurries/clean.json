@@ -13,6 +13,9 @@
     "mekanism:clean_zinc",
     "mekanism:clean_tungsten",
     "mekanism:clean_peridot",
-    "mekanism:clean_electrotine"
+    "mekanism:clean_electrotine",
+    "mekanism:clean_bort",
+    "mekanism:clean_crimson_iron",
+    "mekanism:clean_azure_silver"
   ]
 }

@@ -36,8 +36,13 @@ public enum MaterialType
 	// Ice and Fire: Dragons
 	// Copper
 	// Silver
-	// Sapphire (WIP)
-	// Amethyst (WIP)
+	// Sapphire
+	// Amethyst
+
+	// Silent Gear
+	Bort(MaterialResultShape.GEM, "bort", "Bort", 0x7495AF),
+	CrimsonIron(MaterialResultShape.INGOT, "crimson_iron", "Crimson Iron", 0xF44770),
+	AzureSiler(MaterialResultShape.INGOT, "azure_silver", "Azure Silver", 0xCE9CF3),
 
 	// EOL
 	;
@@ -82,6 +87,11 @@ public enum MaterialType
 
 	public int getColor()
 	{
+		if (this == CrimsonIron)
+		{
+			return 0xF44770;
+		}
+
 		return this.color;
 	}
 

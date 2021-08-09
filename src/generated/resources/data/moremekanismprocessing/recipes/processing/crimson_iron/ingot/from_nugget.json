@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "moremekanismprocessing:crimson_iron_ingot",
+  "pattern": [
+    "###",
+    "#*#",
+    "###"
+  ],
+  "key": {
+    "*": {
+      "item": "moremekanismprocessing:crimson_iron_nugget"
+    },
+    "#": {
+      "tag": "forge:nuggets/crimson_iron"
+    }
+  },
+  "result": {
+    "item": "moremekanismprocessing:crimson_iron_ingot"
+  }
+}

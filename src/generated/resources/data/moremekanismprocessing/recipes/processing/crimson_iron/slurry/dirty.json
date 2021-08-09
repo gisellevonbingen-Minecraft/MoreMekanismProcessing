@@ -1,0 +1,17 @@
+{
+  "type": "mekanism:dissolution",
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/crimson_iron"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:sulfuric_acid"
+  },
+  "output": {
+    "slurry": "mekanism:dirty_crimson_iron",
+    "amount": 1000,
+    "chemicalType": "slurry"
+  }
+}

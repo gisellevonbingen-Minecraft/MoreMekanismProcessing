@@ -13,6 +13,9 @@
     "moremekanismprocessing:dust_zinc",
     "moremekanismprocessing:dust_tungsten",
     "moremekanismprocessing:dust_peridot",
-    "moremekanismprocessing:dust_electrotine"
+    "moremekanismprocessing:dust_electrotine",
+    "moremekanismprocessing:dust_bort",
+    "moremekanismprocessing:dust_crimson_iron",
+    "moremekanismprocessing:dust_azure_silver"
   ]
 }

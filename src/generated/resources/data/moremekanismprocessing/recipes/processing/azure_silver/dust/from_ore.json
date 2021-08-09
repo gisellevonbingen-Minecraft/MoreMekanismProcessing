@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/azure_silver"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_azure_silver",
+    "count": 2
+  }
+}

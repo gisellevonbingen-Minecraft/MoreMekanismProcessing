@@ -13,6 +13,9 @@
     "moremekanismprocessing:crystal_zinc",
     "moremekanismprocessing:crystal_tungsten",
     "moremekanismprocessing:crystal_peridot",
-    "moremekanismprocessing:crystal_electrotine"
+    "moremekanismprocessing:crystal_electrotine",
+    "moremekanismprocessing:crystal_bort",
+    "moremekanismprocessing:crystal_crimson_iron",
+    "moremekanismprocessing:crystal_azure_silver"
   ]
 }

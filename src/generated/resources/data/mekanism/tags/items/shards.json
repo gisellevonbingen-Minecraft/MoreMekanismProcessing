@@ -13,6 +13,9 @@
     "moremekanismprocessing:shard_zinc",
     "moremekanismprocessing:shard_tungsten",
     "moremekanismprocessing:shard_peridot",
-    "moremekanismprocessing:shard_electrotine"
+    "moremekanismprocessing:shard_electrotine",
+    "moremekanismprocessing:shard_bort",
+    "moremekanismprocessing:shard_crimson_iron",
+    "moremekanismprocessing:shard_azure_silver"
   ]
 }

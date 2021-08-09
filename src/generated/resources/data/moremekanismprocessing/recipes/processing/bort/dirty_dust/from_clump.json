@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:clumps/bort"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dirty_dust_bort"
+  }
+}

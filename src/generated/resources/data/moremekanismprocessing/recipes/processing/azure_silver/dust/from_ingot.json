@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ingots/azure_silver"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_azure_silver"
+  }
+}

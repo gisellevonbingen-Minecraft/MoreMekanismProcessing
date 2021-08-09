@@ -1,6 +1,8 @@
 package com.github.gisellevonbingen.moremekanismprocessing.datagen;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
@@ -10,8 +12,8 @@ import com.github.gisellevonbingen.moremekanismprocessing.util.UnsafeHelper;
 import mekanism.common.Mekanism;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -60,6 +62,12 @@ public class ItemModelGenerator extends ItemModelProvider
 
 	protected void onRegisterModels()
 	{
+		List<MaterialState> hasOverlay = new ArrayList<>();
+		hasOverlay.add(MaterialState.DIRTY_DUST);
+		hasOverlay.add(MaterialState.CLUMP);
+		hasOverlay.add(MaterialState.SHARD);
+		hasOverlay.add(MaterialState.CRYSTAL);
+
 		for (MaterialType materialType : MaterialType.values())
 		{
 			for (MaterialState materialState : materialType.getResultShape().getProcessableStates())
@@ -67,7 +75,13 @@ public class ItemModelGenerator extends ItemModelProvider
 				if (materialState != MaterialState.ORE)
 				{
 					Item item = materialState.getItem(materialType);
-					this.singleTexture(item.getRegistryName().getPath(), this.mcLoc("item/generated"), "layer0", this.getTexture(materialState));
+					ItemModelBuilder builder = this.singleTexture(item.getRegistryName().getPath(), this.mcLoc("item/generated"), "layer0", this.getTexture(materialState));
+
+					if (hasOverlay.contains(materialState) == true)
+					{
+						builder.texture("layer1", this.getMekanismTexture(materialState.getBaseName() + "_overlay"));
+					}
+
 				}
 
 			}
@@ -76,19 +90,20 @@ public class ItemModelGenerator extends ItemModelProvider
 
 	}
 
+	protected ResourceLocation getMekanismTexture(String name)
+	{
+		return new ResourceLocation(Mekanism.MODID, "item/" + name);
+	}
+
 	protected ResourceLocation getTexture(MaterialState materialState)
 	{
-		if (materialState == MaterialState.INGOT)
-		{
-			return this.child(Items.IRON_INGOT.getRegistryName());
-		}
-		else if (materialState == MaterialState.GEM)
+		if (materialState == MaterialState.GEM || materialState == MaterialState.INGOT || materialState == MaterialState.DUST)
 		{
 			return new ResourceLocation(MoreMekanismProcessing.MODID, "item/" + materialState.getBaseName());
 		}
 		else
 		{
-			return new ResourceLocation(Mekanism.MODID, "item/" + materialState.getBaseName());
+			return this.getMekanismTexture(materialState.getBaseName());
 		}
 
 	}

@@ -17,7 +17,15 @@ public class CommonItemColor implements IItemColor
 	@Override
 	public int getColor(ItemStack itemColor, int p1)
 	{
-		return 0xFF000000 | this.type.getColor();
+		if (p1 == 0)
+		{
+			return 0xFF000000 | this.type.getColor();
+		}
+		else
+		{
+			return 0xFFFFFFFF;
+		}
+
 	}
 
 	public MaterialType getType()

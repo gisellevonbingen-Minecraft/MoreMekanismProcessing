@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "moremekanismprocessing:crimson_iron_nugget",
+  "ingredients": [
+    {
+      "item": "moremekanismprocessing:crimson_iron_ingot"
+    }
+  ],
+  "result": {
+    "item": "moremekanismprocessing:crimson_iron_nugget",
+    "count": 9
+  }
+}

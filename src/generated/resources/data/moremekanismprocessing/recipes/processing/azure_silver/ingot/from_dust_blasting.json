@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "forge:dusts/azure_silver"
+  },
+  "result": "moremekanismprocessing:azure_silver_ingot",
+  "experience": 0.3,
+  "cookingtime": 100
+}
