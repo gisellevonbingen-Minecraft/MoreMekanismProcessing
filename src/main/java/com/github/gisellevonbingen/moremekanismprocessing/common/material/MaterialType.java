@@ -45,8 +45,8 @@ public enum MaterialType
 	AzureSiler(MaterialResultShape.INGOT, "azure_silver", "Azure Silver", 0xCE9CF3),
 
 	// Immersive Engineering
-	Aluminum(MaterialResultShape.INGOT, "aluminum", "Aluminum", 0xDCE5E6),
-	
+	Aluminum(MaterialResultShape.INGOT, "aluminum", "Aluminum", 0xC7D8D7),
+
 	// EOL
 	;
 
@@ -90,11 +90,6 @@ public enum MaterialType
 
 	public int getColor()
 	{
-		if (this == Aluminum)
-		{
-			return 0xC7D8D7;
-		}
-
 		return this.color;
 	}
 
