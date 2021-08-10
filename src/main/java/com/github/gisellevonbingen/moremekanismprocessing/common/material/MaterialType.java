@@ -45,7 +45,7 @@ public enum MaterialType
 	AzureSiler(MaterialResultShape.INGOT, "azure_silver", "Azure Silver", 0xCE9CF3),
 
 	// Immersive Engineering
-	Aluminum(MaterialResultShape.INGOT, "aluminum", "Aluminum", 0xC7D8D7),
+	Aluminum(MaterialResultShape.INGOT, "aluminum", "Aluminum", 0xE5E5E5),
 
 	// EOL
 	;
