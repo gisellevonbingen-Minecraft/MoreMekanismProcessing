@@ -4,8 +4,8 @@ Not contains ores with mekanism's default ores same name
 
 * Silver Ingot
 * Nickel Ingot
-* Niter Gem
-* Sulfur Gem
+* Niter Dust
+* Sulfur Dust
 
 # Tinkers Construct
 
@@ -47,3 +47,7 @@ Not contains ores with mekanism's default ores same name
 * Crimson Ingot
 * Azure Silver Ingot
 * Bort Gem
+
+# Immersive Engineering
+
+* Bauxite Ingot (Aluminium)
