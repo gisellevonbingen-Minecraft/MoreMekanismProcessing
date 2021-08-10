@@ -97,9 +97,13 @@ public class ItemModelGenerator extends ItemModelProvider
 
 	protected ResourceLocation getTexture(MaterialState materialState)
 	{
-		if (materialState == MaterialState.GEM || materialState == MaterialState.INGOT || materialState == MaterialState.DUST)
+		if (materialState == MaterialState.GEM || materialState == MaterialState.INGOT)
 		{
 			return new ResourceLocation(MoreMekanismProcessing.MODID, "item/" + materialState.getBaseName());
+		}
+		else if (materialState == MaterialState.DUST)
+		{
+			return this.getTexture(MaterialState.DIRTY_DUST);
 		}
 		else
 		{
