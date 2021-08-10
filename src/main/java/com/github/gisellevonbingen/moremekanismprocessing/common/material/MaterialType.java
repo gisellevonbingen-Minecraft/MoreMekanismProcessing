@@ -13,8 +13,8 @@ public enum MaterialType
 	// Thermal Foundation
 	Silver(MaterialResultShape.INGOT, "silver", "Silver", 0xD8E4ED),
 	Nickel(MaterialResultShape.INGOT, "nickel", "Nickel", 0xE5E09E),
-	Niter(MaterialResultShape.GEM, "niter", "Niter", 0xC0C0C0),
-	Sulfur(MaterialResultShape.GEM, "sulfur", "Sulfur", 0xEFFCCB),
+	Niter(MaterialResultShape.DUST, "niter", "Niter", 0xB8AFAF),
+	Sulfur(MaterialResultShape.DUST, "sulfur", "Sulfur", 0xE1FC93),
 
 	// Blue Power
 	Ruby(MaterialResultShape.GEM, "ruby", "Ruby", 0xCC3333),
@@ -90,6 +90,11 @@ public enum MaterialType
 
 	public int getColor()
 	{
+		if (this == Sulfur)
+		{
+			return 0xD8CC51;
+		}
+		
 		return this.color;
 	}
 
