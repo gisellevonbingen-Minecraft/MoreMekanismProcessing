@@ -111,7 +111,7 @@ c820f9d3aaf1f7c2ba2f7a845bf2848858a23c51 data/forge/tags/blocks/ores.json
 576a874d9d186c596d3aba663b160aa5d6357602 data/forge/tags/blocks/ores/sapphire.json
 ebc6f0809dfb683b71f8295451148de6e45df904 data/forge/tags/blocks/ores/uranium.json
 ebc6f0809dfb683b71f8295451148de6e45df904 data/forge/tags/blocks/ores/yellorite.json
-3e1ec4843e796987267b4ae7a071027c1bd2d1f1 data/forge/tags/items/dusts.json
+1783cdce1c3016c909e7852c781cdd0ea086aac6 data/forge/tags/items/dusts.json
 031281ba07292eba9fcbedfc878f5cb1a48c2490 data/forge/tags/items/dusts/aluminum.json
 6f2d0b41dd40330c91eb30badfb4d049de63ada1 data/forge/tags/items/dusts/amethyst.json
 52bcb87d65bc958c6cbbf7886c05582f42019dfe data/forge/tags/items/dusts/azure_silver.json
@@ -126,7 +126,7 @@ ed4322bc80139af3bc9866dd997209f8841f156b data/forge/tags/items/dusts/peridot.jso
 ebbe9cb1e1577c5a8ab17a1788020dcc48d0a3ad data/forge/tags/items/dusts/ruby.json
 9cda14b6034454d585276c5e3627302fb8b72f4b data/forge/tags/items/dusts/sapphire.json
 ca334994421c8245c5c797bf38ce6c596246f61c data/forge/tags/items/dusts/silver.json
-eb6bcf9e6fdc0b92f198e6f0305905eccf539111 data/forge/tags/items/dusts/sulfur.json
+cff3ff1fc4b6ab614ed12decc3dd445b3c71a913 data/forge/tags/items/dusts/sulfur.json
 98ec665c03ce8c8ca09839caf5582a3d5ddb6895 data/forge/tags/items/dusts/tungsten.json
 78c15f98856ab5b8353f84edf85d10cbeb90307a data/forge/tags/items/dusts/zinc.json
 4625ad27aaf94246c0ca04235ead6248a1940030 data/forge/tags/items/gems.json
@@ -434,8 +434,8 @@ cbf934c393ccb3727120b46eeb06ca58b9301b77 data/moremekanismprocessing/recipes/pro
 654449865403444990b8fc7c0748827dc087a84c data/moremekanismprocessing/recipes/processing/sulfur/clump/from_shard.json
 727db16bf31b09cef7800fbc67acce61377e8015 data/moremekanismprocessing/recipes/processing/sulfur/crystal/from_slurry.json
 3b4fa0d50ede7b9e6587fc3dbeb1843228189519 data/moremekanismprocessing/recipes/processing/sulfur/dirty_dust/from_clump.json
-606402956ab42de77a0c1096e2c96ca09021642a data/moremekanismprocessing/recipes/processing/sulfur/dust/from_dirty_dust.json
-d6f6e981c9cd7d823f75f28db4fcfb6973d32236 data/moremekanismprocessing/recipes/processing/sulfur/dust/from_ore.json
+97003e9415c8708c159a7b6dec5ca3fd173bb3b7 data/moremekanismprocessing/recipes/processing/sulfur/dust/from_dirty_dust.json
+be9c312af65a2baca45509794dbf0c1fdafca3e8 data/moremekanismprocessing/recipes/processing/sulfur/dust/from_ore.json
 cd5c446f9d4f69f798af05fdd38483003d92751c data/moremekanismprocessing/recipes/processing/sulfur/shard/from_crystal.json
 a61132c1453342c474488090588bf5a5a239d825 data/moremekanismprocessing/recipes/processing/sulfur/shard/from_ore.json
 cb7116126c775c103c00add7dd5607ea93b742df data/moremekanismprocessing/recipes/processing/sulfur/slurry/clean.json

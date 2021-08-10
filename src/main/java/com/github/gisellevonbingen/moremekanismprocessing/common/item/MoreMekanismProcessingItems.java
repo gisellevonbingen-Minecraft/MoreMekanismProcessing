@@ -11,6 +11,8 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.material.Materi
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.registry.Registry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -21,8 +23,22 @@ public class MoreMekanismProcessingItems
 	public static final DeferredRegister<Item> REGISTER = DeferredRegister.create(ForgeRegistries.ITEMS, MoreMekanismProcessing.MODID);
 	public static final Map<MaterialType, Map<MaterialState, RegistryObject<Item>>> PROCESSING_ITEMS = new HashMap<>();
 
-	public static ItemStatedMaterial getProcessingItem(MaterialType materialType, MaterialState materialState)
+	public static Item getProcessingItem(MaterialType materialType, MaterialState materialState)
 	{
+		ResourceLocation presetName = materialType.getPresetItem(materialState);
+
+		if (presetName != null)
+		{
+			@SuppressWarnings("deprecation")
+			Item presetItem = Registry.ITEM.get(presetName);
+
+			if (presetItem != null)
+			{
+				return presetItem;
+			}
+
+		}
+
 		Map<MaterialState, RegistryObject<Item>> map = PROCESSING_ITEMS.get(materialType);
 
 		if (map == null)
@@ -76,7 +92,13 @@ public class MoreMekanismProcessingItems
 
 		for (MaterialState materialState : materialType.getResultShape().getProcessableStates())
 		{
-			if (materialState != MaterialState.ORE)
+			ResourceLocation presetName = materialType.getPresetItem(materialState);
+
+			if (presetName != null)
+			{
+				continue;
+			}
+			else if (materialState != MaterialState.ORE)
 			{
 				RegistryObject<Item> registryObject = registry.register(materialState.getItemName(materialType), () -> new ItemStatedMaterial(materialType, materialState));
 				map2.put(materialState, registryObject);
