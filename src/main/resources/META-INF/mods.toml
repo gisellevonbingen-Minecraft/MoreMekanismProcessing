@@ -3,7 +3,7 @@ loaderVersion="[36,)"
 license="All rights reserved"
 [[mods]]
 modId="moremekanismprocessing"
-version="0.4"
+version="0.5"
 displayName="More Mekanism Processing"
 credits="gisellevonbingen"
 authors="gisellevonbingen"
