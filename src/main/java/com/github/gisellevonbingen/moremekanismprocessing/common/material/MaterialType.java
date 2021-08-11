@@ -19,7 +19,7 @@ public enum MaterialType
 	Silver(new MaterialTypeBuilder("silver").resultShape(MaterialResultShape.INGOT).displayName("Silver").color(0xD8E4ED)),
 	Nickel(new MaterialTypeBuilder("nickel").resultShape(MaterialResultShape.INGOT).displayName("Nickel").color(0xE5E09E)),
 	Niter(new MaterialTypeBuilder("niter").resultShape(MaterialResultShape.DUST).displayName("Niter").color(0xB8AFAF)),
-	Sulfur(new MaterialTypeBuilder("sulfur").resultShape(MaterialResultShape.DUST).displayName("Sulfur").color(0xE1FC93).presetItem(MaterialState.DUST, Mekanism.MODID, MekanismItems.SULFUR_DUST.getInternalRegistryName())),
+	Sulfur(new MaterialTypeBuilder("sulfur").resultShape(MaterialResultShape.DUST).displayName("Sulfur").color(0xD8CC51).presetItem(MaterialState.DUST, Mekanism.MODID, MekanismItems.SULFUR_DUST.getInternalRegistryName())),
 
 	// Blue Power
 	Ruby(new MaterialTypeBuilder("ruby").resultShape(MaterialResultShape.GEM).displayName("Ruby").color(0xCC3333)),
@@ -107,11 +107,6 @@ public enum MaterialType
 
 	public int getColor()
 	{
-		if (this == Sulfur)
-		{
-			return 0xD8CC51;
-		}
-
 		return this.color;
 	}
 
