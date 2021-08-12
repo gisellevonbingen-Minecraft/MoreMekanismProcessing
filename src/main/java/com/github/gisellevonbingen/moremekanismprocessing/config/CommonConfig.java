@@ -30,7 +30,7 @@ public class CommonConfig
 		{
 			builder.push(materialType.getBaseName());
 
-			builder.comment("set ores processing max level", "5 : can ore dissolution to dirty slurry and clean slurry crystalizing to crystals", "4 : can ore or crystal injecting to shards", "3 : can ore or shard purifying to clumps and clumps crushing to dirty dusts", "2 : can ore enriching to dusts", "0~1 : disable this ore processing");
+			builder.comment("set ores processing max level", "5 : can into up x5 (able all procssing)", "4 : can into up x4 (disable ore dissolution, slurry crystalizing)", "3 : can into up x3 (disable injecting)", "2 : can into up x2 (disable purifying and clumps crushing)", "0~1 : disable all processing in this mod");
 			this.processingLevels.put(materialType, builder.define("processingLevel", 5));
 
 			builder.pop();
