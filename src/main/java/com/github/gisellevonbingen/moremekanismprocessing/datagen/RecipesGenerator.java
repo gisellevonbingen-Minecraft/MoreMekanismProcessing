@@ -1,11 +1,14 @@
 package com.github.gisellevonbingen.moremekanismprocessing.datagen;
 
 import java.util.Arrays;
-import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
 
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
+import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.CookingRecipeBuilder;
+import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.ShapedRecipeBuilder;
+import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.ShapelessRecipeBuilder;
+import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.TagNotEmptyCondition;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurries;
@@ -35,6 +38,7 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.tags.ITag.INamedTag;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.fluids.FluidStack;
 
 public class RecipesGenerator extends RecipeProvider
@@ -63,6 +67,11 @@ public class RecipesGenerator extends RecipeProvider
 		{
 			this.materialType = materialType;
 			this.consumer = consumer;
+		}
+
+		public ICondition createConditionHasOre()
+		{
+			return new TagNotEmptyCondition(MaterialState.ORE.getStateTagName(this.materialType));
 		}
 
 		public void build()
@@ -169,87 +178,75 @@ public class RecipesGenerator extends RecipeProvider
 			return this.from(materialState.getBaseName(), method);
 		}
 
-		public void build(String name, String outputState, BiConsumer<Consumer<IFinishedRecipe>, ResourceLocation> consumer)
-		{
-			consumer.accept(this.consumer, this.getRecipeName(outputState, name));
-		}
-
 		public void buildChemicalCrystallizing(SlurryStackIngredient slurryInput, MaterialState stateOutput, int outputCount)
 		{
 			ItemStack output = stateOutput.getItemStack(this.materialType, outputCount);
-
-			if (slurryInput == null || output == null || output.isEmpty() == true)
-			{
-				return;
-			}
-
-			this.build(this.from("slurry"), stateOutput.getBaseName(), ChemicalCrystallizerRecipeBuilder.crystallizing(slurryInput, output)::build);
+			ChemicalCrystallizerRecipeBuilder builder = ChemicalCrystallizerRecipeBuilder.crystallizing(slurryInput, output);
+			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from("slurry")));
 		}
 
 		public void buildChemicalWashing(FluidStackIngredient fluidInput, Slurry slurryInput, Slurry slurryOutput)
 		{
-			if (fluidInput == null || slurryInput == null || slurryOutput == null)
-			{
-				return;
-			}
-
 			SlurryStackIngredient slurryStackInput = SlurryStackIngredient.from(new SlurryStack(slurryInput, 1));
 			SlurryStack slurryStackOutput = new SlurryStack(slurryOutput, 1);
-			this.build("clean", "slurry", FluidSlurryToSlurryRecipeBuilder.washing(fluidInput, slurryStackInput, slurryStackOutput)::build);
+			FluidSlurryToSlurryRecipeBuilder builder = FluidSlurryToSlurryRecipeBuilder.washing(fluidInput, slurryStackInput, slurryStackOutput);
+			builder.build(this.consumer, this.getRecipeName("slurry", "clean"));
 		}
 
 		public void buildChemicalDissolution(MaterialState stateInput, Slurry slurryOutput, int outputAmount, GasStackIngredient gasInput)
 		{
 			ItemStackIngredient itemInput = this.getTaggedItemStackIngredient(stateInput);
+			SlurryStack slurryStackOutput = new SlurryStack(slurryOutput, outputAmount);
+			ChemicalDissolutionRecipeBuilder builder = ChemicalDissolutionRecipeBuilder.dissolution(itemInput, gasInput, slurryStackOutput);
 
-			if (itemInput == null || slurryOutput == null || gasInput == null)
+			if (stateInput == MaterialState.ORE)
 			{
-				return;
+				builder.addCondition(this.createConditionHasOre());
 			}
 
-			SlurryStack slurryStackOutput = new SlurryStack(slurryOutput, outputAmount);
-			this.build("dirty", "slurry", ChemicalDissolutionRecipeBuilder.dissolution(itemInput, gasInput, slurryStackOutput)::build);
+			builder.build(this.consumer, this.getRecipeName("slurry", "dirty"));
 		}
 
 		public void buildItemStackGasToItemStack(MaterialState stateInput, MaterialState stateOutput, int outputCount, GasStackIngredient gasInput, ThreeFunction<ItemStackIngredient, GasStackIngredient, ItemStack, ItemStackGasToItemStackRecipeBuilder> function)
 		{
 			ItemStackIngredient itemInput = this.getTaggedItemStackIngredient(stateInput);
 			ItemStack output = stateOutput.getItemStack(this.materialType, outputCount);
+			ItemStackGasToItemStackRecipeBuilder builder = function.apply(itemInput, gasInput, output);
 
-			if (itemInput == null || output == null || output.isEmpty() == true || gasInput == null)
+			if (stateInput == MaterialState.ORE)
 			{
-				return;
+				builder.addCondition(this.createConditionHasOre());
 			}
 
-			this.build(this.from(stateInput), stateOutput.getBaseName(), function.apply(itemInput, gasInput, output)::build);
+			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from(stateInput)));
 		}
 
 		public void buildItemToItemStack(MaterialState stateInput, MaterialState stateOutput, int outputCount, BiFunction<ItemStackIngredient, ItemStack, ItemStackToItemStackRecipeBuilder> function)
 		{
 			ItemStackIngredient itemInput = this.getTaggedItemStackIngredient(stateInput);
 			ItemStack output = stateOutput.getItemStack(this.materialType, outputCount);
+			ItemStackToItemStackRecipeBuilder builder = function.apply(itemInput, output);
 
-			if (itemInput == null || output == null || output.isEmpty() == true)
+			if (stateInput == MaterialState.ORE)
 			{
-				return;
+				builder.addCondition(this.createConditionHasOre());
 			}
 
-			this.build(this.from(stateInput), stateOutput.getBaseName(), function.apply(itemInput, output)::build);
+			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from(stateInput)));
 		}
 
 		public void buildCook(MaterialState stateInput, MaterialState stateOutput)
 		{
 			Ingredient itemInput = this.getTaggedIngredient(stateInput);
 			Item output = stateOutput.getItem(this.materialType);
-
-			if (itemInput == null || output == null)
-			{
-				return;
-			}
-
-			ResourceLocation recipeName = this.getRecipeName(stateOutput.getBaseName(), this.from(stateInput));
+			ResourceLocation recipeName = this.getRecipeName(stateOutput, this.from(stateInput));
 			CookingRecipeBuilder builder = new CookingRecipeBuilder(recipeName);
 			builder.setOutput(output).setIngredient(itemInput).setExperience(0.3F);
+
+			if (stateInput == MaterialState.ORE)
+			{
+				builder.addCondition(this.createConditionHasOre());
+			}
 
 			this.consumer.accept(builder.getSmelting());
 			this.consumer.accept(builder.getBlasting());
@@ -261,17 +258,19 @@ public class RecipesGenerator extends RecipeProvider
 			MaterialState stateOutput = MaterialState.INGOT;
 			Item itemOutput = stateOutput.getItem(this.materialType);
 
-			if (itemOutput == null)
-			{
-				return;
-			}
-
-			ResourceLocation recipeName = this.getRecipeName(stateOutput.getBaseName(), this.from(stateInput));
+			ResourceLocation recipeName = this.getRecipeName(stateOutput, this.from(stateInput));
 			ShapedRecipeBuilder builder = new ShapedRecipeBuilder(recipeName);
 			builder.setGroup(this.getGroup(stateOutput));
-			builder.setOutput(itemOutput).addPattern("###", "#*#", "###");
+			builder.setOutput(itemOutput);
+			builder.addPattern("###", "#*#", "###");
 			builder.addKey('#', this.getTaggedIngredient(stateInput));
 			builder.addKey('*', this.getExcatIngredient(stateInput));
+
+			if (stateInput == MaterialState.ORE)
+			{
+				builder.addCondition(this.createConditionHasOre());
+			}
+
 			this.consumer.accept(builder.getResult());
 		}
 
@@ -281,16 +280,23 @@ public class RecipesGenerator extends RecipeProvider
 			MaterialState stateOutput = MaterialState.NUGGET;
 			Item itemOutput = stateOutput.getItem(this.materialType);
 
-			if (itemOutput == null)
-			{
-				return;
-			}
-
-			ResourceLocation recipeName = this.getRecipeName(stateOutput.getBaseName(), this.from(stateInput));
+			ResourceLocation recipeName = this.getRecipeName(stateOutput, this.from(stateInput));
 			ShapelessRecipeBuilder builder = new ShapelessRecipeBuilder(recipeName);
 			builder.setGroup(this.getGroup(stateOutput));
-			builder.setOutput(itemOutput, 9).add(this.getExcatIngredient(stateInput));
+			builder.setOutput(itemOutput, 9);
+			builder.add(this.getExcatIngredient(stateInput));
+
+			if (stateInput == MaterialState.ORE)
+			{
+				builder.addCondition(this.createConditionHasOre());
+			}
+
 			this.consumer.accept(builder.getResult());
+		}
+
+		public ResourceLocation getRecipeName(MaterialState stateOutput, String name)
+		{
+			return this.getRecipeName(stateOutput.getBaseName(), name);
 		}
 
 		public ResourceLocation getRecipeName(String stateOutput, String name)

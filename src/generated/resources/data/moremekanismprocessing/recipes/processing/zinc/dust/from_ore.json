@@ -1,5 +1,11 @@
 {
   "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "tag": "forge:ores/zinc",
+      "type": "moremekanismprocessing:tag_not_empty"
+    }
+  ],
   "input": {
     "ingredient": {
       "tag": "forge:ores/zinc"

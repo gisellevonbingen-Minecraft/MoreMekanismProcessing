@@ -1,5 +1,11 @@
 {
   "type": "mekanism:dissolution",
+  "conditions": [
+    {
+      "tag": "forge:ores/electrotine",
+      "type": "moremekanismprocessing:tag_not_empty"
+    }
+  ],
   "itemInput": {
     "ingredient": {
       "tag": "forge:ores/electrotine"

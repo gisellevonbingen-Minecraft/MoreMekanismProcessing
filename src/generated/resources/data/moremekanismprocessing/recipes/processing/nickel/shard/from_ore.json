@@ -1,5 +1,11 @@
 {
   "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "tag": "forge:ores/nickel",
+      "type": "moremekanismprocessing:tag_not_empty"
+    }
+  ],
   "itemInput": {
     "ingredient": {
       "tag": "forge:ores/nickel"

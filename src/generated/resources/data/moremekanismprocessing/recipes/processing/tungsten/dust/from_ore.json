@@ -1,5 +1,11 @@
 {
   "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "tag": "forge:ores/tungsten",
+      "type": "moremekanismprocessing:tag_not_empty"
+    }
+  ],
   "input": {
     "ingredient": {
       "tag": "forge:ores/tungsten"

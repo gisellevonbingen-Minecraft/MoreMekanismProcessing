@@ -5,12 +5,14 @@ import org.apache.logging.log4j.Logger;
 
 import com.github.gisellevonbingen.moremekanismprocessing.client.ClientHandler;
 import com.github.gisellevonbingen.moremekanismprocessing.common.block.MoreMekanismProcessingBlocks;
+import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.TagNotEmptyCondition;
 import com.github.gisellevonbingen.moremekanismprocessing.common.item.MoreMekanismProcessingItems;
 import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurries;
 import com.github.gisellevonbingen.moremekanismprocessing.datagen.DataGenerators;
 import com.github.gisellevonbingen.moremekanismprocessing.integration.MoreMekanismProcessingIntagrations;
 
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
@@ -35,6 +37,8 @@ public class MoreMekanismProcessing
 		MoreMekanismProcessingSlurries.register(modEventBus);
 
 		MoreMekanismProcessingIntagrations.initialize();
+		
+		CraftingHelper.register(new TagNotEmptyCondition.Serializer());
 	}
 
 }

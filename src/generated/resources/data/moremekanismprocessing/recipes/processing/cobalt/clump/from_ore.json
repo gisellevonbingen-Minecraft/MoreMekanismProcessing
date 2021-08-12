@@ -1,5 +1,11 @@
 {
   "type": "mekanism:purifying",
+  "conditions": [
+    {
+      "tag": "forge:ores/cobalt",
+      "type": "moremekanismprocessing:tag_not_empty"
+    }
+  ],
   "itemInput": {
     "ingredient": {
       "tag": "forge:ores/cobalt"

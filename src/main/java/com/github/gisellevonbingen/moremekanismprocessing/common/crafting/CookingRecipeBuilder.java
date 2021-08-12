@@ -1,18 +1,14 @@
-package com.github.gisellevonbingen.moremekanismprocessing.datagen;
+package com.github.gisellevonbingen.moremekanismprocessing.common.crafting;
 
-import com.google.common.base.Strings;
 import com.google.gson.JsonObject;
 
-import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 
-public class CookingRecipeBuilder
+public class CookingRecipeBuilder extends RecipeBuilder
 {
-	private final ResourceLocation id;
-	private String group;
 	private Item output;
 	private Ingredient ingredient;
 	private float experience;
@@ -21,9 +17,8 @@ public class CookingRecipeBuilder
 
 	public CookingRecipeBuilder(ResourceLocation id)
 	{
-		this.id = id;
+		super(id);
 
-		this.setGroup("");
 		this.setCookingTime(200);
 	}
 
@@ -32,22 +27,6 @@ public class CookingRecipeBuilder
 		this(id);
 
 		this.setOutput(output);
-	}
-
-	public ResourceLocation getId()
-	{
-		return this.id;
-	}
-
-	public String getGroup()
-	{
-		return this.group;
-	}
-
-	public CookingRecipeBuilder setGroup(String group)
-	{
-		this.group = group;
-		return this;
 	}
 
 	public Item getOutput()
@@ -122,10 +101,8 @@ public class CookingRecipeBuilder
 		return new Result(this, "blasting", this.blastingTime, IRecipeSerializer.BLASTING_RECIPE);
 	}
 
-	public static class Result implements IFinishedRecipe
+	public static class Result extends RecipeResult
 	{
-		private final ResourceLocation id;
-		private final String group;
 		private final Item output;
 		private final Ingredient ingredient;
 		private final float experience;
@@ -135,8 +112,8 @@ public class CookingRecipeBuilder
 
 		public Result(CookingRecipeBuilder builder, String name, int cookingTime, IRecipeSerializer<?> type)
 		{
-			this.id = new ResourceLocation(builder.id.getNamespace(), builder.id.getPath() + "_" + name);
-			this.group = builder.group;
+			super(builder, new ResourceLocation(builder.getId().getNamespace(), builder.getId().getPath() + "_" + name));
+
 			this.output = builder.output;
 			this.ingredient = builder.ingredient;
 			this.experience = builder.experience;
@@ -147,26 +124,12 @@ public class CookingRecipeBuilder
 		@Override
 		public void serializeRecipeData(JsonObject json)
 		{
-			if (!Strings.isNullOrEmpty(this.group))
-			{
-				json.addProperty("group", this.group);
-			}
+			super.serializeRecipeData(json);
 
 			json.add("ingredient", this.ingredient.toJson());
 			json.addProperty("result", this.output.getRegistryName().toString());
 			json.addProperty("experience", this.experience);
 			json.addProperty("cookingtime", this.cookingTime);
-		}
-
-		@Override
-		public ResourceLocation getId()
-		{
-			return this.id;
-		}
-
-		public String getGroup()
-		{
-			return this.group;
 		}
 
 		public Item getOutput()
@@ -193,86 +156,6 @@ public class CookingRecipeBuilder
 		public IRecipeSerializer<?> getType()
 		{
 			return this.type;
-		}
-
-		@Override
-		public ResourceLocation getAdvancementId()
-		{
-			return null;
-		}
-
-		@Override
-		public JsonObject serializeAdvancement()
-		{
-			return null;
-		}
-
-	}
-
-	public static class Smelting implements IFinishedRecipe
-	{
-		@Override
-		public ResourceLocation getAdvancementId()
-		{
-			return null;
-		}
-
-		@Override
-		public ResourceLocation getId()
-		{
-			return null;
-		}
-
-		@Override
-		public IRecipeSerializer<?> getType()
-		{
-			return null;
-		}
-
-		@Override
-		public JsonObject serializeAdvancement()
-		{
-			return null;
-		}
-
-		@Override
-		public void serializeRecipeData(JsonObject p0)
-		{
-
-		}
-
-	}
-
-	public static class Blasting implements IFinishedRecipe
-	{
-		@Override
-		public ResourceLocation getAdvancementId()
-		{
-			return null;
-		}
-
-		@Override
-		public ResourceLocation getId()
-		{
-			return null;
-		}
-
-		@Override
-		public IRecipeSerializer<?> getType()
-		{
-			return null;
-		}
-
-		@Override
-		public JsonObject serializeAdvancement()
-		{
-			return null;
-		}
-
-		@Override
-		public void serializeRecipeData(JsonObject p0)
-		{
-
 		}
 
 	}
