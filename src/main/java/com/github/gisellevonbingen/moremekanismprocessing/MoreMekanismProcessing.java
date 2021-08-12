@@ -5,17 +5,19 @@ import org.apache.logging.log4j.Logger;
 
 import com.github.gisellevonbingen.moremekanismprocessing.client.ClientHandler;
 import com.github.gisellevonbingen.moremekanismprocessing.common.block.MoreMekanismProcessingBlocks;
-import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.TagNotEmptyCondition;
+import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.MoreMekanismProcessingConditions;
 import com.github.gisellevonbingen.moremekanismprocessing.common.item.MoreMekanismProcessingItems;
 import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurries;
+import com.github.gisellevonbingen.moremekanismprocessing.config.MoreMekanismProcessingConfigs;
 import com.github.gisellevonbingen.moremekanismprocessing.datagen.DataGenerators;
 import com.github.gisellevonbingen.moremekanismprocessing.integration.MoreMekanismProcessingIntagrations;
 
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(MoreMekanismProcessing.MODID)
@@ -29,16 +31,17 @@ public class MoreMekanismProcessing
 	{
 		DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> ClientHandler::new);
 
+		ModLoadingContext modLoadingContext = ModLoadingContext.get();
+		modLoadingContext.registerConfig(ModConfig.Type.COMMON, MoreMekanismProcessingConfigs.CommonSpec);
+
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		modEventBus.register(new DataGenerators());
 
 		MoreMekanismProcessingBlocks.register(modEventBus);
 		MoreMekanismProcessingItems.register(modEventBus);
 		MoreMekanismProcessingSlurries.register(modEventBus);
-
+		MoreMekanismProcessingConditions.register();
 		MoreMekanismProcessingIntagrations.initialize();
-		
-		CraftingHelper.register(new TagNotEmptyCondition.Serializer());
 	}
 
 }

@@ -1,5 +1,12 @@
 {
   "type": "mekanism:purifying",
+  "conditions": [
+    {
+      "materialType": "crimson_iron",
+      "requireLevel": 4,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "itemInput": {
     "ingredient": {
       "tag": "mekanism:shards/crimson_iron"

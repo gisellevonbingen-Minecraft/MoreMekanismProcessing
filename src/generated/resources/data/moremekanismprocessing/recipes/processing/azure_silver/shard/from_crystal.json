@@ -1,5 +1,12 @@
 {
   "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "materialType": "azure_silver",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "itemInput": {
     "ingredient": {
       "tag": "mekanism:crystals/azure_silver"

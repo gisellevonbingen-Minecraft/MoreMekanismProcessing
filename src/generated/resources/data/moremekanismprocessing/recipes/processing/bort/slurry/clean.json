@@ -1,5 +1,12 @@
 {
   "type": "mekanism:washing",
+  "conditions": [
+    {
+      "materialType": "bort",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "fluidInput": {
     "amount": 5,
     "fluid": "minecraft:water"

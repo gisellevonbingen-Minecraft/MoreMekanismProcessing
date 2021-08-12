@@ -4,6 +4,11 @@
     {
       "tag": "forge:ores/sapphire",
       "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "sapphire",
+      "requireLevel": 4,
+      "type": "moremekanismprocessing:processing_level"
     }
   ],
   "itemInput": {

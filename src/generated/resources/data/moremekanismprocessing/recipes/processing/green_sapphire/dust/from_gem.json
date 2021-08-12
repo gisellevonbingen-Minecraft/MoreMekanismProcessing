@@ -1,5 +1,12 @@
 {
   "type": "mekanism:crushing",
+  "conditions": [
+    {
+      "materialType": "green_sapphire",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "input": {
     "ingredient": {
       "tag": "forge:gems/green_sapphire"

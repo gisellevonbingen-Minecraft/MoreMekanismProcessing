@@ -1,6 +1,7 @@
 package com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions;
 
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
+import com.github.gisellevonbingen.moremekanismprocessing.config.MoreMekanismProcessingConfigs;
 import com.google.gson.JsonObject;
 
 import net.minecraft.item.Item;
@@ -30,6 +31,11 @@ public class TagNotEmptyCondition implements ICondition
 	@Override
 	public boolean test()
 	{
+		if (MoreMekanismProcessingConfigs.Common.showOreNotExistRecipes.get())
+		{
+			return true;
+		}
+
 		ITag<Item> tag = TagCollectionManager.getInstance().getItems().getTag(this.tagName);
 		return tag != null && tag.getValues().isEmpty() == false;
 	}

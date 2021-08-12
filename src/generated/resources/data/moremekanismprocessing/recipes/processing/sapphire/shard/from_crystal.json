@@ -1,5 +1,12 @@
 {
   "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "materialType": "sapphire",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "itemInput": {
     "ingredient": {
       "tag": "mekanism:crystals/sapphire"

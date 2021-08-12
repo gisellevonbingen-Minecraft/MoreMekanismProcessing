@@ -1,5 +1,12 @@
 {
   "type": "mekanism:crushing",
+  "conditions": [
+    {
+      "materialType": "zinc",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "input": {
     "ingredient": {
       "tag": "forge:ingots/zinc"

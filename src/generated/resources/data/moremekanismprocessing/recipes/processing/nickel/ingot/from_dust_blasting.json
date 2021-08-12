@@ -1,5 +1,12 @@
 {
   "type": "minecraft:blasting",
+  "conditions": [
+    {
+      "materialType": "nickel",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "ingredient": {
     "tag": "forge:dusts/nickel"
   },

@@ -1,5 +1,12 @@
 {
   "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "materialType": "green_sapphire",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "input": {
     "ingredient": {
       "tag": "forge:dusts/green_sapphire"

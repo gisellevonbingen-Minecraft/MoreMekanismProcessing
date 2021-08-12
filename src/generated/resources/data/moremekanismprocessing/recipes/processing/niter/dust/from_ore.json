@@ -4,6 +4,11 @@
     {
       "tag": "forge:ores/niter",
       "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "niter",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
     }
   ],
   "input": {

@@ -1,5 +1,12 @@
 {
   "type": "mekanism:purifying",
+  "conditions": [
+    {
+      "materialType": "cobalt",
+      "requireLevel": 4,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "itemInput": {
     "ingredient": {
       "tag": "mekanism:shards/cobalt"

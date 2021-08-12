@@ -4,6 +4,11 @@
     {
       "tag": "forge:ores/bort",
       "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "bort",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
     }
   ],
   "itemInput": {

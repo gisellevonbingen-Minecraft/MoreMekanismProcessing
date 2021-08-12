@@ -1,5 +1,12 @@
 {
   "type": "mekanism:crushing",
+  "conditions": [
+    {
+      "materialType": "crimson_iron",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "input": {
     "ingredient": {
       "tag": "mekanism:clumps/crimson_iron"

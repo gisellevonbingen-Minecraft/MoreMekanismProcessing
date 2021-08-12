@@ -4,6 +4,11 @@
     {
       "tag": "forge:ores/ruby",
       "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "ruby",
+      "requireLevel": 4,
+      "type": "moremekanismprocessing:processing_level"
     }
   ],
   "itemInput": {

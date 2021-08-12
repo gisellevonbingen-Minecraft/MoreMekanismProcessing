@@ -1,5 +1,12 @@
 {
   "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "materialType": "sulfur",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "input": {
     "ingredient": {
       "tag": "mekanism:dirty_dusts/sulfur"

@@ -1,5 +1,12 @@
 {
   "type": "minecraft:smelting",
+  "conditions": [
+    {
+      "materialType": "silver",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "ingredient": {
     "tag": "forge:dusts/silver"
   },

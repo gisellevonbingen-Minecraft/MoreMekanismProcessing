@@ -8,6 +8,7 @@ import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.CookingRecipeBuilder;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.ShapedRecipeBuilder;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.ShapelessRecipeBuilder;
+import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.ProcessingLevelCondition;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.TagNotEmptyCondition;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
@@ -62,6 +63,7 @@ public class RecipesGenerator extends RecipeProvider
 	{
 		private MaterialType materialType;
 		private Consumer<IFinishedRecipe> consumer;
+		private ICondition condition;
 
 		public OreRecipesGenerator(MaterialType materialType, Consumer<IFinishedRecipe> consumer)
 		{
@@ -74,10 +76,47 @@ public class RecipesGenerator extends RecipeProvider
 			return new TagNotEmptyCondition(MaterialState.ORE.getStateTagName(this.materialType));
 		}
 
+		public void prepareCondition(ICondition condition)
+		{
+			this.condition = condition;
+		}
+
+		public void applyCondition(int processingLevel, Runnable runnable)
+		{
+			try
+			{
+				this.condition = new ProcessingLevelCondition(this.materialType, processingLevel);
+				runnable.run();
+			}
+			finally
+			{
+				this.condition = null;
+			}
+
+		}
+
+		public void applyCondition(Consumer<ICondition> consumer)
+		{
+			if (this.condition != null)
+			{
+				consumer.accept(this.condition);
+			}
+
+		}
+
 		public void build()
 		{
+			this.applyCondition(5, () -> this.buildProcessingLevel5());
+			this.applyCondition(4, () -> this.buildProcessingLevel4());
+			this.applyCondition(3, () -> this.buildProcessingLevel3());
+			this.applyCondition(2, () -> this.buildProcessingLevel2());
+
+			this.buildOthers();
+		}
+
+		public void buildProcessingLevel5()
+		{
 			GasStackIngredient hydrogenChloride = GasStackIngredient.from(new GasStack(MekanismGases.HYDROGEN_CHLORIDE.get(), 1));
-			GasStackIngredient oxygen = GasStackIngredient.from(new GasStack(MekanismGases.OXYGEN.get(), 1));
 			GasStackIngredient sulfuricAcid = GasStackIngredient.from(new GasStack(MekanismGases.SULFURIC_ACID.get(), 1));
 			FluidStackIngredient water = FluidStackIngredient.from(new FluidStack(Fluids.WATER, 5));
 
@@ -92,29 +131,37 @@ public class RecipesGenerator extends RecipeProvider
 				this.buildChemicalCrystallizing(SlurryStackIngredient.from(new SlurryStack(cleanSlurry, 200)), MaterialState.CRYSTAL, 1);
 			}
 
-			if (this.canProcess(MaterialState.ORE, MaterialState.SHARD) == true)
-			{
-				this.buildItemStackGasToItemStack(MaterialState.ORE, MaterialState.SHARD, 4, hydrogenChloride, ItemStackGasToItemStackRecipeBuilder::injecting);
-			}
-
-			if (this.canProcess(MaterialState.ORE, MaterialState.CLUMP) == true)
-			{
-				this.buildItemStackGasToItemStack(MaterialState.ORE, MaterialState.CLUMP, 3, oxygen, ItemStackGasToItemStackRecipeBuilder::purifying);
-			}
-
-			if (this.canProcess(MaterialState.ORE, MaterialState.DUST) == true)
-			{
-				this.buildItemToItemStack(MaterialState.ORE, MaterialState.DUST, 2, ItemStackToItemStackRecipeBuilder::enriching);
-			}
-
 			if (this.canProcess(MaterialState.CRYSTAL, MaterialState.SHARD) == true)
 			{
 				this.buildItemStackGasToItemStack(MaterialState.CRYSTAL, MaterialState.SHARD, 1, hydrogenChloride, ItemStackGasToItemStackRecipeBuilder::injecting);
 			}
 
+		}
+
+		public void buildProcessingLevel4()
+		{
+			GasStackIngredient hydrogenChloride = GasStackIngredient.from(new GasStack(MekanismGases.HYDROGEN_CHLORIDE.get(), 1));
+			GasStackIngredient oxygen = GasStackIngredient.from(new GasStack(MekanismGases.OXYGEN.get(), 1));
+
+			if (this.canProcess(MaterialState.ORE, MaterialState.SHARD) == true)
+			{
+				this.buildItemStackGasToItemStack(MaterialState.ORE, MaterialState.SHARD, 4, hydrogenChloride, ItemStackGasToItemStackRecipeBuilder::injecting);
+			}
+
 			if (this.canProcess(MaterialState.SHARD, MaterialState.CLUMP) == true)
 			{
 				this.buildItemStackGasToItemStack(MaterialState.SHARD, MaterialState.CLUMP, 1, oxygen, ItemStackGasToItemStackRecipeBuilder::purifying);
+			}
+
+		}
+
+		public void buildProcessingLevel3()
+		{
+			GasStackIngredient oxygen = GasStackIngredient.from(new GasStack(MekanismGases.OXYGEN.get(), 1));
+
+			if (this.canProcess(MaterialState.ORE, MaterialState.CLUMP) == true)
+			{
+				this.buildItemStackGasToItemStack(MaterialState.ORE, MaterialState.CLUMP, 3, oxygen, ItemStackGasToItemStackRecipeBuilder::purifying);
 			}
 
 			if (this.canProcess(MaterialState.CLUMP, MaterialState.DIRTY_DUST) == true)
@@ -125,6 +172,15 @@ public class RecipesGenerator extends RecipeProvider
 			if (this.canProcess(MaterialState.DIRTY_DUST, MaterialState.DUST) == true)
 			{
 				this.buildItemToItemStack(MaterialState.DIRTY_DUST, MaterialState.DUST, 1, ItemStackToItemStackRecipeBuilder::enriching);
+			}
+
+		}
+
+		public void buildProcessingLevel2()
+		{
+			if (this.canProcess(MaterialState.ORE, MaterialState.DUST) == true)
+			{
+				this.buildItemToItemStack(MaterialState.ORE, MaterialState.DUST, 2, ItemStackToItemStackRecipeBuilder::enriching);
 			}
 
 			if (this.canProcess(MaterialState.DUST, MaterialState.INGOT) == true)
@@ -139,6 +195,10 @@ public class RecipesGenerator extends RecipeProvider
 				this.buildItemToItemStack(MaterialState.GEM, MaterialState.DUST, 1, ItemStackToItemStackRecipeBuilder::crushing);
 			}
 
+		}
+
+		public void buildOthers()
+		{
 			if (this.canProcess(MaterialState.INGOT, MaterialState.NUGGET) == true)
 			{
 				this.buildNuggetFromIngot();
@@ -182,6 +242,7 @@ public class RecipesGenerator extends RecipeProvider
 		{
 			ItemStack output = stateOutput.getItemStack(this.materialType, outputCount);
 			ChemicalCrystallizerRecipeBuilder builder = ChemicalCrystallizerRecipeBuilder.crystallizing(slurryInput, output);
+			this.applyCondition(builder::addCondition);
 			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from("slurry")));
 		}
 
@@ -190,6 +251,7 @@ public class RecipesGenerator extends RecipeProvider
 			SlurryStackIngredient slurryStackInput = SlurryStackIngredient.from(new SlurryStack(slurryInput, 1));
 			SlurryStack slurryStackOutput = new SlurryStack(slurryOutput, 1);
 			FluidSlurryToSlurryRecipeBuilder builder = FluidSlurryToSlurryRecipeBuilder.washing(fluidInput, slurryStackInput, slurryStackOutput);
+			this.applyCondition(builder::addCondition);
 			builder.build(this.consumer, this.getRecipeName("slurry", "clean"));
 		}
 
@@ -204,6 +266,7 @@ public class RecipesGenerator extends RecipeProvider
 				builder.addCondition(this.createConditionHasOre());
 			}
 
+			this.applyCondition(builder::addCondition);
 			builder.build(this.consumer, this.getRecipeName("slurry", "dirty"));
 		}
 
@@ -218,6 +281,7 @@ public class RecipesGenerator extends RecipeProvider
 				builder.addCondition(this.createConditionHasOre());
 			}
 
+			this.applyCondition(builder::addCondition);
 			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from(stateInput)));
 		}
 
@@ -232,6 +296,7 @@ public class RecipesGenerator extends RecipeProvider
 				builder.addCondition(this.createConditionHasOre());
 			}
 
+			this.applyCondition(builder::addCondition);
 			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from(stateInput)));
 		}
 
@@ -248,6 +313,7 @@ public class RecipesGenerator extends RecipeProvider
 				builder.addCondition(this.createConditionHasOre());
 			}
 
+			this.applyCondition(builder::addCondition);
 			this.consumer.accept(builder.getSmelting());
 			this.consumer.accept(builder.getBlasting());
 		}
@@ -271,6 +337,7 @@ public class RecipesGenerator extends RecipeProvider
 				builder.addCondition(this.createConditionHasOre());
 			}
 
+			this.applyCondition(builder::addCondition);
 			this.consumer.accept(builder.getResult());
 		}
 
@@ -291,6 +358,7 @@ public class RecipesGenerator extends RecipeProvider
 				builder.addCondition(this.createConditionHasOre());
 			}
 
+			this.applyCondition(builder::addCondition);
 			this.consumer.accept(builder.getResult());
 		}
 

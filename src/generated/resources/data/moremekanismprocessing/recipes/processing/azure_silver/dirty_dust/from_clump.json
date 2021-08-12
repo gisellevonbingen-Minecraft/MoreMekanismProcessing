@@ -1,5 +1,12 @@
 {
   "type": "mekanism:crushing",
+  "conditions": [
+    {
+      "materialType": "azure_silver",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "input": {
     "ingredient": {
       "tag": "mekanism:clumps/azure_silver"

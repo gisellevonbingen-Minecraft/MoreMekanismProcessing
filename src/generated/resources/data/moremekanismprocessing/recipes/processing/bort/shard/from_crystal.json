@@ -1,5 +1,12 @@
 {
   "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "materialType": "bort",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "itemInput": {
     "ingredient": {
       "tag": "mekanism:crystals/bort"

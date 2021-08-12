@@ -4,6 +4,11 @@
     {
       "tag": "forge:ores/silver",
       "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "silver",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
     }
   ],
   "input": {

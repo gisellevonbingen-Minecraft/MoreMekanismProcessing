@@ -1,5 +1,12 @@
 {
   "type": "mekanism:crushing",
+  "conditions": [
+    {
+      "materialType": "crimson_iron",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "input": {
     "ingredient": {
       "tag": "forge:ingots/crimson_iron"

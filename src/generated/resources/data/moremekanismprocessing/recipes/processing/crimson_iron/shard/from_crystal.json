@@ -1,5 +1,12 @@
 {
   "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "materialType": "crimson_iron",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
   "itemInput": {
     "ingredient": {
       "tag": "mekanism:crystals/crimson_iron"

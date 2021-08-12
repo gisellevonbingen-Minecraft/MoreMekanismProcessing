@@ -4,6 +4,11 @@
     {
       "tag": "forge:ores/nickel",
       "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "nickel",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
     }
   ],
   "input": {
