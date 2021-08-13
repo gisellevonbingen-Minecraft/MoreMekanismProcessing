@@ -8,11 +8,6 @@ It can 1 ore process into up to 5 ingots
 
 I don't know if that was intentional, That ores names is same, but some tags missing
 
-## And add random recipes integration with mekanism
-
-Industrial Foregoing 'Material Stonework' can processing sand  to silicon
-Now, Mekanism Crusher can too
-
 # Mekanism version 1.16.5-10.0.20.447 ore higher is required
 
 https://www.curseforge.com/minecraft/mc-mods/mekanism
