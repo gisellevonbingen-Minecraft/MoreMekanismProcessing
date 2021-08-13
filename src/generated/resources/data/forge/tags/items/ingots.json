@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:cobalt_ingot",
-    "moremekanismprocessing:silver_ingot",
-    "moremekanismprocessing:nickel_ingot",
-    "moremekanismprocessing:zinc_ingot",
-    "moremekanismprocessing:tungsten_ingot",
-    "moremekanismprocessing:crimson_iron_ingot",
+    "moremekanismprocessing:aluminum_ingot",
     "moremekanismprocessing:azure_silver_ingot",
-    "moremekanismprocessing:aluminum_ingot"
+    "moremekanismprocessing:cobalt_ingot",
+    "moremekanismprocessing:crimson_iron_ingot",
+    "moremekanismprocessing:nickel_ingot",
+    "moremekanismprocessing:silver_ingot",
+    "moremekanismprocessing:tungsten_ingot",
+    "moremekanismprocessing:zinc_ingot"
   ]
 }

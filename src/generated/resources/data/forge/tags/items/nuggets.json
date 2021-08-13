@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:cobalt_nugget",
-    "moremekanismprocessing:silver_nugget",
-    "moremekanismprocessing:nickel_nugget",
-    "moremekanismprocessing:zinc_nugget",
-    "moremekanismprocessing:tungsten_nugget",
-    "moremekanismprocessing:crimson_iron_nugget",
+    "moremekanismprocessing:aluminum_nugget",
     "moremekanismprocessing:azure_silver_nugget",
-    "moremekanismprocessing:aluminum_nugget"
+    "moremekanismprocessing:cobalt_nugget",
+    "moremekanismprocessing:crimson_iron_nugget",
+    "moremekanismprocessing:nickel_nugget",
+    "moremekanismprocessing:silver_nugget",
+    "moremekanismprocessing:tungsten_nugget",
+    "moremekanismprocessing:zinc_nugget"
   ]
 }

@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
+    "moremekanismprocessing:clean_aluminum",
+    "moremekanismprocessing:clean_amethyst",
+    "moremekanismprocessing:clean_azure_silver",
+    "moremekanismprocessing:clean_bort",
     "moremekanismprocessing:clean_cobalt",
-    "moremekanismprocessing:clean_silver",
+    "moremekanismprocessing:clean_crimson_iron",
+    "moremekanismprocessing:clean_electrotine",
+    "moremekanismprocessing:clean_green_sapphire",
     "moremekanismprocessing:clean_nickel",
     "moremekanismprocessing:clean_niter",
-    "moremekanismprocessing:clean_sulfur",
+    "moremekanismprocessing:clean_peridot",
     "moremekanismprocessing:clean_ruby",
     "moremekanismprocessing:clean_sapphire",
-    "moremekanismprocessing:clean_amethyst",
-    "moremekanismprocessing:clean_green_sapphire",
-    "moremekanismprocessing:clean_zinc",
+    "moremekanismprocessing:clean_silver",
+    "moremekanismprocessing:clean_sulfur",
     "moremekanismprocessing:clean_tungsten",
-    "moremekanismprocessing:clean_peridot",
-    "moremekanismprocessing:clean_electrotine",
-    "moremekanismprocessing:clean_bort",
-    "moremekanismprocessing:clean_crimson_iron",
-    "moremekanismprocessing:clean_azure_silver",
-    "moremekanismprocessing:clean_aluminum"
+    "moremekanismprocessing:clean_zinc"
   ]
 }

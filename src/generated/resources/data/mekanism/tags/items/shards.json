@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
+    "moremekanismprocessing:shard_aluminum",
+    "moremekanismprocessing:shard_amethyst",
+    "moremekanismprocessing:shard_azure_silver",
+    "moremekanismprocessing:shard_bort",
     "moremekanismprocessing:shard_cobalt",
-    "moremekanismprocessing:shard_silver",
+    "moremekanismprocessing:shard_crimson_iron",
+    "moremekanismprocessing:shard_electrotine",
+    "moremekanismprocessing:shard_green_sapphire",
     "moremekanismprocessing:shard_nickel",
     "moremekanismprocessing:shard_niter",
-    "moremekanismprocessing:shard_sulfur",
+    "moremekanismprocessing:shard_peridot",
     "moremekanismprocessing:shard_ruby",
     "moremekanismprocessing:shard_sapphire",
-    "moremekanismprocessing:shard_amethyst",
-    "moremekanismprocessing:shard_green_sapphire",
-    "moremekanismprocessing:shard_zinc",
+    "moremekanismprocessing:shard_silver",
+    "moremekanismprocessing:shard_sulfur",
     "moremekanismprocessing:shard_tungsten",
-    "moremekanismprocessing:shard_peridot",
-    "moremekanismprocessing:shard_electrotine",
-    "moremekanismprocessing:shard_bort",
-    "moremekanismprocessing:shard_crimson_iron",
-    "moremekanismprocessing:shard_azure_silver",
-    "moremekanismprocessing:shard_aluminum"
+    "moremekanismprocessing:shard_zinc"
   ]
 }

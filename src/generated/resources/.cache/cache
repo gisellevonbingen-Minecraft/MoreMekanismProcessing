@@ -111,7 +111,7 @@ c820f9d3aaf1f7c2ba2f7a845bf2848858a23c51 data/forge/tags/blocks/ores.json
 576a874d9d186c596d3aba663b160aa5d6357602 data/forge/tags/blocks/ores/sapphire.json
 ebc6f0809dfb683b71f8295451148de6e45df904 data/forge/tags/blocks/ores/uranium.json
 ebc6f0809dfb683b71f8295451148de6e45df904 data/forge/tags/blocks/ores/yellorite.json
-1783cdce1c3016c909e7852c781cdd0ea086aac6 data/forge/tags/items/dusts.json
+3a78a66bebefeac106dfcde37ff3ad54855131b1 data/forge/tags/items/dusts.json
 031281ba07292eba9fcbedfc878f5cb1a48c2490 data/forge/tags/items/dusts/aluminum.json
 6f2d0b41dd40330c91eb30badfb4d049de63ada1 data/forge/tags/items/dusts/amethyst.json
 52bcb87d65bc958c6cbbf7886c05582f42019dfe data/forge/tags/items/dusts/azure_silver.json
@@ -129,14 +129,14 @@ ca334994421c8245c5c797bf38ce6c596246f61c data/forge/tags/items/dusts/silver.json
 cff3ff1fc4b6ab614ed12decc3dd445b3c71a913 data/forge/tags/items/dusts/sulfur.json
 98ec665c03ce8c8ca09839caf5582a3d5ddb6895 data/forge/tags/items/dusts/tungsten.json
 78c15f98856ab5b8353f84edf85d10cbeb90307a data/forge/tags/items/dusts/zinc.json
-4625ad27aaf94246c0ca04235ead6248a1940030 data/forge/tags/items/gems.json
+36d19f9790d45496d58e034d69e3fbdf3669f030 data/forge/tags/items/gems.json
 1dcff0e87699a748b229deacf547c57dd01662dd data/forge/tags/items/gems/amethyst.json
 c65f024dc1c74291ca58b2cdfeba31a7e204c739 data/forge/tags/items/gems/bort.json
 b3dfa9bf382d64f7d7610ed867759a8eaf94d449 data/forge/tags/items/gems/green_sapphire.json
 8931850b42fa589773bef10859d4dd3994869113 data/forge/tags/items/gems/peridot.json
 0e9985bd90327abedb8c41d5a37232de33040df2 data/forge/tags/items/gems/ruby.json
 feb782a81da5284d193b890d2d6cb71052d4ec6b data/forge/tags/items/gems/sapphire.json
-516216189ee38daecbd320a32b36b37d29f3e9c9 data/forge/tags/items/ingots.json
+8b31ad52167e6be0f7c72d5e99b69bab078ed309 data/forge/tags/items/ingots.json
 a991b9c3390100136aaf1b370c0a70aa491ed036 data/forge/tags/items/ingots/aluminum.json
 e00135c4d0b26e87e63820b89e7fd09f4b33e4be data/forge/tags/items/ingots/azure_silver.json
 e95b19abd906f16f70ae8d717408011cb7e671a4 data/forge/tags/items/ingots/cobalt.json
@@ -145,7 +145,7 @@ e95b19abd906f16f70ae8d717408011cb7e671a4 data/forge/tags/items/ingots/cobalt.jso
 c7e197342d53d221ee7ad0031c368181ab237ece data/forge/tags/items/ingots/silver.json
 d2c0a0deb0b3f099b763db9f469ac031f662b02d data/forge/tags/items/ingots/tungsten.json
 2b9796c912803b953f351d52123e8d11397558bb data/forge/tags/items/ingots/zinc.json
-a0f0a18e7d47f3969655718cc1f8659c88242921 data/forge/tags/items/nuggets.json
+ac97cd9e4347eea5538845e293bbed301a8bf3c0 data/forge/tags/items/nuggets.json
 8e9aa47a4c216ec2e02e9a371cbda2241117aa0f data/forge/tags/items/nuggets/aluminum.json
 6db8b5da21b106a97a236e907e0d7710545b84a6 data/forge/tags/items/nuggets/azure_silver.json
 fa8dc55881cac03f6b32562bc84f96282d6fbfd0 data/forge/tags/items/nuggets/cobalt.json
@@ -174,7 +174,7 @@ c820f9d3aaf1f7c2ba2f7a845bf2848858a23c51 data/forge/tags/items/ores.json
 ebc6f0809dfb683b71f8295451148de6e45df904 data/forge/tags/items/ores/uranium.json
 ebc6f0809dfb683b71f8295451148de6e45df904 data/forge/tags/items/ores/yellorite.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/zinc.json
-c98b00f3ad44512624ff75d1ae79f3e403299d95 data/mekanism/tags/items/clumps.json
+0f22900849a66d43ee26635ce496905d0f9ed524 data/mekanism/tags/items/clumps.json
 5066a286ce7546028003a5b003352e75bf8fc32b data/mekanism/tags/items/clumps/aluminum.json
 83d001e5a6c8771c1fccd17113c7324974b5b6c1 data/mekanism/tags/items/clumps/amethyst.json
 70fa45a93a90cc279069dda1569699dd12bb768d data/mekanism/tags/items/clumps/azure_silver.json
@@ -192,7 +192,7 @@ d00d5827799a25a432ac69d9cbc294bc2844a30b data/mekanism/tags/items/clumps/silver.
 7cb4b78c0871681ed6cc03a6f7ae0cee3ed73bb0 data/mekanism/tags/items/clumps/sulfur.json
 56c446b2236215a7d6e662326360421ae69cc6a2 data/mekanism/tags/items/clumps/tungsten.json
 63accbcefca3291edb8347b307910bbc2c4f6d73 data/mekanism/tags/items/clumps/zinc.json
-e442ebd8e06c062a1cbd56a8b356e4a9b9b03a52 data/mekanism/tags/items/crystals.json
+275f0217072ca0d6b35878e476a87fb4b74eb9e8 data/mekanism/tags/items/crystals.json
 afb40b4871673582fff68a5b0db4d869ffa4a227 data/mekanism/tags/items/crystals/aluminum.json
 8e56d7c27a68cb3d5eeff25ab7c97d33c4ff210a data/mekanism/tags/items/crystals/amethyst.json
 3019764fe605a36ec1f8fb41f3acdff3e3e7974d data/mekanism/tags/items/crystals/azure_silver.json
@@ -210,7 +210,7 @@ d8a4fd4392906013b6cd2908f2d8dcd5ab23d013 data/mekanism/tags/items/crystals/silve
 a999dc06b3426a7438fef8ec42cd5e5b74e953fe data/mekanism/tags/items/crystals/sulfur.json
 b09f437142b8d7161540b0269df2b6d64a15f15f data/mekanism/tags/items/crystals/tungsten.json
 79c679b73031501596eb3f5aadfe6ae737cf4619 data/mekanism/tags/items/crystals/zinc.json
-d8f2ad69fbb7da9f3b5e0614aaf519bdb45835b2 data/mekanism/tags/items/dirty_dusts.json
+36081f9b8e139aba3e368d5cfdea281dc194b436 data/mekanism/tags/items/dirty_dusts.json
 52f2b60e80ab7dd58031f1c14241756930869ddf data/mekanism/tags/items/dirty_dusts/aluminum.json
 449cfd38386e4411912b5f32762f931880c158c7 data/mekanism/tags/items/dirty_dusts/amethyst.json
 97b285839d182565127f3a421ed014fc11471d53 data/mekanism/tags/items/dirty_dusts/azure_silver.json
@@ -228,7 +228,7 @@ d75673ea8ca705e03b1dad5617313f0ef6105b8a data/mekanism/tags/items/dirty_dusts/si
 98fa822f7a097badd61c561572df23d88f8d8f67 data/mekanism/tags/items/dirty_dusts/sulfur.json
 dfc383dde99cd16277522e3698004182c658ce95 data/mekanism/tags/items/dirty_dusts/tungsten.json
 27aa9662854bcb2d8140c0c29203bb3bca87cef9 data/mekanism/tags/items/dirty_dusts/zinc.json
-7eeef765dfeec2015423fb804a4d833b331a4273 data/mekanism/tags/items/shards.json
+e2b3c11188d661648c1209b2d9e1bd6920db2e6f data/mekanism/tags/items/shards.json
 9b20f1f4f8e889fcc1d5d8f53883b2b379211944 data/mekanism/tags/items/shards/aluminum.json
 5e166bf83d51ea6eafc51dafedc9f5c847a5af1d data/mekanism/tags/items/shards/amethyst.json
 18c0d14e73fab7718a463baa0e0ee0a3a193e0ac data/mekanism/tags/items/shards/azure_silver.json
@@ -246,8 +246,8 @@ aadf59eeb54b187391184d2a2c97f6e5fc098196 data/mekanism/tags/items/shards/silver.
 ec97f269691da080f9bcce0b06cff3e7761905b0 data/mekanism/tags/items/shards/sulfur.json
 8127707db116eebb1dfe2c30b1752dd5c8c79a1b data/mekanism/tags/items/shards/tungsten.json
 9e2b337c351fd5b60d02d679bbaadecc592e0d54 data/mekanism/tags/items/shards/zinc.json
-3042b2619000279fd5653fb82fb7c0314d2fe446 data/mekanism/tags/slurries/clean.json
-316111730e6de90780304ed0ecf86b47de95728d data/mekanism/tags/slurries/dirty.json
+fb3571e6ec754fd56c7b2e58943aa2a55263a651 data/mekanism/tags/slurries/clean.json
+99d85a85b1fb702711428f01ef8eb11fcb6873e3 data/mekanism/tags/slurries/dirty.json
 637b9695c9528ce5383d6ed80356a66c986a0abb data/moremekanismprocessing/recipes/processing/aluminum/clump/from_ore.json
 b308aff6b515b2a008cbd04efa9ffa7af8cafc0e data/moremekanismprocessing/recipes/processing/aluminum/clump/from_shard.json
 6c9e7e0e58dfd56718281a2ca88ca939e9f2c6fe data/moremekanismprocessing/recipes/processing/aluminum/crystal/from_slurry.json
