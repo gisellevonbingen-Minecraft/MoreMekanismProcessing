@@ -63,3 +63,7 @@ Not contains ores with mekanism's default ores same name
 
 * Lithium Ingot (lithium dust can mixable with mekanism:dust_lithium)
 * Titanium Ingot
+
+# Create
+
+* Zinc Ingot
