@@ -51,3 +51,13 @@ Not contains ores with mekanism's default ores same name
 # Immersive Engineering
 
 * Bauxite Ingot (Aluminium)
+
+# LibVulpes (Advanced Rocketry)
+
+* Iridium Ingot
+* Dilithium Gem
+
+# Better Diving
+
+* Lithium Ingot (lithium dust can mixable with mekanism:dust_lithium)
+* Titanium Ingot
