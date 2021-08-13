@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "materialType": "bismuth",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "mekanism:crystals/bismuth"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "item": "moremekanismprocessing:shard_bismuth"
+  }
+}

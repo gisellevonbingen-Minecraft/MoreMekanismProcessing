@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:crystallizing",
+  "conditions": [
+    {
+      "materialType": "bismuth",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "chemicalType": "slurry",
+  "input": {
+    "amount": 200,
+    "slurry": "moremekanismprocessing:clean_bismuth"
+  },
+  "output": {
+    "item": "moremekanismprocessing:crystal_bismuth"
+  }
+}

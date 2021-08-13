@@ -14,8 +14,6 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.material.Materi
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurries;
 import com.github.gisellevonbingen.moremekanismprocessing.function.ThreeFunction;
-import com.refinedmods.refinedstorage.RSItems;
-import com.refinedmods.refinedstorage.item.SiliconItem;
 
 import mekanism.api.chemical.gas.GasStack;
 import mekanism.api.chemical.slurry.Slurry;
@@ -41,7 +39,6 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.tags.ITag.INamedTag;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.Tags.Items;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.fluids.FluidStack;
 

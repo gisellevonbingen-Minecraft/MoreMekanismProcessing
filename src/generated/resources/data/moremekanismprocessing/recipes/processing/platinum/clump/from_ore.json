@@ -1,0 +1,27 @@
+{
+  "type": "mekanism:purifying",
+  "conditions": [
+    {
+      "tag": "forge:ores/platinum",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "platinum",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/platinum"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "output": {
+    "item": "moremekanismprocessing:clump_platinum",
+    "count": 3
+  }
+}

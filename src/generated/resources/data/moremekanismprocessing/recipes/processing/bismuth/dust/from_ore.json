@@ -1,0 +1,23 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "tag": "forge:ores/bismuth",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "bismuth",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/bismuth"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_bismuth",
+    "count": 2
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smelting",
+  "conditions": [
+    {
+      "materialType": "platinum",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:dusts/platinum"
+  },
+  "result": "moremekanismprocessing:platinum_ingot",
+  "experience": 0.3,
+  "cookingtime": 200
+}

@@ -1,0 +1,23 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "tag": "forge:ores/platinum",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "platinum",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/platinum"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_platinum",
+    "count": 2
+  }
+}
