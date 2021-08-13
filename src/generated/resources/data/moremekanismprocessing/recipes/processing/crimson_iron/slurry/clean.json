@@ -13,10 +13,10 @@
   },
   "slurryInput": {
     "amount": 1,
-    "slurry": "mekanism:dirty_crimson_iron"
+    "slurry": "moremekanismprocessing:dirty_crimson_iron"
   },
   "output": {
-    "slurry": "mekanism:clean_crimson_iron",
+    "slurry": "moremekanismprocessing:clean_crimson_iron",
     "amount": 1
   }
 }

@@ -13,10 +13,10 @@
   },
   "slurryInput": {
     "amount": 1,
-    "slurry": "mekanism:dirty_green_sapphire"
+    "slurry": "moremekanismprocessing:dirty_green_sapphire"
   },
   "output": {
-    "slurry": "mekanism:clean_green_sapphire",
+    "slurry": "moremekanismprocessing:clean_green_sapphire",
     "amount": 1
   }
 }

@@ -10,7 +10,7 @@
   "chemicalType": "slurry",
   "input": {
     "amount": 200,
-    "slurry": "mekanism:clean_cobalt"
+    "slurry": "moremekanismprocessing:clean_cobalt"
   },
   "output": {
     "item": "moremekanismprocessing:crystal_cobalt"

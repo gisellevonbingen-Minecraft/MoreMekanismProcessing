@@ -21,7 +21,7 @@
     "gas": "mekanism:sulfuric_acid"
   },
   "output": {
-    "slurry": "mekanism:dirty_peridot",
+    "slurry": "moremekanismprocessing:dirty_peridot",
     "amount": 1000,
     "chemicalType": "slurry"
   }

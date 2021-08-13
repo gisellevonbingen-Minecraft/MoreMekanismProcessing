@@ -10,7 +10,7 @@
   "chemicalType": "slurry",
   "input": {
     "amount": 200,
-    "slurry": "mekanism:clean_sulfur"
+    "slurry": "moremekanismprocessing:clean_sulfur"
   },
   "output": {
     "item": "moremekanismprocessing:crystal_sulfur"

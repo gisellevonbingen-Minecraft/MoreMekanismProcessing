@@ -21,7 +21,7 @@
     "gas": "mekanism:sulfuric_acid"
   },
   "output": {
-    "slurry": "mekanism:dirty_aluminum",
+    "slurry": "moremekanismprocessing:dirty_aluminum",
     "amount": 1000,
     "chemicalType": "slurry"
   }

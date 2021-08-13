@@ -10,7 +10,7 @@
   "chemicalType": "slurry",
   "input": {
     "amount": 200,
-    "slurry": "mekanism:clean_green_sapphire"
+    "slurry": "moremekanismprocessing:clean_green_sapphire"
   },
   "output": {
     "item": "moremekanismprocessing:crystal_green_sapphire"

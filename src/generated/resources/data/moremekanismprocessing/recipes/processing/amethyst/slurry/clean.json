@@ -13,10 +13,10 @@
   },
   "slurryInput": {
     "amount": 1,
-    "slurry": "mekanism:dirty_amethyst"
+    "slurry": "moremekanismprocessing:dirty_amethyst"
   },
   "output": {
-    "slurry": "mekanism:clean_amethyst",
+    "slurry": "moremekanismprocessing:clean_amethyst",
     "amount": 1
   }
 }

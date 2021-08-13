@@ -13,10 +13,10 @@
   },
   "slurryInput": {
     "amount": 1,
-    "slurry": "mekanism:dirty_aluminum"
+    "slurry": "moremekanismprocessing:dirty_aluminum"
   },
   "output": {
-    "slurry": "mekanism:clean_aluminum",
+    "slurry": "moremekanismprocessing:clean_aluminum",
     "amount": 1
   }
 }

@@ -13,10 +13,10 @@
   },
   "slurryInput": {
     "amount": 1,
-    "slurry": "mekanism:dirty_peridot"
+    "slurry": "moremekanismprocessing:dirty_peridot"
   },
   "output": {
-    "slurry": "mekanism:clean_peridot",
+    "slurry": "moremekanismprocessing:clean_peridot",
     "amount": 1
   }
 }

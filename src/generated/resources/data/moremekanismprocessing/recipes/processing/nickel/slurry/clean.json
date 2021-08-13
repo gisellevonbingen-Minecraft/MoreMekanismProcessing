@@ -13,10 +13,10 @@
   },
   "slurryInput": {
     "amount": 1,
-    "slurry": "mekanism:dirty_nickel"
+    "slurry": "moremekanismprocessing:dirty_nickel"
   },
   "output": {
-    "slurry": "mekanism:clean_nickel",
+    "slurry": "moremekanismprocessing:clean_nickel",
     "amount": 1
   }
 }

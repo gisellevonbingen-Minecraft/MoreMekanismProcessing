@@ -10,7 +10,7 @@
   "chemicalType": "slurry",
   "input": {
     "amount": 200,
-    "slurry": "mekanism:clean_nickel"
+    "slurry": "moremekanismprocessing:clean_nickel"
   },
   "output": {
     "item": "moremekanismprocessing:crystal_nickel"

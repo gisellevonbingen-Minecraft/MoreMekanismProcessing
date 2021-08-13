@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.UnaryOperator;
 
+import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 
@@ -11,23 +12,23 @@ import mekanism.api.chemical.slurry.Slurry;
 import mekanism.api.chemical.slurry.SlurryBuilder;
 import mekanism.common.registration.impl.SlurryDeferredRegister;
 import mekanism.common.registration.impl.SlurryRegistryObject;
-import mekanism.common.registries.MekanismSlurries;
 import net.minecraft.item.Item;
 import net.minecraft.tags.ITag.INamedTag;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 public class MoreMekanismProcessingSlurries
 {
-	public static final Map<MaterialType, SlurryRegistryObject<Slurry, Slurry>> SLURRIES = new HashMap<>();
+	public static final SlurryDeferredRegister SLURRIES = new SlurryDeferredRegister(MoreMekanismProcessing.MODID);
+	public static final Map<MaterialType, SlurryRegistryObject<Slurry, Slurry>> MAP = new HashMap<>();
 
 	public static SlurryRegistryObject<Slurry, Slurry> getSlurryRegistry(MaterialType materialType)
 	{
-		return SLURRIES.get(materialType);
+		return MAP.get(materialType);
 	}
 
 	public static void register(IEventBus eventBus)
 	{
-		register(eventBus, MekanismSlurries.SLURRIES);
+		register(eventBus, SLURRIES);
 	}
 
 	public static void register(IEventBus eventBus, SlurryDeferredRegister register)
@@ -39,7 +40,7 @@ public class MoreMekanismProcessingSlurries
 			if (materialType.getResultShape().canProcess(MaterialState.CRYSTAL) == true)
 			{
 				SlurryRegistryObject<Slurry, Slurry> registryObject = register.register(materialType.getBaseName(), new SlurryBuildOperator(materialType));
-				SLURRIES.put(materialType, registryObject);
+				MAP.put(materialType, registryObject);
 			}
 
 		}

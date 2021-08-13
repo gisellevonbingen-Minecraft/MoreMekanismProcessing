@@ -21,7 +21,7 @@
     "gas": "mekanism:sulfuric_acid"
   },
   "output": {
-    "slurry": "mekanism:dirty_electrotine",
+    "slurry": "moremekanismprocessing:dirty_electrotine",
     "amount": 1000,
     "chemicalType": "slurry"
   }

@@ -10,7 +10,7 @@
   "chemicalType": "slurry",
   "input": {
     "amount": 200,
-    "slurry": "mekanism:clean_zinc"
+    "slurry": "moremekanismprocessing:clean_zinc"
   },
   "output": {
     "item": "moremekanismprocessing:crystal_zinc"

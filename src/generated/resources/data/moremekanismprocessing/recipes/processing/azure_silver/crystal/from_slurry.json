@@ -10,7 +10,7 @@
   "chemicalType": "slurry",
   "input": {
     "amount": 200,
-    "slurry": "mekanism:clean_azure_silver"
+    "slurry": "moremekanismprocessing:clean_azure_silver"
   },
   "output": {
     "item": "moremekanismprocessing:crystal_azure_silver"

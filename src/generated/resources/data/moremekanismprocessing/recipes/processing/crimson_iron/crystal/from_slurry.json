@@ -10,7 +10,7 @@
   "chemicalType": "slurry",
   "input": {
     "amount": 200,
-    "slurry": "mekanism:clean_crimson_iron"
+    "slurry": "moremekanismprocessing:clean_crimson_iron"
   },
   "output": {
     "item": "moremekanismprocessing:crystal_crimson_iron"

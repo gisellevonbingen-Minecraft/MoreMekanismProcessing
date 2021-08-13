@@ -10,7 +10,7 @@
   "chemicalType": "slurry",
   "input": {
     "amount": 200,
-    "slurry": "mekanism:clean_amethyst"
+    "slurry": "moremekanismprocessing:clean_amethyst"
   },
   "output": {
     "item": "moremekanismprocessing:crystal_amethyst"

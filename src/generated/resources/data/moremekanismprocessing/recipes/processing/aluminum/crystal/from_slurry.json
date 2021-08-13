@@ -10,7 +10,7 @@
   "chemicalType": "slurry",
   "input": {
     "amount": 200,
-    "slurry": "mekanism:clean_aluminum"
+    "slurry": "moremekanismprocessing:clean_aluminum"
   },
   "output": {
     "item": "moremekanismprocessing:crystal_aluminum"

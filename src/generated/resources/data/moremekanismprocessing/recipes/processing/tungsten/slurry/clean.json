@@ -13,10 +13,10 @@
   },
   "slurryInput": {
     "amount": 1,
-    "slurry": "mekanism:dirty_tungsten"
+    "slurry": "moremekanismprocessing:dirty_tungsten"
   },
   "output": {
-    "slurry": "mekanism:clean_tungsten",
+    "slurry": "moremekanismprocessing:clean_tungsten",
     "amount": 1
   }
 }

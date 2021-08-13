@@ -13,10 +13,10 @@
   },
   "slurryInput": {
     "amount": 1,
-    "slurry": "mekanism:dirty_azure_silver"
+    "slurry": "moremekanismprocessing:dirty_azure_silver"
   },
   "output": {
-    "slurry": "mekanism:clean_azure_silver",
+    "slurry": "moremekanismprocessing:clean_azure_silver",
     "amount": 1
   }
 }

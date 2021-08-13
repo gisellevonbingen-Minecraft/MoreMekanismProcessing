@@ -21,7 +21,7 @@
     "gas": "mekanism:sulfuric_acid"
   },
   "output": {
-    "slurry": "mekanism:dirty_zinc",
+    "slurry": "moremekanismprocessing:dirty_zinc",
     "amount": 1000,
     "chemicalType": "slurry"
   }

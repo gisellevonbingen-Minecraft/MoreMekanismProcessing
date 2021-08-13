@@ -10,7 +10,7 @@
   "chemicalType": "slurry",
   "input": {
     "amount": 200,
-    "slurry": "mekanism:clean_tungsten"
+    "slurry": "moremekanismprocessing:clean_tungsten"
   },
   "output": {
     "item": "moremekanismprocessing:crystal_tungsten"

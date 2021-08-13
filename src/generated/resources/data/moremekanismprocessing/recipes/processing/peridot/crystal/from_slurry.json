@@ -10,7 +10,7 @@
   "chemicalType": "slurry",
   "input": {
     "amount": 200,
-    "slurry": "mekanism:clean_peridot"
+    "slurry": "moremekanismprocessing:clean_peridot"
   },
   "output": {
     "item": "moremekanismprocessing:crystal_peridot"

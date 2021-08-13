@@ -10,7 +10,7 @@
   "chemicalType": "slurry",
   "input": {
     "amount": 200,
-    "slurry": "mekanism:clean_electrotine"
+    "slurry": "moremekanismprocessing:clean_electrotine"
   },
   "output": {
     "item": "moremekanismprocessing:crystal_electrotine"

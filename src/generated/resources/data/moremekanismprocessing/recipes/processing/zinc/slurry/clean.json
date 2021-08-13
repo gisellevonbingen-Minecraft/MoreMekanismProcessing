@@ -13,10 +13,10 @@
   },
   "slurryInput": {
     "amount": 1,
-    "slurry": "mekanism:dirty_zinc"
+    "slurry": "moremekanismprocessing:dirty_zinc"
   },
   "output": {
-    "slurry": "mekanism:clean_zinc",
+    "slurry": "moremekanismprocessing:clean_zinc",
     "amount": 1
   }
 }

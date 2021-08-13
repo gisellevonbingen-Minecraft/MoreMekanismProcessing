@@ -21,7 +21,7 @@
     "gas": "mekanism:sulfuric_acid"
   },
   "output": {
-    "slurry": "mekanism:dirty_niter",
+    "slurry": "moremekanismprocessing:dirty_niter",
     "amount": 1000,
     "chemicalType": "slurry"
   }

@@ -13,10 +13,10 @@
   },
   "slurryInput": {
     "amount": 1,
-    "slurry": "mekanism:dirty_electrotine"
+    "slurry": "moremekanismprocessing:dirty_electrotine"
   },
   "output": {
-    "slurry": "mekanism:clean_electrotine",
+    "slurry": "moremekanismprocessing:clean_electrotine",
     "amount": 1
   }
 }
