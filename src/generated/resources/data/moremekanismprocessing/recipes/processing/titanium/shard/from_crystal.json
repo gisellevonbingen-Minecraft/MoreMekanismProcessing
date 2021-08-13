@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "materialType": "titanium",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "mekanism:crystals/titanium"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "item": "moremekanismprocessing:shard_titanium"
+  }
+}

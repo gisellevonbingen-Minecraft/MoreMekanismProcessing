@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:blasting",
+  "conditions": [
+    {
+      "materialType": "titanium",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:dusts/titanium"
+  },
+  "result": "moremekanismprocessing:titanium_ingot",
+  "experience": 0.3,
+  "cookingtime": 100
+}

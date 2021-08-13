@@ -7,8 +7,11 @@
     "moremekanismprocessing:shard_bort",
     "moremekanismprocessing:shard_cobalt",
     "moremekanismprocessing:shard_crimson_iron",
+    "moremekanismprocessing:shard_dilithium",
     "moremekanismprocessing:shard_electrotine",
     "moremekanismprocessing:shard_green_sapphire",
+    "moremekanismprocessing:shard_iridium",
+    "moremekanismprocessing:shard_lithium",
     "moremekanismprocessing:shard_nickel",
     "moremekanismprocessing:shard_niter",
     "moremekanismprocessing:shard_peridot",
@@ -16,6 +19,7 @@
     "moremekanismprocessing:shard_sapphire",
     "moremekanismprocessing:shard_silver",
     "moremekanismprocessing:shard_sulfur",
+    "moremekanismprocessing:shard_titanium",
     "moremekanismprocessing:shard_tungsten",
     "moremekanismprocessing:shard_zinc"
   ]

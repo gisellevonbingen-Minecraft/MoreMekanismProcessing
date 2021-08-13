@@ -1,0 +1,27 @@
+{
+  "type": "mekanism:purifying",
+  "conditions": [
+    {
+      "tag": "forge:ores/lithium",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "lithium",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/lithium"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "output": {
+    "item": "moremekanismprocessing:clump_lithium",
+    "count": 3
+  }
+}

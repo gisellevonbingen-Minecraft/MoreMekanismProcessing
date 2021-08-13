@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smelting",
+  "conditions": [
+    {
+      "materialType": "iridium",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:dusts/iridium"
+  },
+  "result": "moremekanismprocessing:iridium_ingot",
+  "experience": 0.3,
+  "cookingtime": 200
+}

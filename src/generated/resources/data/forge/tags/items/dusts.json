@@ -7,8 +7,11 @@
     "moremekanismprocessing:dust_bort",
     "moremekanismprocessing:dust_cobalt",
     "moremekanismprocessing:dust_crimson_iron",
+    "moremekanismprocessing:dust_dilithium",
     "moremekanismprocessing:dust_electrotine",
     "moremekanismprocessing:dust_green_sapphire",
+    "moremekanismprocessing:dust_iridium",
+    "moremekanismprocessing:dust_lithium",
     "moremekanismprocessing:dust_nickel",
     "moremekanismprocessing:dust_niter",
     "moremekanismprocessing:dust_peridot",
@@ -16,6 +19,7 @@
     "moremekanismprocessing:dust_sapphire",
     "moremekanismprocessing:dust_silver",
     "mekanism:dust_sulfur",
+    "moremekanismprocessing:dust_titanium",
     "moremekanismprocessing:dust_tungsten",
     "moremekanismprocessing:dust_zinc"
   ]

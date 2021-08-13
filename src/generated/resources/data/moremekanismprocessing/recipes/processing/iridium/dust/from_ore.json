@@ -1,0 +1,23 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "tag": "forge:ores/iridium",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "iridium",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/iridium"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_iridium",
+    "count": 2
+  }
+}

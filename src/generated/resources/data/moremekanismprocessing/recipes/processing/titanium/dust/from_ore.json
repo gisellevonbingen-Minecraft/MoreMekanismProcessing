@@ -1,0 +1,23 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "tag": "forge:ores/titanium",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "titanium",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/titanium"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_titanium",
+    "count": 2
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "tag": "forge:ores/lithium",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "lithium",
+      "requireLevel": 4,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/lithium"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "item": "moremekanismprocessing:shard_lithium",
+    "count": 4
+  }
+}

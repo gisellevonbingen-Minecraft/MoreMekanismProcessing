@@ -7,8 +7,11 @@
     "moremekanismprocessing:clean_bort",
     "moremekanismprocessing:clean_cobalt",
     "moremekanismprocessing:clean_crimson_iron",
+    "moremekanismprocessing:clean_dilithium",
     "moremekanismprocessing:clean_electrotine",
     "moremekanismprocessing:clean_green_sapphire",
+    "moremekanismprocessing:clean_iridium",
+    "moremekanismprocessing:clean_lithium",
     "moremekanismprocessing:clean_nickel",
     "moremekanismprocessing:clean_niter",
     "moremekanismprocessing:clean_peridot",
@@ -16,6 +19,7 @@
     "moremekanismprocessing:clean_sapphire",
     "moremekanismprocessing:clean_silver",
     "moremekanismprocessing:clean_sulfur",
+    "moremekanismprocessing:clean_titanium",
     "moremekanismprocessing:clean_tungsten",
     "moremekanismprocessing:clean_zinc"
   ]

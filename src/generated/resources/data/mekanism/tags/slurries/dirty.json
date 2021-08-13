@@ -7,8 +7,11 @@
     "moremekanismprocessing:dirty_bort",
     "moremekanismprocessing:dirty_cobalt",
     "moremekanismprocessing:dirty_crimson_iron",
+    "moremekanismprocessing:dirty_dilithium",
     "moremekanismprocessing:dirty_electrotine",
     "moremekanismprocessing:dirty_green_sapphire",
+    "moremekanismprocessing:dirty_iridium",
+    "moremekanismprocessing:dirty_lithium",
     "moremekanismprocessing:dirty_nickel",
     "moremekanismprocessing:dirty_niter",
     "moremekanismprocessing:dirty_peridot",
@@ -16,6 +19,7 @@
     "moremekanismprocessing:dirty_sapphire",
     "moremekanismprocessing:dirty_silver",
     "moremekanismprocessing:dirty_sulfur",
+    "moremekanismprocessing:dirty_titanium",
     "moremekanismprocessing:dirty_tungsten",
     "moremekanismprocessing:dirty_zinc"
   ]

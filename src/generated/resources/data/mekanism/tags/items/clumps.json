@@ -7,8 +7,11 @@
     "moremekanismprocessing:clump_bort",
     "moremekanismprocessing:clump_cobalt",
     "moremekanismprocessing:clump_crimson_iron",
+    "moremekanismprocessing:clump_dilithium",
     "moremekanismprocessing:clump_electrotine",
     "moremekanismprocessing:clump_green_sapphire",
+    "moremekanismprocessing:clump_iridium",
+    "moremekanismprocessing:clump_lithium",
     "moremekanismprocessing:clump_nickel",
     "moremekanismprocessing:clump_niter",
     "moremekanismprocessing:clump_peridot",
@@ -16,6 +19,7 @@
     "moremekanismprocessing:clump_sapphire",
     "moremekanismprocessing:clump_silver",
     "moremekanismprocessing:clump_sulfur",
+    "moremekanismprocessing:clump_titanium",
     "moremekanismprocessing:clump_tungsten",
     "moremekanismprocessing:clump_zinc"
   ]

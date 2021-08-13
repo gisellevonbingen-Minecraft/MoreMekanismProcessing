@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "materialType": "dilithium",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:dusts/dilithium"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:gem_dilithium"
+  }
+}

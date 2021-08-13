@@ -1,0 +1,28 @@
+{
+  "type": "mekanism:dissolution",
+  "conditions": [
+    {
+      "tag": "forge:ores/iridium",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "iridium",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/iridium"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:sulfuric_acid"
+  },
+  "output": {
+    "slurry": "moremekanismprocessing:dirty_iridium",
+    "amount": 1000,
+    "chemicalType": "slurry"
+  }
+}

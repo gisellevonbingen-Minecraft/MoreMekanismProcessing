@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:crystallizing",
+  "conditions": [
+    {
+      "materialType": "titanium",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "chemicalType": "slurry",
+  "input": {
+    "amount": 200,
+    "slurry": "moremekanismprocessing:clean_titanium"
+  },
+  "output": {
+    "item": "moremekanismprocessing:crystal_titanium"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:crushing",
+  "conditions": [
+    {
+      "materialType": "dilithium",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:gems/dilithium"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_dilithium"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "materialType": "lithium",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:dirty_dusts/lithium"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_lithium"
+  }
+}

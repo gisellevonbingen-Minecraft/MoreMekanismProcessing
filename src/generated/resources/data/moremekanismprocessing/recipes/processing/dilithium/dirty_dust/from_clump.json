@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:crushing",
+  "conditions": [
+    {
+      "materialType": "dilithium",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:clumps/dilithium"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dirty_dust_dilithium"
+  }
+}

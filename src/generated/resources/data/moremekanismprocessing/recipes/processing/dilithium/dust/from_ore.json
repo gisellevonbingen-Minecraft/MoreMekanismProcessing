@@ -1,0 +1,23 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "tag": "forge:ores/dilithium",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "dilithium",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/dilithium"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_dilithium",
+    "count": 2
+  }
+}

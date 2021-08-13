@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "materialType": "dilithium",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:dirty_dusts/dilithium"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_dilithium"
+  }
+}

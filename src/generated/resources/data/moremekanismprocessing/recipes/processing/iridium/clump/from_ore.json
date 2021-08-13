@@ -1,0 +1,27 @@
+{
+  "type": "mekanism:purifying",
+  "conditions": [
+    {
+      "tag": "forge:ores/iridium",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "iridium",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/iridium"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "output": {
+    "item": "moremekanismprocessing:clump_iridium",
+    "count": 3
+  }
+}
