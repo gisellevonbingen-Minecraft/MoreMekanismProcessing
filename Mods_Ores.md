@@ -48,9 +48,18 @@ Not contains ores with mekanism's default ores same name
 * Azure Silver Ingot
 * Bort Gem
 
+# Silent's Mechanisms
+
+* Silver Ingot
+* Nickel Ingot
+* Platinum Ingot
+* Zinc Ingot
+* Bismuth Ingot
+* Aluminium Ingot (Bauxite)
+
 # Immersive Engineering
 
-* Bauxite Ingot (Aluminium)
+* Aluminium Ingot (Bauxite)
 
 # LibVulpes (Advanced Rocketry)
 
