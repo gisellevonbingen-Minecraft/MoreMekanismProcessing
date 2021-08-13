@@ -6,7 +6,6 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.material.Materi
 import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurries;
 
 import mekanism.api.chemical.slurry.Slurry;
-import mekanism.common.Mekanism;
 import mekanism.common.registration.impl.SlurryRegistryObject;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.ResourceLocation;
@@ -57,7 +56,7 @@ public class LanguagesGenerator extends LanguageProvider
 			this.add(materialType.getDescriptionId(), materialType.getDisplayName());
 		}
 
-		String slurryCommentPrefix = Util.makeDescriptionId("slurry", new ResourceLocation(Mekanism.MODID, "_comment"));
+		String slurryCommentPrefix = Util.makeDescriptionId("slurry", new ResourceLocation(MoreMekanismProcessing.MODID, "_comment"));
 		int slurryCommentLine = 0;
 
 		this.add(slurryCommentPrefix + (slurryCommentLine++), "");
