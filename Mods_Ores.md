@@ -56,6 +56,8 @@ Not contains ores with mekanism's default ores same name
 
 * Iridium Ingot
 * Dilithium Gem
+* Titanium Ingot (Fix Tags)
+<br>Add 'forge:ores/titanium' to Rutile Ore
 
 # Better Diving
 
