@@ -6,6 +6,7 @@ import java.util.List;
 import com.github.gisellevonbingen.moremekanismprocessing.integration.biggerreactors.BiggerReactorsMod;
 import com.github.gisellevonbingen.moremekanismprocessing.integration.extremereactors.ExtremeReactors2Mod;
 import com.github.gisellevonbingen.moremekanismprocessing.integration.iceandfire.IceAndFireMod;
+import com.github.gisellevonbingen.moremekanismprocessing.integration.libvulpes.LibVulpesMod;
 import com.google.common.collect.Lists;
 
 public class MoreMekanismProcessingIntagrations
@@ -31,6 +32,7 @@ public class MoreMekanismProcessingIntagrations
 		mods.add(new IceAndFireMod());
 		mods.add(new ExtremeReactors2Mod());
 		mods.add(new BiggerReactorsMod());
+		mods.add(new LibVulpesMod());
 
 		return mods;
 	}

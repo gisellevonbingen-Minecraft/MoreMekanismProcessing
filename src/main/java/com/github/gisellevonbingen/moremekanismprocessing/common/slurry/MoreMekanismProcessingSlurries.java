@@ -59,7 +59,7 @@ public class MoreMekanismProcessingSlurries
 		@Override
 		public SlurryBuilder apply(SlurryBuilder builder)
 		{
-			INamedTag<Item> tag = MaterialState.ORE.getStateTag(this.materialType);
+			INamedTag<Item> tag = MaterialState.ORE.getStateItemTag(this.materialType);
 			return builder.color(this.materialType.getColor()).ore(tag);
 		}
 

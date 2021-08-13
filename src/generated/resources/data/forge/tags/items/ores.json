@@ -16,6 +16,10 @@
     {
       "id": "biggerreactors:yellorite_ore",
       "required": false
+    },
+    {
+      "id": "libvulpes:orerutile",
+      "required": false
     }
   ]
 }

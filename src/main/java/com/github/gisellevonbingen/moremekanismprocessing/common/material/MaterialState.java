@@ -7,8 +7,10 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.item.MoreMekani
 import com.github.gisellevonbingen.moremekanismprocessing.common.tag.MoreMekanismProcessingTags;
 
 import mekanism.common.tags.MekanismTags;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ITag;
 import net.minecraft.tags.ITag.INamedTag;
 import net.minecraft.tags.ITagCollection;
@@ -44,7 +46,7 @@ public enum MaterialState
 		return new ResourceLocation(categoryTagName.getNamespace(), categoryTagName.getPath() + "/" + materialType.getBaseName());
 	}
 
-	public INamedTag<Item> getStateTag(MaterialType materialType)
+	public INamedTag<Item> getStateItemTag(MaterialType materialType)
 	{
 		if (this != MaterialState.ORE)
 		{
@@ -65,6 +67,23 @@ public enum MaterialState
 				return ItemTags.bind(tagName.toString());
 			}
 
+		}
+
+	}
+
+	public INamedTag<Block> getStateBlockTag(MaterialType materialType)
+	{
+		ITagCollection<Block> allTags = BlockTags.getAllTags();
+		ResourceLocation tagName = this.getStateTagName(materialType);
+		INamedTag<Block> tag = (INamedTag<Block>) allTags.getTag(tagName);
+
+		if (tag != null)
+		{
+			return tag;
+		}
+		else
+		{
+			return BlockTags.bind(tagName.toString());
 		}
 
 	}

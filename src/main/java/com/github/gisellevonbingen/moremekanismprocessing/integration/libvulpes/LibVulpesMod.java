@@ -1,4 +1,4 @@
-package com.github.gisellevonbingen.moremekanismprocessing.integration.iceandfire;
+package com.github.gisellevonbingen.moremekanismprocessing.integration.libvulpes;
 
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
@@ -7,11 +7,11 @@ import com.github.gisellevonbingen.moremekanismprocessing.integration.Integratio
 
 import net.minecraft.util.ResourceLocation;
 
-public class IceAndFireMod extends IntegrationMod
+public class LibVulpesMod extends IntegrationMod
 {
-	public static final String MODID = "iceandfire";
+	public static final String MODID = "libvulpes";
 
-	public IceAndFireMod()
+	public LibVulpesMod()
 	{
 
 	}
@@ -27,8 +27,7 @@ public class IceAndFireMod extends IntegrationMod
 	{
 		super.addBlockTags(generator);
 
-		generator.tagOres(MaterialState.ORE.getStateBlockTag(MaterialType.Sapphire), new ResourceLocation(MODID, "sapphire_ore"));
-		generator.tagOres(MaterialState.ORE.getStateBlockTag(MaterialType.Amethyst), new ResourceLocation(MODID, "amythest_ore"));
+		generator.tagOres(MaterialState.ORE.getStateBlockTag(MaterialType.Titanium), new ResourceLocation(MODID, "orerutile"));
 	}
 
 	@Override
