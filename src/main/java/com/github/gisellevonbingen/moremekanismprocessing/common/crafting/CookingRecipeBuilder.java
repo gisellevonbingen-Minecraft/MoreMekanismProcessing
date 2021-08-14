@@ -2,14 +2,12 @@ package com.github.gisellevonbingen.moremekanismprocessing.common.crafting;
 
 import com.google.gson.JsonObject;
 
-import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 
-public class CookingRecipeBuilder extends RecipeBuilder
+public class CookingRecipeBuilder extends SingleOutputRecipeBuilder
 {
-	private Item output;
 	private Ingredient ingredient;
 	private float experience;
 	private int smeltingTime;
@@ -22,33 +20,14 @@ public class CookingRecipeBuilder extends RecipeBuilder
 		this.setCookingTime(200);
 	}
 
-	public CookingRecipeBuilder(ResourceLocation id, Item output, int count)
-	{
-		this(id);
-
-		this.setOutput(output);
-	}
-
-	public Item getOutput()
-	{
-		return this.output;
-	}
-
-	public CookingRecipeBuilder setOutput(Item output)
-	{
-		this.output = output;
-		return this;
-	}
-
 	public Ingredient getIngredient()
 	{
 		return this.ingredient;
 	}
 
-	public CookingRecipeBuilder setIngredient(Ingredient ingredient)
+	public void setIngredient(Ingredient ingredient)
 	{
 		this.ingredient = ingredient;
-		return this;
 	}
 
 	public float getExperience()
@@ -56,10 +35,9 @@ public class CookingRecipeBuilder extends RecipeBuilder
 		return this.experience;
 	}
 
-	public CookingRecipeBuilder setExperience(float experience)
+	public void setExperience(float experience)
 	{
 		this.experience = experience;
-		return this;
 	}
 
 	public int getSmeltingTime()
@@ -101,9 +79,8 @@ public class CookingRecipeBuilder extends RecipeBuilder
 		return new Result(this, "blasting", this.blastingTime, IRecipeSerializer.BLASTING_RECIPE);
 	}
 
-	public static class Result extends RecipeResult
+	public static class Result extends SingleOutputRecipeResult
 	{
-		private final Item output;
 		private final Ingredient ingredient;
 		private final float experience;
 		private final int cookingTime;
@@ -114,7 +91,6 @@ public class CookingRecipeBuilder extends RecipeBuilder
 		{
 			super(builder, new ResourceLocation(builder.getId().getNamespace(), builder.getId().getPath() + "_" + name));
 
-			this.output = builder.output;
 			this.ingredient = builder.ingredient;
 			this.experience = builder.experience;
 			this.cookingTime = cookingTime;
@@ -127,14 +103,8 @@ public class CookingRecipeBuilder extends RecipeBuilder
 			super.serializeRecipeData(json);
 
 			json.add("ingredient", this.ingredient.toJson());
-			json.addProperty("result", this.output.getRegistryName().toString());
 			json.addProperty("experience", this.experience);
 			json.addProperty("cookingtime", this.cookingTime);
-		}
-
-		public Item getOutput()
-		{
-			return this.output;
 		}
 
 		public Ingredient getIngredient()

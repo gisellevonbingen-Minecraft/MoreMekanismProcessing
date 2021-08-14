@@ -7,10 +7,12 @@
       "type": "moremekanismprocessing:processing_level"
     }
   ],
+  "result": {
+    "item": "moremekanismprocessing:lithium_ingot"
+  },
   "ingredient": {
     "tag": "forge:dusts/lithium"
   },
-  "result": "moremekanismprocessing:lithium_ingot",
   "experience": 0.3,
   "cookingtime": 100
 }

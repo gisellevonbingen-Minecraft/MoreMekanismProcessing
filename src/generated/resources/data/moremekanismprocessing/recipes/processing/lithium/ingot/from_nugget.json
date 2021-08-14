@@ -1,6 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "moremekanismprocessing:lithium_ingot",
+  "result": {
+    "item": "moremekanismprocessing:lithium_ingot"
+  },
   "pattern": [
     "###",
     "#*#",
@@ -13,8 +16,5 @@
     "#": {
       "tag": "forge:nuggets/lithium"
     }
-  },
-  "result": {
-    "item": "moremekanismprocessing:lithium_ingot"
   }
 }

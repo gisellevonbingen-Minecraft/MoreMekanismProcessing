@@ -7,10 +7,12 @@
       "type": "moremekanismprocessing:processing_level"
     }
   ],
+  "result": {
+    "item": "moremekanismprocessing:tungsten_ingot"
+  },
   "ingredient": {
     "tag": "forge:dusts/tungsten"
   },
-  "result": "moremekanismprocessing:tungsten_ingot",
   "experience": 0.3,
   "cookingtime": 100
 }

@@ -7,10 +7,12 @@
       "type": "moremekanismprocessing:processing_level"
     }
   ],
+  "result": {
+    "item": "moremekanismprocessing:azure_silver_ingot"
+  },
   "ingredient": {
     "tag": "forge:dusts/azure_silver"
   },
-  "result": "moremekanismprocessing:azure_silver_ingot",
   "experience": 0.3,
   "cookingtime": 100
 }

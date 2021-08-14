@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
   "group": "moremekanismprocessing:lithium_nugget",
+  "result": {
+    "item": "moremekanismprocessing:lithium_nugget",
+    "count": 9
+  },
   "ingredients": [
     {
       "item": "moremekanismprocessing:lithium_ingot"
     }
-  ],
-  "result": {
-    "item": "moremekanismprocessing:lithium_nugget",
-    "count": 9
-  }
+  ]
 }

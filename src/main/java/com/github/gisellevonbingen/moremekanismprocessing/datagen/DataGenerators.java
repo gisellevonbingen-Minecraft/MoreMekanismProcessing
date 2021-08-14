@@ -1,5 +1,6 @@
 package com.github.gisellevonbingen.moremekanismprocessing.datagen;
 
+import com.github.gisellevonbingen.moremekanismprocessing.common.data.EmptyExistingFileHelper;
 import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationBlockTagsGenerator;
 import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationItemTagsGenerator;
 import com.github.gisellevonbingen.moremekanismprocessing.integration.MoreMekanismProcessingIntagrations;
@@ -35,7 +36,7 @@ public class DataGenerators
 
 		if (event.includeClient())
 		{
-			generator.addProvider(new ItemModelGenerator(generator, existingFileHelper));
+			generator.addProvider(new ItemModelGenerator(generator, new EmptyExistingFileHelper()));
 		}
 
 		MoreMekanismProcessingIntagrations.getMods().forEach(m -> m.addDataGenerator(event));

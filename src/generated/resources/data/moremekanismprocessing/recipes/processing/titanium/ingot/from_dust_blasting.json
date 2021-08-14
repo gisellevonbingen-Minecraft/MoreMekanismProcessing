@@ -7,10 +7,12 @@
       "type": "moremekanismprocessing:processing_level"
     }
   ],
+  "result": {
+    "item": "moremekanismprocessing:titanium_ingot"
+  },
   "ingredient": {
     "tag": "forge:dusts/titanium"
   },
-  "result": "moremekanismprocessing:titanium_ingot",
   "experience": 0.3,
   "cookingtime": 100
 }

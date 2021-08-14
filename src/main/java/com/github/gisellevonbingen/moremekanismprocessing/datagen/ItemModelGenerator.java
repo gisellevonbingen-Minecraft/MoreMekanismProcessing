@@ -1,13 +1,11 @@
 package com.github.gisellevonbingen.moremekanismprocessing.datagen;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
-import com.github.gisellevonbingen.moremekanismprocessing.util.UnsafeHelper;
 
 import mekanism.common.Mekanism;
 import net.minecraft.data.DataGenerator;
@@ -26,41 +24,6 @@ public class ItemModelGenerator extends ItemModelProvider
 
 	@Override
 	protected void registerModels()
-	{
-		boolean enable = this.existingFileHelper.isEnabled();
-		Field enableField = null;
-
-		try
-		{
-			try
-			{
-				enableField = ExistingFileHelper.class.getDeclaredField("enable");
-				enableField.setAccessible(true);
-			}
-			catch (NoSuchFieldException | SecurityException e)
-			{
-				e.printStackTrace();
-			}
-
-			if (enableField != null)
-			{
-				UnsafeHelper.putBoolean(this.existingFileHelper, enableField, false);
-			}
-
-			this.onRegisterModels();
-		}
-		finally
-		{
-			if (enableField != null)
-			{
-				UnsafeHelper.putBoolean(this.existingFileHelper, enableField, enable);
-			}
-
-		}
-
-	}
-
-	protected void onRegisterModels()
 	{
 		List<MaterialState> hasOverlay = new ArrayList<>();
 		hasOverlay.add(MaterialState.DIRTY_DUST);

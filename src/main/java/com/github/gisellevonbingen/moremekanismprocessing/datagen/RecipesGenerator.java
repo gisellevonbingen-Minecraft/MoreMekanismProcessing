@@ -62,9 +62,9 @@ public class RecipesGenerator extends RecipeProvider
 
 	public void buildOtherRecipes(Consumer<IFinishedRecipe> consumer)
 	{
-//		SiliconItem silicon = RSItems.SILICON.get();
-//		ItemStackToItemStackRecipeBuilder sand_to_silicon = ItemStackToItemStackRecipeBuilder.crushing(ItemStackIngredient.from(Items.SAND), new ItemStack(silicon));
-//		sand_to_silicon.build(consumer, this.getRecipeName(silicon.getRegistryName().getPath(), "from_sand"));
+		// SiliconItem silicon = RSItems.SILICON.get();
+		// ItemStackToItemStackRecipeBuilder sand_to_silicon = ItemStackToItemStackRecipeBuilder.crushing(ItemStackIngredient.from(Items.SAND), new ItemStack(silicon));
+		// sand_to_silicon.build(consumer, this.getRecipeName(silicon.getRegistryName().getPath(), "from_sand"));
 	}
 
 	public ResourceLocation getRecipeName(String output, String name)
@@ -319,7 +319,9 @@ public class RecipesGenerator extends RecipeProvider
 			Item output = stateOutput.getItem(this.materialType);
 			ResourceLocation recipeName = this.getRecipeName(stateOutput, this.from(stateInput));
 			CookingRecipeBuilder builder = new CookingRecipeBuilder(recipeName);
-			builder.setOutput(output).setIngredient(itemInput).setExperience(0.3F);
+			builder.setOutput(output);
+			builder.setIngredient(itemInput);
+			builder.setExperience(0.3F);
 
 			if (stateInput == MaterialState.ORE)
 			{

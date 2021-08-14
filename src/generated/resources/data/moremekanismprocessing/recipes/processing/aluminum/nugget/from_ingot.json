@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
   "group": "moremekanismprocessing:aluminum_nugget",
+  "result": {
+    "item": "moremekanismprocessing:aluminum_nugget",
+    "count": 9
+  },
   "ingredients": [
     {
       "item": "moremekanismprocessing:aluminum_ingot"
     }
-  ],
-  "result": {
-    "item": "moremekanismprocessing:aluminum_nugget",
-    "count": 9
-  }
+  ]
 }

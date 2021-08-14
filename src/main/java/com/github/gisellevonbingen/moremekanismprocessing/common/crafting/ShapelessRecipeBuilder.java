@@ -7,15 +7,12 @@ import com.google.common.collect.Lists;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
-import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 
-public class ShapelessRecipeBuilder extends RecipeBuilder
+public class ShapelessRecipeBuilder extends SingleOutputRecipeBuilder
 {
-	private Item output;
-	private int count;
 	private final List<Ingredient> ingredients;
 
 	public ShapelessRecipeBuilder(ResourceLocation id)
@@ -43,32 +40,6 @@ public class ShapelessRecipeBuilder extends RecipeBuilder
 
 	}
 
-	public Item getOutput()
-	{
-		return this.output;
-	}
-
-	public void setOutput(Item output)
-	{
-		this.output = output;
-	}
-
-	public int getCount()
-	{
-		return this.count;
-	}
-
-	public void setCount(int count)
-	{
-		this.count = count;
-	}
-
-	public void setOutput(Item output, int count)
-	{
-		this.setOutput(output);
-		this.setCount(count);
-	}
-
 	public List<Ingredient> getIngredients()
 	{
 		return this.ingredients;
@@ -79,18 +50,14 @@ public class ShapelessRecipeBuilder extends RecipeBuilder
 		return (IRecipeSerializer<?>) IRecipeSerializer.SHAPELESS_RECIPE;
 	}
 
-	public static class Result extends RecipeResult
+	public static class Result extends SingleOutputRecipeResult
 	{
-		private final Item output;
-		private final int count;
 		private final ArrayList<Ingredient> ingredients;
 
 		public Result(ShapelessRecipeBuilder builder)
 		{
 			super(builder);
 
-			this.output = builder.output;
-			this.count = builder.count;
 			this.ingredients = new ArrayList<>(builder.ingredients);
 		}
 
@@ -107,26 +74,6 @@ public class ShapelessRecipeBuilder extends RecipeBuilder
 			}
 
 			json.add("ingredients", ingredientsJson);
-
-			JsonObject resultJson = new JsonObject();
-			resultJson.addProperty("item", this.output.getRegistryName().toString());
-
-			if (this.count > 1)
-			{
-				resultJson.addProperty("count", this.count);
-			}
-
-			json.add("result", resultJson);
-		}
-
-		public Item getOutput()
-		{
-			return this.output;
-		}
-
-		public int getCount()
-		{
-			return this.count;
 		}
 
 		public ArrayList<Ingredient> getIngredients()

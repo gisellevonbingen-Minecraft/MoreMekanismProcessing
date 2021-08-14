@@ -11,15 +11,12 @@ import com.google.common.collect.Maps;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
-import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 
-public class ShapedRecipeBuilder extends RecipeBuilder
+public class ShapedRecipeBuilder extends SingleOutputRecipeBuilder
 {
-	private Item output;
-	private int count;
 	private final List<String> patterns;
 	private final Map<Character, Ingredient> keys;
 
@@ -29,42 +26,6 @@ public class ShapedRecipeBuilder extends RecipeBuilder
 
 		this.patterns = new ArrayList<>();
 		this.keys = new HashMap<>();
-
-		this.setCount(1);
-	}
-
-	public ShapedRecipeBuilder(ResourceLocation id, Item output, int count)
-	{
-		this(id);
-
-		this.setOutput(output);
-		this.setCount(count);
-	}
-
-	public Item getOutput()
-	{
-		return this.output;
-	}
-
-	public void setOutput(Item output)
-	{
-		this.output = output;
-	}
-
-	public void setOutput(Item output, int count)
-	{
-		this.setOutput(output);
-		this.setCount(count);
-	}
-
-	public int getCount()
-	{
-		return this.count;
-	}
-
-	public void setCount(int count)
-	{
-		this.count = count;
 	}
 
 	public List<String> getPatterns()
@@ -103,10 +64,8 @@ public class ShapedRecipeBuilder extends RecipeBuilder
 		return new Result(this);
 	}
 
-	public static class Result extends RecipeResult
+	public static class Result extends SingleOutputRecipeResult
 	{
-		private final Item result;
-		private final int count;
 		private final List<String> patterns;
 		private final Map<Character, Ingredient> keys;
 
@@ -114,8 +73,6 @@ public class ShapedRecipeBuilder extends RecipeBuilder
 		{
 			super(builder);
 
-			this.result = builder.output;
-			this.count = builder.count;
 			this.patterns = new ArrayList<>(builder.patterns);
 			this.keys = new HashMap<>(builder.keys);
 		}
@@ -141,27 +98,6 @@ public class ShapedRecipeBuilder extends RecipeBuilder
 			}
 
 			json.add("key", keyJson);
-
-			JsonObject resultJson = new JsonObject();
-
-			resultJson.addProperty("item", this.result.getRegistryName().toString());
-
-			if (this.count > 1)
-			{
-				resultJson.addProperty("count", this.count);
-			}
-
-			json.add("result", resultJson);
-		}
-
-		public Item getResult()
-		{
-			return this.result;
-		}
-
-		public int getCount()
-		{
-			return this.count;
 		}
 
 		public List<String> getPatterns()

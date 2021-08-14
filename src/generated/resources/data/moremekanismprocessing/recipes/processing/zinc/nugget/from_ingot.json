@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
   "group": "moremekanismprocessing:zinc_nugget",
+  "result": {
+    "item": "moremekanismprocessing:zinc_nugget",
+    "count": 9
+  },
   "ingredients": [
     {
       "item": "moremekanismprocessing:zinc_ingot"
     }
-  ],
-  "result": {
-    "item": "moremekanismprocessing:zinc_nugget",
-    "count": 9
-  }
+  ]
 }

@@ -7,10 +7,12 @@
       "type": "moremekanismprocessing:processing_level"
     }
   ],
+  "result": {
+    "item": "moremekanismprocessing:nickel_ingot"
+  },
   "ingredient": {
     "tag": "forge:dusts/nickel"
   },
-  "result": "moremekanismprocessing:nickel_ingot",
   "experience": 0.3,
   "cookingtime": 100
 }

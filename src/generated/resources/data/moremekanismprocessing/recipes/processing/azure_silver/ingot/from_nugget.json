@@ -1,6 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "moremekanismprocessing:azure_silver_ingot",
+  "result": {
+    "item": "moremekanismprocessing:azure_silver_ingot"
+  },
   "pattern": [
     "###",
     "#*#",
@@ -13,8 +16,5 @@
     "#": {
       "tag": "forge:nuggets/azure_silver"
     }
-  },
-  "result": {
-    "item": "moremekanismprocessing:azure_silver_ingot"
   }
 }

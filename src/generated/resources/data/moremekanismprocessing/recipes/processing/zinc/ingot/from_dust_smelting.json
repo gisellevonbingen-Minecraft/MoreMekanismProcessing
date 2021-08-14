@@ -7,10 +7,12 @@
       "type": "moremekanismprocessing:processing_level"
     }
   ],
+  "result": {
+    "item": "moremekanismprocessing:zinc_ingot"
+  },
   "ingredient": {
     "tag": "forge:dusts/zinc"
   },
-  "result": "moremekanismprocessing:zinc_ingot",
   "experience": 0.3,
   "cookingtime": 200
 }

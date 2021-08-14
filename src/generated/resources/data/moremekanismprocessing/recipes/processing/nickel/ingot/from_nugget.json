@@ -1,6 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "moremekanismprocessing:nickel_ingot",
+  "result": {
+    "item": "moremekanismprocessing:nickel_ingot"
+  },
   "pattern": [
     "###",
     "#*#",
@@ -13,8 +16,5 @@
     "#": {
       "tag": "forge:nuggets/nickel"
     }
-  },
-  "result": {
-    "item": "moremekanismprocessing:nickel_ingot"
   }
 }
