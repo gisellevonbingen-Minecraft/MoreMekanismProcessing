@@ -11,7 +11,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.common.crafting.conditions.ICondition;
@@ -20,30 +19,14 @@ public abstract class RecipeBuilder
 {
 	private final ResourceLocation id;
 	private String group;
-	private final List<Ingredient> ingredients;
 	private final List<ICondition> conditions;
 
 	public RecipeBuilder(ResourceLocation id)
 	{
 		this.id = id;
-		this.ingredients = new ArrayList<>();
 		this.conditions = new ArrayList<>();
 
 		this.setGroup("");
-	}
-
-	public void add(Ingredient ingredient)
-	{
-		this.ingredients.add(ingredient);
-	}
-
-	public void add(Ingredient ingredient, int count)
-	{
-		for (int i = 0; i < count; ++i)
-		{
-			this.ingredients.add(ingredient);
-		}
-
 	}
 
 	public ResourceLocation getId()
@@ -59,11 +42,6 @@ public abstract class RecipeBuilder
 	public void setGroup(String group)
 	{
 		this.group = group;
-	}
-
-	public List<Ingredient> getIngredients()
-	{
-		return this.ingredients;
 	}
 
 	public List<ICondition> getConditions()
