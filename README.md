@@ -24,6 +24,12 @@ Can't decide one value each properties
 
 That's reason
 
+# Why don't provide Combiner recipes?
+
+Same reason
+
+Can't determine one in many same name blocks
+
 # Processing Tree
 
 Depending on the final item of the ore, it is divided into 3 processing trees
