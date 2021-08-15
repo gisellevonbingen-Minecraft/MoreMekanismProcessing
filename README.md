@@ -26,7 +26,7 @@ That's reason
 
 # Why don't provide Combiner recipes?
 
-Same reason
+Mekanism Recipe's output require exact item registry name (e.g. xxxmod:silver_ore)
 
 Can't determine one in many same name blocks
 
