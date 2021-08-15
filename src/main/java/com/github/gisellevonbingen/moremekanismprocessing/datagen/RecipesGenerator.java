@@ -57,14 +57,6 @@ public class RecipesGenerator extends RecipeProvider
 			new OreRecipesGenerator(materialType, consumer).build();
 		}
 
-		this.buildOtherRecipes(consumer);
-	}
-
-	public void buildOtherRecipes(Consumer<IFinishedRecipe> consumer)
-	{
-		// SiliconItem silicon = RSItems.SILICON.get();
-		// ItemStackToItemStackRecipeBuilder sand_to_silicon = ItemStackToItemStackRecipeBuilder.crushing(ItemStackIngredient.from(Items.SAND), new ItemStack(silicon));
-		// sand_to_silicon.build(consumer, this.getRecipeName(silicon.getRegistryName().getPath(), "from_sand"));
 	}
 
 	public ResourceLocation getRecipeName(String output, String name)

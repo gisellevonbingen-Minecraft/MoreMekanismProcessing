@@ -10,6 +10,11 @@ public class BiggerReactorsMod extends IntegrationMod
 {
 	public static final String MODID = "biggerreactors";
 
+	public BiggerReactorsMod()
+	{
+		
+	}
+	
 	@Override
 	public void initialize()
 	{
