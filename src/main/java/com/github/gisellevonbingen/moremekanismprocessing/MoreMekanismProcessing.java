@@ -33,6 +33,7 @@ public class MoreMekanismProcessing
 
 		ModLoadingContext modLoadingContext = ModLoadingContext.get();
 		modLoadingContext.registerConfig(ModConfig.Type.COMMON, MoreMekanismProcessingConfigs.CommonSpec);
+		modLoadingContext.registerConfig(ModConfig.Type.CLIENT, MoreMekanismProcessingConfigs.ClientSpec);
 
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		modEventBus.register(new DataGenerators());

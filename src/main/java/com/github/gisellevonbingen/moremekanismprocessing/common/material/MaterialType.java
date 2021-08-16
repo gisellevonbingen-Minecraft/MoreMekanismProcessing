@@ -4,11 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
+import com.github.gisellevonbingen.moremekanismprocessing.config.MoreMekanismProcessingConfigs;
 
 import mekanism.common.registries.MekanismItems;
 import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Util;
+import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 
 public enum MaterialType
 {
@@ -50,9 +52,10 @@ public enum MaterialType
 	private final Map<MaterialState, ResourceLocation> presetItems;
 	private final MaterialResultShape resultShape;
 	private final String displayName;
-	private final int color;
+	private final int defaultColor;
 	private final boolean respectMekanism;
 
+	private Integer cachedColor;
 	private String cachedDescriptionId;
 
 	private MaterialType(MaterialTypeBuilder builder)
@@ -61,7 +64,7 @@ public enum MaterialType
 		this.resultShape = builder.resultShape();
 		this.presetItems = new HashMap<>(builder.presetItems());
 		this.displayName = builder.displayName();
-		this.color = 0xFF000000 | builder.color();
+		this.defaultColor = 0xFF000000 | builder.color();
 		this.respectMekanism = builder.respect();
 	}
 
@@ -105,9 +108,21 @@ public enum MaterialType
 		return this.displayName;
 	}
 
+	public int getDefaultColor()
+	{
+		return this.defaultColor;
+	}
+
 	public int getColor()
 	{
-		return this.color;
+		if (this.cachedColor == null)
+		{
+			ConfigValue<Integer> config = MoreMekanismProcessingConfigs.Client.colors.get(this);
+			Integer holder = config != null ? config.get() : null;
+			this.cachedColor = holder != null ? holder : this.getDefaultColor();
+		}
+
+		return this.cachedColor;
 	}
 
 	public boolean isRespectMekanism()

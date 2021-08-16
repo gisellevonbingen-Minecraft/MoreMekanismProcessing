@@ -32,6 +32,8 @@ public class LanguagesGenerator extends LanguageProvider
 		this.add(statedCommentPrefix + (statedCommentLine++), "");
 		this.add(statedCommentPrefix + (statedCommentLine++), "Items can override this rule thought by declare that item's translation");
 		this.add(statedCommentPrefix + (statedCommentLine++), "    e.g.) '" + MaterialState.INGOT.getItem(MaterialType.Cobalt).getDescriptionId() + "' : 'Blue Metal'");
+		this.add(statedCommentPrefix + (statedCommentLine++), "So is slurry");
+		this.add(statedCommentPrefix + (statedCommentLine++), "    e.g.) '" + MoreMekanismProcessingSlurries.getSlurryRegistry(MaterialType.Cobalt).getCleanSlurry().getTranslationKey() + "' : 'Clean Blue Metal Slurry'");
 
 		this.add(MaterialState.ORE.getStatedDescriptionId(), "%s Ore");
 		this.add(MaterialState.DUST.getStatedDescriptionId(), "%s Dust");
@@ -56,20 +58,20 @@ public class LanguagesGenerator extends LanguageProvider
 			this.add(materialType.getDescriptionId(), materialType.getDisplayName());
 		}
 
-		String slurryCommentPrefix = Util.makeDescriptionId("slurry", new ResourceLocation(MoreMekanismProcessing.MODID, "_comment"));
-		int slurryCommentLine = 0;
-
-		this.add(slurryCommentPrefix + (slurryCommentLine++), "");
-		this.add(slurryCommentPrefix + (slurryCommentLine++), "===== Slurries =====");
-		this.add(slurryCommentPrefix + (slurryCommentLine++), "");
-
-		for (MaterialType materialType : MaterialType.values())
-		{
-			String displayName = materialType.getDisplayName();
-			SlurryRegistryObject<Slurry, Slurry> slurryRegistry = MoreMekanismProcessingSlurries.getSlurryRegistry(materialType);
-			this.add(slurryRegistry.getDirtySlurry().getTranslationKey(), "Dirty " + displayName + " Slurry");
-			this.add(slurryRegistry.getCleanSlurry().getTranslationKey(), "Clean " + displayName + " Slurry");
-		}
+//		String slurryCommentPrefix = Util.makeDescriptionId("slurry", new ResourceLocation(MoreMekanismProcessing.MODID, "_comment"));
+//		int slurryCommentLine = 0;
+//
+//		this.add(slurryCommentPrefix + (slurryCommentLine++), "");
+//		this.add(slurryCommentPrefix + (slurryCommentLine++), "===== Slurries =====");
+//		this.add(slurryCommentPrefix + (slurryCommentLine++), "");
+//
+//		for (MaterialType materialType : MaterialType.values())
+//		{
+//			String displayName = materialType.getDisplayName();
+//			SlurryRegistryObject<Slurry, Slurry> slurryRegistry = MoreMekanismProcessingSlurries.getSlurryRegistry(materialType);
+//			this.add(slurryRegistry.getDirtySlurry().getTranslationKey(), "Dirty " + displayName + " Slurry");
+//			this.add(slurryRegistry.getCleanSlurry().getTranslationKey(), "Clean " + displayName + " Slurry");
+//		}
 
 	}
 
