@@ -16,6 +16,7 @@ public class MaterialTypeBuilder
 	private MaterialResultShape resultShape;
 	private String displayName;
 	private int color;
+	private boolean respect;
 
 	public MaterialTypeBuilder(String baseName)
 	{
@@ -94,6 +95,17 @@ public class MaterialTypeBuilder
 	public MaterialTypeBuilder color(int color)
 	{
 		this.color = color;
+		return this;
+	}
+	
+	public boolean respect()
+	{
+		return this.respect;
+	}
+	
+	public MaterialTypeBuilder respect(boolean respect)
+	{
+		this.respect = respect;
 		return this;
 	}
 

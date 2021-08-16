@@ -8,6 +8,7 @@ public class MoreMekanismProcessingConditions
 	{
 		CraftingHelper.register(new TagNotEmptyCondition.Serializer());
 		CraftingHelper.register(new ProcessingLevelCondition.Serializer());
+		CraftingHelper.register(new OverrideRespectCondition.Serializer());
 	}
 
 }

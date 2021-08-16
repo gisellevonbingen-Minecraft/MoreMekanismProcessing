@@ -1,6 +1,8 @@
 package com.github.gisellevonbingen.moremekanismprocessing.datagen;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
 
@@ -9,6 +11,7 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.Cookin
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.ShapedRecipeBuilder;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.ShapelessRecipeBuilder;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.ProcessingLevelCondition;
+import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.OverrideRespectCondition;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.TagNotEmptyCondition;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialResultShape;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
@@ -69,12 +72,13 @@ public class RecipesGenerator extends RecipeProvider
 	{
 		private MaterialType materialType;
 		private Consumer<IFinishedRecipe> consumer;
-		private ICondition condition;
+		private List<ICondition> conditions;
 
 		public OreRecipesGenerator(MaterialType materialType, Consumer<IFinishedRecipe> consumer)
 		{
 			this.materialType = materialType;
 			this.consumer = consumer;
+			this.conditions = new ArrayList<>();
 		}
 
 		public ICondition createConditionHasOre()
@@ -82,40 +86,45 @@ public class RecipesGenerator extends RecipeProvider
 			return new TagNotEmptyCondition(MaterialState.ORE.getStateTagName(this.materialType));
 		}
 
-		public void prepareCondition(ICondition condition)
+		public void applyProcssingLevelCondition(int processingLevel, Runnable runnable)
 		{
-			this.condition = condition;
+			this.applyCondition(new ProcessingLevelCondition(this.materialType, processingLevel), runnable);
 		}
 
-		public void applyCondition(int processingLevel, Runnable runnable)
+		public void applyCondition(ICondition condition, Runnable runnable)
 		{
 			try
 			{
-				this.condition = new ProcessingLevelCondition(this.materialType, processingLevel);
+				this.conditions.add(condition);
 				runnable.run();
 			}
 			finally
 			{
-				this.condition = null;
+				this.conditions.remove(condition);
 			}
 
 		}
 
 		public void applyCondition(Consumer<ICondition> consumer)
 		{
-			if (this.condition != null)
+			for (ICondition condition : this.conditions)
 			{
-				consumer.accept(this.condition);
+				consumer.accept(condition);
 			}
 
 		}
 
 		public void build()
 		{
-			this.applyCondition(5, () -> this.buildProcessingLevel5());
-			this.applyCondition(4, () -> this.buildProcessingLevel4());
-			this.applyCondition(3, () -> this.buildProcessingLevel3());
-			this.applyCondition(2, () -> this.buildProcessingLevel2());
+			if (this.materialType.isRespectMekanism() == true)
+			{
+				this.conditions.add(new OverrideRespectCondition(this.materialType));
+			}
+
+			this.applyProcssingLevelCondition(5, () -> this.buildProcessingLevel5());
+			this.applyProcssingLevelCondition(4, () -> this.buildProcessingLevel4());
+			this.applyProcssingLevelCondition(3, () -> this.buildProcessingLevel3());
+			this.applyProcssingLevelCondition(2, () -> this.buildProcessingLevel2());
 
 			this.buildOthers();
 		}
@@ -184,6 +193,11 @@ public class RecipesGenerator extends RecipeProvider
 
 		public void buildProcessingLevel2()
 		{
+			if (this.materialType.isRespectMekanism() == true)
+			{
+				return;
+			}
+			
 			if (this.materialType.getResultShape() == MaterialResultShape.GEM)
 			{
 				if (this.canProcess(MaterialState.ORE, MaterialState.GEM) == true)
@@ -200,7 +214,7 @@ public class RecipesGenerator extends RecipeProvider
 				}
 
 			}
-			
+
 			if (this.canProcess(MaterialState.DUST, MaterialState.INGOT) == true)
 			{
 				this.buildCook(MaterialState.DUST, MaterialState.INGOT);

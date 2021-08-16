@@ -6,6 +6,7 @@ import java.util.Map;
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
 
 import mekanism.common.registries.MekanismItems;
+import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Util;
 
@@ -18,10 +19,8 @@ public enum MaterialType
 	Bort(new MaterialTypeBuilder("bort").resultShape(MaterialResultShape.GEM).displayName("Bort").color(0x7495AF)),
 	Cobalt(new MaterialTypeBuilder("cobalt").resultShape(MaterialResultShape.INGOT).displayName("Cobalt").color(0x1E66BF)),
 	CrimsonIron(new MaterialTypeBuilder("crimson_iron").resultShape(MaterialResultShape.INGOT).displayName("Crimson Iron").color(0xF44770)),
-//	Diamond(new MaterialTypeBuilder("diamond").resultShape(MaterialResultShape.GEM).displayName("Diamond").color(0x49EAD6).presetItem(MaterialState.DUST, MekanismItems.DIAMOND_DUST).presetItem(MaterialState.GEM, Items.DIAMOND)),
 	Dilithium(new MaterialTypeBuilder("dilithium").resultShape(MaterialResultShape.GEM).displayName("Dilithium").color(0xD8C4C4)),
 	Electrotine(new MaterialTypeBuilder("electrotine").resultShape(MaterialResultShape.DUST).displayName("Electrotine").color(0x0CB4F8)),
-//	Emerald(new MaterialTypeBuilder("emerald").resultShape(MaterialResultShape.GEM).displayName("Emerald").color(0x17DA61).presetItem(MaterialState.DUST, MekanismItems.EMERALD_DUST).presetItem(MaterialState.GEM, Items.EMERALD)),
 	GreenSapphire(new MaterialTypeBuilder("green_sapphire").resultShape(MaterialResultShape.GEM).displayName("Green Sapphire").color(0x33CC33)),
 	Iridium(new MaterialTypeBuilder("iridium").resultShape(MaterialResultShape.INGOT).displayName("Iridium").color(0xD8D8C4)),
 	Lithium(new MaterialTypeBuilder("lithium").resultShape(MaterialResultShape.INGOT).displayName("Lithium").color(0x808080)),
@@ -37,6 +36,8 @@ public enum MaterialType
 	Tungsten(new MaterialTypeBuilder("tungsten").resultShape(MaterialResultShape.INGOT).displayName("Tungsten").color(0x333333)),
 	Zinc(new MaterialTypeBuilder("zinc").resultShape(MaterialResultShape.INGOT).displayName("Zinc").color(0xCCCC8E)),
 
+//	Diamond(new MaterialTypeBuilder("diamond").respect(true).resultShape(MaterialResultShape.GEM).displayName("Diamond").color(0x49EAD6).presetItem(MaterialState.DUST, MekanismItems.DIAMOND_DUST).presetItem(MaterialState.GEM, Items.DIAMOND)),
+//	Emerald(new MaterialTypeBuilder("emerald").respect(true).resultShape(MaterialResultShape.GEM).displayName("Emerald").color(0x17DA61).presetItem(MaterialState.DUST, MekanismItems.EMERALD_DUST).presetItem(MaterialState.GEM, Items.EMERALD)),
 	// EOL
 	;
 
@@ -45,6 +46,7 @@ public enum MaterialType
 	private final MaterialResultShape resultShape;
 	private final String displayName;
 	private final int color;
+	private final boolean respectMekanism;
 
 	private MaterialType(MaterialTypeBuilder builder)
 	{
@@ -53,6 +55,7 @@ public enum MaterialType
 		this.presetItems = new HashMap<>(builder.presetItems());
 		this.displayName = builder.displayName();
 		this.color = 0xFF000000 | builder.color();
+		this.respectMekanism = builder.respect();
 	}
 
 	public String getDescriptionId()
@@ -93,6 +96,11 @@ public enum MaterialType
 	public int getColor()
 	{
 		return this.color;
+	}
+	
+	public boolean isRespectMekanism()
+	{
+		return this.respectMekanism;
 	}
 
 }

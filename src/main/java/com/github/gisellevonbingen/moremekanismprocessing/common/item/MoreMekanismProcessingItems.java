@@ -23,31 +23,51 @@ public class MoreMekanismProcessingItems
 	public static final DeferredRegister<Item> REGISTER = DeferredRegister.create(ForgeRegistries.ITEMS, MoreMekanismProcessing.MODID);
 	public static final Map<MaterialType, Map<MaterialState, RegistryObject<Item>>> PROCESSING_ITEMS = new HashMap<>();
 
+	public static ResourceLocation getProcessingItemName(MaterialType materialType, MaterialState materialState)
+	{
+		ResourceLocation presetName = materialType.getPresetItem(materialState);
+
+		if (presetName != null)
+		{
+			return presetName;
+		}
+		else
+		{
+			Map<MaterialState, RegistryObject<Item>> map = PROCESSING_ITEMS.get(materialType);
+
+			if (map == null)
+			{
+				return null;
+			}
+
+			RegistryObject<Item> registryObject = map.get(materialState);
+			return registryObject != null ? registryObject.getId() : null;
+		}
+
+	}
+
+	@SuppressWarnings("deprecation")
 	public static Item getProcessingItem(MaterialType materialType, MaterialState materialState)
 	{
 		ResourceLocation presetName = materialType.getPresetItem(materialState);
 
 		if (presetName != null)
 		{
-			@SuppressWarnings("deprecation")
-			Item presetItem = Registry.ITEM.get(presetName);
+			return Registry.ITEM.get(presetName);
+		}
+		else
+		{
+			Map<MaterialState, RegistryObject<Item>> map = PROCESSING_ITEMS.get(materialType);
 
-			if (presetItem != null)
+			if (map == null)
 			{
-				return presetItem;
+				return null;
 			}
 
+			RegistryObject<Item> registryObject = map.get(materialState);
+			return registryObject != null ? (ItemStatedMaterial) registryObject.get() : null;
 		}
 
-		Map<MaterialState, RegistryObject<Item>> map = PROCESSING_ITEMS.get(materialType);
-
-		if (map == null)
-		{
-			return null;
-		}
-
-		RegistryObject<Item> registryObject = map.get(materialState);
-		return registryObject != null ? (ItemStatedMaterial) registryObject.get() : null;
 	}
 
 	public static List<ItemStatedMaterial> getProcessingItems(MaterialState materialState)
@@ -100,7 +120,7 @@ public class MoreMekanismProcessingItems
 			}
 			else if (materialState != MaterialState.ORE)
 			{
-				RegistryObject<Item> registryObject = registry.register(materialState.getItemName(materialType), () -> new ItemStatedMaterial(materialType, materialState));
+				RegistryObject<Item> registryObject = registry.register(materialState.getItemNamePath(materialType), () -> new ItemStatedMaterial(materialType, materialState));
 				map2.put(materialState, registryObject);
 			}
 

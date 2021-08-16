@@ -88,7 +88,7 @@ public enum MaterialState
 
 	}
 
-	public String getItemName(MaterialType materialType)
+	public String getItemNamePath(MaterialType materialType)
 	{
 		String stateName = this.getBaseName();
 		String baseName = materialType.getBaseName();
@@ -100,6 +100,19 @@ public enum MaterialState
 		else
 		{
 			return stateName + "_" + baseName;
+		}
+
+	}
+
+	public ResourceLocation getItemName(MaterialType materialType)
+	{
+		if (this != MaterialState.ORE)
+		{
+			return MoreMekanismProcessingItems.getProcessingItemName(materialType, this);
+		}
+		else
+		{
+			throw new NotImplementedException("getItemName(" + materialType.name() + ")");
 		}
 
 	}
