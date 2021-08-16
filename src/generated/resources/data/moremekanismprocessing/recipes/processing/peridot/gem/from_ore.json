@@ -2,22 +2,22 @@
   "type": "mekanism:enriching",
   "conditions": [
     {
-      "tag": "forge:ores/green_sapphire",
+      "tag": "forge:ores/peridot",
       "type": "moremekanismprocessing:tag_not_empty"
     },
     {
-      "materialType": "green_sapphire",
+      "materialType": "peridot",
       "requireLevel": 2,
       "type": "moremekanismprocessing:processing_level"
     }
   ],
   "input": {
     "ingredient": {
-      "tag": "forge:ores/green_sapphire"
+      "tag": "forge:ores/peridot"
     }
   },
   "output": {
-    "item": "moremekanismprocessing:dust_green_sapphire",
+    "item": "moremekanismprocessing:gem_peridot",
     "count": 2
   }
 }

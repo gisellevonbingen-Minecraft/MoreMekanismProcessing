@@ -2,22 +2,22 @@
   "type": "mekanism:enriching",
   "conditions": [
     {
-      "tag": "forge:ores/ruby",
+      "tag": "forge:ores/bort",
       "type": "moremekanismprocessing:tag_not_empty"
     },
     {
-      "materialType": "ruby",
+      "materialType": "bort",
       "requireLevel": 2,
       "type": "moremekanismprocessing:processing_level"
     }
   ],
   "input": {
     "ingredient": {
-      "tag": "forge:ores/ruby"
+      "tag": "forge:ores/bort"
     }
   },
   "output": {
-    "item": "moremekanismprocessing:dust_ruby",
+    "item": "moremekanismprocessing:gem_bort",
     "count": 2
   }
 }

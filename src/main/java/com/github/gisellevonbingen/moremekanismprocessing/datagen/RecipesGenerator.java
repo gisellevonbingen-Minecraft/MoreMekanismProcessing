@@ -10,6 +10,7 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.Shaped
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.ShapelessRecipeBuilder;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.ProcessingLevelCondition;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.TagNotEmptyCondition;
+import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialResultShape;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurries;
@@ -183,11 +184,23 @@ public class RecipesGenerator extends RecipeProvider
 
 		public void buildProcessingLevel2()
 		{
-			if (this.canProcess(MaterialState.ORE, MaterialState.DUST) == true)
+			if (this.materialType.getResultShape() == MaterialResultShape.GEM)
 			{
-				this.buildItemToItemStack(MaterialState.ORE, MaterialState.DUST, 2, ItemStackToItemStackRecipeBuilder::enriching);
-			}
+				if (this.canProcess(MaterialState.ORE, MaterialState.GEM) == true)
+				{
+					this.buildItemToItemStack(MaterialState.ORE, MaterialState.GEM, 2, ItemStackToItemStackRecipeBuilder::enriching);
+				}
 
+			}
+			else
+			{
+				if (this.canProcess(MaterialState.ORE, MaterialState.DUST) == true)
+				{
+					this.buildItemToItemStack(MaterialState.ORE, MaterialState.DUST, 2, ItemStackToItemStackRecipeBuilder::enriching);
+				}
+
+			}
+			
 			if (this.canProcess(MaterialState.DUST, MaterialState.INGOT) == true)
 			{
 				this.buildCook(MaterialState.DUST, MaterialState.INGOT);

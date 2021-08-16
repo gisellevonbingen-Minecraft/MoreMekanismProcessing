@@ -3,7 +3,11 @@ package com.github.gisellevonbingen.moremekanismprocessing.common.material;
 import java.util.HashMap;
 import java.util.Map;
 
+import mekanism.common.Mekanism;
+import mekanism.common.registration.WrappedRegistryObject;
+import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.registries.IForgeRegistryEntry;
 
 public class MaterialTypeBuilder
 {
@@ -38,6 +42,21 @@ public class MaterialTypeBuilder
 	public MaterialTypeBuilder presetItem(MaterialState state, String modid, String itemName)
 	{
 		return this.presetItem(state, new ResourceLocation(modid, itemName));
+	}
+
+	public MaterialTypeBuilder presetItem(MaterialState state, IForgeRegistryEntry<Item> holder)
+	{
+		return this.presetItem(state, holder.getRegistryName());
+	}
+
+	public MaterialTypeBuilder presetItem(MaterialState state, WrappedRegistryObject<Item> holder)
+	{
+		return this.presetItem(state, Mekanism.MODID, holder);
+	}
+
+	public MaterialTypeBuilder presetItem(MaterialState state, String modid, WrappedRegistryObject<Item> holder)
+	{
+		return this.presetItem(state, modid, holder.getInternalRegistryName());
 	}
 
 	public String baseName()

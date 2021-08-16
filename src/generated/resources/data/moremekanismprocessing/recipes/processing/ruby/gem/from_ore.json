@@ -2,22 +2,22 @@
   "type": "mekanism:enriching",
   "conditions": [
     {
-      "tag": "forge:ores/peridot",
+      "tag": "forge:ores/ruby",
       "type": "moremekanismprocessing:tag_not_empty"
     },
     {
-      "materialType": "peridot",
+      "materialType": "ruby",
       "requireLevel": 2,
       "type": "moremekanismprocessing:processing_level"
     }
   ],
   "input": {
     "ingredient": {
-      "tag": "forge:ores/peridot"
+      "tag": "forge:ores/ruby"
     }
   },
   "output": {
-    "item": "moremekanismprocessing:dust_peridot",
+    "item": "moremekanismprocessing:gem_ruby",
     "count": 2
   }
 }

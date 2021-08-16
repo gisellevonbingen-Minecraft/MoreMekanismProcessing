@@ -21,6 +21,7 @@ public class CommonConfig
 
 		builder.pop();
 
+		builder.comment("processingLevel : set ores processing max level", "    5 : can into up x5 (able all procssing)", "    4 : can into up x4 (disable ore dissolution, slurry crystalizing)", "    3 : can into up x3 (disable injecting)", "    2 : can into up x2 (disable purifying and clumps crushing)", "    0~1 : disable all processing in this mod");
 		builder.push("ores");
 
 		this.processingLevels = new HashMap<>();
@@ -30,13 +31,25 @@ public class CommonConfig
 		{
 			builder.push(materialType.getBaseName());
 
-			builder.comment("set ores processing max level", "5 : can into up x5 (able all procssing)", "4 : can into up x4 (disable ore dissolution, slurry crystalizing)", "3 : can into up x3 (disable injecting)", "2 : can into up x2 (disable purifying and clumps crushing)", "0~1 : disable all processing in this mod");
-			this.processingLevels.put(materialType, builder.define("processingLevel", 5));
+			this.processingLevels.put(materialType, builder.define("processingLevel", this.getProcessingLevel(materialType)));
 
 			builder.pop();
 		}
 
 		builder.pop();
+	}
+
+	public int getProcessingLevel(MaterialType materialType)
+	{
+//		if (materialType == MaterialType.Diamond || materialType == MaterialType.Emerald)
+//		{
+//			return 0;
+//		}
+//		else
+		{
+			return 5;
+		}
+
 	}
 
 }

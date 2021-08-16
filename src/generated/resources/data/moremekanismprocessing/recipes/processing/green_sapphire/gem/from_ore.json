@@ -2,22 +2,22 @@
   "type": "mekanism:enriching",
   "conditions": [
     {
-      "tag": "forge:ores/bort",
+      "tag": "forge:ores/green_sapphire",
       "type": "moremekanismprocessing:tag_not_empty"
     },
     {
-      "materialType": "bort",
+      "materialType": "green_sapphire",
       "requireLevel": 2,
       "type": "moremekanismprocessing:processing_level"
     }
   ],
   "input": {
     "ingredient": {
-      "tag": "forge:ores/bort"
+      "tag": "forge:ores/green_sapphire"
     }
   },
   "output": {
-    "item": "moremekanismprocessing:dust_bort",
+    "item": "moremekanismprocessing:gem_green_sapphire",
     "count": 2
   }
 }
