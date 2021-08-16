@@ -1,0 +1,26 @@
+{
+  "type": "mekanism:washing",
+  "conditions": [
+    {
+      "materialType": "redstone",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "redstone",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "fluidInput": {
+    "amount": 5,
+    "fluid": "minecraft:water"
+  },
+  "slurryInput": {
+    "amount": 1,
+    "slurry": "moremekanismprocessing:dirty_redstone"
+  },
+  "output": {
+    "slurry": "moremekanismprocessing:clean_redstone",
+    "amount": 1
+  }
+}

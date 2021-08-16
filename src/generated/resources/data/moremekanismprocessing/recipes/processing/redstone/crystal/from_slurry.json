@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:crystallizing",
+  "conditions": [
+    {
+      "materialType": "redstone",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "redstone",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "chemicalType": "slurry",
+  "input": {
+    "amount": 200,
+    "slurry": "moremekanismprocessing:clean_redstone"
+  },
+  "output": {
+    "item": "moremekanismprocessing:crystal_redstone"
+  }
+}

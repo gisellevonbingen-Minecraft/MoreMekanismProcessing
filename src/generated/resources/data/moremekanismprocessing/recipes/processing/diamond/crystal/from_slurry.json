@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:crystallizing",
+  "conditions": [
+    {
+      "materialType": "diamond",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "diamond",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "chemicalType": "slurry",
+  "input": {
+    "amount": 200,
+    "slurry": "moremekanismprocessing:clean_diamond"
+  },
+  "output": {
+    "item": "moremekanismprocessing:crystal_diamond"
+  }
+}

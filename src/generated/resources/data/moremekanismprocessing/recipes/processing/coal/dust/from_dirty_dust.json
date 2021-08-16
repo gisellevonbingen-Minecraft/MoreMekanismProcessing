@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "materialType": "coal",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "coal",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:dirty_dusts/coal"
+    }
+  },
+  "output": {
+    "item": "mekanism:dust_coal"
+  }
+}

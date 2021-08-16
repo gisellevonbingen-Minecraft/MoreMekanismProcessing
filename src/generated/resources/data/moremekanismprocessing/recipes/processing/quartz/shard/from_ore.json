@@ -1,0 +1,31 @@
+{
+  "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "tag": "forge:ores/quartz",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "quartz",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "quartz",
+      "requireLevel": 4,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/quartz"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "item": "moremekanismprocessing:shard_quartz",
+    "count": 4
+  }
+}

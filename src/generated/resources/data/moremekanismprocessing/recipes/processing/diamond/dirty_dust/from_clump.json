@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:crushing",
+  "conditions": [
+    {
+      "materialType": "diamond",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "diamond",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:clumps/diamond"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dirty_dust_diamond"
+  }
+}

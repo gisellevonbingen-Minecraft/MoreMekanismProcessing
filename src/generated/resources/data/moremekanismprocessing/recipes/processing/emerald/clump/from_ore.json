@@ -1,0 +1,31 @@
+{
+  "type": "mekanism:purifying",
+  "conditions": [
+    {
+      "tag": "forge:ores/emerald",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "emerald",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "emerald",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/emerald"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "output": {
+    "item": "moremekanismprocessing:clump_emerald",
+    "count": 3
+  }
+}

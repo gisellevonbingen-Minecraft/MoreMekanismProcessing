@@ -1,0 +1,26 @@
+{
+  "type": "mekanism:purifying",
+  "conditions": [
+    {
+      "materialType": "emerald",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "emerald",
+      "requireLevel": 4,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "mekanism:shards/emerald"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "output": {
+    "item": "moremekanismprocessing:clump_emerald"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "materialType": "emerald",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "emerald",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:dirty_dusts/emerald"
+    }
+  },
+  "output": {
+    "item": "mekanism:dust_emerald"
+  }
+}

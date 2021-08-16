@@ -1,0 +1,26 @@
+{
+  "type": "mekanism:washing",
+  "conditions": [
+    {
+      "materialType": "emerald",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "emerald",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "fluidInput": {
+    "amount": 5,
+    "fluid": "minecraft:water"
+  },
+  "slurryInput": {
+    "amount": 1,
+    "slurry": "moremekanismprocessing:dirty_emerald"
+  },
+  "output": {
+    "slurry": "moremekanismprocessing:clean_emerald",
+    "amount": 1
+  }
+}

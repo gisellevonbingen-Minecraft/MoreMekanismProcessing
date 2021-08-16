@@ -23,6 +23,12 @@
     "moremekanismprocessing:shard_sulfur",
     "moremekanismprocessing:shard_titanium",
     "moremekanismprocessing:shard_tungsten",
-    "moremekanismprocessing:shard_zinc"
+    "moremekanismprocessing:shard_zinc",
+    "moremekanismprocessing:shard_coal",
+    "moremekanismprocessing:shard_lapis",
+    "moremekanismprocessing:shard_diamond",
+    "moremekanismprocessing:shard_redstone",
+    "moremekanismprocessing:shard_emerald",
+    "moremekanismprocessing:shard_quartz"
   ]
 }

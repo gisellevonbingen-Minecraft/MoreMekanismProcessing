@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:crystallizing",
+  "conditions": [
+    {
+      "materialType": "coal",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "coal",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "chemicalType": "slurry",
+  "input": {
+    "amount": 200,
+    "slurry": "moremekanismprocessing:clean_coal"
+  },
+  "output": {
+    "item": "moremekanismprocessing:crystal_coal"
+  }
+}

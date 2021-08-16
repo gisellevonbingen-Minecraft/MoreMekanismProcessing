@@ -1,0 +1,31 @@
+{
+  "type": "mekanism:purifying",
+  "conditions": [
+    {
+      "tag": "forge:ores/lapis",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "lapis",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "lapis",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/lapis"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "output": {
+    "item": "moremekanismprocessing:clump_lapis",
+    "count": 3
+  }
+}

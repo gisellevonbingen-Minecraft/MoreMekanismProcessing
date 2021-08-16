@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:crushing",
+  "conditions": [
+    {
+      "materialType": "coal",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "coal",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:clumps/coal"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dirty_dust_coal"
+  }
+}

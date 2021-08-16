@@ -1,0 +1,26 @@
+{
+  "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "materialType": "lapis",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "lapis",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "mekanism:crystals/lapis"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "item": "moremekanismprocessing:shard_lapis"
+  }
+}

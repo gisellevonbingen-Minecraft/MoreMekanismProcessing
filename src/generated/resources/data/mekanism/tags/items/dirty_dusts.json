@@ -23,6 +23,12 @@
     "moremekanismprocessing:dirty_dust_sulfur",
     "moremekanismprocessing:dirty_dust_titanium",
     "moremekanismprocessing:dirty_dust_tungsten",
-    "moremekanismprocessing:dirty_dust_zinc"
+    "moremekanismprocessing:dirty_dust_zinc",
+    "moremekanismprocessing:dirty_dust_coal",
+    "moremekanismprocessing:dirty_dust_lapis",
+    "moremekanismprocessing:dirty_dust_diamond",
+    "moremekanismprocessing:dirty_dust_redstone",
+    "moremekanismprocessing:dirty_dust_emerald",
+    "moremekanismprocessing:dirty_dust_quartz"
   ]
 }

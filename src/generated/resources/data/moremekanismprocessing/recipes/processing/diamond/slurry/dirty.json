@@ -1,0 +1,32 @@
+{
+  "type": "mekanism:dissolution",
+  "conditions": [
+    {
+      "tag": "forge:ores/diamond",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "diamond",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "diamond",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/diamond"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:sulfuric_acid"
+  },
+  "output": {
+    "slurry": "moremekanismprocessing:dirty_diamond",
+    "amount": 1000,
+    "chemicalType": "slurry"
+  }
+}

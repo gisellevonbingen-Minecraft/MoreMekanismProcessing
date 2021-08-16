@@ -1,0 +1,31 @@
+{
+  "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "tag": "forge:ores/emerald",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "emerald",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "emerald",
+      "requireLevel": 4,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/emerald"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "item": "moremekanismprocessing:shard_emerald",
+    "count": 4
+  }
+}

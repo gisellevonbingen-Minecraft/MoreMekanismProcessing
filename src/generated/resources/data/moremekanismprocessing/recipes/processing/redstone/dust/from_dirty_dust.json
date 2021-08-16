@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "materialType": "redstone",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "redstone",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:dirty_dusts/redstone"
+    }
+  },
+  "output": {
+    "item": "minecraft:redstone"
+  }
+}

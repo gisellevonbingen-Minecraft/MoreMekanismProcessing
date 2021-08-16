@@ -23,6 +23,12 @@
     "moremekanismprocessing:clean_sulfur",
     "moremekanismprocessing:clean_titanium",
     "moremekanismprocessing:clean_tungsten",
-    "moremekanismprocessing:clean_zinc"
+    "moremekanismprocessing:clean_zinc",
+    "moremekanismprocessing:clean_coal",
+    "moremekanismprocessing:clean_lapis",
+    "moremekanismprocessing:clean_diamond",
+    "moremekanismprocessing:clean_redstone",
+    "moremekanismprocessing:clean_emerald",
+    "moremekanismprocessing:clean_quartz"
   ]
 }

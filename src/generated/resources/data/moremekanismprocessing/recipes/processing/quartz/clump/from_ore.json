@@ -1,0 +1,31 @@
+{
+  "type": "mekanism:purifying",
+  "conditions": [
+    {
+      "tag": "forge:ores/quartz",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "quartz",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "quartz",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/quartz"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "output": {
+    "item": "moremekanismprocessing:clump_quartz",
+    "count": 3
+  }
+}

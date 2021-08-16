@@ -1,0 +1,31 @@
+{
+  "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "tag": "forge:ores/lapis",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "lapis",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "lapis",
+      "requireLevel": 4,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/lapis"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "item": "moremekanismprocessing:shard_lapis",
+    "count": 4
+  }
+}

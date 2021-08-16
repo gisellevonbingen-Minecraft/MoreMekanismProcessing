@@ -1,0 +1,31 @@
+{
+  "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "tag": "forge:ores/redstone",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "redstone",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "redstone",
+      "requireLevel": 4,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/redstone"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "item": "moremekanismprocessing:shard_redstone",
+    "count": 4
+  }
+}

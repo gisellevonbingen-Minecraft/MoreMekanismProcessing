@@ -23,6 +23,12 @@
     "mekanism:dust_sulfur",
     "moremekanismprocessing:dust_titanium",
     "moremekanismprocessing:dust_tungsten",
-    "moremekanismprocessing:dust_zinc"
+    "moremekanismprocessing:dust_zinc",
+    "mekanism:dust_coal",
+    "mekanism:dust_lapis_lazuli",
+    "mekanism:dust_diamond",
+    "minecraft:redstone",
+    "mekanism:dust_emerald",
+    "mekanism:dust_quartz"
   ]
 }

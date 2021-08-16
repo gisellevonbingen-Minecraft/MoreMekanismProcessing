@@ -1,0 +1,32 @@
+{
+  "type": "mekanism:dissolution",
+  "conditions": [
+    {
+      "tag": "forge:ores/coal",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "coal",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "coal",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/coal"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:sulfuric_acid"
+  },
+  "output": {
+    "slurry": "moremekanismprocessing:dirty_coal",
+    "amount": 1000,
+    "chemicalType": "slurry"
+  }
+}

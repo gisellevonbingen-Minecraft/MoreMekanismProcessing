@@ -1,0 +1,31 @@
+{
+  "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "tag": "forge:ores/coal",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "coal",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "coal",
+      "requireLevel": 4,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/coal"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "item": "moremekanismprocessing:shard_coal",
+    "count": 4
+  }
+}

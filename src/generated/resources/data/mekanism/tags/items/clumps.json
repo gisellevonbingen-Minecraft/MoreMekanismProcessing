@@ -23,6 +23,12 @@
     "moremekanismprocessing:clump_sulfur",
     "moremekanismprocessing:clump_titanium",
     "moremekanismprocessing:clump_tungsten",
-    "moremekanismprocessing:clump_zinc"
+    "moremekanismprocessing:clump_zinc",
+    "moremekanismprocessing:clump_coal",
+    "moremekanismprocessing:clump_lapis",
+    "moremekanismprocessing:clump_diamond",
+    "moremekanismprocessing:clump_redstone",
+    "moremekanismprocessing:clump_emerald",
+    "moremekanismprocessing:clump_quartz"
   ]
 }

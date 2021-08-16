@@ -19,12 +19,6 @@ public class SlurryTagGenerator extends SlurryTagsProvider
 	}
 
 	@Override
-	public String getName()
-	{
-		return "Slurry Tags";
-	}
-
-	@Override
 	protected void addTags()
 	{
 		Builder<Slurry> dirty = this.tag(MekanismTags.Slurries.DIRTY);

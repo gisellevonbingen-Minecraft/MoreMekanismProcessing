@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:crushing",
+  "conditions": [
+    {
+      "materialType": "lapis",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "lapis",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:clumps/lapis"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dirty_dust_lapis"
+  }
+}

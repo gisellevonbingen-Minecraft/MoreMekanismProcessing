@@ -1,0 +1,26 @@
+{
+  "type": "mekanism:washing",
+  "conditions": [
+    {
+      "materialType": "quartz",
+      "type": "moremekanismprocessing:override_respect"
+    },
+    {
+      "materialType": "quartz",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "fluidInput": {
+    "amount": 5,
+    "fluid": "minecraft:water"
+  },
+  "slurryInput": {
+    "amount": 1,
+    "slurry": "moremekanismprocessing:dirty_quartz"
+  },
+  "output": {
+    "slurry": "moremekanismprocessing:clean_quartz",
+    "amount": 1
+  }
+}

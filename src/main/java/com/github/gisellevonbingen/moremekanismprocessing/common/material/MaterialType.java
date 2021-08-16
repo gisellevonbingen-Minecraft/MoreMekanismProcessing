@@ -36,8 +36,13 @@ public enum MaterialType
 	Tungsten(new MaterialTypeBuilder("tungsten").resultShape(MaterialResultShape.INGOT).displayName("Tungsten").color(0x333333)),
 	Zinc(new MaterialTypeBuilder("zinc").resultShape(MaterialResultShape.INGOT).displayName("Zinc").color(0xCCCC8E)),
 
-//	Diamond(new MaterialTypeBuilder("diamond").respect(true).resultShape(MaterialResultShape.GEM).displayName("Diamond").color(0x49EAD6).presetItem(MaterialState.DUST, MekanismItems.DIAMOND_DUST).presetItem(MaterialState.GEM, Items.DIAMOND)),
-//	Emerald(new MaterialTypeBuilder("emerald").respect(true).resultShape(MaterialResultShape.GEM).displayName("Emerald").color(0x17DA61).presetItem(MaterialState.DUST, MekanismItems.EMERALD_DUST).presetItem(MaterialState.GEM, Items.EMERALD)),
+	Coal(new MaterialTypeBuilder("coal").respect(true).resultShape(MaterialResultShape.DUST).displayName("Coal").color(0x2D2D2D).presetItem(MaterialState.DUST, MekanismItems.COAL_DUST)),
+	Lapis(new MaterialTypeBuilder("lapis").respect(true).resultShape(MaterialResultShape.DUST).displayName("Lapis Lazuli").color(0x2C69C8).presetItem(MaterialState.DUST, MekanismItems.LAPIS_LAZULI_DUST)),
+	Diamond(new MaterialTypeBuilder("diamond").respect(true).resultShape(MaterialResultShape.DUST).displayName("Diamond").color(0x49EAD6).presetItem(MaterialState.DUST, MekanismItems.DIAMOND_DUST)),
+	Redstone(new MaterialTypeBuilder("redstone").respect(true).resultShape(MaterialResultShape.DUST).displayName("Redstone").color(0xFF0000).presetItem(MaterialState.DUST, Items.REDSTONE)),
+	Emerald(new MaterialTypeBuilder("emerald").respect(true).resultShape(MaterialResultShape.DUST).displayName("Emerald").color(0x17DA61).presetItem(MaterialState.DUST, MekanismItems.EMERALD_DUST)),
+	Quartz(new MaterialTypeBuilder("quartz").respect(true).resultShape(MaterialResultShape.DUST).displayName("Nether Quartz").color(0xEBE3DB).presetItem(MaterialState.DUST, MekanismItems.QUARTZ_DUST)),
+
 	// EOL
 	;
 
@@ -47,6 +52,8 @@ public enum MaterialType
 	private final String displayName;
 	private final int color;
 	private final boolean respectMekanism;
+
+	private String cachedDescriptionId;
 
 	private MaterialType(MaterialTypeBuilder builder)
 	{
@@ -60,7 +67,12 @@ public enum MaterialType
 
 	public String getDescriptionId()
 	{
-		return makeDescriptionId(this.baseName);
+		if (this.cachedDescriptionId == null)
+		{
+			this.cachedDescriptionId = makeDescriptionId(this.baseName);
+		}
+
+		return this.cachedDescriptionId;
 	}
 
 	public static String makeDescriptionId(String baseName)
@@ -97,7 +109,7 @@ public enum MaterialType
 	{
 		return this.color;
 	}
-	
+
 	public boolean isRespectMekanism()
 	{
 		return this.respectMekanism;
