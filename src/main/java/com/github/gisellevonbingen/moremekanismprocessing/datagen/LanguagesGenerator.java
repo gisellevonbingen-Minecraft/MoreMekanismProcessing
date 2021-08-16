@@ -5,11 +5,7 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.material.Materi
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurries;
 
-import mekanism.api.chemical.slurry.Slurry;
-import mekanism.common.registration.impl.SlurryRegistryObject;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Util;
 import net.minecraftforge.common.data.LanguageProvider;
 
 public class LanguagesGenerator extends LanguageProvider
@@ -25,7 +21,7 @@ public class LanguagesGenerator extends LanguageProvider
 		String statedCommentPrefix = MaterialState.makeDescriptionId("_comment");
 		int statedCommentLine = 0;
 		this.add(statedCommentPrefix + (statedCommentLine++), "");
-		this.add(statedCommentPrefix + (statedCommentLine++), "===== ItemStatedMaterial Common Rule =====");
+		this.add(statedCommentPrefix + (statedCommentLine++), "===== Rule =====");
 		this.add(statedCommentPrefix + (statedCommentLine++), "");
 		this.add(statedCommentPrefix + (statedCommentLine++), "%s is material type (e.g. Cobalt, Silver)");
 		this.add(statedCommentPrefix + (statedCommentLine++), "    from materialType.xxxxx");
@@ -45,7 +41,7 @@ public class LanguagesGenerator extends LanguageProvider
 		this.add(MaterialState.NUGGET.getStatedDescriptionId(), "%s Nugget");
 		this.add(MaterialState.GEM.getStatedDescriptionId(), "%s Gem");
 		this.add(MaterialState.makeDescriptionId("dirty_slurry"), "Dirty %s Slurry");
-		this.add(MaterialState.makeDescriptionId("clearn_slurry"), "Clearn %s Slurry");
+		this.add(MaterialState.makeDescriptionId("clean_slurry"), "Clean %s Slurry");
 
 		String materialTypeCommentPrefix = MaterialType.makeDescriptionId("_comment");
 		int materialTypeCommentLine = 0;
@@ -57,21 +53,6 @@ public class LanguagesGenerator extends LanguageProvider
 		{
 			this.add(materialType.getDescriptionId(), materialType.getDisplayName());
 		}
-
-//		String slurryCommentPrefix = Util.makeDescriptionId("slurry", new ResourceLocation(MoreMekanismProcessing.MODID, "_comment"));
-//		int slurryCommentLine = 0;
-//
-//		this.add(slurryCommentPrefix + (slurryCommentLine++), "");
-//		this.add(slurryCommentPrefix + (slurryCommentLine++), "===== Slurries =====");
-//		this.add(slurryCommentPrefix + (slurryCommentLine++), "");
-//
-//		for (MaterialType materialType : MaterialType.values())
-//		{
-//			String displayName = materialType.getDisplayName();
-//			SlurryRegistryObject<Slurry, Slurry> slurryRegistry = MoreMekanismProcessingSlurries.getSlurryRegistry(materialType);
-//			this.add(slurryRegistry.getDirtySlurry().getTranslationKey(), "Dirty " + displayName + " Slurry");
-//			this.add(slurryRegistry.getCleanSlurry().getTranslationKey(), "Clean " + displayName + " Slurry");
-//		}
 
 	}
 

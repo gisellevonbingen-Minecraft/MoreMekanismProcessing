@@ -11,8 +11,10 @@ import net.minecraft.util.text.TranslationTextComponent;
 
 public class MoreMekanismProcessingSlurry extends Slurry
 {
-	private MaterialType materialType;
-	private String state;
+	private final MaterialType materialType;
+	private final String state;
+
+	private ITextComponent cachedTextComponent;
 
 	public MoreMekanismProcessingSlurry(SlurryBuilder builder, MaterialType materialType, String state)
 	{
@@ -35,6 +37,16 @@ public class MoreMekanismProcessingSlurry extends Slurry
 
 	@Override
 	public ITextComponent getTextComponent()
+	{
+		if (this.cachedTextComponent == null)
+		{
+			this.cachedTextComponent = this.createTextComponent();
+		}
+
+		return cachedTextComponent;
+	}
+
+	private ITextComponent createTextComponent()
 	{
 		String descriptionId = this.getTranslationKey();
 
