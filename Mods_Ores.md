@@ -1,17 +1,55 @@
-Not contains ores with mekanism's default ores same name
 
-# Thermal Foundation
+# Support Ores
+
+* Not contains ores with mekanism's default ores same name
+* forge:ores/XXXX tagged ores support automatically
+
+## Gems
+
+* Bort Gem
+* Dilithium Gem
+* Green Sapphire Gem
+* Peridot Gem
+* Ruby Gem
+* Sapphire Gem
+
+## Ingots
+
+* Aluminium Ingot (Bauxite)
+* Azure Silver Ingot
+* Bismuth Ingot
+* Cobalt Ingot
+* Crimson Ingot
+* Iridium Ingot
+* Lithium Ingot
+* Nickel Ingot
+* Platinum Ingot
+* Silver Ingot
+* Titanium Ingot
+* Tungsten Ingot
+* Zinc Ingot
+
+
+## Dusts
+
+* Electrotine Dust
+* Niter Dust
+* Sulfur Dust
+
+# Tested Mods/Ores
+
+## Thermal Foundation
 
 * Silver Ingot
 * Nickel Ingot
 * Niter Dust
 * Sulfur Dust
 
-# Tinkers Construct
+## Tinkers Construct
 
 * Cobalt Ingot
 
-# Blue Power
+## Blue Power
 
 * Ruby Gem
 * Sapphire Gem
@@ -21,7 +59,7 @@ Not contains ores with mekanism's default ores same name
 * Zinc Ingot
 * Tungsten Ingot
 
-# Proejct Red
+## Proejct Red
 
 * Ruby Gem
 * Sapphire Gem
@@ -29,7 +67,7 @@ Not contains ores with mekanism's default ores same name
 * Silver Ingot
 * Electrotine Dust
 
-# Ice and Fire
+## Ice and Fire
 
 * Silver Ingot
 * Sapphire Gem (Fix Tags)
@@ -37,18 +75,18 @@ Not contains ores with mekanism's default ores same name
 * Amethyst Gem (Fix Tags)
 <br>Add 'forge:ores/amethyst'
 
-# Extreme Reactors 2
+## Extreme Reactors 2
 
 * Yellorite Ingot (Fix Tags)
 <br>Add 'forge:ores', 'forge:ores/uranium', 'forges:ores/yellorite'
 
-# Silent Gear
+## Silent Gear
 
 * Crimson Ingot
 * Azure Silver Ingot
 * Bort Gem
 
-# Silent's Mechanisms
+## Silent's Mechanisms
 
 * Silver Ingot
 * Nickel Ingot
@@ -57,22 +95,22 @@ Not contains ores with mekanism's default ores same name
 * Bismuth Ingot
 * Aluminium Ingot (Bauxite)
 
-# Immersive Engineering
+## Immersive Engineering
 
 * Aluminium Ingot (Bauxite)
 
-# LibVulpes (Advanced Rocketry)
+## LibVulpes (Advanced Rocketry)
 
 * Iridium Ingot
 * Dilithium Gem
 * Titanium Ingot (Fix Tags)
 <br>Add 'forge:ores/titanium' to Rutile Ore
 
-# Better Diving
+## Better Diving
 
 * Lithium Ingot (lithium dust can mixable with mekanism:dust_lithium)
 * Titanium Ingot
 
-# Create
+## Create
 
 * Zinc Ingot
