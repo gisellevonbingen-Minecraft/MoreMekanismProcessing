@@ -23,7 +23,7 @@ public class CommonConfig
 
 		builder.pop();
 
-		builder.comment("processingLevel : set ores processing max level", "    5 : can into up x5 (able all procssing)", "    4 : can into up x4 (disable ore dissolution, slurry crystalizing)", "    3 : can into up x3 (disable injecting)", "    2 : can into up x2 (disable purifying and clumps crushing)", "    0~1 : disable all processing in this mod");
+		builder.comment("processingLevel : set ores processing max level", "    5 : can into up x5 (able all procssing)", "    4 : can into up x4 (disable ore dissolution, slurry crystalizing)", "    3 : can into up x3 (disable injecting)", "    2 : can into up x2 (disable purifying and clumps crushing)", "    1 : reserved (currently same with 0)", "    0 : disable all processing in this mod");
 		builder.push("ores");
 
 		this.processingLevels = new HashMap<>();

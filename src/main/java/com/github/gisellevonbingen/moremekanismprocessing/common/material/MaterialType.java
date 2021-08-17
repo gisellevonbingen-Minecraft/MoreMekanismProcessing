@@ -10,7 +10,6 @@ import mekanism.common.registries.MekanismItems;
 import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Util;
-import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 
 public enum MaterialType
 {
@@ -61,7 +60,7 @@ public enum MaterialType
 		this.resultShape = builder.resultShape();
 		this.presetItems = new HashMap<>(builder.presetItems());
 		this.displayName = builder.displayName();
-		this.defaultColor = 0xFF000000 | builder.color();
+		this.defaultColor = builder.color();
 		this.respectMekanism = builder.respect();
 	}
 
@@ -107,9 +106,8 @@ public enum MaterialType
 
 	public int getColor()
 	{
-		ConfigValue<Integer> config = MoreMekanismProcessingConfigs.Client.colors.get(this);
-		Integer holder = config != null ? config.get() : null;
-		return holder != null ? holder : this.getDefaultColor();
+		Integer color = MoreMekanismProcessingConfigs.Client.parsedColors.get(this);
+		return color != null ? color : this.getDefaultColor();
 	}
 
 	public boolean isRespectMekanism()

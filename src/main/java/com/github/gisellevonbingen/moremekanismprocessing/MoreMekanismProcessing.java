@@ -38,6 +38,7 @@ public class MoreMekanismProcessing
 
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		modEventBus.register(new DataGenerators());
+		modEventBus.register(MoreMekanismProcessingConfigs.class);
 
 		MoreMekanismProcessingBlocks.register(modEventBus);
 		MoreMekanismProcessingItems.register(modEventBus);
