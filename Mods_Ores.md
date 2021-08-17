@@ -6,34 +6,34 @@
 
 ## Gems
 
-* Bort Gem
-* Dilithium Gem
-* Green Sapphire Gem
-* Peridot Gem
-* Ruby Gem
-* Sapphire Gem
+* Bort
+* Dilithium
+* Green Sapphire
+* Peridot
+* Ruby
+* Sapphire
 
 ## Ingots
 
-* Aluminium Ingot
-* Azure Silver Ingot
-* Bismuth Ingot
-* Cobalt Ingot
-* Crimson Ingot
-* Iridium Ingot
-* Lithium Ingot
-* Nickel Ingot
-* Platinum Ingot
-* Silver Ingot
-* Titanium Ingot
-* Tungsten Ingot
-* Zinc Ingot
+* Aluminium
+* Azure Silver
+* Bismuth
+* Cobalt
+* Crimson
+* Iridium
+* Lithium (lithium dust can mixable with mekanism:dust_lithium)
+* Nickel
+* Platinum
+* Silver
+* Titanium
+* Tungsten
+* Zinc
 
 ## Dusts
 
-* Electrotine Dust
-* Niter Dust
-* Sulfur Dust
+* Electrotine
+* Niter
+* Sulfur
 
 # Tested Mods/Ores
 
@@ -107,7 +107,7 @@
 
 ## Better Diving
 
-* Lithium Ingot (lithium dust can mixable with mekanism:dust_lithium)
+* Lithium Ingot
 * Titanium Ingot
 
 ## Create
