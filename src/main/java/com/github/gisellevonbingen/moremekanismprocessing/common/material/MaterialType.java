@@ -55,9 +55,6 @@ public enum MaterialType
 	private final int defaultColor;
 	private final boolean respectMekanism;
 
-	private Integer cachedColor;
-	private String cachedDescriptionId;
-
 	private MaterialType(MaterialTypeBuilder builder)
 	{
 		this.baseName = builder.baseName();
@@ -70,12 +67,7 @@ public enum MaterialType
 
 	public String getDescriptionId()
 	{
-		if (this.cachedDescriptionId == null)
-		{
-			this.cachedDescriptionId = makeDescriptionId(this.baseName);
-		}
-
-		return this.cachedDescriptionId;
+		return makeDescriptionId(this.baseName);
 	}
 
 	public static String makeDescriptionId(String baseName)
@@ -115,14 +107,9 @@ public enum MaterialType
 
 	public int getColor()
 	{
-		if (this.cachedColor == null)
-		{
-			ConfigValue<Integer> config = MoreMekanismProcessingConfigs.Client.colors.get(this);
-			Integer holder = config != null ? config.get() : null;
-			this.cachedColor = holder != null ? holder : this.getDefaultColor();
-		}
-
-		return this.cachedColor;
+		ConfigValue<Integer> config = MoreMekanismProcessingConfigs.Client.colors.get(this);
+		Integer holder = config != null ? config.get() : null;
+		return holder != null ? holder : this.getDefaultColor();
 	}
 
 	public boolean isRespectMekanism()
