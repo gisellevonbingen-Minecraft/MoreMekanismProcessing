@@ -15,7 +15,7 @@
 
 ## Ingots
 
-* Aluminium Ingot (Bauxite)
+* Aluminium Ingot
 * Azure Silver Ingot
 * Bismuth Ingot
 * Cobalt Ingot
