@@ -4,24 +4,21 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.material.Materi
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 
 import mekanism.api.chemical.slurry.Slurry;
-import mekanism.api.chemical.slurry.SlurryBuilder;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.LanguageMap;
-import net.minecraft.util.text.TranslationTextComponent;
 
 public class MoreMekanismProcessingSlurry extends Slurry
 {
+	public static final String SLURRY = "slurry";
+
 	private final MaterialType materialType;
-	private final String state;
+	private final String slurryType;
 
-	private ITextComponent cachedTextComponent;
-
-	public MoreMekanismProcessingSlurry(SlurryBuilder builder, MaterialType materialType, String state)
+	public MoreMekanismProcessingSlurry(MoreMekanismProcessingSlurryBuilder builder)
 	{
 		super(builder);
 
-		this.materialType = materialType;
-		this.state = state;
+		this.materialType = builder.materialType();
+		this.slurryType = builder.slurryType();
 	}
 
 	public MaterialType getMaterialType()
@@ -29,39 +26,53 @@ public class MoreMekanismProcessingSlurry extends Slurry
 		return this.materialType;
 	}
 
+	public String getSlurryType()
+	{
+		return this.slurryType;
+	}
+
 	@Override
 	public int getTint()
 	{
-		return this.materialType.getColor();
+		return this.getMaterialType().getColor();
 	}
 
 	@Override
 	public ITextComponent getTextComponent()
 	{
-		if (this.cachedTextComponent == null)
-		{
-			this.cachedTextComponent = this.createTextComponent();
-		}
-
-		return cachedTextComponent;
+		String descriptionId = this.getTranslationKey();
+		String statedDescriptionId = this.getStatedDescriptionId();
+		return MaterialState.createTextComponent(descriptionId, statedDescriptionId, this.getMaterialType());
 	}
 
-	private ITextComponent createTextComponent()
+	public String getSlurryName()
 	{
-		String descriptionId = this.getTranslationKey();
+		return getSlurryName(this.getSlurryType(), this.getMaterialType());
+	}
 
-		if (LanguageMap.getInstance().has(descriptionId) == true)
-		{
-			return new TranslationTextComponent(descriptionId);
-		}
-		else
-		{
-			String statedDescriptionId = MaterialState.makeDescriptionId(this.state + "_slurry");
-			String materialTypedescriptionId = this.materialType.getDescriptionId();
-			TranslationTextComponent materialType = new TranslationTextComponent(materialTypedescriptionId);
-			return new TranslationTextComponent(statedDescriptionId, materialType);
-		}
+	public String getStatedDescriptionId()
+	{
+		return makeDescriptionId(this.getSlurryType());
+	}
 
+	public static String makeDescriptionId(String slurryType)
+	{
+		return MaterialState.makeDescriptionId(getSlurryTypeKey(slurryType));
+	}
+
+	public static String getSlurryTypeKey(String slurryType)
+	{
+		return slurryType + "_" + SLURRY;
+	}
+
+	public static String getSlurryName(String slurryType, MaterialType materialType)
+	{
+		return getSlurryName(slurryType, materialType.getBaseName());
+	}
+
+	public static String getSlurryName(String slurryType, String materialType)
+	{
+		return slurryType + "_" + materialType;
 	}
 
 }

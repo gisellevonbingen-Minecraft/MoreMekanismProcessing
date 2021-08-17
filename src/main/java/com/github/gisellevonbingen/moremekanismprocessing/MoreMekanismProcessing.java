@@ -12,6 +12,7 @@ import com.github.gisellevonbingen.moremekanismprocessing.config.MoreMekanismPro
 import com.github.gisellevonbingen.moremekanismprocessing.datagen.DataGenerators;
 import com.github.gisellevonbingen.moremekanismprocessing.integration.MoreMekanismProcessingIntagrations;
 
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
@@ -43,6 +44,11 @@ public class MoreMekanismProcessing
 		MoreMekanismProcessingSlurries.register(modEventBus);
 		MoreMekanismProcessingConditions.register();
 		MoreMekanismProcessingIntagrations.initialize();
+	}
+
+	public static ResourceLocation rl(String path)
+	{
+		return new ResourceLocation(MODID, path);
 	}
 
 }

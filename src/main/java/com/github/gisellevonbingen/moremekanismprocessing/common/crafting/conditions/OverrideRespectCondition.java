@@ -17,7 +17,7 @@ import net.minecraftforge.common.crafting.conditions.IConditionSerializer;
 
 public class OverrideRespectCondition implements ICondition
 {
-	private static final ResourceLocation NAME = new ResourceLocation(MoreMekanismProcessing.MODID, "override_respect");
+	private static final ResourceLocation NAME = MoreMekanismProcessing.rl("override_respect");
 	private final MaterialType materialType;
 
 	public OverrideRespectCondition(MaterialType materialType)

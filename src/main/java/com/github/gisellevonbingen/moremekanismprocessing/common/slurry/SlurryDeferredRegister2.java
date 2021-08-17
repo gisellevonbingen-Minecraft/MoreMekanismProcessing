@@ -9,8 +9,6 @@ import mekanism.api.chemical.slurry.Slurry;
 import mekanism.api.chemical.slurry.SlurryBuilder;
 import mekanism.common.registration.impl.SlurryDeferredRegister;
 import mekanism.common.registration.impl.SlurryRegistryObject;
-import net.minecraft.item.Item;
-import net.minecraft.tags.ITag.INamedTag;
 import net.minecraftforge.fml.RegistryObject;
 
 public class SlurryDeferredRegister2 extends SlurryDeferredRegister
@@ -22,37 +20,21 @@ public class SlurryDeferredRegister2 extends SlurryDeferredRegister
 
 	public SlurryRegistryObject<Slurry, Slurry> register(MaterialType materialType, UnaryOperator<SlurryBuilder> builderModifier)
 	{
-		RegistryObject<Slurry> dirty = this.register("dirty", materialType, SlurryBuilder.dirty(), builderModifier);
-		RegistryObject<Slurry> clean = this.register("clean", materialType, SlurryBuilder.clean(), builderModifier);
+		RegistryObject<Slurry> dirty = this.register(MoreMekanismProcessingSlurryBuilder.dirty(), materialType, builderModifier);
+		RegistryObject<Slurry> clean = this.register(MoreMekanismProcessingSlurryBuilder.clean(), materialType, builderModifier);
 		return new SlurryRegistryObject<>(dirty, clean);
 	}
 
-	public RegistryObject<Slurry> register(String type, MaterialType materialType, SlurryBuilder builder, UnaryOperator<SlurryBuilder> builderModifier)
+	public RegistryObject<Slurry> register(MoreMekanismProcessingSlurryBuilder builder, MaterialType materialType, UnaryOperator<SlurryBuilder> builderModifier)
 	{
-		return this.internal.register(type + "_" + materialType.getBaseName(), () -> new MoreMekanismProcessingSlurry(builderModifier.apply(new SlurryBuildOperator(materialType).apply(builder)), materialType, type));
+		builder.materialType(materialType);
+		builder.ore(MaterialState.ORE.getStateItemTag(materialType));
+		return this.register(builder, builderModifier);
 	}
 
-	public static final class SlurryBuildOperator implements UnaryOperator<SlurryBuilder>
+	public RegistryObject<Slurry> register(MoreMekanismProcessingSlurryBuilder builder, UnaryOperator<SlurryBuilder> builderModifier)
 	{
-		private final MaterialType materialType;
-
-		private SlurryBuildOperator(MaterialType materialType)
-		{
-			this.materialType = materialType;
-		}
-
-		@Override
-		public SlurryBuilder apply(SlurryBuilder builder)
-		{
-			INamedTag<Item> tag = MaterialState.ORE.getStateItemTag(this.materialType);
-			return builder.ore(tag);
-		}
-
-		public MaterialType getOreType()
-		{
-			return this.materialType;
-		}
-
+		return this.internal.register(builder.getSlurryName(), () -> new MoreMekanismProcessingSlurry((MoreMekanismProcessingSlurryBuilder) builderModifier.apply(builder)));
 	}
 
 }

@@ -6,8 +6,6 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.material.Materi
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.LanguageMap;
-import net.minecraft.util.text.TranslationTextComponent;
 
 public class ItemStatedMaterial extends Item
 {
@@ -26,22 +24,11 @@ public class ItemStatedMaterial extends Item
 	public ITextComponent getName(ItemStack itemStack)
 	{
 		String descriptionId = this.getDescriptionId(itemStack);
-
-		if (LanguageMap.getInstance().has(descriptionId) == true)
-		{
-			return new TranslationTextComponent(descriptionId);
-		}
-		else
-		{
-			String statedDescriptionId = this.materialState.getStatedDescriptionId();
-			String materialTypedescriptionId = this.materialType.getDescriptionId();
-			TranslationTextComponent materialType = new TranslationTextComponent(materialTypedescriptionId);
-			return new TranslationTextComponent(statedDescriptionId, materialType);
-		}
-
+		String statedDescriptionId = this.materialState.getStatedDescriptionId();
+		return MaterialState.createTextComponent(descriptionId, statedDescriptionId, this.getMaterialType());
 	}
 
-	public MaterialType getOreType()
+	public MaterialType getMaterialType()
 	{
 		return this.materialType;
 	}

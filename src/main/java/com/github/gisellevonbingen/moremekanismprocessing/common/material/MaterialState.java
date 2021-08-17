@@ -17,6 +17,9 @@ import net.minecraft.tags.ITagCollection;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Util;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.LanguageMap;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.common.Tags;
 
 public enum MaterialState
@@ -147,7 +150,20 @@ public enum MaterialState
 
 	public static String makeDescriptionId(String baseName)
 	{
-		return Util.makeDescriptionId("statedMaterial", new ResourceLocation(MoreMekanismProcessing.MODID, baseName));
+		return Util.makeDescriptionId("statedMaterial", MoreMekanismProcessing.rl(baseName));
+	}
+
+	public static ITextComponent createTextComponent(String translationKey, String statedDescriptionId, MaterialType materialType)
+	{
+		if (LanguageMap.getInstance().has(translationKey) == true)
+		{
+			return new TranslationTextComponent(translationKey);
+		}
+		else
+		{
+			return new TranslationTextComponent(statedDescriptionId, new TranslationTextComponent(materialType.getDescriptionId()));
+		}
+
 	}
 
 	public String getBaseName()

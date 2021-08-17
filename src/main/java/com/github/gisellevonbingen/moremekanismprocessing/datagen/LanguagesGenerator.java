@@ -4,6 +4,8 @@ import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurries;
+import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurry;
+import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurryBuilder;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -40,8 +42,8 @@ public class LanguagesGenerator extends LanguageProvider
 		this.add(MaterialState.INGOT.getStatedDescriptionId(), "%s Ingot");
 		this.add(MaterialState.NUGGET.getStatedDescriptionId(), "%s Nugget");
 		this.add(MaterialState.GEM.getStatedDescriptionId(), "%s Gem");
-		this.add(MaterialState.makeDescriptionId("dirty_slurry"), "Dirty %s Slurry");
-		this.add(MaterialState.makeDescriptionId("clean_slurry"), "Clean %s Slurry");
+		this.add(MoreMekanismProcessingSlurry.makeDescriptionId(MoreMekanismProcessingSlurryBuilder.DIRTY), "Dirty %s Slurry");
+		this.add(MoreMekanismProcessingSlurry.makeDescriptionId(MoreMekanismProcessingSlurryBuilder.CLEAN), "Clean %s Slurry");
 
 		String materialTypeCommentPrefix = MaterialType.makeDescriptionId("_comment");
 		int materialTypeCommentLine = 0;

@@ -80,7 +80,7 @@ public enum MaterialType
 
 	public static String makeDescriptionId(String baseName)
 	{
-		return Util.makeDescriptionId("materialType", new ResourceLocation(MoreMekanismProcessing.MODID, baseName));
+		return Util.makeDescriptionId("materialType", MoreMekanismProcessing.rl(baseName));
 	}
 
 	public String getBaseName()

@@ -14,7 +14,7 @@ import net.minecraftforge.common.crafting.conditions.IConditionSerializer;
 
 public class TagNotEmptyCondition implements ICondition
 {
-	private static final ResourceLocation NAME = new ResourceLocation(MoreMekanismProcessing.MODID, "tag_not_empty");
+	private static final ResourceLocation NAME = MoreMekanismProcessing.rl("tag_not_empty");
 	private final ResourceLocation tagName;
 
 	public TagNotEmptyCondition(ResourceLocation tagName)

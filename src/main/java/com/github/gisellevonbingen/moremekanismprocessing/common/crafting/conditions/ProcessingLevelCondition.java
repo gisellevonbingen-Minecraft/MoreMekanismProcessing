@@ -16,7 +16,7 @@ import net.minecraftforge.common.crafting.conditions.IConditionSerializer;
 
 public class ProcessingLevelCondition implements ICondition
 {
-	private static final ResourceLocation NAME = new ResourceLocation(MoreMekanismProcessing.MODID, "processing_level");
+	private static final ResourceLocation NAME = MoreMekanismProcessing.rl("processing_level");
 	private final MaterialType materialType;
 	private final int requireLevel;
 

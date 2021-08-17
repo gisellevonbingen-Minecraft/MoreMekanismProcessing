@@ -10,13 +10,15 @@ import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.CookingRecipeBuilder;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.ShapedRecipeBuilder;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.ShapelessRecipeBuilder;
-import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.ProcessingLevelCondition;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.OverrideRespectCondition;
+import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.ProcessingLevelCondition;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.TagNotEmptyCondition;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialResultShape;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurries;
+import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurry;
+import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurryBuilder;
 import com.github.gisellevonbingen.moremekanismprocessing.function.ThreeFunction;
 
 import mekanism.api.chemical.gas.GasStack;
@@ -65,7 +67,7 @@ public class RecipesGenerator extends RecipeProvider
 
 	public ResourceLocation getRecipeName(String output, String name)
 	{
-		return new ResourceLocation(MoreMekanismProcessing.MODID, (output + "/" + name).toLowerCase());
+		return MoreMekanismProcessing.rl((output + "/" + name).toLowerCase());
 	}
 
 	public static class OreRecipesGenerator
@@ -197,7 +199,7 @@ public class RecipesGenerator extends RecipeProvider
 			{
 				return;
 			}
-			
+
 			if (this.materialType.getResultShape() == MaterialResultShape.GEM)
 			{
 				if (this.canProcess(MaterialState.ORE, MaterialState.GEM) == true)
@@ -284,7 +286,7 @@ public class RecipesGenerator extends RecipeProvider
 			SlurryStack slurryStackOutput = new SlurryStack(slurryOutput, 1);
 			FluidSlurryToSlurryRecipeBuilder builder = FluidSlurryToSlurryRecipeBuilder.washing(fluidInput, slurryStackInput, slurryStackOutput);
 			this.applyCondition(builder::addCondition);
-			builder.build(this.consumer, this.getRecipeName("slurry", "clean"));
+			builder.build(this.consumer, this.getRecipeName(MoreMekanismProcessingSlurry.SLURRY, MoreMekanismProcessingSlurryBuilder.CLEAN));
 		}
 
 		public void buildChemicalDissolution(MaterialState stateInput, Slurry slurryOutput, int outputAmount, GasStackIngredient gasInput)
@@ -299,7 +301,7 @@ public class RecipesGenerator extends RecipeProvider
 			}
 
 			this.applyCondition(builder::addCondition);
-			builder.build(this.consumer, this.getRecipeName("slurry", "dirty"));
+			builder.build(this.consumer, this.getRecipeName(MoreMekanismProcessingSlurry.SLURRY, MoreMekanismProcessingSlurryBuilder.DIRTY));
 		}
 
 		public void buildItemStackGasToItemStack(MaterialState stateInput, MaterialState stateOutput, int outputCount, GasStackIngredient gasInput, ThreeFunction<ItemStackIngredient, GasStackIngredient, ItemStack, ItemStackGasToItemStackRecipeBuilder> function)
@@ -403,7 +405,7 @@ public class RecipesGenerator extends RecipeProvider
 
 		public ResourceLocation getRecipeName(String stateOutput, String name)
 		{
-			return new ResourceLocation(MoreMekanismProcessing.MODID, ("processing/" + this.materialType.getBaseName() + "/" + stateOutput + "/" + name).toLowerCase());
+			return MoreMekanismProcessing.rl(("processing/" + this.materialType.getBaseName() + "/" + stateOutput + "/" + name).toLowerCase());
 		}
 
 		public Ingredient getExcatIngredient(MaterialState materialState)

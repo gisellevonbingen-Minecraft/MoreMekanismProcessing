@@ -55,14 +55,14 @@ public class ItemModelGenerator extends ItemModelProvider
 
 	protected ResourceLocation getMekanismTexture(String name)
 	{
-		return new ResourceLocation(Mekanism.MODID, "item/" + name);
+		return Mekanism.rl("item/" + name);
 	}
 
 	protected ResourceLocation getTexture(MaterialState materialState)
 	{
 		if (materialState == MaterialState.GEM || materialState == MaterialState.INGOT)
 		{
-			return new ResourceLocation(MoreMekanismProcessing.MODID, "item/" + materialState.getBaseName());
+			return MoreMekanismProcessing.rl("item/" + materialState.getBaseName());
 		}
 		else if (materialState == MaterialState.DUST)
 		{
@@ -73,11 +73,6 @@ public class ItemModelGenerator extends ItemModelProvider
 			return this.getMekanismTexture(materialState.getBaseName());
 		}
 
-	}
-
-	protected ResourceLocation child(ResourceLocation parent)
-	{
-		return new ResourceLocation(parent.getNamespace(), "item/" + parent.getPath());
 	}
 
 }
