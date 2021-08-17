@@ -1,7 +1,7 @@
 
 # Support Ores
 
-* Not contains ores with mekanism's default ores same name
+* Not contains ores with mekanism or vanilla default ores same name
 * forge:ores/XXXX tagged ores in below list support automatically
 
 ## Gems
