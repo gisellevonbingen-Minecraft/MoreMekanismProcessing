@@ -2,7 +2,7 @@
 # Support Ores
 
 * Not contains ores with mekanism's default ores same name
-* forge:ores/XXXX tagged ores support automatically
+* forge:ores/XXXX tagged ores in below list support automatically
 
 ## Gems
 
@@ -28,7 +28,6 @@
 * Titanium Ingot
 * Tungsten Ingot
 * Zinc Ingot
-
 
 ## Dusts
 
