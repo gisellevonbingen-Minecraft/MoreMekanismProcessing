@@ -3,10 +3,6 @@
   "conditions": [
     {
       "materialType": "emerald",
-      "type": "moremekanismprocessing:override_respect"
-    },
-    {
-      "materialType": "emerald",
       "requireLevel": 5,
       "type": "moremekanismprocessing:processing_level"
     }

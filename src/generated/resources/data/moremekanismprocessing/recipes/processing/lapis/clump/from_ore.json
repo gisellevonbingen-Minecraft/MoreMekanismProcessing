@@ -7,10 +7,6 @@
     },
     {
       "materialType": "lapis",
-      "type": "moremekanismprocessing:override_respect"
-    },
-    {
-      "materialType": "lapis",
       "requireLevel": 3,
       "type": "moremekanismprocessing:processing_level"
     }

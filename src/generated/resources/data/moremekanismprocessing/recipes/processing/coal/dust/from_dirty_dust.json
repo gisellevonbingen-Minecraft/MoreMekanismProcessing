@@ -3,10 +3,6 @@
   "conditions": [
     {
       "materialType": "coal",
-      "type": "moremekanismprocessing:override_respect"
-    },
-    {
-      "materialType": "coal",
       "requireLevel": 3,
       "type": "moremekanismprocessing:processing_level"
     }

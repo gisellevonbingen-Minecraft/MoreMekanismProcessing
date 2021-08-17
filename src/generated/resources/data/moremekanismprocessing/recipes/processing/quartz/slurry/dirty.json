@@ -7,10 +7,6 @@
     },
     {
       "materialType": "quartz",
-      "type": "moremekanismprocessing:override_respect"
-    },
-    {
-      "materialType": "quartz",
       "requireLevel": 5,
       "type": "moremekanismprocessing:processing_level"
     }

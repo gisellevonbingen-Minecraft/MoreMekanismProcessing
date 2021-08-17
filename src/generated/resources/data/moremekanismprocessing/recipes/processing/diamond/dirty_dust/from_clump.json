@@ -3,10 +3,6 @@
   "conditions": [
     {
       "materialType": "diamond",
-      "type": "moremekanismprocessing:override_respect"
-    },
-    {
-      "materialType": "diamond",
       "requireLevel": 3,
       "type": "moremekanismprocessing:processing_level"
     }

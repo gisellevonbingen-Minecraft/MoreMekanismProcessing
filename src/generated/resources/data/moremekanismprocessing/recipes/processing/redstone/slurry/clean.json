@@ -3,10 +3,6 @@
   "conditions": [
     {
       "materialType": "redstone",
-      "type": "moremekanismprocessing:override_respect"
-    },
-    {
-      "materialType": "redstone",
       "requireLevel": 5,
       "type": "moremekanismprocessing:processing_level"
     }

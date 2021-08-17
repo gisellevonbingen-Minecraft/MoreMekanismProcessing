@@ -7,10 +7,6 @@
     },
     {
       "materialType": "coal",
-      "type": "moremekanismprocessing:override_respect"
-    },
-    {
-      "materialType": "coal",
       "requireLevel": 4,
       "type": "moremekanismprocessing:processing_level"
     }

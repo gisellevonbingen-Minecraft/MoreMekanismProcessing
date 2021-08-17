@@ -3,10 +3,6 @@
   "conditions": [
     {
       "materialType": "quartz",
-      "type": "moremekanismprocessing:override_respect"
-    },
-    {
-      "materialType": "quartz",
       "requireLevel": 4,
       "type": "moremekanismprocessing:processing_level"
     }

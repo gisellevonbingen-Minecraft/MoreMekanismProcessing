@@ -7,10 +7,6 @@
     },
     {
       "materialType": "emerald",
-      "type": "moremekanismprocessing:override_respect"
-    },
-    {
-      "materialType": "emerald",
       "requireLevel": 3,
       "type": "moremekanismprocessing:processing_level"
     }

@@ -10,7 +10,6 @@ import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.CookingRecipeBuilder;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.ShapedRecipeBuilder;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.ShapelessRecipeBuilder;
-import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.OverrideRespectCondition;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.ProcessingLevelCondition;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.TagNotEmptyCondition;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialResultShape;
@@ -118,11 +117,6 @@ public class RecipesGenerator extends RecipeProvider
 
 		public void build()
 		{
-			if (this.materialType.isRespectMekanism() == true)
-			{
-				this.conditions.add(new OverrideRespectCondition(this.materialType));
-			}
-
 			this.applyProcssingLevelCondition(5, () -> this.buildProcessingLevel5());
 			this.applyProcssingLevelCondition(4, () -> this.buildProcessingLevel4());
 			this.applyProcssingLevelCondition(3, () -> this.buildProcessingLevel3());
@@ -233,6 +227,11 @@ public class RecipesGenerator extends RecipeProvider
 
 		public void buildOthers()
 		{
+			if (this.materialType.isRespectMekanism() == true)
+			{
+				return;
+			}
+
 			if (this.canProcess(MaterialState.INGOT, MaterialState.NUGGET) == true)
 			{
 				this.buildNuggetFromIngot();

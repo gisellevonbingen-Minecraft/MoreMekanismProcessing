@@ -3,10 +3,6 @@
   "conditions": [
     {
       "materialType": "lapis",
-      "type": "moremekanismprocessing:override_respect"
-    },
-    {
-      "materialType": "lapis",
       "requireLevel": 5,
       "type": "moremekanismprocessing:processing_level"
     }
