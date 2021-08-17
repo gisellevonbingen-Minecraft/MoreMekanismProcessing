@@ -39,7 +39,7 @@ public class CommonConfig
 				processingLevel = 0; 
 			}
 
-			this.processingLevels.put(materialType, builder.define("processingLevel", processingLevel));
+			this.processingLevels.put(materialType, builder.defineInRange("processingLevel", processingLevel, 0, 5));
 
 			builder.pop();
 		}
