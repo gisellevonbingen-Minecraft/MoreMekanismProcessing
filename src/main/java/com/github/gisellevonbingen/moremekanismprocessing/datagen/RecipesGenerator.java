@@ -277,7 +277,7 @@ public class RecipesGenerator extends RecipeProvider
 			ItemStack output = stateOutput.getItemStack(this.materialType, outputCount);
 			ChemicalCrystallizerRecipeBuilder builder = ChemicalCrystallizerRecipeBuilder.crystallizing(slurryInput, output);
 			this.applyCondition(builder::addCondition);
-			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from("slurry")));
+			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from(MoreMekanismProcessingSlurry.SLURRY)));
 		}
 
 		public void buildChemicalWashing(FluidStackIngredient fluidInput, Slurry slurryInput, Slurry slurryOutput)
