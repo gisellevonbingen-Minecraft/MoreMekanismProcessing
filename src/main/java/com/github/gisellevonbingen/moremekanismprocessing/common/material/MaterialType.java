@@ -21,7 +21,7 @@ public enum MaterialType
 	Cobalt(new MaterialTypeBuilder("cobalt").resultShape(MaterialResultShape.INGOT).displayName("Cobalt").color(0x1E66BF)),
 	CrimsonIron(new MaterialTypeBuilder("crimson_iron").resultShape(MaterialResultShape.INGOT).displayName("Crimson Iron").color(0xF44770)),
 	Dilithium(new MaterialTypeBuilder("dilithium").resultShape(MaterialResultShape.GEM).displayName("Dilithium").color(0xD8C4C4)),
-	Draconium(new MaterialTypeBuilder("draconium").resultShape(MaterialResultShape.INGOT).displayName("Draconium").color(0xC694F4)),
+	Draconium(new MaterialTypeBuilder("draconium").resultShape(MaterialResultShape.INGOT).displayName("Draconium").color(0xA351CC)),
 	Electrotine(new MaterialTypeBuilder("electrotine").resultShape(MaterialResultShape.DUST).displayName("Electrotine").color(0x0CB4F8)),
 	GreenSapphire(new MaterialTypeBuilder("green_sapphire").resultShape(MaterialResultShape.GEM).displayName("Green Sapphire").color(0x33CC33)),
 	Iridium(new MaterialTypeBuilder("iridium").resultShape(MaterialResultShape.INGOT).displayName("Iridium").color(0xD8D8C4)),
