@@ -63,7 +63,7 @@
 
 ## Draconic Evolution
 
-* Draconium Ingot (WIP)
+* Draconium Ingot
 
 ## Extreme Reactors 2
 
