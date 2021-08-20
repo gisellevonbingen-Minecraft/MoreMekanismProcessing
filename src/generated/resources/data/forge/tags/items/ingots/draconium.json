@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:draconium_ingot"
+    {
+      "id": "moremekanismprocessing:draconium_ingot",
+      "required": false
+    }
   ]
 }

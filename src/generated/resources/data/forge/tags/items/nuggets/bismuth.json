@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:bismuth_nugget"
+    {
+      "id": "moremekanismprocessing:bismuth_nugget",
+      "required": false
+    }
   ]
 }

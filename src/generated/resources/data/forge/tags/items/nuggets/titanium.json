@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:titanium_nugget"
+    {
+      "id": "moremekanismprocessing:titanium_nugget",
+      "required": false
+    }
   ]
 }

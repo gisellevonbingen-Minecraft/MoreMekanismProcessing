@@ -9,10 +9,13 @@ import java.util.Map.Entry;
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
+import com.github.gisellevonbingen.moremekanismprocessing.config.MoreMekanismProcessingConfigs;
+import com.github.gisellevonbingen.moremekanismprocessing.util.LauncherUtil;
 
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
+import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -105,6 +108,44 @@ public class MoreMekanismProcessingItems
 
 	}
 
+	public static int getProcessingLevel(MaterialState materialState)
+	{
+		if (materialState == MaterialState.CRYSTAL)
+		{
+			return 5;
+		}
+		else if (materialState == MaterialState.SHARD)
+		{
+			return 4;
+		}
+		else if (materialState == MaterialState.DIRTY_DUST || materialState == MaterialState.CLUMP)
+		{
+			return 3;
+		}
+
+		return 2;
+	}
+
+	public static boolean testProcessingLevel(MaterialType materialType, MaterialState materialState)
+	{
+		if (LauncherUtil.isRunDevData() == true)
+		{
+			return true;
+		}
+
+		ConfigValue<Integer> configValue = MoreMekanismProcessingConfigs.Common.processingLevels.get(materialType);
+
+		if (configValue == null)
+		{
+			return true;
+		}
+
+		int processingLevel = configValue.get();
+		int requireLevel = getProcessingLevel(materialState);
+
+		return processingLevel >= requireLevel;
+	}
+
 	public static void registerOreType(DeferredRegister<Item> registry, MaterialType materialType)
 	{
 		Map<MaterialState, RegistryObject<Item>> map2 = new HashMap<>();
@@ -120,8 +161,12 @@ public class MoreMekanismProcessingItems
 			}
 			else if (materialState != MaterialState.ORE)
 			{
-				RegistryObject<Item> registryObject = registry.register(materialState.getItemNamePath(materialType), () -> new ItemStatedMaterial(materialType, materialState));
-				map2.put(materialState, registryObject);
+				if (testProcessingLevel(materialType, materialState) == true)
+				{
+					RegistryObject<Item> registryObject = registry.register(materialState.getItemNamePath(materialType), () -> new ItemStatedMaterial(materialType, materialState));
+					map2.put(materialState, registryObject);
+				}
+
 			}
 
 		}

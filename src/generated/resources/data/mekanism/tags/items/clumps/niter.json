@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:clump_niter"
+    {
+      "id": "moremekanismprocessing:clump_niter",
+      "required": false
+    }
   ]
 }

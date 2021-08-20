@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:clump_titanium"
+    {
+      "id": "moremekanismprocessing:clump_titanium",
+      "required": false
+    }
   ]
 }

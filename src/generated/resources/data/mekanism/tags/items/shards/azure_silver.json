@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:shard_azure_silver"
+    {
+      "id": "moremekanismprocessing:shard_azure_silver",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:titanium_ingot"
+    {
+      "id": "moremekanismprocessing:titanium_ingot",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:shard_ruby"
+    {
+      "id": "moremekanismprocessing:shard_ruby",
+      "required": false
+    }
   ]
 }

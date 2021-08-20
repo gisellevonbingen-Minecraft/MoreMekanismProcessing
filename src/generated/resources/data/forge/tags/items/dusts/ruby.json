@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:dust_ruby"
+    {
+      "id": "moremekanismprocessing:dust_ruby",
+      "required": false
+    }
   ]
 }

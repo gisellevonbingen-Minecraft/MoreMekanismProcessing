@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:shard_peridot"
+    {
+      "id": "moremekanismprocessing:shard_peridot",
+      "required": false
+    }
   ]
 }

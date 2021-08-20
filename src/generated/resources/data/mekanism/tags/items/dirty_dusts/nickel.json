@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:dirty_dust_nickel"
+    {
+      "id": "moremekanismprocessing:dirty_dust_nickel",
+      "required": false
+    }
   ]
 }

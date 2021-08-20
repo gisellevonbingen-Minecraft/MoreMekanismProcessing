@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:tungsten_ingot"
+    {
+      "id": "moremekanismprocessing:tungsten_ingot",
+      "required": false
+    }
   ]
 }

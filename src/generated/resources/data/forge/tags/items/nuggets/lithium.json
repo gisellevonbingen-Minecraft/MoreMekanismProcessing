@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:lithium_nugget"
+    {
+      "id": "moremekanismprocessing:lithium_nugget",
+      "required": false
+    }
   ]
 }

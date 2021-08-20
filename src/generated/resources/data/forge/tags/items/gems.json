@@ -1,12 +1,33 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:gem_amethyst",
-    "moremekanismprocessing:gem_bort",
-    "moremekanismprocessing:gem_dilithium",
-    "moremekanismprocessing:gem_green_sapphire",
-    "moremekanismprocessing:gem_peridot",
-    "moremekanismprocessing:gem_ruby",
-    "moremekanismprocessing:gem_sapphire"
+    {
+      "id": "moremekanismprocessing:gem_amethyst",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:gem_bort",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:gem_dilithium",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:gem_green_sapphire",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:gem_peridot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:gem_ruby",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:gem_sapphire",
+      "required": false
+    }
   ]
 }

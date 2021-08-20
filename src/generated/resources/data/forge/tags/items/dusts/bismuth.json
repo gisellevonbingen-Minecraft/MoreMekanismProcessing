@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:dust_bismuth"
+    {
+      "id": "moremekanismprocessing:dust_bismuth",
+      "required": false
+    }
   ]
 }

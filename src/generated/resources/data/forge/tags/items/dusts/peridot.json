@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:dust_peridot"
+    {
+      "id": "moremekanismprocessing:dust_peridot",
+      "required": false
+    }
   ]
 }

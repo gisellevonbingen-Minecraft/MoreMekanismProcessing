@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:shard_titanium"
+    {
+      "id": "moremekanismprocessing:shard_titanium",
+      "required": false
+    }
   ]
 }

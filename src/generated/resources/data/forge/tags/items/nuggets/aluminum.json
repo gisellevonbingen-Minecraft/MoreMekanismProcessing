@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:aluminum_nugget"
+    {
+      "id": "moremekanismprocessing:aluminum_nugget",
+      "required": false
+    }
   ]
 }

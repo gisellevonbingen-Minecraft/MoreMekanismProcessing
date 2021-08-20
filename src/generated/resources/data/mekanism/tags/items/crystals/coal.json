@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:crystal_coal"
+    {
+      "id": "moremekanismprocessing:crystal_coal",
+      "required": false
+    }
   ]
 }

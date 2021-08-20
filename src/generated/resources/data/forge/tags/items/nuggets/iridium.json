@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:iridium_nugget"
+    {
+      "id": "moremekanismprocessing:iridium_nugget",
+      "required": false
+    }
   ]
 }

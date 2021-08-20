@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:clump_diamond"
+    {
+      "id": "moremekanismprocessing:clump_diamond",
+      "required": false
+    }
   ]
 }

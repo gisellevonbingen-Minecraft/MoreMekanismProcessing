@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:dust_iridium"
+    {
+      "id": "moremekanismprocessing:dust_iridium",
+      "required": false
+    }
   ]
 }

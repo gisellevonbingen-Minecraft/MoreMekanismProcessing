@@ -1,19 +1,61 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:aluminum_nugget",
-    "moremekanismprocessing:azure_silver_nugget",
-    "moremekanismprocessing:bismuth_nugget",
-    "moremekanismprocessing:cobalt_nugget",
-    "moremekanismprocessing:crimson_iron_nugget",
-    "moremekanismprocessing:draconium_nugget",
-    "moremekanismprocessing:iridium_nugget",
-    "moremekanismprocessing:lithium_nugget",
-    "moremekanismprocessing:nickel_nugget",
-    "moremekanismprocessing:platinum_nugget",
-    "moremekanismprocessing:silver_nugget",
-    "moremekanismprocessing:titanium_nugget",
-    "moremekanismprocessing:tungsten_nugget",
-    "moremekanismprocessing:zinc_nugget"
+    {
+      "id": "moremekanismprocessing:aluminum_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:azure_silver_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:bismuth_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:cobalt_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:crimson_iron_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:draconium_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:iridium_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:lithium_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:nickel_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:platinum_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:silver_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:titanium_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:tungsten_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:zinc_nugget",
+      "required": false
+    }
   ]
 }

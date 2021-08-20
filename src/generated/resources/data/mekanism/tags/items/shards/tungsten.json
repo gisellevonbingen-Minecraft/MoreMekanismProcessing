@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:shard_tungsten"
+    {
+      "id": "moremekanismprocessing:shard_tungsten",
+      "required": false
+    }
   ]
 }

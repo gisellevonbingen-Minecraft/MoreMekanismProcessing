@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:dust_zinc"
+    {
+      "id": "moremekanismprocessing:dust_zinc",
+      "required": false
+    }
   ]
 }

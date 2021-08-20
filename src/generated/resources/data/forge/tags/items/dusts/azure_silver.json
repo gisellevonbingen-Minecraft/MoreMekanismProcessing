@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:dust_azure_silver"
+    {
+      "id": "moremekanismprocessing:dust_azure_silver",
+      "required": false
+    }
   ]
 }

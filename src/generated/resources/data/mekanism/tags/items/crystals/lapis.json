@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:crystal_lapis"
+    {
+      "id": "moremekanismprocessing:crystal_lapis",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:draconium_nugget"
+    {
+      "id": "moremekanismprocessing:draconium_nugget",
+      "required": false
+    }
   ]
 }

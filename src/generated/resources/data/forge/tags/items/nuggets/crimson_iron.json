@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:crimson_iron_nugget"
+    {
+      "id": "moremekanismprocessing:crimson_iron_nugget",
+      "required": false
+    }
   ]
 }

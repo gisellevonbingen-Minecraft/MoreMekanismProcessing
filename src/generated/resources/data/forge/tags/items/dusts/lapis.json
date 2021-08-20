@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "mekanism:dust_lapis_lazuli"
+    {
+      "id": "mekanism:dust_lapis_lazuli",
+      "required": false
+    }
   ]
 }

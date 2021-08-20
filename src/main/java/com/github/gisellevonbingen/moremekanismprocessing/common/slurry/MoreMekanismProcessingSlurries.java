@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.function.UnaryOperator;
 
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
+import com.github.gisellevonbingen.moremekanismprocessing.common.item.MoreMekanismProcessingItems;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 
@@ -36,7 +37,9 @@ public class MoreMekanismProcessingSlurries
 
 		for (MaterialType materialType : MaterialType.values())
 		{
-			if (materialType.getResultShape().canProcess(MaterialState.CRYSTAL) == true)
+			MaterialState crystal = MaterialState.CRYSTAL;
+
+			if (materialType.getResultShape().canProcess(crystal) == true && MoreMekanismProcessingItems.testProcessingLevel(materialType, crystal) == true)
 			{
 				SlurryRegistryObject<Slurry, Slurry> registryObject = register.register(materialType, new SlurryBuildOperator(materialType));
 				MAP.put(materialType, registryObject);

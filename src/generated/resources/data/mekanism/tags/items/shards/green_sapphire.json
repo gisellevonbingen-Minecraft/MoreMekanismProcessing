@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:shard_green_sapphire"
+    {
+      "id": "moremekanismprocessing:shard_green_sapphire",
+      "required": false
+    }
   ]
 }

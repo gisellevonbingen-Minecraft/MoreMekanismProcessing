@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:nickel_ingot"
+    {
+      "id": "moremekanismprocessing:nickel_ingot",
+      "required": false
+    }
   ]
 }

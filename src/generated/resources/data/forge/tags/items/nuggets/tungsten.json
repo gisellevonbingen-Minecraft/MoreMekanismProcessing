@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:tungsten_nugget"
+    {
+      "id": "moremekanismprocessing:tungsten_nugget",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:dirty_dust_diamond"
+    {
+      "id": "moremekanismprocessing:dirty_dust_diamond",
+      "required": false
+    }
   ]
 }

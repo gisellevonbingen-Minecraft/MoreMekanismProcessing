@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:crystal_draconium"
+    {
+      "id": "moremekanismprocessing:crystal_draconium",
+      "required": false
+    }
   ]
 }

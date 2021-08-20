@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:crystal_peridot"
+    {
+      "id": "moremekanismprocessing:crystal_peridot",
+      "required": false
+    }
   ]
 }

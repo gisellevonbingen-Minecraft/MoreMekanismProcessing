@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:shard_quartz"
+    {
+      "id": "moremekanismprocessing:shard_quartz",
+      "required": false
+    }
   ]
 }

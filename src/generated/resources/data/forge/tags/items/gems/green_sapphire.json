@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:gem_green_sapphire"
+    {
+      "id": "moremekanismprocessing:gem_green_sapphire",
+      "required": false
+    }
   ]
 }

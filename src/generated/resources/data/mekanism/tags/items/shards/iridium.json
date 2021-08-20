@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:shard_iridium"
+    {
+      "id": "moremekanismprocessing:shard_iridium",
+      "required": false
+    }
   ]
 }

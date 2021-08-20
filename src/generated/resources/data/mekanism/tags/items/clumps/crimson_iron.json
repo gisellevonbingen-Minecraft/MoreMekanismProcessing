@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:clump_crimson_iron"
+    {
+      "id": "moremekanismprocessing:clump_crimson_iron",
+      "required": false
+    }
   ]
 }

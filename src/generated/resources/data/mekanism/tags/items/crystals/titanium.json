@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:crystal_titanium"
+    {
+      "id": "moremekanismprocessing:crystal_titanium",
+      "required": false
+    }
   ]
 }

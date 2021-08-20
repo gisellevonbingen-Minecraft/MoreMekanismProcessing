@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:dust_titanium"
+    {
+      "id": "moremekanismprocessing:dust_titanium",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:clump_cobalt"
+    {
+      "id": "moremekanismprocessing:clump_cobalt",
+      "required": false
+    }
   ]
 }

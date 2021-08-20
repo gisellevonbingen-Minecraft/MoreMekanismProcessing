@@ -1,35 +1,125 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:dirty_dust_aluminum",
-    "moremekanismprocessing:dirty_dust_amethyst",
-    "moremekanismprocessing:dirty_dust_azure_silver",
-    "moremekanismprocessing:dirty_dust_bismuth",
-    "moremekanismprocessing:dirty_dust_bort",
-    "moremekanismprocessing:dirty_dust_cobalt",
-    "moremekanismprocessing:dirty_dust_crimson_iron",
-    "moremekanismprocessing:dirty_dust_dilithium",
-    "moremekanismprocessing:dirty_dust_draconium",
-    "moremekanismprocessing:dirty_dust_electrotine",
-    "moremekanismprocessing:dirty_dust_green_sapphire",
-    "moremekanismprocessing:dirty_dust_iridium",
-    "moremekanismprocessing:dirty_dust_lithium",
-    "moremekanismprocessing:dirty_dust_nickel",
-    "moremekanismprocessing:dirty_dust_niter",
-    "moremekanismprocessing:dirty_dust_peridot",
-    "moremekanismprocessing:dirty_dust_platinum",
-    "moremekanismprocessing:dirty_dust_ruby",
-    "moremekanismprocessing:dirty_dust_sapphire",
-    "moremekanismprocessing:dirty_dust_silver",
-    "moremekanismprocessing:dirty_dust_sulfur",
-    "moremekanismprocessing:dirty_dust_titanium",
-    "moremekanismprocessing:dirty_dust_tungsten",
-    "moremekanismprocessing:dirty_dust_zinc",
-    "moremekanismprocessing:dirty_dust_coal",
-    "moremekanismprocessing:dirty_dust_lapis",
-    "moremekanismprocessing:dirty_dust_diamond",
-    "moremekanismprocessing:dirty_dust_redstone",
-    "moremekanismprocessing:dirty_dust_emerald",
-    "moremekanismprocessing:dirty_dust_quartz"
+    {
+      "id": "moremekanismprocessing:dirty_dust_aluminum",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_amethyst",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_azure_silver",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_bismuth",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_bort",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_cobalt",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_crimson_iron",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_dilithium",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_draconium",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_electrotine",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_green_sapphire",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_iridium",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_lithium",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_nickel",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_niter",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_peridot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_platinum",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_ruby",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_sapphire",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_silver",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_sulfur",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_titanium",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_tungsten",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_zinc",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_coal",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_lapis",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_diamond",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_redstone",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_emerald",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_quartz",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:nickel_nugget"
+    {
+      "id": "moremekanismprocessing:nickel_nugget",
+      "required": false
+    }
   ]
 }

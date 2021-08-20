@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:dust_tungsten"
+    {
+      "id": "moremekanismprocessing:dust_tungsten",
+      "required": false
+    }
   ]
 }

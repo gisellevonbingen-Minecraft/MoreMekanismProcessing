@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:azure_silver_ingot"
+    {
+      "id": "moremekanismprocessing:azure_silver_ingot",
+      "required": false
+    }
   ]
 }

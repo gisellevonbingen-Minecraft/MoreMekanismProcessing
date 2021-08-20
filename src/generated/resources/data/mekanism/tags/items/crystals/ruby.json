@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:crystal_ruby"
+    {
+      "id": "moremekanismprocessing:crystal_ruby",
+      "required": false
+    }
   ]
 }

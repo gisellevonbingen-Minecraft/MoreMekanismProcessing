@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:iridium_ingot"
+    {
+      "id": "moremekanismprocessing:iridium_ingot",
+      "required": false
+    }
   ]
 }

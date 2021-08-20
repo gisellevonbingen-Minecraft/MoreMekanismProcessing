@@ -1,19 +1,61 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:aluminum_ingot",
-    "moremekanismprocessing:azure_silver_ingot",
-    "moremekanismprocessing:bismuth_ingot",
-    "moremekanismprocessing:cobalt_ingot",
-    "moremekanismprocessing:crimson_iron_ingot",
-    "moremekanismprocessing:draconium_ingot",
-    "moremekanismprocessing:iridium_ingot",
-    "moremekanismprocessing:lithium_ingot",
-    "moremekanismprocessing:nickel_ingot",
-    "moremekanismprocessing:platinum_ingot",
-    "moremekanismprocessing:silver_ingot",
-    "moremekanismprocessing:titanium_ingot",
-    "moremekanismprocessing:tungsten_ingot",
-    "moremekanismprocessing:zinc_ingot"
+    {
+      "id": "moremekanismprocessing:aluminum_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:azure_silver_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:bismuth_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:cobalt_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:crimson_iron_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:draconium_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:iridium_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:lithium_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:nickel_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:platinum_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:silver_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:titanium_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:tungsten_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:zinc_ingot",
+      "required": false
+    }
   ]
 }

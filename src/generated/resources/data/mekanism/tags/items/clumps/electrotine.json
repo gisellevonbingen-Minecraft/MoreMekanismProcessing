@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:clump_electrotine"
+    {
+      "id": "moremekanismprocessing:clump_electrotine",
+      "required": false
+    }
   ]
 }

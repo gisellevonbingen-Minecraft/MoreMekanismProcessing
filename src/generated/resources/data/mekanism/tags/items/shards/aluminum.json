@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:shard_aluminum"
+    {
+      "id": "moremekanismprocessing:shard_aluminum",
+      "required": false
+    }
   ]
 }

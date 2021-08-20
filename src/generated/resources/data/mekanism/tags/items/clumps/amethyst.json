@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:clump_amethyst"
+    {
+      "id": "moremekanismprocessing:clump_amethyst",
+      "required": false
+    }
   ]
 }

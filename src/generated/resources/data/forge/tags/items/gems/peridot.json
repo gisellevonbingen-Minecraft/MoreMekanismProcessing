@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:gem_peridot"
+    {
+      "id": "moremekanismprocessing:gem_peridot",
+      "required": false
+    }
   ]
 }

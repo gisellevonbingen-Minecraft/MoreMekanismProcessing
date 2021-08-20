@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:crystal_nickel"
+    {
+      "id": "moremekanismprocessing:crystal_nickel",
+      "required": false
+    }
   ]
 }

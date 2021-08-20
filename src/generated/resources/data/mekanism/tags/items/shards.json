@@ -1,35 +1,125 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:shard_aluminum",
-    "moremekanismprocessing:shard_amethyst",
-    "moremekanismprocessing:shard_azure_silver",
-    "moremekanismprocessing:shard_bismuth",
-    "moremekanismprocessing:shard_bort",
-    "moremekanismprocessing:shard_cobalt",
-    "moremekanismprocessing:shard_crimson_iron",
-    "moremekanismprocessing:shard_dilithium",
-    "moremekanismprocessing:shard_draconium",
-    "moremekanismprocessing:shard_electrotine",
-    "moremekanismprocessing:shard_green_sapphire",
-    "moremekanismprocessing:shard_iridium",
-    "moremekanismprocessing:shard_lithium",
-    "moremekanismprocessing:shard_nickel",
-    "moremekanismprocessing:shard_niter",
-    "moremekanismprocessing:shard_peridot",
-    "moremekanismprocessing:shard_platinum",
-    "moremekanismprocessing:shard_ruby",
-    "moremekanismprocessing:shard_sapphire",
-    "moremekanismprocessing:shard_silver",
-    "moremekanismprocessing:shard_sulfur",
-    "moremekanismprocessing:shard_titanium",
-    "moremekanismprocessing:shard_tungsten",
-    "moremekanismprocessing:shard_zinc",
-    "moremekanismprocessing:shard_coal",
-    "moremekanismprocessing:shard_lapis",
-    "moremekanismprocessing:shard_diamond",
-    "moremekanismprocessing:shard_redstone",
-    "moremekanismprocessing:shard_emerald",
-    "moremekanismprocessing:shard_quartz"
+    {
+      "id": "moremekanismprocessing:shard_aluminum",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_amethyst",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_azure_silver",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_bismuth",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_bort",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_cobalt",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_crimson_iron",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_dilithium",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_draconium",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_electrotine",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_green_sapphire",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_iridium",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_lithium",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_nickel",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_niter",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_peridot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_platinum",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_ruby",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_sapphire",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_silver",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_sulfur",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_titanium",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_tungsten",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_zinc",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_coal",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_lapis",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_diamond",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_redstone",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_emerald",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_quartz",
+      "required": false
+    }
   ]
 }

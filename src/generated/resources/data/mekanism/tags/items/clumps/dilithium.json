@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:clump_dilithium"
+    {
+      "id": "moremekanismprocessing:clump_dilithium",
+      "required": false
+    }
   ]
 }

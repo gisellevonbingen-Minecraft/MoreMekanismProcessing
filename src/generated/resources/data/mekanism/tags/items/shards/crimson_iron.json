@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moremekanismprocessing:shard_crimson_iron"
+    {
+      "id": "moremekanismprocessing:shard_crimson_iron",
+      "required": false
+    }
   ]
 }

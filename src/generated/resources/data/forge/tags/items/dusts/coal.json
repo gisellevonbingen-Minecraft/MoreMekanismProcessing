@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "mekanism:dust_coal"
+    {
+      "id": "mekanism:dust_coal",
+      "required": false
+    }
   ]
 }

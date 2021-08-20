@@ -8,6 +8,7 @@ import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.ItemTagsProvider;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ItemTagsGenerator extends ItemTagsProvider
@@ -34,9 +35,9 @@ public class ItemTagsGenerator extends ItemTagsProvider
 
 				if (materialState != MaterialState.ORE)
 				{
-					Item item = materialState.getItem(materialType);
-					builderCategory.add(item);
-					builderState.add(item);
+					ResourceLocation itemName = materialState.getItemName(materialType);
+					builderCategory.addOptional(itemName);
+					builderState.addOptional(itemName);
 				}
 
 			}

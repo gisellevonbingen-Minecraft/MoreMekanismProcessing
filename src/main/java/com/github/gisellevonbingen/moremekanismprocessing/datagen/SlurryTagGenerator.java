@@ -30,8 +30,8 @@ public class SlurryTagGenerator extends SlurryTagsProvider
 
 			if (registry != null)
 			{
-				dirty.add(registry.getDirtySlurry());
-				clean.add(registry.getCleanSlurry());
+				dirty.addOptional(registry.getDirtySlurry().getRegistryName());
+				clean.addOptional(registry.getCleanSlurry().getRegistryName());
 			}
 
 		}
