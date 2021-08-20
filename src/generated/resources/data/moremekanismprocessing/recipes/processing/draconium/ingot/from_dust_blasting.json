@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:blasting",
+  "conditions": [
+    {
+      "materialType": "draconium",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "result": {
+    "item": "moremekanismprocessing:draconium_ingot"
+  },
+  "ingredient": {
+    "tag": "forge:dusts/draconium"
+  },
+  "experience": 0.3,
+  "cookingtime": 100
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "moremekanismprocessing:draconium_ingot",
+  "result": {
+    "item": "moremekanismprocessing:draconium_ingot"
+  },
+  "pattern": [
+    "###",
+    "#*#",
+    "###"
+  ],
+  "key": {
+    "*": {
+      "item": "moremekanismprocessing:draconium_nugget"
+    },
+    "#": {
+      "tag": "forge:nuggets/draconium"
+    }
+  }
+}

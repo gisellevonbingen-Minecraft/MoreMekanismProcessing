@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "moremekanismprocessing:draconium_nugget",
+  "result": {
+    "item": "moremekanismprocessing:draconium_nugget",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "moremekanismprocessing:draconium_ingot"
+    }
+  ]
+}
