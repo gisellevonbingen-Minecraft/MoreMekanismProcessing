@@ -10,6 +10,8 @@ import net.minecraft.util.ResourceLocation;
 public class IceAndFireMod extends IntegrationMod
 {
 	public static final String MODID = "iceandfire";
+	public static final ResourceLocation AMYTHEST_ORE = rl("amythest_ore");
+	public static final ResourceLocation SAPPHIRE_ORE = rl("sapphire_ore");
 
 	public IceAndFireMod()
 	{
@@ -27,14 +29,19 @@ public class IceAndFireMod extends IntegrationMod
 	{
 		super.addBlockTags(generator);
 
-		generator.tagOres(MaterialState.ORE.getStateBlockTag(MaterialType.Sapphire), new ResourceLocation(MODID, "sapphire_ore"));
-		generator.tagOres(MaterialState.ORE.getStateBlockTag(MaterialType.Amethyst), new ResourceLocation(MODID, "amythest_ore"));
+		generator.tagOres(MaterialState.ORE.getStateBlockTag(MaterialType.Sapphire), SAPPHIRE_ORE);
+		generator.tagOres(MaterialState.ORE.getStateBlockTag(MaterialType.Amethyst), AMYTHEST_ORE);
 	}
 
 	@Override
 	public String getModId()
 	{
 		return MODID;
+	}
+
+	public static ResourceLocation rl(String path)
+	{
+		return new ResourceLocation(MODID, path);
 	}
 
 }

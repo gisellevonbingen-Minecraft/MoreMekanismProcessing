@@ -77,10 +77,6 @@ repositories {
 		url "https://modmaven.dev"
 	}
 	maven {
-		name "RS"
-		url "https://repo.refinedmods.com"
-	}
-	maven {
 		name "Local"
 		url uri("${projectDir}/libs")
 	}
@@ -100,10 +96,6 @@ dependencies {
     runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:additions")
     runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:generators")
     runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:tools")
-	
-	// RS
-    compileOnly fg.deobf("com.refinedmods:refinedstorage:${refinedmods_rs_version}:api")
-    runtimeOnly fg.deobf("com.refinedmods:refinedstorage:${refinedmods_rs_version}")
 }
 
 jar {

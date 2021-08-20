@@ -1,0 +1,23 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "tag": "forge:ores/draconium",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "draconium",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/draconium"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_draconium",
+    "count": 2
+  }
+}

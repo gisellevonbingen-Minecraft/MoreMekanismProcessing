@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "materialType": "draconium",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "mekanism:crystals/draconium"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "item": "moremekanismprocessing:shard_draconium"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "mekanism:purifying",
+  "conditions": [
+    {
+      "tag": "forge:ores/draconium",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "draconium",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/draconium"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "output": {
+    "item": "moremekanismprocessing:clump_draconium",
+    "count": 3
+  }
+}

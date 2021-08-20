@@ -9,12 +9,13 @@ import net.minecraft.util.ResourceLocation;
 public class BiggerReactorsMod extends IntegrationMod
 {
 	public static final String MODID = "biggerreactors";
+	public static final ResourceLocation YELLORITE_ORE = rl("yellorite_ore");
 
 	public BiggerReactorsMod()
 	{
-		
+
 	}
-	
+
 	@Override
 	public void initialize()
 	{
@@ -26,15 +27,19 @@ public class BiggerReactorsMod extends IntegrationMod
 	{
 		super.addBlockTags(generator);
 
-		ResourceLocation blockName = new ResourceLocation(MODID, "yellorite_ore");
-		generator.tagOres(IntegrationTags.Blocks.ORES_YELLORITE, blockName);
-		generator.tagOres(IntegrationTags.Blocks.ORES_URANIUM, blockName);
+		generator.tagOres(IntegrationTags.Blocks.ORES_YELLORITE, YELLORITE_ORE);
+		generator.tagOres(IntegrationTags.Blocks.ORES_URANIUM, YELLORITE_ORE);
 	}
 
 	@Override
 	public String getModId()
 	{
 		return MODID;
+	}
+
+	public static ResourceLocation rl(String path)
+	{
+		return new ResourceLocation(MODID, path);
 	}
 
 }

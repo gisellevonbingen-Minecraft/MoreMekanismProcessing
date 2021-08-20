@@ -10,6 +10,7 @@ import net.minecraft.util.ResourceLocation;
 public class LibVulpesMod extends IntegrationMod
 {
 	public static final String MODID = "libvulpes";
+	public static final ResourceLocation RUTILE_ORE = rl("orerutile");
 
 	public LibVulpesMod()
 	{
@@ -27,13 +28,18 @@ public class LibVulpesMod extends IntegrationMod
 	{
 		super.addBlockTags(generator);
 
-		generator.tagOres(MaterialState.ORE.getStateBlockTag(MaterialType.Titanium), new ResourceLocation(MODID, "orerutile"));
+		generator.tagOres(MaterialState.ORE.getStateBlockTag(MaterialType.Titanium), RUTILE_ORE);
 	}
 
 	@Override
 	public String getModId()
 	{
 		return MODID;
+	}
+
+	public static ResourceLocation rl(String path)
+	{
+		return new ResourceLocation(MODID, path);
 	}
 
 }
