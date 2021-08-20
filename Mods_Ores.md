@@ -20,6 +20,7 @@
 * Bismuth
 * Cobalt
 * Crimson
+* Draconium
 * Iridium
 * Lithium (lithium dust can mixable with mekanism:dust_lithium)
 * Nickel
@@ -37,16 +38,14 @@
 
 # Tested Mods/Ores
 
-## Thermal Foundation
+## Better Diving
 
-* Silver Ingot
-* Nickel Ingot
-* Niter Dust
-* Sulfur Dust
+* Lithium Ingot
+* Titanium Ingot
 
-## Tinkers Construct
+## Bigger Reactors
 
-* Cobalt Ingot
+* Yellorite Ingot
 
 ## Blue Power
 
@@ -58,13 +57,18 @@
 * Zinc Ingot
 * Tungsten Ingot
 
-## Proejct Red
+## Create
 
-* Ruby Gem
-* Sapphire Gem
-* Peridot Gem
-* Silver Ingot
-* Electrotine Dust
+* Zinc Ingot
+
+## Draconic Evolution
+
+* Draconium Ingot (WIP)
+
+## Extreme Reactors 2
+
+* Yellorite Ingot (Fix Tags)
+<br>Add 'forge:ores', 'forge:ores/uranium', 'forges:ores/yellorite'
 
 ## Ice and Fire
 
@@ -74,10 +78,24 @@
 * Amethyst Gem (Fix Tags)
 <br>Add 'forge:ores/amethyst'
 
-## Extreme Reactors 2
+## Immersive Engineering
 
-* Yellorite Ingot (Fix Tags)
-<br>Add 'forge:ores', 'forge:ores/uranium', 'forges:ores/yellorite'
+* Aluminium Ingot (Bauxite)
+
+## LibVulpes (Advanced Rocketry)
+
+* Iridium Ingot
+* Dilithium Gem
+* Titanium Ingot (Fix Tags)
+<br>Add 'forge:ores/titanium' to Rutile Ore
+
+## Proejct Red
+
+* Ruby Gem
+* Sapphire Gem
+* Peridot Gem
+* Silver Ingot
+* Electrotine Dust
 
 ## Silent Gear
 
@@ -94,22 +112,13 @@
 * Bismuth Ingot
 * Aluminium Ingot (Bauxite)
 
-## Immersive Engineering
+## Thermal Foundation
 
-* Aluminium Ingot (Bauxite)
+* Silver Ingot
+* Nickel Ingot
+* Niter Dust
+* Sulfur Dust
 
-## LibVulpes (Advanced Rocketry)
+## Tinkers Construct
 
-* Iridium Ingot
-* Dilithium Gem
-* Titanium Ingot (Fix Tags)
-<br>Add 'forge:ores/titanium' to Rutile Ore
-
-## Better Diving
-
-* Lithium Ingot
-* Titanium Ingot
-
-## Create
-
-* Zinc Ingot
+* Cobalt Ingot
