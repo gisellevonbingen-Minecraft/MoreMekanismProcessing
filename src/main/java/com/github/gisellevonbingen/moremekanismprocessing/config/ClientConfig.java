@@ -27,7 +27,8 @@ public class ClientConfig
 		{
 			builder.push(materialType.getBaseName());
 
-			this.colors.put(materialType, builder.define("color", Integer.toString(materialType.getDefaultColor() & 0x00FFFFFF, RADIX)));
+			builder.comment("if empty, use default", "default : " + Integer.toString(materialType.getDefaultColor() & 0x00FFFFFF, RADIX));
+			this.colors.put(materialType, builder.define("color", ""));
 
 			builder.pop();
 		}
@@ -42,10 +43,28 @@ public class ClientConfig
 		for (MaterialType materialType : MaterialType.values())
 		{
 			ConfigValue<String> value = this.colors.get(materialType);
-			int color = value != null ? Integer.valueOf(value.get(), RADIX) : materialType.getDefaultColor();
+			int color = this.parseColor(value, materialType.getColor());
 			this.parsedColors.put(materialType, color);
 		}
 
+	}
+
+	public int parseColor(ConfigValue<String> configValue, int fallback)
+	{
+		try
+		{
+			if (configValue != null)
+			{
+				return Integer.parseInt(configValue.get(), RADIX);
+			}
+
+		}
+		catch (Exception e)
+		{
+
+		}
+
+		return fallback;
 	}
 
 }
