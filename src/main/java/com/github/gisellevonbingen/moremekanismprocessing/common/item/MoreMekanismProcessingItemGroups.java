@@ -31,10 +31,11 @@ public class MoreMekanismProcessingItemGroups
 
 			if (this.lastMillis == 0)
 			{
+				this.iconIndex = 0;
 				this.lastMillis = millis;
 				this.icon = this.makeIcon();
 			}
-			else if (this.lastMillis > 0 && (millis - this.lastMillis) > 1000)
+			else if ((millis - this.lastMillis) > 2000)
 			{
 				this.iconIndex++;
 				this.lastMillis = millis;

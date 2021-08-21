@@ -22,6 +22,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:desh_ingot",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:draconium_ingot",
       "required": false
     },

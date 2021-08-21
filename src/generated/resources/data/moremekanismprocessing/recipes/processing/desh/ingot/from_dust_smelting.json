@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:smelting",
+  "conditions": [
+    {
+      "materialType": "desh",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "result": {
+    "item": "moremekanismprocessing:desh_ingot"
+  },
+  "ingredient": {
+    "tag": "forge:dusts/desh"
+  },
+  "experience": 0.3,
+  "cookingtime": 200
+}

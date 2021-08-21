@@ -30,6 +30,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:clean_desh",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:clean_dilithium",
       "required": false
     },

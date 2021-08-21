@@ -20,6 +20,7 @@ public enum MaterialType
 	Bort(new MaterialTypeBuilder("bort").resultShape(MaterialResultShape.GEM).displayName("Bort").color(0x7495AF)),
 	Cobalt(new MaterialTypeBuilder("cobalt").resultShape(MaterialResultShape.INGOT).displayName("Cobalt").color(0x1E66BF)),
 	CrimsonIron(new MaterialTypeBuilder("crimson_iron").resultShape(MaterialResultShape.INGOT).displayName("Crimson Iron").color(0xF44770)),
+	Desh(new MaterialTypeBuilder("desh").resultShape(MaterialResultShape.INGOT).displayName("Desh").color(0xFF9F51)),
 	Dilithium(new MaterialTypeBuilder("dilithium").resultShape(MaterialResultShape.GEM).displayName("Dilithium").color(0xD8C4C4)),
 	Draconium(new MaterialTypeBuilder("draconium").resultShape(MaterialResultShape.INGOT).displayName("Draconium").color(0xA351CC)),
 	Electrotine(new MaterialTypeBuilder("electrotine").resultShape(MaterialResultShape.DUST).displayName("Electrotine").color(0x0CB4F8)),

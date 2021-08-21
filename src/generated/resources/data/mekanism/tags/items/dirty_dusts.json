@@ -30,6 +30,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:dirty_dust_desh",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:dirty_dust_dilithium",
       "required": false
     },
