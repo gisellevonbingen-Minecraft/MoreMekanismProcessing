@@ -20,6 +20,7 @@
 * Bismuth
 * Cobalt
 * Crimson
+* Desh (WIP)
 * Draconium
 * Iridium
 * Lithium (lithium dust can mixable with mekanism:dust_lithium)
@@ -111,6 +112,10 @@
 * Zinc Ingot
 * Bismuth Ingot
 * Aluminium Ingot (Bauxite)
+
+## Space-BossTools (WIP)
+
+* Desh Ingot
 
 ## Thermal Foundation
 
