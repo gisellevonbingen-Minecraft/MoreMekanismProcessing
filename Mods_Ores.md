@@ -7,11 +7,14 @@
 ## Gems
 
 * Bort
+* Cinnabar
 * Dilithium
 * Green Sapphire
+* Niter
 * Peridot
 * Ruby
 * Sapphire
+* Sulfur
 
 ## Ingots
 
@@ -20,7 +23,7 @@
 * Bismuth
 * Cobalt
 * Crimson
-* Desh (WIP)
+* Desh
 * Draconium
 * Iridium
 * Lithium (lithium dust can mixable with mekanism:dust_lithium)
@@ -34,8 +37,6 @@
 ## Dusts
 
 * Electrotine
-* Niter
-* Sulfur
 
 # Tested Mods/Ores
 
@@ -113,16 +114,17 @@
 * Bismuth Ingot
 * Aluminium Ingot (Bauxite)
 
-## Space-BossTools (WIP)
+## Space-BossTools
 
 * Desh Ingot
 
 ## Thermal Foundation
 
-* Silver Ingot
+* Cinnabar Gem
 * Nickel Ingot
-* Niter Dust
-* Sulfur Dust
+* Niter Gem
+* Silver Ingot
+* Sulfur Gem
 
 ## Tinkers Construct
 
