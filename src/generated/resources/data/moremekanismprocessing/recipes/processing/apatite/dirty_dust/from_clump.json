@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:crushing",
+  "conditions": [
+    {
+      "materialType": "apatite",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:clumps/apatite"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dirty_dust_apatite"
+  }
+}

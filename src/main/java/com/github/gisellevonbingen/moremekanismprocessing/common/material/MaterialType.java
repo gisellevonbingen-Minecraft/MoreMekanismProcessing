@@ -15,9 +15,11 @@ public enum MaterialType
 {
 	Aluminum(new MaterialTypeBuilder("aluminum").resultShape(MaterialResultShape.INGOT).displayName("Aluminum").color(0xA0C4D8)),
 	Amethyst(new MaterialTypeBuilder("amethyst").resultShape(MaterialResultShape.GEM).displayName("Amethyst").color(0xCC33CC)),
+	Apatite(new MaterialTypeBuilder("apatite").resultShape(MaterialResultShape.GEM).displayName("Apatite").color(0x95FCFC)),
 	AzureSiler(new MaterialTypeBuilder("azure_silver").resultShape(MaterialResultShape.INGOT).displayName("Azure Silver").color(0xCE9CF3)),
 	Bismuth(new MaterialTypeBuilder("bismuth").resultShape(MaterialResultShape.INGOT).displayName("Bismuth").color(0xE8D8E8)),
 	Bort(new MaterialTypeBuilder("bort").resultShape(MaterialResultShape.GEM).displayName("Bort").color(0x7495AF)),
+	Cinnabar(new MaterialTypeBuilder("cinnabar").resultShape(MaterialResultShape.GEM).displayName("Cinnabar").color(0x990F0F)),
 	Cobalt(new MaterialTypeBuilder("cobalt").resultShape(MaterialResultShape.INGOT).displayName("Cobalt").color(0x1E66BF)),
 	CrimsonIron(new MaterialTypeBuilder("crimson_iron").resultShape(MaterialResultShape.INGOT).displayName("Crimson Iron").color(0xF44770)),
 	Desh(new MaterialTypeBuilder("desh").resultShape(MaterialResultShape.INGOT).displayName("Desh").color(0xFF9F51)),
@@ -28,7 +30,7 @@ public enum MaterialType
 	Iridium(new MaterialTypeBuilder("iridium").resultShape(MaterialResultShape.INGOT).displayName("Iridium").color(0xD8D8C4)),
 	Lithium(new MaterialTypeBuilder("lithium").resultShape(MaterialResultShape.INGOT).displayName("Lithium").color(0x808080)),
 	Nickel(new MaterialTypeBuilder("nickel").resultShape(MaterialResultShape.INGOT).displayName("Nickel").color(0xE5E09E)),
-	Niter(new MaterialTypeBuilder("niter").resultShape(MaterialResultShape.DUST).displayName("Niter").color(0xB8AFAF)),
+	Niter(new MaterialTypeBuilder("niter").resultShape(MaterialResultShape.GEM).displayName("Niter").color(0xB8AFAF)),
 	Peridot(new MaterialTypeBuilder("peridot").resultShape(MaterialResultShape.GEM).displayName("Peridot").color(0x66FF66)),
 	Platinum(new MaterialTypeBuilder("platinum").resultShape(MaterialResultShape.INGOT).displayName("Platinum").color(0xA0F0FF)),
 	Ruby(new MaterialTypeBuilder("ruby").resultShape(MaterialResultShape.GEM).displayName("Ruby").color(0xCC3333)),
@@ -108,6 +110,11 @@ public enum MaterialType
 
 	public int getColor()
 	{
+		if (this == Apatite)
+		{
+			return 0x3595B2;
+		}
+		
 		Integer color = MoreMekanismProcessingConfigs.Client.parsedColors.get(this);
 		return color != null ? color : this.getDefaultColor();
 	}

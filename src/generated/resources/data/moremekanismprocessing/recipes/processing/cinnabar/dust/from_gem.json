@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:crushing",
+  "conditions": [
+    {
+      "materialType": "cinnabar",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:gems/cinnabar"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_cinnabar"
+  }
+}

@@ -10,6 +10,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:clump_apatite",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:clump_azure_silver",
       "required": false
     },
@@ -19,6 +23,10 @@
     },
     {
       "id": "moremekanismprocessing:clump_bort",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:clump_cinnabar",
       "required": false
     },
     {

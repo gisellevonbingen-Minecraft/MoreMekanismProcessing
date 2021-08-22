@@ -10,6 +10,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:clean_apatite",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:clean_azure_silver",
       "required": false
     },
@@ -19,6 +23,10 @@
     },
     {
       "id": "moremekanismprocessing:clean_bort",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:clean_cinnabar",
       "required": false
     },
     {

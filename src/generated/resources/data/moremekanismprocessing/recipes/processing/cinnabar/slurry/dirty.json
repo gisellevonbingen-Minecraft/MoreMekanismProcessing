@@ -1,0 +1,28 @@
+{
+  "type": "mekanism:dissolution",
+  "conditions": [
+    {
+      "tag": "forge:ores/cinnabar",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "cinnabar",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/cinnabar"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:sulfuric_acid"
+  },
+  "output": {
+    "slurry": "moremekanismprocessing:dirty_cinnabar",
+    "amount": 1000,
+    "chemicalType": "slurry"
+  }
+}

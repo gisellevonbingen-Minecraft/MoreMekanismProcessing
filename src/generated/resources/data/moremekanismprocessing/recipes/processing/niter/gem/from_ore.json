@@ -1,0 +1,23 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "tag": "forge:ores/niter",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "niter",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/niter"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:gem_niter",
+    "count": 2
+  }
+}

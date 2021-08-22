@@ -1,0 +1,27 @@
+{
+  "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "tag": "forge:ores/apatite",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "apatite",
+      "requireLevel": 4,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/apatite"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "item": "moremekanismprocessing:shard_apatite",
+    "count": 4
+  }
+}

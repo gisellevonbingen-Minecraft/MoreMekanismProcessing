@@ -1,0 +1,23 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "tag": "forge:ores/cinnabar",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "cinnabar",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/cinnabar"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:gem_cinnabar",
+    "count": 2
+  }
+}

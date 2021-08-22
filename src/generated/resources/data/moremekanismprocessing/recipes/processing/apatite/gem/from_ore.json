@@ -1,0 +1,23 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "tag": "forge:ores/apatite",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "apatite",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/apatite"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:gem_apatite",
+    "count": 2
+  }
+}

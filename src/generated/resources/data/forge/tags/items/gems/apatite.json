@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "moremekanismprocessing:gem_apatite",
+      "required": false
+    }
+  ]
+}

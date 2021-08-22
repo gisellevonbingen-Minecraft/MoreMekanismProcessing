@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:crushing",
+  "conditions": [
+    {
+      "materialType": "cinnabar",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:clumps/cinnabar"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dirty_dust_cinnabar"
+  }
+}

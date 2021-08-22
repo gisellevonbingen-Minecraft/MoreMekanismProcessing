@@ -6,7 +6,15 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:gem_apatite",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:gem_bort",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:gem_cinnabar",
       "required": false
     },
     {
@@ -15,6 +23,10 @@
     },
     {
       "id": "moremekanismprocessing:gem_green_sapphire",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:gem_niter",
       "required": false
     },
     {
