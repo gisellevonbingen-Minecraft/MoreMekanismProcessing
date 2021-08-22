@@ -15,7 +15,7 @@ public enum MaterialType
 {
 	Aluminum(new MaterialTypeBuilder("aluminum").resultShape(MaterialResultShape.INGOT).displayName("Aluminum").color(0xA0C4D8)),
 	Amethyst(new MaterialTypeBuilder("amethyst").resultShape(MaterialResultShape.GEM).displayName("Amethyst").color(0xCC33CC)),
-	Apatite(new MaterialTypeBuilder("apatite").resultShape(MaterialResultShape.GEM).displayName("Apatite").color(0x95FCFC)),
+	Apatite(new MaterialTypeBuilder("apatite").resultShape(MaterialResultShape.GEM).displayName("Apatite").color(0x3595B2)),
 	AzureSiler(new MaterialTypeBuilder("azure_silver").resultShape(MaterialResultShape.INGOT).displayName("Azure Silver").color(0xCE9CF3)),
 	Bismuth(new MaterialTypeBuilder("bismuth").resultShape(MaterialResultShape.INGOT).displayName("Bismuth").color(0xE8D8E8)),
 	Bort(new MaterialTypeBuilder("bort").resultShape(MaterialResultShape.GEM).displayName("Bort").color(0x7495AF)),
@@ -110,11 +110,6 @@ public enum MaterialType
 
 	public int getColor()
 	{
-		if (this == Apatite)
-		{
-			return 0x3595B2;
-		}
-		
 		Integer color = MoreMekanismProcessingConfigs.Client.parsedColors.get(this);
 		return color != null ? color : this.getDefaultColor();
 	}
