@@ -29,6 +29,7 @@
 * Lithium (lithium dust can mixable with mekanism:dust_lithium)
 * Nickel
 * Platinum
+* Silicon
 * Silver
 * Titanium
 * Tungsten
@@ -117,6 +118,7 @@
 ## Space-BossTools
 
 * Desh Ingot
+* Silicon Ingot
 
 ## Thermal Foundation
 
