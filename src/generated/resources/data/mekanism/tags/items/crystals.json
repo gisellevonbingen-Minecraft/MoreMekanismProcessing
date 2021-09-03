@@ -90,6 +90,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:crystal_silicon",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:crystal_silver",
       "required": false
     },

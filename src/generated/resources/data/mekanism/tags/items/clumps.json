@@ -90,6 +90,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:clump_silicon",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:clump_silver",
       "required": false
     },

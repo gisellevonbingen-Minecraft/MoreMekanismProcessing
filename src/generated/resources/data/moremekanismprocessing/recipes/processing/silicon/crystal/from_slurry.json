@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:crystallizing",
+  "conditions": [
+    {
+      "materialType": "silicon",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "chemicalType": "slurry",
+  "input": {
+    "amount": 200,
+    "slurry": "moremekanismprocessing:clean_silicon"
+  },
+  "output": {
+    "item": "moremekanismprocessing:crystal_silicon"
+  }
+}

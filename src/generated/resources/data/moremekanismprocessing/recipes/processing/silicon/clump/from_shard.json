@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:purifying",
+  "conditions": [
+    {
+      "materialType": "silicon",
+      "requireLevel": 4,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "mekanism:shards/silicon"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "output": {
+    "item": "moremekanismprocessing:clump_silicon"
+  }
+}

@@ -46,6 +46,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:silicon_ingot",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:silver_ingot",
       "required": false
     },

@@ -90,6 +90,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:shard_silicon",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:shard_silver",
       "required": false
     },

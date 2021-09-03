@@ -90,6 +90,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:dirty_dust_silicon",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:dirty_dust_silver",
       "required": false
     },

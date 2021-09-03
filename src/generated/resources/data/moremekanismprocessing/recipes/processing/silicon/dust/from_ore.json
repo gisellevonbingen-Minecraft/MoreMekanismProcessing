@@ -1,0 +1,23 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "tag": "forge:ores/silicon",
+      "type": "moremekanismprocessing:tag_not_empty"
+    },
+    {
+      "materialType": "silicon",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/silicon"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_silicon",
+    "count": 2
+  }
+}
