@@ -64,10 +64,10 @@ e.g.) Project Red's Electrotine
 * [List of mods/ores](https://github.com/gisellevonbingen/Minecraft-MoreMekanismProcessing/blob/main/Mods_Ores.md)
 * If want to add support mod, ['New Issue'](https://github.com/gisellevonbingen/Minecraft-MoreMekanismProcessing/issues/new) with 'curse forge project' or 'github' url
 
-# Licence
+# License
 
 MIT and while 'Mekanism' allows
 
 # Modpacks
 
-Can use in modpacks under licence
+Can use in modpacks under license
