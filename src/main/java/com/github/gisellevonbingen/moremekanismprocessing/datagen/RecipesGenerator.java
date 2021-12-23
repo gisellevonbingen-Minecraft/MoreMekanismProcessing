@@ -20,13 +20,14 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMeka
 import com.github.gisellevonbingen.moremekanismprocessing.common.slurry.MoreMekanismProcessingSlurryBuilder;
 import com.github.gisellevonbingen.moremekanismprocessing.function.ThreeFunction;
 
+import mekanism.api.chemical.gas.Gas;
 import mekanism.api.chemical.gas.GasStack;
 import mekanism.api.chemical.slurry.Slurry;
 import mekanism.api.chemical.slurry.SlurryStack;
 import mekanism.api.datagen.recipe.builder.ChemicalCrystallizerRecipeBuilder;
 import mekanism.api.datagen.recipe.builder.ChemicalDissolutionRecipeBuilder;
 import mekanism.api.datagen.recipe.builder.FluidSlurryToSlurryRecipeBuilder;
-import mekanism.api.datagen.recipe.builder.ItemStackGasToItemStackRecipeBuilder;
+import mekanism.api.datagen.recipe.builder.ItemStackChemicalToItemStackRecipeBuilder;
 import mekanism.api.datagen.recipe.builder.ItemStackToItemStackRecipeBuilder;
 import mekanism.api.recipes.inputs.FluidStackIngredient;
 import mekanism.api.recipes.inputs.ItemStackIngredient;
@@ -144,7 +145,7 @@ public class RecipesGenerator extends RecipeProvider
 
 			if (this.canProcess(MaterialState.CRYSTAL, MaterialState.SHARD) == true)
 			{
-				this.buildItemStackGasToItemStack(MaterialState.CRYSTAL, MaterialState.SHARD, 1, hydrogenChloride, ItemStackGasToItemStackRecipeBuilder::injecting);
+				this.buildItemStackGasToItemStack(MaterialState.CRYSTAL, MaterialState.SHARD, 1, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
 			}
 
 		}
@@ -156,12 +157,12 @@ public class RecipesGenerator extends RecipeProvider
 
 			if (this.canProcess(MaterialState.ORE, MaterialState.SHARD) == true)
 			{
-				this.buildItemStackGasToItemStack(MaterialState.ORE, MaterialState.SHARD, 4, hydrogenChloride, ItemStackGasToItemStackRecipeBuilder::injecting);
+				this.buildItemStackGasToItemStack(MaterialState.ORE, MaterialState.SHARD, 4, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
 			}
 
 			if (this.canProcess(MaterialState.SHARD, MaterialState.CLUMP) == true)
 			{
-				this.buildItemStackGasToItemStack(MaterialState.SHARD, MaterialState.CLUMP, 1, oxygen, ItemStackGasToItemStackRecipeBuilder::purifying);
+				this.buildItemStackGasToItemStack(MaterialState.SHARD, MaterialState.CLUMP, 1, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
 			}
 
 		}
@@ -172,7 +173,7 @@ public class RecipesGenerator extends RecipeProvider
 
 			if (this.canProcess(MaterialState.ORE, MaterialState.CLUMP) == true)
 			{
-				this.buildItemStackGasToItemStack(MaterialState.ORE, MaterialState.CLUMP, 3, oxygen, ItemStackGasToItemStackRecipeBuilder::purifying);
+				this.buildItemStackGasToItemStack(MaterialState.ORE, MaterialState.CLUMP, 3, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
 			}
 
 			if (this.canProcess(MaterialState.CLUMP, MaterialState.DIRTY_DUST) == true)
@@ -303,11 +304,11 @@ public class RecipesGenerator extends RecipeProvider
 			builder.build(this.consumer, this.getRecipeName(MoreMekanismProcessingSlurry.SLURRY, MoreMekanismProcessingSlurryBuilder.DIRTY));
 		}
 
-		public void buildItemStackGasToItemStack(MaterialState stateInput, MaterialState stateOutput, int outputCount, GasStackIngredient gasInput, ThreeFunction<ItemStackIngredient, GasStackIngredient, ItemStack, ItemStackGasToItemStackRecipeBuilder> function)
+		public void buildItemStackGasToItemStack(MaterialState stateInput, MaterialState stateOutput, int outputCount, GasStackIngredient gasInput, ThreeFunction<ItemStackIngredient, GasStackIngredient, ItemStack, ItemStackChemicalToItemStackRecipeBuilder<Gas, GasStack, GasStackIngredient>> function)
 		{
 			ItemStackIngredient itemInput = this.getTaggedItemStackIngredient(stateInput);
 			ItemStack output = stateOutput.getItemStack(this.materialType, outputCount);
-			ItemStackGasToItemStackRecipeBuilder builder = function.apply(itemInput, gasInput, output);
+			ItemStackChemicalToItemStackRecipeBuilder<Gas, GasStack, GasStackIngredient> builder = function.apply(itemInput, gasInput, output);
 
 			if (stateInput == MaterialState.ORE)
 			{
