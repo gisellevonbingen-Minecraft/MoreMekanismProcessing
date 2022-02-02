@@ -10,8 +10,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 
@@ -54,7 +54,7 @@ public abstract class RecipeBuilder
 		this.conditions.add(condition);
 	}
 
-	public abstract static class RecipeResult implements IFinishedRecipe
+	public abstract static class RecipeResult implements FinishedRecipe
 	{
 		private final ResourceLocation id;
 		private final String group;

@@ -4,7 +4,7 @@ import com.github.gisellevonbingen.moremekanismprocessing.integration.Integratio
 import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationMod;
 import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationTags;
 
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 
 public class ExtremeReactors2Mod extends IntegrationMod
 {

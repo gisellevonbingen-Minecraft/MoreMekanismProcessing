@@ -12,8 +12,8 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.material.Materi
 import mekanism.api.chemical.slurry.Slurry;
 import mekanism.api.chemical.slurry.SlurryBuilder;
 import mekanism.common.registration.impl.SlurryRegistryObject;
-import net.minecraft.item.Item;
-import net.minecraft.tags.ITag.INamedTag;
+import net.minecraft.tags.Tag;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 public class MoreMekanismProcessingSlurries
@@ -61,7 +61,7 @@ public class MoreMekanismProcessingSlurries
 		@Override
 		public SlurryBuilder apply(SlurryBuilder builder)
 		{
-			INamedTag<Item> tag = MaterialState.ORE.getStateItemTag(this.materialType);
+			Tag.Named<Item> tag = MaterialState.ORE.getStateItemTag(this.materialType);
 			return builder.ore(tag);
 		}
 

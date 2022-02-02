@@ -4,11 +4,11 @@ import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 
-import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.ItemTagsProvider;
-import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ItemTagsGenerator extends ItemTagsProvider
@@ -30,8 +30,8 @@ public class ItemTagsGenerator extends ItemTagsProvider
 		{
 			for (MaterialState materialState : materialType.getResultShape().getProcessableStates())
 			{
-				Builder<Item> builderCategory = this.tag(materialState.getCategoryTag());
-				Builder<Item> builderState = this.tag(materialState.getStateItemTag(materialType));
+				TagAppender<Item> builderCategory = this.tag(materialState.getCategoryTag());
+				TagAppender<Item> builderState = this.tag(materialState.getStateItemTag(materialType));
 
 				if (materialState != MaterialState.ORE)
 				{

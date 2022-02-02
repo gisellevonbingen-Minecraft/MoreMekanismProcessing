@@ -12,7 +12,7 @@
       "tag": "mekanism:shards/amethyst"
     }
   },
-  "gasInput": {
+  "chemicalInput": {
     "amount": 1,
     "gas": "mekanism:oxygen"
   },

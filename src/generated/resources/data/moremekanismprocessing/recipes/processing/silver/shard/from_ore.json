@@ -2,8 +2,11 @@
   "type": "mekanism:injecting",
   "conditions": [
     {
-      "tag": "forge:ores/silver",
-      "type": "moremekanismprocessing:tag_not_empty"
+      "value": {
+        "tag": "forge:ores/silver",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
     },
     {
       "materialType": "silver",
@@ -16,7 +19,7 @@
       "tag": "forge:ores/silver"
     }
   },
-  "gasInput": {
+  "chemicalInput": {
     "amount": 1,
     "gas": "mekanism:hydrogen_chloride"
   },

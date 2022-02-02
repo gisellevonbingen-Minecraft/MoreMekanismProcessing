@@ -2,8 +2,11 @@
   "type": "mekanism:injecting",
   "conditions": [
     {
-      "tag": "forge:ores/draconium",
-      "type": "moremekanismprocessing:tag_not_empty"
+      "value": {
+        "tag": "forge:ores/draconium",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
     },
     {
       "materialType": "draconium",
@@ -16,7 +19,7 @@
       "tag": "forge:ores/draconium"
     }
   },
-  "gasInput": {
+  "chemicalInput": {
     "amount": 1,
     "gas": "mekanism:hydrogen_chloride"
   },

@@ -9,8 +9,8 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.material.Materi
 import com.github.gisellevonbingen.moremekanismprocessing.config.MoreMekanismProcessingConfigs;
 import com.google.gson.JsonObject;
 
-import net.minecraft.util.JSONUtils;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.GsonHelper;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionSerializer;
 
@@ -74,9 +74,9 @@ public class ProcessingLevelCondition implements ICondition
 		@Override
 		public ProcessingLevelCondition read(JsonObject json)
 		{
-			String asString = JSONUtils.getAsString(json, "materialType");
+			String asString = GsonHelper.getAsString(json, "materialType");
 			MaterialType materialType = Arrays.stream(MaterialType.values()).filter(t -> StringUtils.equals(t.getBaseName(), asString)).findFirst().get();
-			return new ProcessingLevelCondition(materialType, JSONUtils.getAsInt(json, "requireLevel"));
+			return new ProcessingLevelCondition(materialType, GsonHelper.getAsInt(json, "requireLevel"));
 		}
 
 		@Override

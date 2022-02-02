@@ -2,8 +2,8 @@ package com.github.gisellevonbingen.moremekanismprocessing.datagen;
 
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
 
-import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class BlockTagsGenerator extends BlockTagsProvider

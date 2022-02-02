@@ -2,8 +2,11 @@
   "type": "mekanism:purifying",
   "conditions": [
     {
-      "tag": "forge:ores/cobalt",
-      "type": "moremekanismprocessing:tag_not_empty"
+      "value": {
+        "tag": "forge:ores/cobalt",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
     },
     {
       "materialType": "cobalt",
@@ -16,7 +19,7 @@
       "tag": "forge:ores/cobalt"
     }
   },
-  "gasInput": {
+  "chemicalInput": {
     "amount": 1,
     "gas": "mekanism:oxygen"
   },

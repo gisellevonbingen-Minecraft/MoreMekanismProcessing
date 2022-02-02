@@ -1,21 +1,19 @@
 package com.github.gisellevonbingen.moremekanismprocessing.util;
 
+import net.minecraftforge.fml.loading.FMLLoader;
+import net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler;
+import net.minecraftforge.fml.loading.targets.ForgeDataUserdevLaunchHandler;
+
 public class LauncherUtil
 {
-	public static boolean isRunTarget(String requireTarget)
-	{
-		String target = System.getenv("target");
-		return target != null && target.equalsIgnoreCase(requireTarget);
-	}
-
 	public static boolean isRunDevData()
 	{
-		return isRunTarget("fmluserdevdata");
+		return FMLLoader.getLaunchHandler() instanceof ForgeDataUserdevLaunchHandler;
 	}
 
 	public static boolean isRunDevClient()
 	{
-		return isRunTarget("fmluserdevclient");
+		return FMLLoader.getLaunchHandler() instanceof ForgeClientUserdevLaunchHandler;
 	}
 
 	private LauncherUtil()

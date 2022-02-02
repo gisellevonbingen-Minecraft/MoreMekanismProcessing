@@ -9,7 +9,7 @@ import mekanism.api.chemical.slurry.Slurry;
 import mekanism.api.chemical.slurry.SlurryBuilder;
 import mekanism.common.registration.impl.SlurryDeferredRegister;
 import mekanism.common.registration.impl.SlurryRegistryObject;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.RegistryObject;
 
 public class SlurryDeferredRegister2 extends SlurryDeferredRegister
 {

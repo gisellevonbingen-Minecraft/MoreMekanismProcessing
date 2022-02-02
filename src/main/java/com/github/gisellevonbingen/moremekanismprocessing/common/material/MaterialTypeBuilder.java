@@ -5,8 +5,8 @@ import java.util.Map;
 
 import mekanism.common.Mekanism;
 import mekanism.common.registration.WrappedRegistryObject;
-import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 
 public class MaterialTypeBuilder

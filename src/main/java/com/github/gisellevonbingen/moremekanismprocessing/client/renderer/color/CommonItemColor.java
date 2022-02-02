@@ -2,10 +2,10 @@ package com.github.gisellevonbingen.moremekanismprocessing.client.renderer.color
 
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 
-import net.minecraft.client.renderer.color.IItemColor;
-import net.minecraft.item.ItemStack;
+import net.minecraft.client.color.item.ItemColor;
+import net.minecraft.world.item.ItemStack;
 
-public class CommonItemColor implements IItemColor
+public class CommonItemColor implements ItemColor
 {
 	private MaterialType type;
 

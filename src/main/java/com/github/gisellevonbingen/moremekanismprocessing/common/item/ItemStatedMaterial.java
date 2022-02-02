@@ -3,9 +3,9 @@ package com.github.gisellevonbingen.moremekanismprocessing.common.item;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.ITextComponent;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
 public class ItemStatedMaterial extends Item
 {
@@ -21,7 +21,7 @@ public class ItemStatedMaterial extends Item
 	}
 
 	@Override
-	public ITextComponent getName(ItemStack itemStack)
+	public Component getName(ItemStack itemStack)
 	{
 		String descriptionId = this.getDescriptionId(itemStack);
 		String statedDescriptionId = this.materialState.getStatedDescriptionId();

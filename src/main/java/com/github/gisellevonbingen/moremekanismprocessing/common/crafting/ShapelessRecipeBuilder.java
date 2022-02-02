@@ -7,9 +7,9 @@ import com.google.common.collect.Lists;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
-import net.minecraft.item.crafting.IRecipeSerializer;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 
 public class ShapelessRecipeBuilder extends SingleOutputRecipeBuilder
 {
@@ -45,9 +45,9 @@ public class ShapelessRecipeBuilder extends SingleOutputRecipeBuilder
 		return this.ingredients;
 	}
 
-	public IRecipeSerializer<?> getType()
+	public RecipeSerializer<?> getType()
 	{
-		return (IRecipeSerializer<?>) IRecipeSerializer.SHAPELESS_RECIPE;
+		return RecipeSerializer.SHAPELESS_RECIPE;
 	}
 
 	public static class Result extends SingleOutputRecipeResult
@@ -82,9 +82,9 @@ public class ShapelessRecipeBuilder extends SingleOutputRecipeBuilder
 		}
 
 		@Override
-		public IRecipeSerializer<?> getType()
+		public RecipeSerializer<?> getType()
 		{
-			return IRecipeSerializer.SHAPELESS_RECIPE;
+			return RecipeSerializer.SHAPELESS_RECIPE;
 		}
 
 	}

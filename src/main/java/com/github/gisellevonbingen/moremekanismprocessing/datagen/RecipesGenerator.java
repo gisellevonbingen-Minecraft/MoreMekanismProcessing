@@ -11,7 +11,6 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.Cookin
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.ShapedRecipeBuilder;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.ShapelessRecipeBuilder;
 import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.ProcessingLevelCondition;
-import com.github.gisellevonbingen.moremekanismprocessing.common.crafting.conditions.TagNotEmptyCondition;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialResultShape;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialState;
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
@@ -36,16 +35,18 @@ import mekanism.api.recipes.inputs.chemical.SlurryStackIngredient;
 import mekanism.common.registration.impl.SlurryRegistryObject;
 import mekanism.common.registries.MekanismGases;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.RecipeProvider;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.tags.ITag.INamedTag;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.tags.Tag;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.crafting.conditions.ICondition;
+import net.minecraftforge.common.crafting.conditions.NotCondition;
+import net.minecraftforge.common.crafting.conditions.TagEmptyCondition;
 import net.minecraftforge.fluids.FluidStack;
 
 public class RecipesGenerator extends RecipeProvider
@@ -56,7 +57,7 @@ public class RecipesGenerator extends RecipeProvider
 	}
 
 	@Override
-	protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer)
+	protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
 	{
 		for (MaterialType materialType : MaterialType.values())
 		{
@@ -73,10 +74,10 @@ public class RecipesGenerator extends RecipeProvider
 	public static class OreRecipesGenerator
 	{
 		private MaterialType materialType;
-		private Consumer<IFinishedRecipe> consumer;
+		private Consumer<FinishedRecipe> consumer;
 		private List<ICondition> conditions;
 
-		public OreRecipesGenerator(MaterialType materialType, Consumer<IFinishedRecipe> consumer)
+		public OreRecipesGenerator(MaterialType materialType, Consumer<FinishedRecipe> consumer)
 		{
 			this.materialType = materialType;
 			this.consumer = consumer;
@@ -85,7 +86,7 @@ public class RecipesGenerator extends RecipeProvider
 
 		public ICondition createConditionHasOre()
 		{
-			return new TagNotEmptyCondition(MaterialState.ORE.getStateTagName(this.materialType));
+			return new NotCondition(new TagEmptyCondition(MaterialState.ORE.getStateTagName(this.materialType)));
 		}
 
 		public void applyProcssingLevelCondition(int processingLevel, Runnable runnable)
@@ -428,7 +429,7 @@ public class RecipesGenerator extends RecipeProvider
 			return ItemStackIngredient.from(this.getTag(materialState), amount);
 		}
 
-		public INamedTag<Item> getTag(MaterialState materialState)
+		public Tag.Named<Item> getTag(MaterialState materialState)
 		{
 			return ItemTags.bind(materialState.getStateTagName(this.materialType).toString());
 		}
@@ -443,7 +444,7 @@ public class RecipesGenerator extends RecipeProvider
 			return this.materialType;
 		}
 
-		public Consumer<IFinishedRecipe> getConsumer()
+		public Consumer<FinishedRecipe> getConsumer()
 		{
 			return this.consumer;
 		}

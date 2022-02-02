@@ -11,9 +11,9 @@ import com.google.common.collect.Maps;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
-import net.minecraft.item.crafting.IRecipeSerializer;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 
 public class ShapedRecipeBuilder extends SingleOutputRecipeBuilder
 {
@@ -111,9 +111,9 @@ public class ShapedRecipeBuilder extends SingleOutputRecipeBuilder
 		}
 
 		@Override
-		public IRecipeSerializer<?> getType()
+		public RecipeSerializer<?> getType()
 		{
-			return IRecipeSerializer.SHAPED_RECIPE;
+			return RecipeSerializer.SHAPED_RECIPE;
 		}
 
 	}

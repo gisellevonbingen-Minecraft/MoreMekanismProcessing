@@ -2,8 +2,11 @@
   "type": "mekanism:dissolution",
   "conditions": [
     {
-      "tag": "forge:ores/sapphire",
-      "type": "moremekanismprocessing:tag_not_empty"
+      "value": {
+        "tag": "forge:ores/sapphire",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
     },
     {
       "materialType": "sapphire",

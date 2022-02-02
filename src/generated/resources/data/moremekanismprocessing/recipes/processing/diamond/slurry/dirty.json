@@ -2,8 +2,11 @@
   "type": "mekanism:dissolution",
   "conditions": [
     {
-      "tag": "forge:ores/diamond",
-      "type": "moremekanismprocessing:tag_not_empty"
+      "value": {
+        "tag": "forge:ores/diamond",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
     },
     {
       "materialType": "diamond",

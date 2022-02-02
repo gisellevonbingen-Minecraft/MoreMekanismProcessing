@@ -2,8 +2,11 @@
   "type": "mekanism:injecting",
   "conditions": [
     {
-      "tag": "forge:ores/electrotine",
-      "type": "moremekanismprocessing:tag_not_empty"
+      "value": {
+        "tag": "forge:ores/electrotine",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
     },
     {
       "materialType": "electrotine",
@@ -16,7 +19,7 @@
       "tag": "forge:ores/electrotine"
     }
   },
-  "gasInput": {
+  "chemicalInput": {
     "amount": 1,
     "gas": "mekanism:hydrogen_chloride"
   },

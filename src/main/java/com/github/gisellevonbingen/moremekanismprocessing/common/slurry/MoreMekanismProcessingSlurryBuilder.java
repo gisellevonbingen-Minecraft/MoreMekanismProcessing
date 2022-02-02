@@ -6,7 +6,7 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.material.Materi
 
 import mekanism.api.chemical.slurry.SlurryBuilder;
 import mekanism.common.Mekanism;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 
 public class MoreMekanismProcessingSlurryBuilder extends SlurryBuilder
 {

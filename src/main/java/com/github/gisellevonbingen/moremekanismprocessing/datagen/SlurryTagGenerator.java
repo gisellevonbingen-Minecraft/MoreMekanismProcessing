@@ -21,8 +21,8 @@ public class SlurryTagGenerator extends SlurryTagsProvider
 	@Override
 	protected void addTags()
 	{
-		Builder<Slurry> dirty = this.tag(MekanismTags.Slurries.DIRTY);
-		Builder<Slurry> clean = this.tag(MekanismTags.Slurries.CLEAN);
+		TagAppender<Slurry> dirty = this.tag(MekanismTags.Slurries.DIRTY);
+		TagAppender<Slurry> clean = this.tag(MekanismTags.Slurries.CLEAN);
 
 		for (MaterialType materialType : MaterialType.values())
 		{

@@ -7,19 +7,18 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.item.MoreMekani
 import com.github.gisellevonbingen.moremekanismprocessing.common.tag.MoreMekanismProcessingTags;
 
 import mekanism.common.tags.MekanismTags;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.Util;
+import net.minecraft.locale.Language;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ITag;
-import net.minecraft.tags.ITag.INamedTag;
-import net.minecraft.tags.ITagCollection;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Util;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.LanguageMap;
-import net.minecraft.util.text.TranslationTextComponent;
+import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagCollection;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 
 public enum MaterialState
@@ -35,9 +34,9 @@ public enum MaterialState
 	NUGGET("nugget", Tags.Items.NUGGETS),;
 
 	private String baseName;
-	private ITag.INamedTag<Item> categoryTag;
+	private Tag.Named<Item> categoryTag;
 
-	MaterialState(String baseName, ITag.INamedTag<Item> categoryTag)
+	MaterialState(String baseName, Tag.Named<Item> categoryTag)
 	{
 		this.baseName = baseName;
 		this.categoryTag = categoryTag;
@@ -49,7 +48,7 @@ public enum MaterialState
 		return new ResourceLocation(categoryTagName.getNamespace(), categoryTagName.getPath() + "/" + materialType.getBaseName());
 	}
 
-	public INamedTag<Item> getStateItemTag(MaterialType materialType)
+	public Tag.Named<Item> getStateItemTag(MaterialType materialType)
 	{
 		if (this != MaterialState.ORE)
 		{
@@ -57,9 +56,9 @@ public enum MaterialState
 		}
 		else
 		{
-			ITagCollection<Item> allTags = ItemTags.getAllTags();
+			TagCollection<Item> allTags = ItemTags.getAllTags();
 			ResourceLocation tagName = this.getStateTagName(materialType);
-			INamedTag<Item> tag = (INamedTag<Item>) allTags.getTag(tagName);
+			Tag.Named<Item> tag = (Tag.Named<Item>) allTags.getTag(tagName);
 
 			if (tag != null)
 			{
@@ -74,11 +73,11 @@ public enum MaterialState
 
 	}
 
-	public INamedTag<Block> getStateBlockTag(MaterialType materialType)
+	public Tag.Named<Block> getStateBlockTag(MaterialType materialType)
 	{
-		ITagCollection<Block> allTags = BlockTags.getAllTags();
+		TagCollection<Block> allTags = BlockTags.getAllTags();
 		ResourceLocation tagName = this.getStateTagName(materialType);
-		INamedTag<Block> tag = (INamedTag<Block>) allTags.getTag(tagName);
+		Tag.Named<Block> tag = (Tag.Named<Block>) allTags.getTag(tagName);
 
 		if (tag != null)
 		{
@@ -153,15 +152,15 @@ public enum MaterialState
 		return Util.makeDescriptionId("statedMaterial", MoreMekanismProcessing.rl(baseName));
 	}
 
-	public static ITextComponent createTextComponent(String translationKey, String statedDescriptionId, MaterialType materialType)
+	public static Component createTextComponent(String translationKey, String statedDescriptionId, MaterialType materialType)
 	{
-		if (LanguageMap.getInstance().has(translationKey) == true)
+		if (Language.getInstance().has(translationKey) == true)
 		{
-			return new TranslationTextComponent(translationKey);
+			return new TranslatableComponent(translationKey);
 		}
 		else
 		{
-			return new TranslationTextComponent(statedDescriptionId, new TranslationTextComponent(materialType.getDescriptionId()));
+			return new TranslatableComponent(statedDescriptionId, new TranslatableComponent(materialType.getDescriptionId()));
 		}
 
 	}
@@ -171,7 +170,7 @@ public enum MaterialState
 		return this.baseName;
 	}
 
-	public INamedTag<Item> getCategoryTag()
+	public Tag.Named<Item> getCategoryTag()
 	{
 		return this.categoryTag;
 	}

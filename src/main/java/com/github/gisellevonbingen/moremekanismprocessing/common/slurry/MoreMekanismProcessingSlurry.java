@@ -4,7 +4,7 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.material.Materi
 import com.github.gisellevonbingen.moremekanismprocessing.common.material.MaterialType;
 
 import mekanism.api.chemical.slurry.Slurry;
-import net.minecraft.util.text.ITextComponent;
+import net.minecraft.network.chat.Component;
 
 public class MoreMekanismProcessingSlurry extends Slurry
 {
@@ -38,7 +38,7 @@ public class MoreMekanismProcessingSlurry extends Slurry
 	}
 
 	@Override
-	public ITextComponent getTextComponent()
+	public Component getTextComponent()
 	{
 		String descriptionId = this.getTranslationKey();
 		String statedDescriptionId = this.getStatedDescriptionId();

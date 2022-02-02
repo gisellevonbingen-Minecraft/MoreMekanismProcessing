@@ -1,7 +1,7 @@
 package com.github.gisellevonbingen.moremekanismprocessing.integration;
 
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 public abstract class IntegrationMod
 {

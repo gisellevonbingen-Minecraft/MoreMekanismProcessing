@@ -1,9 +1,9 @@
 modLoader="javafml"
-loaderVersion="[36,)"
-license="All rights reserved"
+loaderVersion="[39,)"
+license="MIT License"
 [[mods]]
 modId="moremekanismprocessing"
-version="1.1"
+version="${file.jarVersion}"
 displayName="More Mekanism Processing"
 credits="gisellevonbingen"
 authors="gisellevonbingen"
@@ -13,18 +13,18 @@ Add mekanism's ore processing to other mod's ores
 [[dependencies.moremekanismprocessing]]
     modId="forge"
     mandatory=true
-    versionRange="[36,)"
+    versionRange="[39,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.moremekanismprocessing]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5,1.17)"
+    versionRange="[1.18.1,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.moremekanismprocessing]]
     modId="mekanism"
     mandatory=true
-    versionRange="[10.0.20,)"
+    versionRange="[10.1.1,)"
     ordering="AFTER"
     side="BOTH"

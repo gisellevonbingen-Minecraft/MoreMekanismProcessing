@@ -2,9 +2,9 @@ package com.github.gisellevonbingen.moremekanismprocessing.common.crafting;
 
 import com.google.gson.JsonObject;
 
-import net.minecraft.item.crafting.IRecipeSerializer;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 
 public class CookingRecipeBuilder extends SingleOutputRecipeBuilder
 {
@@ -71,12 +71,12 @@ public class CookingRecipeBuilder extends SingleOutputRecipeBuilder
 
 	public Result getSmelting()
 	{
-		return new Result(this, "smelting", this.smeltingTime, IRecipeSerializer.SMELTING_RECIPE);
+		return new Result(this, "smelting", this.smeltingTime, RecipeSerializer.SMELTING_RECIPE);
 	}
 
 	public Result getBlasting()
 	{
-		return new Result(this, "blasting", this.blastingTime, IRecipeSerializer.BLASTING_RECIPE);
+		return new Result(this, "blasting", this.blastingTime, RecipeSerializer.BLASTING_RECIPE);
 	}
 
 	public static class Result extends SingleOutputRecipeResult
@@ -85,9 +85,9 @@ public class CookingRecipeBuilder extends SingleOutputRecipeBuilder
 		private final float experience;
 		private final int cookingTime;
 
-		private IRecipeSerializer<?> type;
+		private RecipeSerializer<?> type;
 
-		public Result(CookingRecipeBuilder builder, String name, int cookingTime, IRecipeSerializer<?> type)
+		public Result(CookingRecipeBuilder builder, String name, int cookingTime, RecipeSerializer<?> type)
 		{
 			super(builder, new ResourceLocation(builder.getId().getNamespace(), builder.getId().getPath() + "_" + name));
 
@@ -123,7 +123,7 @@ public class CookingRecipeBuilder extends SingleOutputRecipeBuilder
 		}
 
 		@Override
-		public IRecipeSerializer<?> getType()
+		public RecipeSerializer<?> getType()
 		{
 			return this.type;
 		}

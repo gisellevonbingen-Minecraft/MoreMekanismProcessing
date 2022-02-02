@@ -12,7 +12,7 @@
       "tag": "mekanism:crystals/lithium"
     }
   },
-  "gasInput": {
+  "chemicalInput": {
     "amount": 1,
     "gas": "mekanism:hydrogen_chloride"
   },

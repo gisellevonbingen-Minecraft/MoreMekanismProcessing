@@ -7,9 +7,9 @@ import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing
 import com.github.gisellevonbingen.moremekanismprocessing.config.MoreMekanismProcessingConfigs;
 
 import mekanism.common.registries.MekanismItems;
-import net.minecraft.item.Items;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Util;
+import net.minecraft.Util;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 
 public enum MaterialType
 {

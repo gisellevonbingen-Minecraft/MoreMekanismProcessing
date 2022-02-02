@@ -12,7 +12,7 @@
       "tag": "mekanism:crystals/azure_silver"
     }
   },
-  "gasInput": {
+  "chemicalInput": {
     "amount": 1,
     "gas": "mekanism:hydrogen_chloride"
   },

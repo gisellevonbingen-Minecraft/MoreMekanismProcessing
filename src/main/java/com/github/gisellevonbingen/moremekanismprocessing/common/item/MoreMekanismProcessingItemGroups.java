@@ -2,15 +2,15 @@ package com.github.gisellevonbingen.moremekanismprocessing.common.item;
 
 import com.github.gisellevonbingen.moremekanismprocessing.MoreMekanismProcessing;
 
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.core.NonNullList;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
 public class MoreMekanismProcessingItemGroups
 {
-	public static final ItemGroup tabMoreMekanismProcessing = new ItemGroup(MoreMekanismProcessing.MODID)
+	public static final CreativeModeTab tabMoreMekanismProcessing = new CreativeModeTab(MoreMekanismProcessing.MODID)
 	{
 		NonNullList<ItemStack> itemStacks = NonNullList.create();
 		int iconIndex = 0;
@@ -55,9 +55,9 @@ public class MoreMekanismProcessingItemGroups
 		};
 
 		@Override
-		public ITextComponent getDisplayName()
+		public Component getDisplayName()
 		{
-			return new StringTextComponent(MoreMekanismProcessing.MODANME);
+			return new TextComponent(MoreMekanismProcessing.MODANME);
 		};
 
 	};

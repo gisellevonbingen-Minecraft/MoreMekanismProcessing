@@ -12,14 +12,13 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.material.Materi
 import com.github.gisellevonbingen.moremekanismprocessing.config.MoreMekanismProcessingConfigs;
 import com.github.gisellevonbingen.moremekanismprocessing.util.LauncherUtil;
 
-import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class MoreMekanismProcessingItems
 {
@@ -49,14 +48,13 @@ public class MoreMekanismProcessingItems
 
 	}
 
-	@SuppressWarnings("deprecation")
 	public static Item getProcessingItem(MaterialType materialType, MaterialState materialState)
 	{
 		ResourceLocation presetName = materialType.getPresetItem(materialState);
 
 		if (presetName != null)
 		{
-			return Registry.ITEM.get(presetName);
+			return ForgeRegistries.ITEMS.getValue(presetName);
 		}
 		else
 		{

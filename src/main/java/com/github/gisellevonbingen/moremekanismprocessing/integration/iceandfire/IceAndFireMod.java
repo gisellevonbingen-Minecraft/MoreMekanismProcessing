@@ -5,7 +5,7 @@ import com.github.gisellevonbingen.moremekanismprocessing.common.material.Materi
 import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationBlockTagsGenerator;
 import com.github.gisellevonbingen.moremekanismprocessing.integration.IntegrationMod;
 
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 
 public class IceAndFireMod extends IntegrationMod
 {

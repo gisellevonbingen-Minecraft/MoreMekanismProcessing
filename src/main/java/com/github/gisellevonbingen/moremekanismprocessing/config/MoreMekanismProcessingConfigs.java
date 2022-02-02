@@ -13,6 +13,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 import net.minecraftforge.fml.loading.FMLPaths;
 
@@ -68,25 +69,25 @@ public class MoreMekanismProcessingConfigs
 		{
 			ModConfig config = new ModConfig(type, spec, modContaier);
 			CommentedFileConfig configData = config.getHandler().reader(FMLPaths.CONFIGDIR.get()).apply(config);
-			config.getSpec().setConfig(configData);
+			config.getSpec().acceptConfig(configData);
 			configData.save();
 		}
 
 	}
 
 	@SubscribeEvent
-	public static void onLoad(ModConfig.Loading event)
+	public static void onLoad(ModConfigEvent.Loading event)
 	{
 		parseConfig(event);
 	}
 
 	@SubscribeEvent
-	public static void onReload(ModConfig.Reloading event)
+	public static void onReload(ModConfigEvent.Reloading event)
 	{
 		parseConfig(event);
 	}
 
-	public static void parseConfig(ModConfig.ModConfigEvent event)
+	public static void parseConfig(ModConfigEvent event)
 	{
 		if (event.getConfig().getSpec() == ClientSpec)
 		{

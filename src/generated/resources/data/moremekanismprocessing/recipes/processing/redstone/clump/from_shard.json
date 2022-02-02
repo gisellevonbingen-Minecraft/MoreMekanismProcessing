@@ -12,7 +12,7 @@
       "tag": "mekanism:shards/redstone"
     }
   },
-  "gasInput": {
+  "chemicalInput": {
     "amount": 1,
     "gas": "mekanism:oxygen"
   },
