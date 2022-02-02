@@ -1,0 +1,41 @@
+package com.github.gisellevonbingen.mmp.datagen;
+
+import com.github.gisellevonbingen.mmp.MoreMekanismProcessing;
+import com.github.gisellevonbingen.mmp.common.material.MaterialType;
+import com.github.gisellevonbingen.mmp.common.slurry.MoreMekanismProcessingSlurries;
+
+import mekanism.api.chemical.slurry.Slurry;
+import mekanism.api.datagen.tag.ChemicalTagsProvider.SlurryTagsProvider;
+import mekanism.common.registration.impl.SlurryRegistryObject;
+import mekanism.common.tags.MekanismTags;
+import net.minecraft.data.DataGenerator;
+import net.minecraftforge.common.data.ExistingFileHelper;
+
+public class SlurryTagGenerator extends SlurryTagsProvider
+{
+	protected SlurryTagGenerator(DataGenerator gen, ExistingFileHelper existingFileHelper)
+	{
+		super(gen, MoreMekanismProcessing.MODID, existingFileHelper);
+	}
+
+	@Override
+	protected void addTags()
+	{
+		TagAppender<Slurry> dirty = this.tag(MekanismTags.Slurries.DIRTY);
+		TagAppender<Slurry> clean = this.tag(MekanismTags.Slurries.CLEAN);
+
+		for (MaterialType materialType : MaterialType.values())
+		{
+			SlurryRegistryObject<Slurry, Slurry> registry = MoreMekanismProcessingSlurries.getSlurryRegistry(materialType);
+
+			if (registry != null)
+			{
+				dirty.addOptional(registry.getDirtySlurry().getRegistryName());
+				clean.addOptional(registry.getCleanSlurry().getRegistryName());
+			}
+
+		}
+
+	}
+
+}
