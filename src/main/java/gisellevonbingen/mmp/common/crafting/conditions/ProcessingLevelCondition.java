@@ -6,7 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.google.gson.JsonObject;
 
-import gisellevonbingen.mmp.MoreMekanismProcessing;
+import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import gisellevonbingen.mmp.common.config.MoreMekanismProcessingConfigs;
 import gisellevonbingen.mmp.common.material.MaterialType;
 import net.minecraft.resources.ResourceLocation;

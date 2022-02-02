@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import gisellevonbingen.mmp.MoreMekanismProcessing;
+import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;

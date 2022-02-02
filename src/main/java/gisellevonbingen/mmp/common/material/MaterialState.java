@@ -2,7 +2,7 @@ package gisellevonbingen.mmp.common.material;
 
 import org.apache.commons.lang3.NotImplementedException;
 
-import gisellevonbingen.mmp.MoreMekanismProcessing;
+import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import gisellevonbingen.mmp.common.item.MoreMekanismProcessingItems;
 import gisellevonbingen.mmp.common.tag.MoreMekanismProcessingTags;
 import mekanism.common.tags.MekanismTags;

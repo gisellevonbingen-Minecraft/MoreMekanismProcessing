@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import gisellevonbingen.mmp.MoreMekanismProcessing;
+import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import gisellevonbingen.mmp.common.config.MoreMekanismProcessingConfigs;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;

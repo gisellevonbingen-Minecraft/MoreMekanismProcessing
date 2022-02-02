@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
 
-import gisellevonbingen.mmp.MoreMekanismProcessing;
+import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import gisellevonbingen.mmp.common.crafting.CookingRecipeBuilder;
 import gisellevonbingen.mmp.common.crafting.ShapedRecipeBuilder;
 import gisellevonbingen.mmp.common.crafting.ShapelessRecipeBuilder;

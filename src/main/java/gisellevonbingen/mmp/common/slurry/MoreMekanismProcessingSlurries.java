@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.UnaryOperator;
 
-import gisellevonbingen.mmp.MoreMekanismProcessing;
+import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import gisellevonbingen.mmp.common.item.MoreMekanismProcessingItems;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;

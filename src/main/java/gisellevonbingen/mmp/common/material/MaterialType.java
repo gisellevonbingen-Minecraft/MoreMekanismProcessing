@@ -3,7 +3,7 @@ package gisellevonbingen.mmp.common.material;
 import java.util.HashMap;
 import java.util.Map;
 
-import gisellevonbingen.mmp.MoreMekanismProcessing;
+import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import gisellevonbingen.mmp.common.config.MoreMekanismProcessingConfigs;
 import mekanism.common.registries.MekanismItems;
 import net.minecraft.Util;

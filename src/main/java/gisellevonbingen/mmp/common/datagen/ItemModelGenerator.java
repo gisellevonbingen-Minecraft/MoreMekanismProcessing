@@ -3,7 +3,7 @@ package gisellevonbingen.mmp.common.datagen;
 import java.util.ArrayList;
 import java.util.List;
 
-import gisellevonbingen.mmp.MoreMekanismProcessing;
+import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
 import mekanism.common.Mekanism;

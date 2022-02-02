@@ -1,6 +1,6 @@
 package gisellevonbingen.mmp.common.datagen;
 
-import gisellevonbingen.mmp.MoreMekanismProcessing;
+import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import gisellevonbingen.mmp.common.material.MaterialType;
 import gisellevonbingen.mmp.common.slurry.MoreMekanismProcessingSlurries;
 import mekanism.api.chemical.slurry.Slurry;

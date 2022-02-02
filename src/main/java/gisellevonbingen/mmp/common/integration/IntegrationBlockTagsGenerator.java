@@ -7,7 +7,7 @@ import java.util.Map;
 
 import com.google.common.collect.Lists;
 
-import gisellevonbingen.mmp.MoreMekanismProcessing;
+import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.resources.ResourceLocation;
