@@ -1,4 +1,4 @@
-package gisellevonbingen.mmp;
+package gisellevonbingen.mmp.common;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
