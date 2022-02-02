@@ -34,7 +34,7 @@ public class ItemModelGenerator extends ItemModelProvider
 		{
 			for (MaterialState materialState : materialType.getResultShape().getProcessableStates())
 			{
-				if (materialState != MaterialState.ORE)
+				if (materialState != MaterialState.ORE && materialType.getPresetItem(materialState) == null)
 				{
 					Item item = materialState.getItem(materialType);
 					ItemModelBuilder builder = this.singleTexture(item.getRegistryName().getPath(), this.mcLoc("item/generated"), "layer0", this.getTexture(materialState));
