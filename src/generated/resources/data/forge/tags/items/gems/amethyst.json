@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     {
-      "id": "moremekanismprocessing:gem_amethyst",
+      "id": "minecraft:amethyst_shard",
       "required": false
     }
   ]

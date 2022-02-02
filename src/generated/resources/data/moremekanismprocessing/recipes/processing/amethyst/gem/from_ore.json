@@ -20,7 +20,7 @@
     }
   },
   "output": {
-    "item": "moremekanismprocessing:gem_amethyst",
+    "item": "minecraft:amethyst_shard",
     "count": 2
   }
 }
