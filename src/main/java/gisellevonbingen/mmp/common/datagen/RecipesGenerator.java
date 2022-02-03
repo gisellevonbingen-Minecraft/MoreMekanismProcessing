@@ -83,9 +83,9 @@ public class RecipesGenerator extends RecipeProvider
 			this.conditions = new ArrayList<>();
 		}
 
-		public ICondition createConditionHasOre()
+		public ICondition createConditionHasState(MaterialState state)
 		{
-			return new NotCondition(new TagEmptyCondition(MaterialState.ORE.getStateTagName(this.materialType)));
+			return new NotCondition(new TagEmptyCondition(state.getStateTagName(this.materialType)));
 		}
 
 		public void applyProcssingLevelCondition(int processingLevel, Runnable runnable)
@@ -105,6 +105,16 @@ public class RecipesGenerator extends RecipeProvider
 				this.conditions.remove(condition);
 			}
 
+		}
+
+		public void applyConditionWithState(Consumer<ICondition> consumer, MaterialState state)
+		{
+			if (state.hasOwnItem() == false)
+			{
+				consumer.accept(this.createConditionHasState(state));
+			}
+
+			this.applyCondition(consumer);
 		}
 
 		public void applyCondition(Consumer<ICondition> consumer)
@@ -276,6 +286,7 @@ public class RecipesGenerator extends RecipeProvider
 		{
 			ItemStack output = stateOutput.getItemStack(this.materialType, outputCount);
 			ChemicalCrystallizerRecipeBuilder builder = ChemicalCrystallizerRecipeBuilder.crystallizing(slurryInput, output);
+
 			this.applyCondition(builder::addCondition);
 			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from(MoreMekanismProcessingSlurry.SLURRY)));
 		}
@@ -285,6 +296,7 @@ public class RecipesGenerator extends RecipeProvider
 			SlurryStackIngredient slurryStackInput = SlurryStackIngredient.from(new SlurryStack(slurryInput, 1));
 			SlurryStack slurryStackOutput = new SlurryStack(slurryOutput, 1);
 			FluidSlurryToSlurryRecipeBuilder builder = FluidSlurryToSlurryRecipeBuilder.washing(fluidInput, slurryStackInput, slurryStackOutput);
+
 			this.applyCondition(builder::addCondition);
 			builder.build(this.consumer, this.getRecipeName(MoreMekanismProcessingSlurry.SLURRY, MoreMekanismProcessingSlurryBuilder.CLEAN));
 		}
@@ -295,12 +307,7 @@ public class RecipesGenerator extends RecipeProvider
 			SlurryStack slurryStackOutput = new SlurryStack(slurryOutput, outputAmount);
 			ChemicalDissolutionRecipeBuilder builder = ChemicalDissolutionRecipeBuilder.dissolution(itemInput, gasInput, slurryStackOutput);
 
-			if (stateInput == MaterialState.ORE)
-			{
-				builder.addCondition(this.createConditionHasOre());
-			}
-
-			this.applyCondition(builder::addCondition);
+			this.applyConditionWithState(builder::addCondition, stateInput);
 			builder.build(this.consumer, this.getRecipeName(MoreMekanismProcessingSlurry.SLURRY, MoreMekanismProcessingSlurryBuilder.DIRTY));
 		}
 
@@ -310,12 +317,7 @@ public class RecipesGenerator extends RecipeProvider
 			ItemStack output = stateOutput.getItemStack(this.materialType, outputCount);
 			ItemStackChemicalToItemStackRecipeBuilder<Gas, GasStack, GasStackIngredient> builder = function.apply(itemInput, gasInput, output);
 
-			if (stateInput == MaterialState.ORE)
-			{
-				builder.addCondition(this.createConditionHasOre());
-			}
-
-			this.applyCondition(builder::addCondition);
+			this.applyConditionWithState(builder::addCondition, stateInput);
 			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from(stateInput)));
 		}
 
@@ -325,12 +327,7 @@ public class RecipesGenerator extends RecipeProvider
 			ItemStack output = stateOutput.getItemStack(this.materialType, outputCount);
 			ItemStackToItemStackRecipeBuilder builder = function.apply(itemInput, output);
 
-			if (stateInput == MaterialState.ORE)
-			{
-				builder.addCondition(this.createConditionHasOre());
-			}
-
-			this.applyCondition(builder::addCondition);
+			this.applyConditionWithState(builder::addCondition, stateInput);
 			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from(stateInput)));
 		}
 
@@ -343,13 +340,8 @@ public class RecipesGenerator extends RecipeProvider
 			builder.setOutput(output);
 			builder.setIngredient(itemInput);
 			builder.setExperience(0.3F);
+			this.applyConditionWithState(builder::addCondition, stateInput);
 
-			if (stateInput == MaterialState.ORE)
-			{
-				builder.addCondition(this.createConditionHasOre());
-			}
-
-			this.applyCondition(builder::addCondition);
 			this.consumer.accept(builder.getSmelting());
 			this.consumer.accept(builder.getBlasting());
 		}
@@ -368,12 +360,7 @@ public class RecipesGenerator extends RecipeProvider
 			builder.addKey('#', this.getTaggedIngredient(stateInput));
 			builder.addKey('*', this.getExcatIngredient(stateInput));
 
-			if (stateInput == MaterialState.ORE)
-			{
-				builder.addCondition(this.createConditionHasOre());
-			}
-
-			this.applyCondition(builder::addCondition);
+			this.applyConditionWithState(builder::addCondition, stateInput);
 			this.consumer.accept(builder.getResult());
 		}
 
@@ -389,12 +376,7 @@ public class RecipesGenerator extends RecipeProvider
 			builder.setOutput(itemOutput, 9);
 			builder.add(this.getExcatIngredient(stateInput));
 
-			if (stateInput == MaterialState.ORE)
-			{
-				builder.addCondition(this.createConditionHasOre());
-			}
-
-			this.applyCondition(builder::addCondition);
+			this.applyConditionWithState(builder::addCondition, stateInput);
 			this.consumer.accept(builder.getResult());
 		}
 
