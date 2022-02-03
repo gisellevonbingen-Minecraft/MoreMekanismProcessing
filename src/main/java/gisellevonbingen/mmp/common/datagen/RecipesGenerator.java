@@ -138,62 +138,76 @@ public class RecipesGenerator extends RecipeProvider
 
 		public void buildProcessingLevel5()
 		{
-			GasStackIngredient hydrogenChloride = GasStackIngredient.from(new GasStack(MekanismGases.HYDROGEN_CHLORIDE.get(), 1));
-			GasStackIngredient sulfuricAcid = GasStackIngredient.from(new GasStack(MekanismGases.SULFURIC_ACID.get(), 1));
-			FluidStackIngredient water = FluidStackIngredient.from(new FluidStack(Fluids.WATER, 5));
-
-			if (this.canProcess(MaterialState.ORE, MaterialState.CRYSTAL) == true)
+			if (this.canProcess(MaterialState.CRYSTAL) == true)
 			{
+				GasStackIngredient hydrogenChloride = GasStackIngredient.from(new GasStack(MekanismGases.HYDROGEN_CHLORIDE.get(), 1));
+				GasStackIngredient sulfuricAcid = GasStackIngredient.from(new GasStack(MekanismGases.SULFURIC_ACID.get(), 1));
+				FluidStackIngredient water = FluidStackIngredient.from(new FluidStack(Fluids.WATER, 5));
+
 				SlurryRegistryObject<Slurry, Slurry> slurryRegistry = MoreMekanismProcessingSlurries.getSlurryRegistry(this.materialType);
 				Slurry dirtySlurry = slurryRegistry.getDirtySlurry();
 				Slurry cleanSlurry = slurryRegistry.getCleanSlurry();
 
-				this.buildChemicalDissolution(MaterialState.ORE, dirtySlurry, 1000, sulfuricAcid);
+				if (this.canProcess(MaterialState.ORE) == true)
+				{
+					this.buildChemicalDissolution(MaterialState.ORE, dirtySlurry, 1000, sulfuricAcid);
+				}
+
 				this.buildChemicalWashing(water, dirtySlurry, cleanSlurry);
 				this.buildChemicalCrystallizing(SlurryStackIngredient.from(new SlurryStack(cleanSlurry, 200)), MaterialState.CRYSTAL, 1);
-			}
 
-			if (this.canProcess(MaterialState.CRYSTAL, MaterialState.SHARD) == true)
-			{
-				this.buildItemStackGasToItemStack(MaterialState.CRYSTAL, MaterialState.SHARD, 1, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
+				if (this.canProcess(MaterialState.SHARD) == true)
+				{
+					this.buildItemStackGasToItemStack(MaterialState.CRYSTAL, MaterialState.SHARD, 1, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
+				}
+
 			}
 
 		}
 
 		public void buildProcessingLevel4()
 		{
-			GasStackIngredient hydrogenChloride = GasStackIngredient.from(new GasStack(MekanismGases.HYDROGEN_CHLORIDE.get(), 1));
-			GasStackIngredient oxygen = GasStackIngredient.from(new GasStack(MekanismGases.OXYGEN.get(), 1));
-
-			if (this.canProcess(MaterialState.ORE, MaterialState.SHARD) == true)
+			if (this.canProcess(MaterialState.SHARD) == true)
 			{
-				this.buildItemStackGasToItemStack(MaterialState.ORE, MaterialState.SHARD, 4, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
-			}
+				GasStackIngredient hydrogenChloride = GasStackIngredient.from(new GasStack(MekanismGases.HYDROGEN_CHLORIDE.get(), 1));
+				GasStackIngredient oxygen = GasStackIngredient.from(new GasStack(MekanismGases.OXYGEN.get(), 1));
 
-			if (this.canProcess(MaterialState.SHARD, MaterialState.CLUMP) == true)
-			{
-				this.buildItemStackGasToItemStack(MaterialState.SHARD, MaterialState.CLUMP, 1, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
+				if (this.canProcess(MaterialState.ORE) == true)
+				{
+					this.buildItemStackGasToItemStack(MaterialState.ORE, MaterialState.SHARD, 4, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
+				}
+
+				if (this.canProcess(MaterialState.CLUMP) == true)
+				{
+					this.buildItemStackGasToItemStack(MaterialState.SHARD, MaterialState.CLUMP, 1, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
+				}
+
 			}
 
 		}
 
 		public void buildProcessingLevel3()
 		{
-			GasStackIngredient oxygen = GasStackIngredient.from(new GasStack(MekanismGases.OXYGEN.get(), 1));
-
-			if (this.canProcess(MaterialState.ORE, MaterialState.CLUMP) == true)
+			if (this.canProcess(MaterialState.CLUMP) == true)
 			{
-				this.buildItemStackGasToItemStack(MaterialState.ORE, MaterialState.CLUMP, 3, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
-			}
+				GasStackIngredient oxygen = GasStackIngredient.from(new GasStack(MekanismGases.OXYGEN.get(), 1));
 
-			if (this.canProcess(MaterialState.CLUMP, MaterialState.DIRTY_DUST) == true)
-			{
-				this.buildItemToItemStack(MaterialState.CLUMP, MaterialState.DIRTY_DUST, 1, ItemStackToItemStackRecipeBuilder::crushing);
-			}
+				if (this.canProcess(MaterialState.ORE) == true)
+				{
+					this.buildItemStackGasToItemStack(MaterialState.ORE, MaterialState.CLUMP, 3, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
+				}
 
-			if (this.canProcess(MaterialState.DIRTY_DUST, MaterialState.DUST) == true)
-			{
-				this.buildItemToItemStack(MaterialState.DIRTY_DUST, MaterialState.DUST, 1, ItemStackToItemStackRecipeBuilder::enriching);
+				if (this.canProcess(MaterialState.DIRTY_DUST) == true)
+				{
+					this.buildItemToItemStack(MaterialState.CLUMP, MaterialState.DIRTY_DUST, 1, ItemStackToItemStackRecipeBuilder::crushing);
+
+					if (this.canProcess(MaterialState.DUST) == true)
+					{
+						this.buildItemToItemStack(MaterialState.DIRTY_DUST, MaterialState.DUST, 1, ItemStackToItemStackRecipeBuilder::enriching);
+					}
+
+				}
+
 			}
 
 		}
@@ -205,33 +219,41 @@ public class RecipesGenerator extends RecipeProvider
 				return;
 			}
 
-			if (this.materialType.getResultShape() == MaterialResultShape.GEM)
+			if (this.canProcess(MaterialState.ORE) == true)
 			{
-				if (this.canProcess(MaterialState.ORE, MaterialState.GEM) == true)
+				if (this.materialType.getResultShape() == MaterialResultShape.GEM)
 				{
-					this.buildItemToItemStack(MaterialState.ORE, MaterialState.GEM, 2, ItemStackToItemStackRecipeBuilder::enriching);
+					if (this.canProcess(MaterialState.GEM) == true)
+					{
+						this.buildItemToItemStack(MaterialState.ORE, MaterialState.GEM, 2, ItemStackToItemStackRecipeBuilder::enriching);
+					}
+
+				}
+				else
+				{
+					if (this.canProcess(MaterialState.DUST) == true)
+					{
+						this.buildItemToItemStack(MaterialState.ORE, MaterialState.DUST, 2, ItemStackToItemStackRecipeBuilder::enriching);
+					}
+
 				}
 
 			}
-			else
+
+			if (this.canProcess(MaterialState.DUST) == true)
 			{
-				if (this.canProcess(MaterialState.ORE, MaterialState.DUST) == true)
+				if (this.canProcess(MaterialState.INGOT) == true)
 				{
-					this.buildItemToItemStack(MaterialState.ORE, MaterialState.DUST, 2, ItemStackToItemStackRecipeBuilder::enriching);
+					this.buildCook(MaterialState.DUST, MaterialState.INGOT);
+					this.buildItemToItemStack(MaterialState.INGOT, MaterialState.DUST, 1, ItemStackToItemStackRecipeBuilder::crushing);
 				}
 
-			}
+				if (this.canProcess(MaterialState.GEM) == true)
+				{
+					this.buildItemToItemStack(MaterialState.DUST, MaterialState.GEM, 1, ItemStackToItemStackRecipeBuilder::enriching);
+					this.buildItemToItemStack(MaterialState.GEM, MaterialState.DUST, 1, ItemStackToItemStackRecipeBuilder::crushing);
+				}
 
-			if (this.canProcess(MaterialState.DUST, MaterialState.INGOT) == true)
-			{
-				this.buildCook(MaterialState.DUST, MaterialState.INGOT);
-				this.buildItemToItemStack(MaterialState.INGOT, MaterialState.DUST, 1, ItemStackToItemStackRecipeBuilder::crushing);
-			}
-
-			if (this.canProcess(MaterialState.DUST, MaterialState.GEM) == true)
-			{
-				this.buildItemToItemStack(MaterialState.DUST, MaterialState.GEM, 1, ItemStackToItemStackRecipeBuilder::enriching);
-				this.buildItemToItemStack(MaterialState.GEM, MaterialState.DUST, 1, ItemStackToItemStackRecipeBuilder::crushing);
 			}
 
 		}
