@@ -151,6 +151,12 @@ public class RecipesGenerator extends RecipeProvider
 					this.buildChemicalDissolution(MaterialState.ORE, 1, dirtySlurry, 1000, sulfuricAcid);
 				}
 
+				if (this.canProcess(MaterialState.RAW) == true)
+				{
+					GasStackIngredient sulfuricAcid = GasStackIngredient.from(new GasStack(MekanismGases.SULFURIC_ACID.get(), 1));
+					this.buildChemicalDissolution(MaterialState.RAW, 3, dirtySlurry, 2000, sulfuricAcid);
+				}
+
 				this.buildChemicalWashing(water, dirtySlurry, cleanSlurry);
 				this.buildChemicalCrystallizing(SlurryStackIngredient.from(new SlurryStack(cleanSlurry, 200)), MaterialState.CRYSTAL, 1);
 
@@ -174,6 +180,12 @@ public class RecipesGenerator extends RecipeProvider
 					this.buildItemStackGasToItemStack(MaterialState.ORE, 1, MaterialState.SHARD, 4, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
 				}
 
+				if (this.canProcess(MaterialState.RAW) == true)
+				{
+					GasStackIngredient hydrogenChloride = GasStackIngredient.from(new GasStack(MekanismGases.HYDROGEN_CHLORIDE.get(), 1));
+					this.buildItemStackGasToItemStack(MaterialState.RAW, 3, MaterialState.SHARD, 8, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
+				}
+				
 				if (this.canProcess(MaterialState.CLUMP) == true)
 				{
 					GasStackIngredient oxygen = GasStackIngredient.from(new GasStack(MekanismGases.OXYGEN.get(), 1));
@@ -192,6 +204,12 @@ public class RecipesGenerator extends RecipeProvider
 				{
 					GasStackIngredient oxygen = GasStackIngredient.from(new GasStack(MekanismGases.OXYGEN.get(), 1));
 					this.buildItemStackGasToItemStack(MaterialState.ORE, 1, MaterialState.CLUMP, 3, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
+				}
+
+				if (this.canProcess(MaterialState.RAW) == true)
+				{
+					GasStackIngredient oxygen = GasStackIngredient.from(new GasStack(MekanismGases.OXYGEN.get(), 1));
+					this.buildItemStackGasToItemStack(MaterialState.RAW, 3, MaterialState.CLUMP, 6, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
 				}
 
 				if (this.canProcess(MaterialState.DIRTY_DUST) == true)
@@ -321,7 +339,7 @@ public class RecipesGenerator extends RecipeProvider
 			ChemicalDissolutionRecipeBuilder builder = ChemicalDissolutionRecipeBuilder.dissolution(itemInput, gasInput, slurryStackOutput);
 
 			this.applyConditionWithState(builder::addCondition, stateInput);
-			builder.build(this.consumer, this.getRecipeName(MoreMekanismProcessingSlurry.SLURRY, MoreMekanismProcessingSlurryBuilder.DIRTY));
+			builder.build(this.consumer, this.getRecipeName(MoreMekanismProcessingSlurry.SLURRY, MoreMekanismProcessingSlurryBuilder.DIRTY +"/" + stateInput.getBaseName()));
 		}
 
 		public void buildItemStackGasToItemStack(MaterialState stateInput, int inputCount, MaterialState stateOutput, int outputCount, GasStackIngredient gasInput, ThreeFunction<ItemStackIngredient, GasStackIngredient, ItemStack, ItemStackChemicalToItemStackRecipeBuilder<Gas, GasStack, GasStackIngredient>> function)
