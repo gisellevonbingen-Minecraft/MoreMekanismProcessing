@@ -11,7 +11,6 @@ import gisellevonbingen.mmp.common.crafting.CookingRecipeBuilder;
 import gisellevonbingen.mmp.common.crafting.ShapedRecipeBuilder;
 import gisellevonbingen.mmp.common.crafting.ShapelessRecipeBuilder;
 import gisellevonbingen.mmp.common.crafting.conditions.ProcessingLevelCondition;
-import gisellevonbingen.mmp.common.crafting.conditions.TagNotEmptyCondition;
 import gisellevonbingen.mmp.common.material.MaterialResultShape;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
@@ -45,6 +44,8 @@ import net.minecraft.tags.ITag.INamedTag;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.conditions.ICondition;
+import net.minecraftforge.common.crafting.conditions.NotCondition;
+import net.minecraftforge.common.crafting.conditions.TagEmptyCondition;
 import net.minecraftforge.fluids.FluidStack;
 
 public class RecipesGenerator extends RecipeProvider
@@ -84,7 +85,7 @@ public class RecipesGenerator extends RecipeProvider
 
 		public ICondition createConditionHasOre()
 		{
-			return new TagNotEmptyCondition(MaterialState.ORE.getStateTagName(this.materialType));
+			return new NotCondition(new TagEmptyCondition(MaterialState.ORE.getStateTagName(this.materialType)));
 		}
 
 		public void applyProcssingLevelCondition(int processingLevel, Runnable runnable)

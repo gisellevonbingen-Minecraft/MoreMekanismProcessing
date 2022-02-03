@@ -2,8 +2,11 @@
   "type": "mekanism:injecting",
   "conditions": [
     {
-      "tag": "forge:ores/titanium",
-      "type": "moremekanismprocessing:tag_not_empty"
+      "value": {
+        "tag": "forge:ores/titanium",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
     },
     {
       "materialType": "titanium",

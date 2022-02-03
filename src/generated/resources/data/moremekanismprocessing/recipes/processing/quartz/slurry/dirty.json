@@ -2,8 +2,11 @@
   "type": "mekanism:dissolution",
   "conditions": [
     {
-      "tag": "forge:ores/quartz",
-      "type": "moremekanismprocessing:tag_not_empty"
+      "value": {
+        "tag": "forge:ores/quartz",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
     },
     {
       "materialType": "quartz",

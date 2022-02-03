@@ -2,8 +2,11 @@
   "type": "mekanism:injecting",
   "conditions": [
     {
-      "tag": "forge:ores/cinnabar",
-      "type": "moremekanismprocessing:tag_not_empty"
+      "value": {
+        "tag": "forge:ores/cinnabar",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
     },
     {
       "materialType": "cinnabar",

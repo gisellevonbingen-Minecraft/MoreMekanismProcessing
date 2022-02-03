@@ -2,8 +2,11 @@
   "type": "mekanism:injecting",
   "conditions": [
     {
-      "tag": "forge:ores/iridium",
-      "type": "moremekanismprocessing:tag_not_empty"
+      "value": {
+        "tag": "forge:ores/iridium",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
     },
     {
       "materialType": "iridium",

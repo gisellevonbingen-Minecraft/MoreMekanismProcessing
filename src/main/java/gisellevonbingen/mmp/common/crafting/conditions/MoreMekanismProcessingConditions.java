@@ -6,7 +6,6 @@ public class MoreMekanismProcessingConditions
 {
 	public static void register()
 	{
-		CraftingHelper.register(new TagNotEmptyCondition.Serializer());
 		CraftingHelper.register(new ProcessingLevelCondition.Serializer());
 	}
 

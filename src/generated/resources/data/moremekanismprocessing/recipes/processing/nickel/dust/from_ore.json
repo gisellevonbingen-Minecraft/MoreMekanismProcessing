@@ -2,8 +2,11 @@
   "type": "mekanism:enriching",
   "conditions": [
     {
-      "tag": "forge:ores/nickel",
-      "type": "moremekanismprocessing:tag_not_empty"
+      "value": {
+        "tag": "forge:ores/nickel",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
     },
     {
       "materialType": "nickel",

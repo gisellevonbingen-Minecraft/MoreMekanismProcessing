@@ -2,8 +2,11 @@
   "type": "mekanism:purifying",
   "conditions": [
     {
-      "tag": "forge:ores/peridot",
-      "type": "moremekanismprocessing:tag_not_empty"
+      "value": {
+        "tag": "forge:ores/peridot",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
     },
     {
       "materialType": "peridot",
