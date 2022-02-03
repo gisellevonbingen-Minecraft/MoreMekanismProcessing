@@ -33,6 +33,7 @@ public class LanguagesGenerator extends LanguageProvider
 		this.add(statedCommentPrefix + (statedCommentLine++), "    e.g.) '" + MoreMekanismProcessingSlurries.getSlurryRegistry(MaterialType.Cobalt).getCleanSlurry().getTranslationKey() + "' : 'Clean Blue Metal Slurry'");
 
 		this.add(MaterialState.ORE.getStatedDescriptionId(), "%s Ore");
+		this.add(MaterialState.RAW.getStatedDescriptionId(), "Raw %s");
 		this.add(MaterialState.DUST.getStatedDescriptionId(), "%s Dust");
 		this.add(MaterialState.DIRTY_DUST.getStatedDescriptionId(), "Dirty %s Dust");
 		this.add(MaterialState.CLUMP.getStatedDescriptionId(), "%s Clump");

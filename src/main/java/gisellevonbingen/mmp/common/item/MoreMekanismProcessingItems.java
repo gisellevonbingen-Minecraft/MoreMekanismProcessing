@@ -156,7 +156,7 @@ public class MoreMekanismProcessingItems
 			{
 				continue;
 			}
-			else if (materialState != MaterialState.ORE)
+			else if (materialState.hasOwnItem() == true)
 			{
 				if (testProcessingLevel(materialType, materialState) == true)
 				{
