@@ -29,11 +29,11 @@ public class ItemTagsGenerator extends ItemTagsProvider
 		{
 			for (MaterialState materialState : materialType.getResultShape().getProcessableStates())
 			{
+				Builder<Item> builderCategory = this.tag(materialState.getCategoryTag());
+				Builder<Item> builderState = this.tag(materialState.getStateItemTag(materialType));
+				
 				if (materialState.hasOwnItem() == true)
 				{
-					Builder<Item> builderCategory = this.tag(materialState.getCategoryTag());
-					Builder<Item> builderState = this.tag(materialState.getStateItemTag(materialType));
-
 					ResourceLocation itemName = materialState.getItemName(materialType);
 					builderCategory.addOptional(itemName);
 					builderState.addOptional(itemName);
