@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "moremekanismprocessing:shard_calorite",
+      "required": false
+    }
+  ]
+}

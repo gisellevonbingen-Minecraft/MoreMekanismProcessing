@@ -90,7 +90,11 @@
       "required": false
     },
     {
-      "id": "moremekanismprocessing:shard_silicon",
+      "id": "moremekanismprocessing:shard_ostrum",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_calorite",
       "required": false
     },
     {

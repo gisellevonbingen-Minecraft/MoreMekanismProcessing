@@ -90,7 +90,11 @@
       "required": false
     },
     {
-      "id": "moremekanismprocessing:dirty_silicon",
+      "id": "moremekanismprocessing:dirty_ostrum",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_calorite",
       "required": false
     },
     {

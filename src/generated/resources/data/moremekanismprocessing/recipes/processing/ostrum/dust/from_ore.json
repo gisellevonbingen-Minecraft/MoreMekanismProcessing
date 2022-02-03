@@ -1,0 +1,26 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:ores/ostrum",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "materialType": "ostrum",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/ostrum"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_ostrum",
+    "count": 2
+  }
+}

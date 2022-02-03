@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "moremekanismprocessing:dirty_dust_calorite",
+      "required": false
+    }
+  ]
+}

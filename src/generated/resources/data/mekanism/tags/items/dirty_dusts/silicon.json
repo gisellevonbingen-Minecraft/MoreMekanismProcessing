@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "moremekanismprocessing:dirty_dust_silicon",
-      "required": false
-    }
-  ]
-}

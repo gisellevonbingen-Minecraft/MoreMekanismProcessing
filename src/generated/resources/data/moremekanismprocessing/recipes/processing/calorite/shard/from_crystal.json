@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "materialType": "calorite",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "mekanism:crystals/calorite"
+    }
+  },
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "item": "moremekanismprocessing:shard_calorite"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:crystallizing",
+  "conditions": [
+    {
+      "materialType": "calorite",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "chemicalType": "slurry",
+  "input": {
+    "amount": 200,
+    "slurry": "moremekanismprocessing:clean_calorite"
+  },
+  "output": {
+    "item": "moremekanismprocessing:crystal_calorite"
+  }
+}

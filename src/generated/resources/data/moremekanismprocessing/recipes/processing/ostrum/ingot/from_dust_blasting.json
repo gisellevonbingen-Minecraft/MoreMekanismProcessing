@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:blasting",
+  "conditions": [
+    {
+      "materialType": "ostrum",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "result": {
+    "item": "moremekanismprocessing:ostrum_ingot"
+  },
+  "ingredient": {
+    "tag": "forge:dusts/ostrum"
+  },
+  "experience": 0.3,
+  "cookingtime": 100
+}

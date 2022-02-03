@@ -46,7 +46,11 @@
       "required": false
     },
     {
-      "id": "moremekanismprocessing:silicon_nugget",
+      "id": "moremekanismprocessing:ostrum_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:calorite_nugget",
       "required": false
     },
     {

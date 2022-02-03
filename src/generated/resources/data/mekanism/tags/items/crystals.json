@@ -90,7 +90,11 @@
       "required": false
     },
     {
-      "id": "moremekanismprocessing:crystal_silicon",
+      "id": "moremekanismprocessing:crystal_ostrum",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:crystal_calorite",
       "required": false
     },
     {

@@ -90,7 +90,11 @@
       "required": false
     },
     {
-      "id": "moremekanismprocessing:clump_silicon",
+      "id": "moremekanismprocessing:clump_ostrum",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:clump_calorite",
       "required": false
     },
     {

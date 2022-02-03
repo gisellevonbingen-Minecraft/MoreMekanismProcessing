@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "moremekanismprocessing:ostrum_nugget",
+  "result": {
+    "item": "moremekanismprocessing:ostrum_nugget",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "moremekanismprocessing:ostrum_ingot"
+    }
+  ]
+}

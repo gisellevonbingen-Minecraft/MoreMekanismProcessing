@@ -46,7 +46,11 @@
       "required": false
     },
     {
-      "id": "moremekanismprocessing:silicon_ingot",
+      "id": "moremekanismprocessing:ostrum_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:calorite_ingot",
       "required": false
     },
     {

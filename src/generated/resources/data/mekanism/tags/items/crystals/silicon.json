@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "moremekanismprocessing:crystal_silicon",
-      "required": false
-    }
-  ]
-}

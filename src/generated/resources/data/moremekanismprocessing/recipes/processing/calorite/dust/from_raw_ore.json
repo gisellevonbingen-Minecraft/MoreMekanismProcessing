@@ -1,0 +1,27 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:raw_materials/calorite",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "materialType": "calorite",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "amount": 3,
+    "ingredient": {
+      "tag": "forge:raw_materials/calorite"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_calorite",
+    "count": 4
+  }
+}
