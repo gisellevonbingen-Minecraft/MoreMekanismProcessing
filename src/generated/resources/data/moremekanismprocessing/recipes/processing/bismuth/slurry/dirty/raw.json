@@ -1,0 +1,32 @@
+{
+  "type": "mekanism:dissolution",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:raw_materials/bismuth",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "materialType": "bismuth",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "amount": 3,
+    "ingredient": {
+      "tag": "forge:raw_materials/bismuth"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:sulfuric_acid"
+  },
+  "output": {
+    "slurry": "moremekanismprocessing:dirty_bismuth",
+    "amount": 2000,
+    "chemicalType": "slurry"
+  }
+}
