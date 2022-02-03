@@ -40,7 +40,7 @@ public class MoreMekanismProcessingTags
 
 				for (MaterialState materialState : materialType.getResultShape().getProcessableStates())
 				{
-					if (materialState != MaterialState.ORE)
+					if (materialState.hasOwnItem() == true)
 					{
 						INamedTag<Item> tag = ItemTags.bind(materialState.getStateTagName(materialType).toString());
 						map2.put(materialState, tag);

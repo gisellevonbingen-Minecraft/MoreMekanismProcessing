@@ -23,7 +23,7 @@ import net.minecraftforge.common.Tags;
 
 public enum MaterialState
 {
-	ORE("ore", Tags.Items.ORES),
+	ORE("ore", Tags.Items.ORES, false),
 	DUST("dust", Tags.Items.DUSTS),
 	DIRTY_DUST("dirty_dust", MekanismTags.Items.DIRTY_DUSTS),
 	CLUMP("clump", MekanismTags.Items.CLUMPS),
@@ -35,11 +35,18 @@ public enum MaterialState
 
 	private String baseName;
 	private ITag.INamedTag<Item> categoryTag;
+	private boolean hasOwnItem;
 
 	MaterialState(String baseName, ITag.INamedTag<Item> categoryTag)
 	{
+		this(baseName, categoryTag, true);
+	}
+
+	MaterialState(String baseName, ITag.INamedTag<Item> categoryTag, boolean hasOwnItem)
+	{
 		this.baseName = baseName;
 		this.categoryTag = categoryTag;
+		this.hasOwnItem = hasOwnItem;
 	}
 
 	public ResourceLocation getStateTagName(MaterialType materialType)
@@ -50,7 +57,7 @@ public enum MaterialState
 
 	public INamedTag<Item> getStateItemTag(MaterialType materialType)
 	{
-		if (this != MaterialState.ORE)
+		if (this.hasOwnItem() == true)
 		{
 			return MoreMekanismProcessingTags.Items.getProcessingItemTag(materialType, this);
 		}
@@ -108,7 +115,7 @@ public enum MaterialState
 
 	public ResourceLocation getItemName(MaterialType materialType)
 	{
-		if (this != MaterialState.ORE)
+		if (this.hasOwnItem() == true)
 		{
 			return MoreMekanismProcessingItems.getProcessingItemName(materialType, this);
 		}
@@ -121,7 +128,7 @@ public enum MaterialState
 
 	public Item getItem(MaterialType materialType)
 	{
-		if (this != MaterialState.ORE)
+		if (this.hasOwnItem() == true)
 		{
 			return MoreMekanismProcessingItems.getProcessingItem(materialType, this);
 		}
@@ -173,6 +180,11 @@ public enum MaterialState
 	public INamedTag<Item> getCategoryTag()
 	{
 		return this.categoryTag;
+	}
+
+	public boolean hasOwnItem()
+	{
+		return this.hasOwnItem;
 	}
 
 }
