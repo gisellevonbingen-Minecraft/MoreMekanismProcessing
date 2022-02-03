@@ -56,6 +56,6 @@
   "statedMaterial.moremekanismprocessing.ingot": "%s Ingot",
   "statedMaterial.moremekanismprocessing.nugget": "%s Nugget",
   "statedMaterial.moremekanismprocessing.ore": "%s Ore",
-  "statedMaterial.moremekanismprocessing.raw": "Raw %s",
+  "statedMaterial.moremekanismprocessing.raw_ore": "Raw %s",
   "statedMaterial.moremekanismprocessing.shard": "%s Shard"
 }

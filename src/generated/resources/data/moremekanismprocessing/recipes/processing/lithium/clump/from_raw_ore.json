@@ -3,21 +3,20 @@
   "conditions": [
     {
       "value": {
-        "tag": "forge:raw_materials/crimson_iron",
+        "tag": "forge:raw_materials/lithium",
         "type": "forge:tag_empty"
       },
       "type": "forge:not"
     },
     {
-      "materialType": "crimson_iron",
+      "materialType": "lithium",
       "requireLevel": 3,
       "type": "moremekanismprocessing:processing_level"
     }
   ],
   "itemInput": {
-    "amount": 3,
     "ingredient": {
-      "tag": "forge:raw_materials/crimson_iron"
+      "tag": "forge:raw_materials/lithium"
     }
   },
   "chemicalInput": {
@@ -25,7 +24,7 @@
     "gas": "mekanism:oxygen"
   },
   "output": {
-    "item": "moremekanismprocessing:clump_crimson_iron",
-    "count": 6
+    "item": "moremekanismprocessing:clump_lithium",
+    "count": 2
   }
 }

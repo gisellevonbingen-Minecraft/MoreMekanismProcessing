@@ -3,21 +3,20 @@
   "conditions": [
     {
       "value": {
-        "tag": "forge:raw_materials/cobalt",
+        "tag": "forge:raw_materials/crimson_iron",
         "type": "forge:tag_empty"
       },
       "type": "forge:not"
     },
     {
-      "materialType": "cobalt",
+      "materialType": "crimson_iron",
       "requireLevel": 3,
       "type": "moremekanismprocessing:processing_level"
     }
   ],
   "itemInput": {
-    "amount": 3,
     "ingredient": {
-      "tag": "forge:raw_materials/cobalt"
+      "tag": "forge:raw_materials/crimson_iron"
     }
   },
   "chemicalInput": {
@@ -25,7 +24,7 @@
     "gas": "mekanism:oxygen"
   },
   "output": {
-    "item": "moremekanismprocessing:clump_cobalt",
-    "count": 6
+    "item": "moremekanismprocessing:clump_crimson_iron",
+    "count": 2
   }
 }

@@ -1,5 +1,5 @@
 {
-  "type": "mekanism:purifying",
+  "type": "mekanism:enriching",
   "conditions": [
     {
       "value": {
@@ -10,22 +10,18 @@
     },
     {
       "materialType": "nickel",
-      "requireLevel": 3,
+      "requireLevel": 2,
       "type": "moremekanismprocessing:processing_level"
     }
   ],
-  "itemInput": {
+  "input": {
     "amount": 3,
     "ingredient": {
       "tag": "forge:raw_materials/nickel"
     }
   },
-  "chemicalInput": {
-    "amount": 1,
-    "gas": "mekanism:oxygen"
-  },
   "output": {
-    "item": "moremekanismprocessing:clump_nickel",
-    "count": 6
+    "item": "moremekanismprocessing:dust_nickel",
+    "count": 4
   }
 }

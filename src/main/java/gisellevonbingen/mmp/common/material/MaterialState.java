@@ -23,7 +23,7 @@ import net.minecraftforge.common.Tags;
 public enum MaterialState
 {
 	ORE("ore", Tags.Items.ORES, false),
-	RAW("raw", Tags.Items.RAW_MATERIALS, false),
+	RAW("raw_ore", Tags.Items.RAW_MATERIALS, false),
 	DUST("dust", Tags.Items.DUSTS),
 	DIRTY_DUST("dirty_dust", MekanismTags.Items.DIRTY_DUSTS),
 	CLUMP("clump", MekanismTags.Items.CLUMPS),

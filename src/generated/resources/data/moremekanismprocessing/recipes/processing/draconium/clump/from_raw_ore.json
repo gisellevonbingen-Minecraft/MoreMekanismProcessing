@@ -3,21 +3,20 @@
   "conditions": [
     {
       "value": {
-        "tag": "forge:raw_materials/bismuth",
+        "tag": "forge:raw_materials/draconium",
         "type": "forge:tag_empty"
       },
       "type": "forge:not"
     },
     {
-      "materialType": "bismuth",
+      "materialType": "draconium",
       "requireLevel": 3,
       "type": "moremekanismprocessing:processing_level"
     }
   ],
   "itemInput": {
-    "amount": 3,
     "ingredient": {
-      "tag": "forge:raw_materials/bismuth"
+      "tag": "forge:raw_materials/draconium"
     }
   },
   "chemicalInput": {
@@ -25,7 +24,7 @@
     "gas": "mekanism:oxygen"
   },
   "output": {
-    "item": "moremekanismprocessing:clump_bismuth",
-    "count": 6
+    "item": "moremekanismprocessing:clump_draconium",
+    "count": 2
   }
 }

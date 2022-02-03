@@ -1,0 +1,27 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:raw_materials/bismuth",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "materialType": "bismuth",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "amount": 3,
+    "ingredient": {
+      "tag": "forge:raw_materials/bismuth"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_bismuth",
+    "count": 4
+  }
+}

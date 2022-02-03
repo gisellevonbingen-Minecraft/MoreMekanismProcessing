@@ -15,7 +15,6 @@
     }
   ],
   "itemInput": {
-    "amount": 3,
     "ingredient": {
       "tag": "forge:raw_materials/desh"
     }
@@ -26,6 +25,6 @@
   },
   "output": {
     "item": "moremekanismprocessing:clump_desh",
-    "count": 6
+    "count": 2
   }
 }
