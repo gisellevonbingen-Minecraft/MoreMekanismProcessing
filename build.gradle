@@ -11,9 +11,9 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.16.5-1.1'
+version = '1.1'
 group = 'com.github.gisellevonbingen'
-archivesBaseName = 'MoreMekanismProcessing'
+archivesBaseName = 'MoreMekanismProcessing-1.16.5'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
