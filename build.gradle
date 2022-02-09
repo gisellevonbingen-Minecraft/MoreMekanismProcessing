@@ -12,7 +12,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '1.1'
-group = 'com.github.gisellevonbingen'
+group = 'gisellevonbingen.mmp'
 archivesBaseName = 'MoreMekanismProcessing-1.16.5'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8)
