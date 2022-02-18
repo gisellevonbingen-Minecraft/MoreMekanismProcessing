@@ -31,10 +31,7 @@ import mekanism.api.recipes.ingredients.ChemicalStackIngredient.GasStackIngredie
 import mekanism.api.recipes.ingredients.ChemicalStackIngredient.SlurryStackIngredient;
 import mekanism.api.recipes.ingredients.FluidStackIngredient;
 import mekanism.api.recipes.ingredients.ItemStackIngredient;
-import mekanism.common.recipe.ingredient.creator.FluidStackIngredientCreator;
-import mekanism.common.recipe.ingredient.creator.GasStackIngredientCreator;
-import mekanism.common.recipe.ingredient.creator.ItemStackIngredientCreator;
-import mekanism.common.recipe.ingredient.creator.SlurryStackIngredientCreator;
+import mekanism.api.recipes.ingredients.creator.IngredientCreatorAccess;
 import mekanism.common.registration.impl.SlurryRegistryObject;
 import mekanism.common.registries.MekanismGases;
 import net.minecraft.data.DataGenerator;
@@ -146,26 +143,26 @@ public class RecipesGenerator extends RecipeProvider
 				SlurryRegistryObject<Slurry, Slurry> slurryRegistry = MoreMekanismProcessingSlurries.getSlurryRegistry(this.materialType);
 				Slurry dirtySlurry = slurryRegistry.getDirtySlurry();
 				Slurry cleanSlurry = slurryRegistry.getCleanSlurry();
-				FluidStackIngredient water = FluidStackIngredientCreator.INSTANCE.from(Fluids.WATER, 5);
+				FluidStackIngredient water = IngredientCreatorAccess.fluid().from(Fluids.WATER, 5);
 
 				if (this.canProcess(MaterialState.ORE) == true)
 				{
-					GasStackIngredient sulfuricAcid = GasStackIngredientCreator.INSTANCE.from(MekanismGases.SULFURIC_ACID.get(), 1);
+					GasStackIngredient sulfuricAcid = IngredientCreatorAccess.gas().from(MekanismGases.SULFURIC_ACID.get(), 1);
 					this.buildChemicalDissolution(MaterialState.ORE, 1, dirtySlurry, 1000, sulfuricAcid);
 				}
 
 				if (this.canProcess(MaterialState.RAW) == true)
 				{
-					GasStackIngredient sulfuricAcid = GasStackIngredientCreator.INSTANCE.from(MekanismGases.SULFURIC_ACID.get(), 1);
+					GasStackIngredient sulfuricAcid = IngredientCreatorAccess.gas().from(MekanismGases.SULFURIC_ACID.get(), 1);
 					this.buildChemicalDissolution(MaterialState.RAW, 3, dirtySlurry, 2000, sulfuricAcid);
 				}
 
 				this.buildChemicalWashing(water, dirtySlurry, cleanSlurry);
-				this.buildChemicalCrystallizing(SlurryStackIngredientCreator.INSTANCE.from(cleanSlurry, 200), MaterialState.CRYSTAL, 1);
+				this.buildChemicalCrystallizing(IngredientCreatorAccess.slurry().from(cleanSlurry, 200), MaterialState.CRYSTAL, 1);
 
 				if (this.canProcess(MaterialState.SHARD) == true)
 				{
-					GasStackIngredient hydrogenChloride = GasStackIngredientCreator.INSTANCE.from(MekanismGases.HYDROGEN_CHLORIDE.get(), 1);
+					GasStackIngredient hydrogenChloride = IngredientCreatorAccess.gas().from(MekanismGases.HYDROGEN_CHLORIDE.get(), 1);
 					this.buildItemStackGasToItemStack(MaterialState.CRYSTAL, 1, MaterialState.SHARD, 1, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
 				}
 
@@ -179,19 +176,19 @@ public class RecipesGenerator extends RecipeProvider
 			{
 				if (this.canProcess(MaterialState.ORE) == true)
 				{
-					GasStackIngredient hydrogenChloride = GasStackIngredientCreator.INSTANCE.from(MekanismGases.HYDROGEN_CHLORIDE.get(), 1);
+					GasStackIngredient hydrogenChloride = IngredientCreatorAccess.gas().from(MekanismGases.HYDROGEN_CHLORIDE.get(), 1);
 					this.buildItemStackGasToItemStack(MaterialState.ORE, 1, MaterialState.SHARD, 4, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
 				}
 
 				if (this.canProcess(MaterialState.RAW) == true)
 				{
-					GasStackIngredient hydrogenChloride = GasStackIngredientCreator.INSTANCE.from(MekanismGases.HYDROGEN_CHLORIDE.get(), 1);
+					GasStackIngredient hydrogenChloride = IngredientCreatorAccess.gas().from(MekanismGases.HYDROGEN_CHLORIDE.get(), 1);
 					this.buildItemStackGasToItemStack(MaterialState.RAW, 3, MaterialState.SHARD, 8, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
 				}
 
 				if (this.canProcess(MaterialState.CLUMP) == true)
 				{
-					GasStackIngredient oxygen = GasStackIngredientCreator.INSTANCE.from(MekanismGases.OXYGEN.get(), 1);
+					GasStackIngredient oxygen = IngredientCreatorAccess.gas().from(MekanismGases.OXYGEN.get(), 1);
 					this.buildItemStackGasToItemStack(MaterialState.SHARD, 1, MaterialState.CLUMP, 1, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
 				}
 
@@ -205,13 +202,13 @@ public class RecipesGenerator extends RecipeProvider
 			{
 				if (this.canProcess(MaterialState.ORE) == true)
 				{
-					GasStackIngredient oxygen = GasStackIngredientCreator.INSTANCE.from(MekanismGases.OXYGEN.get(), 1);
+					GasStackIngredient oxygen = IngredientCreatorAccess.gas().from(MekanismGases.OXYGEN.get(), 1);
 					this.buildItemStackGasToItemStack(MaterialState.ORE, 1, MaterialState.CLUMP, 3, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
 				}
 
 				if (this.canProcess(MaterialState.RAW) == true)
 				{
-					GasStackIngredient oxygen = GasStackIngredientCreator.INSTANCE.from(MekanismGases.OXYGEN.get(), 1);
+					GasStackIngredient oxygen = IngredientCreatorAccess.gas().from(MekanismGases.OXYGEN.get(), 1);
 					this.buildItemStackGasToItemStack(MaterialState.RAW, 1, MaterialState.CLUMP, 2, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
 				}
 
@@ -348,7 +345,7 @@ public class RecipesGenerator extends RecipeProvider
 
 		public void buildChemicalWashing(FluidStackIngredient fluidInput, Slurry slurryInput, Slurry slurryOutput)
 		{
-			SlurryStackIngredient slurryStackInput = SlurryStackIngredientCreator.INSTANCE.from(slurryInput, 1);
+			SlurryStackIngredient slurryStackInput = IngredientCreatorAccess.slurry().from(slurryInput, 1);
 			SlurryStack slurryStackOutput = new SlurryStack(slurryOutput, 1);
 			FluidSlurryToSlurryRecipeBuilder builder = FluidSlurryToSlurryRecipeBuilder.washing(fluidInput, slurryStackInput, slurryStackOutput);
 
@@ -462,7 +459,7 @@ public class RecipesGenerator extends RecipeProvider
 
 		public ItemStackIngredient getTaggedItemStackIngredient(MaterialState materialState, int amount)
 		{
-			return ItemStackIngredientCreator.INSTANCE.from(this.getTag(materialState), amount);
+			return IngredientCreatorAccess.item().from(this.getTag(materialState), amount);
 		}
 
 		public Tag.Named<Item> getTag(MaterialState materialState)
