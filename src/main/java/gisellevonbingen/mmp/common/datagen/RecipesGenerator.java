@@ -27,10 +27,14 @@ import mekanism.api.datagen.recipe.builder.ChemicalDissolutionRecipeBuilder;
 import mekanism.api.datagen.recipe.builder.FluidSlurryToSlurryRecipeBuilder;
 import mekanism.api.datagen.recipe.builder.ItemStackChemicalToItemStackRecipeBuilder;
 import mekanism.api.datagen.recipe.builder.ItemStackToItemStackRecipeBuilder;
-import mekanism.api.recipes.inputs.FluidStackIngredient;
-import mekanism.api.recipes.inputs.ItemStackIngredient;
-import mekanism.api.recipes.inputs.chemical.GasStackIngredient;
-import mekanism.api.recipes.inputs.chemical.SlurryStackIngredient;
+import mekanism.api.recipes.ingredients.ChemicalStackIngredient.GasStackIngredient;
+import mekanism.api.recipes.ingredients.ChemicalStackIngredient.SlurryStackIngredient;
+import mekanism.api.recipes.ingredients.FluidStackIngredient;
+import mekanism.api.recipes.ingredients.ItemStackIngredient;
+import mekanism.common.recipe.ingredient.creator.FluidStackIngredientCreator;
+import mekanism.common.recipe.ingredient.creator.GasStackIngredientCreator;
+import mekanism.common.recipe.ingredient.creator.ItemStackIngredientCreator;
+import mekanism.common.recipe.ingredient.creator.SlurryStackIngredientCreator;
 import mekanism.common.registration.impl.SlurryRegistryObject;
 import mekanism.common.registries.MekanismGases;
 import net.minecraft.data.DataGenerator;
@@ -46,7 +50,6 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.NotCondition;
 import net.minecraftforge.common.crafting.conditions.TagEmptyCondition;
-import net.minecraftforge.fluids.FluidStack;
 
 public class RecipesGenerator extends RecipeProvider
 {
@@ -143,26 +146,26 @@ public class RecipesGenerator extends RecipeProvider
 				SlurryRegistryObject<Slurry, Slurry> slurryRegistry = MoreMekanismProcessingSlurries.getSlurryRegistry(this.materialType);
 				Slurry dirtySlurry = slurryRegistry.getDirtySlurry();
 				Slurry cleanSlurry = slurryRegistry.getCleanSlurry();
-				FluidStackIngredient water = FluidStackIngredient.from(new FluidStack(Fluids.WATER, 5));
+				FluidStackIngredient water = FluidStackIngredientCreator.INSTANCE.from(Fluids.WATER, 5);
 
 				if (this.canProcess(MaterialState.ORE) == true)
 				{
-					GasStackIngredient sulfuricAcid = GasStackIngredient.from(new GasStack(MekanismGases.SULFURIC_ACID.get(), 1));
+					GasStackIngredient sulfuricAcid = GasStackIngredientCreator.INSTANCE.from(MekanismGases.SULFURIC_ACID.get(), 1);
 					this.buildChemicalDissolution(MaterialState.ORE, 1, dirtySlurry, 1000, sulfuricAcid);
 				}
 
 				if (this.canProcess(MaterialState.RAW) == true)
 				{
-					GasStackIngredient sulfuricAcid = GasStackIngredient.from(new GasStack(MekanismGases.SULFURIC_ACID.get(), 1));
+					GasStackIngredient sulfuricAcid = GasStackIngredientCreator.INSTANCE.from(MekanismGases.SULFURIC_ACID.get(), 1);
 					this.buildChemicalDissolution(MaterialState.RAW, 3, dirtySlurry, 2000, sulfuricAcid);
 				}
 
 				this.buildChemicalWashing(water, dirtySlurry, cleanSlurry);
-				this.buildChemicalCrystallizing(SlurryStackIngredient.from(new SlurryStack(cleanSlurry, 200)), MaterialState.CRYSTAL, 1);
+				this.buildChemicalCrystallizing(SlurryStackIngredientCreator.INSTANCE.from(cleanSlurry, 200), MaterialState.CRYSTAL, 1);
 
 				if (this.canProcess(MaterialState.SHARD) == true)
 				{
-					GasStackIngredient hydrogenChloride = GasStackIngredient.from(new GasStack(MekanismGases.HYDROGEN_CHLORIDE.get(), 1));
+					GasStackIngredient hydrogenChloride = GasStackIngredientCreator.INSTANCE.from(MekanismGases.HYDROGEN_CHLORIDE.get(), 1);
 					this.buildItemStackGasToItemStack(MaterialState.CRYSTAL, 1, MaterialState.SHARD, 1, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
 				}
 
@@ -176,19 +179,19 @@ public class RecipesGenerator extends RecipeProvider
 			{
 				if (this.canProcess(MaterialState.ORE) == true)
 				{
-					GasStackIngredient hydrogenChloride = GasStackIngredient.from(new GasStack(MekanismGases.HYDROGEN_CHLORIDE.get(), 1));
+					GasStackIngredient hydrogenChloride = GasStackIngredientCreator.INSTANCE.from(MekanismGases.HYDROGEN_CHLORIDE.get(), 1);
 					this.buildItemStackGasToItemStack(MaterialState.ORE, 1, MaterialState.SHARD, 4, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
 				}
 
 				if (this.canProcess(MaterialState.RAW) == true)
 				{
-					GasStackIngredient hydrogenChloride = GasStackIngredient.from(new GasStack(MekanismGases.HYDROGEN_CHLORIDE.get(), 1));
+					GasStackIngredient hydrogenChloride = GasStackIngredientCreator.INSTANCE.from(MekanismGases.HYDROGEN_CHLORIDE.get(), 1);
 					this.buildItemStackGasToItemStack(MaterialState.RAW, 3, MaterialState.SHARD, 8, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
 				}
 
 				if (this.canProcess(MaterialState.CLUMP) == true)
 				{
-					GasStackIngredient oxygen = GasStackIngredient.from(new GasStack(MekanismGases.OXYGEN.get(), 1));
+					GasStackIngredient oxygen = GasStackIngredientCreator.INSTANCE.from(MekanismGases.OXYGEN.get(), 1);
 					this.buildItemStackGasToItemStack(MaterialState.SHARD, 1, MaterialState.CLUMP, 1, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
 				}
 
@@ -202,13 +205,13 @@ public class RecipesGenerator extends RecipeProvider
 			{
 				if (this.canProcess(MaterialState.ORE) == true)
 				{
-					GasStackIngredient oxygen = GasStackIngredient.from(new GasStack(MekanismGases.OXYGEN.get(), 1));
+					GasStackIngredient oxygen = GasStackIngredientCreator.INSTANCE.from(MekanismGases.OXYGEN.get(), 1);
 					this.buildItemStackGasToItemStack(MaterialState.ORE, 1, MaterialState.CLUMP, 3, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
 				}
 
 				if (this.canProcess(MaterialState.RAW) == true)
 				{
-					GasStackIngredient oxygen = GasStackIngredient.from(new GasStack(MekanismGases.OXYGEN.get(), 1));
+					GasStackIngredient oxygen = GasStackIngredientCreator.INSTANCE.from(MekanismGases.OXYGEN.get(), 1);
 					this.buildItemStackGasToItemStack(MaterialState.RAW, 1, MaterialState.CLUMP, 2, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
 				}
 
@@ -345,7 +348,7 @@ public class RecipesGenerator extends RecipeProvider
 
 		public void buildChemicalWashing(FluidStackIngredient fluidInput, Slurry slurryInput, Slurry slurryOutput)
 		{
-			SlurryStackIngredient slurryStackInput = SlurryStackIngredient.from(new SlurryStack(slurryInput, 1));
+			SlurryStackIngredient slurryStackInput = SlurryStackIngredientCreator.INSTANCE.from(slurryInput, 1);
 			SlurryStack slurryStackOutput = new SlurryStack(slurryOutput, 1);
 			FluidSlurryToSlurryRecipeBuilder builder = FluidSlurryToSlurryRecipeBuilder.washing(fluidInput, slurryStackInput, slurryStackOutput);
 
@@ -459,7 +462,7 @@ public class RecipesGenerator extends RecipeProvider
 
 		public ItemStackIngredient getTaggedItemStackIngredient(MaterialState materialState, int amount)
 		{
-			return ItemStackIngredient.from(this.getTag(materialState), amount);
+			return ItemStackIngredientCreator.INSTANCE.from(this.getTag(materialState), amount);
 		}
 
 		public Tag.Named<Item> getTag(MaterialState materialState)
