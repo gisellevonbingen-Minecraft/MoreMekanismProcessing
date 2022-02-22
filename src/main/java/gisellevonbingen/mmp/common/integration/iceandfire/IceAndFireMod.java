@@ -28,8 +28,8 @@ public class IceAndFireMod extends IntegrationMod
 	{
 		super.addBlockTags(generator);
 
-		generator.tagOres(MaterialState.ORE.getStateBlockTag(MaterialType.Sapphire), SAPPHIRE_ORE);
-		generator.tagOres(MaterialState.ORE.getStateBlockTag(MaterialType.Amethyst), AMYTHEST_ORE);
+		generator.tagOres(MaterialState.ORE.getStateBlockTag(MaterialType.SAPPHIRE), SAPPHIRE_ORE);
+		generator.tagOres(MaterialState.ORE.getStateBlockTag(MaterialType.AMETHYST), AMYTHEST_ORE);
 	}
 
 	@Override
