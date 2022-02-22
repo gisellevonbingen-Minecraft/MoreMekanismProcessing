@@ -1,27 +1,30 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="MIT License"
+license="MIT"
+issueTrackerURL="https://github.com/gisellevonbingen/Minecraft-MoreMekanismProcessing/issues"
+
 [[mods]]
-modId="moremekanismprocessing"
-version="${file.jarVersion}"
-displayName="More Mekanism Processing"
-credits="gisellevonbingen"
-authors="gisellevonbingen"
-description='''
-Add mekanism's ore processing to other mod's ores
-'''
+    modId="moremekanismprocessing"
+    version="${file.jarVersion}"
+    displayName="More Mekanism Processing"
+    displayURL="https://www.curseforge.com/minecraft/mc-mods/more-mekanism-processing"
+    authors="gisellevonbingen"
+    description='''Add mekanism's ore processing to other mod's ores'''
+
 [[dependencies.moremekanismprocessing]]
     modId="forge"
     mandatory=true
     versionRange="[36,)"
     ordering="NONE"
     side="BOTH"
+
 [[dependencies.moremekanismprocessing]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.5,1.17)"
     ordering="NONE"
     side="BOTH"
+
 [[dependencies.moremekanismprocessing]]
     modId="mekanism"
     mandatory=true
