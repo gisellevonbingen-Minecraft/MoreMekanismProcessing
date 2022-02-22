@@ -27,7 +27,7 @@ public class LibVulpesMod extends IntegrationMod
 	{
 		super.addBlockTags(generator);
 
-		generator.tagOres(MaterialState.ORE.getStateBlockTag(MaterialType.Titanium), RUTILE_ORE);
+		generator.tagOres(MaterialState.ORE.getStateBlockTag(MaterialType.TITANIUM), RUTILE_ORE);
 	}
 
 	@Override
