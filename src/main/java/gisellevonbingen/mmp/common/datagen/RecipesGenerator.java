@@ -39,7 +39,7 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -462,9 +462,9 @@ public class RecipesGenerator extends RecipeProvider
 			return IngredientCreatorAccess.item().from(this.getTag(materialState), amount);
 		}
 
-		public Tag.Named<Item> getTag(MaterialState materialState)
+		public TagKey<Item> getTag(MaterialState materialState)
 		{
-			return ItemTags.bind(materialState.getStateTagName(this.materialType).toString());
+			return ItemTags.create(materialState.getStateTagName(this.materialType));
 		}
 
 		public String getGroup(MaterialState stateOutput)

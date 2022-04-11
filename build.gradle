@@ -77,12 +77,12 @@ repositories {
         url "https://dvs1.progwml6.com/files/maven"
     }
     maven {
-        name "CurseForge"
-        url = "https://www.cursemaven.com"
+        name "ModMaven"
+        url "https://modmaven.dev"
     }
     maven {
-        name "Local"
-        url uri("${projectDir}/libs")
+        name "CurseForge"
+        url = "https://www.cursemaven.com"
     }
 }
 
@@ -97,8 +97,8 @@ dependencies {
     implementation fg.deobf("curse.maven:jade-324717:${jade_file}")
 
     // Tinkers Construct
-    implementation fg.deobf("slimeknights.mantle:Mantle:${mc_version}-${mantle_version}")
-    implementation fg.deobf("slimeknights.tconstruct:TConstruct:${mc_version}-${tconstruct_version}")
+    //implementation fg.deobf("slimeknights.mantle:Mantle:${mc_version}-${mantle_version}")
+    //implementation fg.deobf("slimeknights.tconstruct:TConstruct:${mc_version}-${tconstruct_version}")
 
     // Refined Storage
     compileOnly fg.deobf("curse.maven:refined-storage-243076:${refined_storage_file}")

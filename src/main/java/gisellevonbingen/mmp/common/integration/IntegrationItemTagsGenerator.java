@@ -10,7 +10,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -18,7 +18,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 public class IntegrationItemTagsGenerator extends ItemTagsProvider
 {
 	protected final IntegrationBlockTagsGenerator blockTagsGenerator;
-	private final Map<Tag.Named<Item>, List<ResourceLocation>> tags;
+	private final Map<TagKey<Item>, List<ResourceLocation>> tags;
 
 	public IntegrationItemTagsGenerator(DataGenerator generator, IntegrationBlockTagsGenerator blockTagsGenerator, ExistingFileHelper existingFileHelper)
 	{
@@ -36,22 +36,22 @@ public class IntegrationItemTagsGenerator extends ItemTagsProvider
 	}
 
 	@Override
-	public void copy(Tag.Named<Block> blockTag, Tag.Named<Item> itemTag)
+	public void copy(TagKey<Block> blockTag, TagKey<Item> itemTag)
 	{
 		super.copy(blockTag, itemTag);
 	}
 
 	protected void copyOres()
 	{
-		for (Tag.Named<Block> blockTag : this.blockTagsGenerator.getOreTags())
+		for (TagKey<Block> blockTag : this.blockTagsGenerator.getOreTags())
 		{
-			Tag.Named<Item> itemTag = ItemTags.bind(blockTag.getName().toString());
-			this.copy(blockTag, (Tag.Named<Item>) itemTag);
+			TagKey<Item> itemTag = ItemTags.create(blockTag.location());
+			this.copy(blockTag, (TagKey<Item>) itemTag);
 		}
 
 	}
 
-	public void tag(Tag.Named<Item> tag, ResourceLocation itemName)
+	public void tag(TagKey<Item> tag, ResourceLocation itemName)
 	{
 		List<ResourceLocation> list = this.tags.computeIfAbsent(tag, t -> new ArrayList<>());
 

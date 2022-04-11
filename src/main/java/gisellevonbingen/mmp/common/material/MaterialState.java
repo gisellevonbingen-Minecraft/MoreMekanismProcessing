@@ -13,8 +13,7 @@ import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.Tag;
-import net.minecraft.tags.TagCollection;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
@@ -34,28 +33,28 @@ public enum MaterialState
 	NUGGET("nugget", Tags.Items.NUGGETS),;
 
 	private String baseName;
-	private Tag.Named<Item> categoryTag;
+	private TagKey<Item> categoryTag;
 	private boolean hasOwnItem;
 
-	MaterialState(String baseName, Tag.Named<Item> categoryTag)
+	MaterialState(String baseName, TagKey<Item> categoryTag)
 	{
 		this(baseName, categoryTag, true);
 	}
 
-	MaterialState(String baseName, Tag.Named<Item> categoryTag, boolean hasOwnItem)
+	MaterialState(String baseName, TagKey<Item> categoryTag, boolean hasOwnItem)
 	{
 		this.baseName = baseName;
 		this.categoryTag = categoryTag;
 		this.hasOwnItem = hasOwnItem;
 	}
-	
+
 	public ResourceLocation getStateTagName(MaterialType materialType)
 	{
-		ResourceLocation categoryTagName = this.getCategoryTag().getName();
+		ResourceLocation categoryTagName = this.getCategoryTag().location();
 		return new ResourceLocation(categoryTagName.getNamespace(), categoryTagName.getPath() + "/" + materialType.getBaseName());
 	}
 
-	public Tag.Named<Item> getStateItemTag(MaterialType materialType)
+	public TagKey<Item> getStateItemTag(MaterialType materialType)
 	{
 		if (this.hasOwnItem() == true)
 		{
@@ -63,38 +62,16 @@ public enum MaterialState
 		}
 		else
 		{
-			TagCollection<Item> allTags = ItemTags.getAllTags();
 			ResourceLocation tagName = this.getStateTagName(materialType);
-			Tag.Named<Item> tag = (Tag.Named<Item>) allTags.getTag(tagName);
-
-			if (tag != null)
-			{
-				return tag;
-			}
-			else
-			{
-				return ItemTags.bind(tagName.toString());
-			}
-
+			return ItemTags.create(tagName);
 		}
 
 	}
 
-	public Tag.Named<Block> getStateBlockTag(MaterialType materialType)
+	public TagKey<Block> getStateBlockTag(MaterialType materialType)
 	{
-		TagCollection<Block> allTags = BlockTags.getAllTags();
 		ResourceLocation tagName = this.getStateTagName(materialType);
-		Tag.Named<Block> tag = (Tag.Named<Block>) allTags.getTag(tagName);
-
-		if (tag != null)
-		{
-			return tag;
-		}
-		else
-		{
-			return BlockTags.bind(tagName.toString());
-		}
-
+		return BlockTags.create(tagName);
 	}
 
 	public String getItemNamePath(MaterialType materialType)
@@ -177,7 +154,7 @@ public enum MaterialState
 		return this.baseName;
 	}
 
-	public Tag.Named<Item> getCategoryTag()
+	public TagKey<Item> getCategoryTag()
 	{
 		return this.categoryTag;
 	}
@@ -186,5 +163,5 @@ public enum MaterialState
 	{
 		return this.hasOwnItem;
 	}
-	
+
 }

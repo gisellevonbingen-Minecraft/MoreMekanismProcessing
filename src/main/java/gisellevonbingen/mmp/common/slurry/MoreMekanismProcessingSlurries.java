@@ -11,7 +11,7 @@ import gisellevonbingen.mmp.common.material.MaterialType;
 import mekanism.api.chemical.slurry.Slurry;
 import mekanism.api.chemical.slurry.SlurryBuilder;
 import mekanism.common.registration.impl.SlurryRegistryObject;
-import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 
@@ -60,7 +60,7 @@ public class MoreMekanismProcessingSlurries
 		@Override
 		public SlurryBuilder apply(SlurryBuilder builder)
 		{
-			Tag.Named<Item> tag = MaterialState.ORE.getStateItemTag(this.materialType);
+			TagKey<Item> tag = MaterialState.ORE.getStateItemTag(this.materialType);
 			return builder.ore(tag);
 		}
 

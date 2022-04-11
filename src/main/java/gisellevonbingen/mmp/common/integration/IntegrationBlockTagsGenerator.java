@@ -11,15 +11,15 @@ import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class IntegrationBlockTagsGenerator extends BlockTagsProvider
 {
-	private final Map<Tag.Named<Block>, List<ResourceLocation>> tags;
-	private final List<Tag.Named<Block>> oreTags;
+	private final Map<TagKey<Block>, List<ResourceLocation>> tags;
+	private final List<TagKey<Block>> oreTags;
 
 	public IntegrationBlockTagsGenerator(DataGenerator generator, ExistingFileHelper existingFileHelper)
 	{
@@ -35,18 +35,18 @@ public class IntegrationBlockTagsGenerator extends BlockTagsProvider
 		MoreMekanismProcessingIntagrations.getMods().forEach(m -> m.addBlockTags(this));
 	}
 
-	public List<Tag.Named<Block>> getOreTags()
+	public List<TagKey<Block>> getOreTags()
 	{
 		return Lists.newArrayList(this.oreTags);
 	}
 
-	public void tagOres(Tag.Named<Block> tag, ResourceLocation blockName)
+	public void tagOres(TagKey<Block> tag, ResourceLocation blockName)
 	{
 		this.targOres0(Blocks.ORES, blockName);
 		this.targOres0(tag, blockName);
 	}
 
-	private void targOres0(Tag.Named<Block> tag, ResourceLocation blockName)
+	private void targOres0(TagKey<Block> tag, ResourceLocation blockName)
 	{
 		if (this.oreTags.contains(tag) == false)
 		{
@@ -56,7 +56,7 @@ public class IntegrationBlockTagsGenerator extends BlockTagsProvider
 		this.tag(tag, blockName);
 	}
 
-	public void tag(Tag.Named<Block> tag, ResourceLocation blockName)
+	public void tag(TagKey<Block> tag, ResourceLocation blockName)
 	{
 		List<ResourceLocation> list = this.tags.computeIfAbsent(tag, t -> new ArrayList<>());
 

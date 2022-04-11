@@ -499,8 +499,8 @@ a477f7b748a2b7e6ca0d38c66f3f798b0fcc9c4a data/mekanism/tags/items/shards/silver.
 4895031fe6032d5235d39402a1334e9298c0c250 data/mekanism/tags/items/shards/titanium.json
 ee1a4097fd7d3ed7e1157153e53196f5c2a574e5 data/mekanism/tags/items/shards/tungsten.json
 53b456a3b2c3d3f6d71ed320bb0a602e09dda755 data/mekanism/tags/items/shards/zinc.json
-22603374a91c53b1fbd6e06edca45dc4e8444817 data/mekanism/tags/slurries/clean.json
-8bcaf6898c85ec92eb1e119abf079f3391c41ec5 data/mekanism/tags/slurries/dirty.json
+22603374a91c53b1fbd6e06edca45dc4e8444817 data/mekanism/tags/mekanism/slurry/clean.json
+8bcaf6898c85ec92eb1e119abf079f3391c41ec5 data/mekanism/tags/mekanism/slurry/dirty.json
 df0adb00b1c481558ec25d2f8df4b82e3abdfaef data/moremekanismprocessing/recipes/processing/aluminum/clump/from_ore.json
 f073b4216cf5d27d5573b94da354c315186b3773 data/moremekanismprocessing/recipes/processing/aluminum/clump/from_raw_ore.json
 c4add5d61dec42011370eaab49ce53dae7473709 data/moremekanismprocessing/recipes/processing/aluminum/clump/from_shard.json
