@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:crystallizing",
+  "conditions": [
+    {
+      "materialType": "certus_quartz",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "chemicalType": "slurry",
+  "input": {
+    "amount": 200,
+    "slurry": "moremekanismprocessing:clean_certus_quartz"
+  },
+  "output": {
+    "item": "moremekanismprocessing:crystal_certus_quartz"
+  }
+}
