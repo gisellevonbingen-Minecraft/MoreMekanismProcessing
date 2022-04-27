@@ -1,0 +1,26 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:ores/certus_quartz",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "materialType": "certus_quartz",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/certus_quartz"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_certus_quartz",
+    "count": 2
+  }
+}

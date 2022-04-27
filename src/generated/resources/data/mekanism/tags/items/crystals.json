@@ -118,6 +118,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:crystal_certus_quartz",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:crystal_coal",
       "required": false
     },

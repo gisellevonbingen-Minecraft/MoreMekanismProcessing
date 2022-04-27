@@ -118,6 +118,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:shard_certus_quartz",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:shard_coal",
       "required": false
     },

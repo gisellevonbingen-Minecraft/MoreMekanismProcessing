@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:washing",
+  "conditions": [
+    {
+      "materialType": "certus_quartz",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "fluidInput": {
+    "amount": 5,
+    "fluid": "minecraft:water"
+  },
+  "slurryInput": {
+    "amount": 1,
+    "slurry": "moremekanismprocessing:dirty_certus_quartz"
+  },
+  "output": {
+    "slurry": "moremekanismprocessing:clean_certus_quartz",
+    "amount": 1
+  }
+}
