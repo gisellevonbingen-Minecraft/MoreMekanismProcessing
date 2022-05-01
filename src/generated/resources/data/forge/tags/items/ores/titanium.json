@@ -2,7 +2,15 @@
   "replace": false,
   "values": [
     {
+      "id": "voluminousenergy:raw_rutile",
+      "required": false
+    },
+    {
       "id": "libvulpes:orerutile",
+      "required": false
+    },
+    {
+      "id": "voluminousenergy:rutileore",
       "required": false
     }
   ]

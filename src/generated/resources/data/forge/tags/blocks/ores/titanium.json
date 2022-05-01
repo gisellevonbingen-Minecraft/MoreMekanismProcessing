@@ -4,6 +4,10 @@
     {
       "id": "libvulpes:orerutile",
       "required": false
+    },
+    {
+      "id": "voluminousenergy:rutileore",
+      "required": false
     }
   ]
 }

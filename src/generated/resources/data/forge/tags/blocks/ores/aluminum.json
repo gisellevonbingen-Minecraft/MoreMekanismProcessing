@@ -2,10 +2,6 @@
   "replace": false,
   "values": [
     {
-      "id": "voluminousenergy:raw_bauxite",
-      "required": false
-    },
-    {
       "id": "voluminousenergy:bauxiteore",
       "required": false
     }
