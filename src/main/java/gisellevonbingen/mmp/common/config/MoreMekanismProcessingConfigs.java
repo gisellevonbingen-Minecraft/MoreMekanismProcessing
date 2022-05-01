@@ -5,17 +5,14 @@ import java.util.Map;
 
 import org.apache.commons.lang3.tuple.Pair;
 
-import com.electronwill.nightconfig.core.file.CommentedFileConfig;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModContainer;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.loading.FMLEnvironment;
-import net.minecraftforge.fml.loading.FMLPaths;
 
 @Mod.EventBusSubscriber
 public class MoreMekanismProcessingConfigs
@@ -43,34 +40,31 @@ public class MoreMekanismProcessingConfigs
 		SPECS.put(ModConfig.Type.CLIENT, ClientSpec);
 	}
 
-	public static void read(ModContainer modContaier)
+	public static void register(ModLoadingContext modLoadingContext)
 	{
-		read(modContaier, ModConfig.Type.COMMON);
+		register(modLoadingContext, ModConfig.Type.COMMON);
 
 		Dist dist = FMLEnvironment.dist;
 
 		if (dist.isClient())
 		{
-			read(modContaier, ModConfig.Type.CLIENT);
+			register(modLoadingContext, ModConfig.Type.CLIENT);
 		}
 
 		if (dist.isDedicatedServer())
 		{
-			read(modContaier, ModConfig.Type.SERVER);
+			register(modLoadingContext, ModConfig.Type.SERVER);
 		}
 
 	}
 
-	public static void read(ModContainer modContaier, ModConfig.Type type)
+	public static void register(ModLoadingContext modLoadingContext, ModConfig.Type type)
 	{
 		ForgeConfigSpec spec = SPECS.get(type);
 
 		if (spec != null)
 		{
-			ModConfig config = new ModConfig(type, spec, modContaier);
-			CommentedFileConfig configData = config.getHandler().reader(FMLPaths.CONFIGDIR.get()).apply(config);
-			config.getSpec().acceptConfig(configData);
-			configData.save();
+			modLoadingContext.registerConfig(type, spec);
 		}
 
 	}
