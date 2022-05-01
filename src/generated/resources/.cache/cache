@@ -210,10 +210,11 @@ ae7377af623d46abc2667a63b109514c322ded9f assets/moremekanismprocessing/models/it
 d1e59dc3a439404ad231afd193b5fe799dbf2b39 assets/moremekanismprocessing/models/item/zinc_ingot.json
 ae7377af623d46abc2667a63b109514c322ded9f assets/moremekanismprocessing/models/item/zinc_nugget.json
 75486234aa76675b5df3dba88af0d972577165a7 data/appliedenergistics2/tags/items/dusts/certus_quartz.json
-1d854f716fd4dc43f55e84b62ecad60a1cdf8c63 data/forge/tags/blocks/ores.json
+28b0583a64716f81febcfb3b3a077a020b4fbcb5 data/forge/tags/blocks/ores.json
+548790767763f62f740e7e006024328d356eb048 data/forge/tags/blocks/ores/aluminum.json
 26aba9da470eb10ea895b8f17fbd82c28c22851f data/forge/tags/blocks/ores/amethyst.json
 576a874d9d186c596d3aba663b160aa5d6357602 data/forge/tags/blocks/ores/sapphire.json
-8d7db9e9be1e95c2be3051c5a108306849a3d8d2 data/forge/tags/blocks/ores/titanium.json
+fa56267d68d8cd8f9c24ad53e9d95d506f5b9317 data/forge/tags/blocks/ores/titanium.json
 ebc6f0809dfb683b71f8295451148de6e45df904 data/forge/tags/blocks/ores/uranium.json
 ebc6f0809dfb683b71f8295451148de6e45df904 data/forge/tags/blocks/ores/yellorite.json
 be0548c4b2ea88b96ce034c82596e90080fc5c3e data/forge/tags/items/dusts.json
@@ -297,8 +298,8 @@ e6e0ea601b0b958457f8373cc6544e8e3f0471fd data/forge/tags/items/nuggets/silicon.j
 ab6a8da07b287b11a2968f99afa34b8fab7a49fb data/forge/tags/items/nuggets/titanium.json
 e6fa7e20ab60f2d584a7e55c23629c16c654e1a9 data/forge/tags/items/nuggets/tungsten.json
 62529c1cc1b8e0c031df576fa860a36169c9677e data/forge/tags/items/nuggets/zinc.json
-1d854f716fd4dc43f55e84b62ecad60a1cdf8c63 data/forge/tags/items/ores.json
-74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/aluminum.json
+7b26ce0d43f33cadfdc09e368369dc0d9e024059 data/forge/tags/items/ores.json
+45c2c5255eaa9fd77ed2902f925708ddde00a32d data/forge/tags/items/ores/aluminum.json
 26aba9da470eb10ea895b8f17fbd82c28c22851f data/forge/tags/items/ores/amethyst.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/apatite.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/azure_silver.json
@@ -330,7 +331,7 @@ e6fa7e20ab60f2d584a7e55c23629c16c654e1a9 data/forge/tags/items/nuggets/tungsten.
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/silicon.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/silver.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/sulfur.json
-8d7db9e9be1e95c2be3051c5a108306849a3d8d2 data/forge/tags/items/ores/titanium.json
+f2d4d45a66e526ef48b5e792eed6b48fd5e313c4 data/forge/tags/items/ores/titanium.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/tungsten.json
 ebc6f0809dfb683b71f8295451148de6e45df904 data/forge/tags/items/ores/uranium.json
 ebc6f0809dfb683b71f8295451148de6e45df904 data/forge/tags/items/ores/yellorite.json

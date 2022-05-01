@@ -20,6 +20,14 @@
     {
       "id": "libvulpes:orerutile",
       "required": false
+    },
+    {
+      "id": "voluminousenergy:bauxiteore",
+      "required": false
+    },
+    {
+      "id": "voluminousenergy:rutileore",
+      "required": false
     }
   ]
 }
