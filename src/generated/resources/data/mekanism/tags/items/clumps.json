@@ -118,10 +118,6 @@
       "required": false
     },
     {
-      "id": "moremekanismprocessing:clump_certus_quartz",
-      "required": false
-    },
-    {
       "id": "moremekanismprocessing:clump_coal",
       "required": false
     },

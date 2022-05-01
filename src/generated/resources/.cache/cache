@@ -1,4 +1,4 @@
-2eb83c78d33c3cf3ce1b6113f265a31cc20d7984 assets/moremekanismprocessing/lang/en_us.json
+5089333e753c2ba10d6a46631385e1888bba900f assets/moremekanismprocessing/lang/en_us.json
 d1e59dc3a439404ad231afd193b5fe799dbf2b39 assets/moremekanismprocessing/models/item/aluminum_ingot.json
 ae7377af623d46abc2667a63b109514c322ded9f assets/moremekanismprocessing/models/item/aluminum_nugget.json
 d1e59dc3a439404ad231afd193b5fe799dbf2b39 assets/moremekanismprocessing/models/item/azure_silver_ingot.json
@@ -14,7 +14,6 @@ ae7377af623d46abc2667a63b109514c322ded9f assets/moremekanismprocessing/models/it
 5b9c1dd86964b3e786931824645c23777d336eb6 assets/moremekanismprocessing/models/item/clump_bismuth.json
 5b9c1dd86964b3e786931824645c23777d336eb6 assets/moremekanismprocessing/models/item/clump_bort.json
 5b9c1dd86964b3e786931824645c23777d336eb6 assets/moremekanismprocessing/models/item/clump_calorite.json
-5b9c1dd86964b3e786931824645c23777d336eb6 assets/moremekanismprocessing/models/item/clump_certus_quartz.json
 5b9c1dd86964b3e786931824645c23777d336eb6 assets/moremekanismprocessing/models/item/clump_cinnabar.json
 5b9c1dd86964b3e786931824645c23777d336eb6 assets/moremekanismprocessing/models/item/clump_coal.json
 5b9c1dd86964b3e786931824645c23777d336eb6 assets/moremekanismprocessing/models/item/clump_cobalt.json
@@ -54,7 +53,6 @@ c3aa8afb286be18493ad9eb2683e9a90e69751bb assets/moremekanismprocessing/models/it
 c3aa8afb286be18493ad9eb2683e9a90e69751bb assets/moremekanismprocessing/models/item/crystal_bismuth.json
 c3aa8afb286be18493ad9eb2683e9a90e69751bb assets/moremekanismprocessing/models/item/crystal_bort.json
 c3aa8afb286be18493ad9eb2683e9a90e69751bb assets/moremekanismprocessing/models/item/crystal_calorite.json
-c3aa8afb286be18493ad9eb2683e9a90e69751bb assets/moremekanismprocessing/models/item/crystal_certus_quartz.json
 c3aa8afb286be18493ad9eb2683e9a90e69751bb assets/moremekanismprocessing/models/item/crystal_cinnabar.json
 c3aa8afb286be18493ad9eb2683e9a90e69751bb assets/moremekanismprocessing/models/item/crystal_coal.json
 c3aa8afb286be18493ad9eb2683e9a90e69751bb assets/moremekanismprocessing/models/item/crystal_cobalt.json
@@ -92,7 +90,6 @@ ae7377af623d46abc2667a63b109514c322ded9f assets/moremekanismprocessing/models/it
 5b378017b5ea5277ee9f4b28a30ddc9303371e24 assets/moremekanismprocessing/models/item/dirty_dust_bismuth.json
 5b378017b5ea5277ee9f4b28a30ddc9303371e24 assets/moremekanismprocessing/models/item/dirty_dust_bort.json
 5b378017b5ea5277ee9f4b28a30ddc9303371e24 assets/moremekanismprocessing/models/item/dirty_dust_calorite.json
-5b378017b5ea5277ee9f4b28a30ddc9303371e24 assets/moremekanismprocessing/models/item/dirty_dust_certus_quartz.json
 5b378017b5ea5277ee9f4b28a30ddc9303371e24 assets/moremekanismprocessing/models/item/dirty_dust_cinnabar.json
 5b378017b5ea5277ee9f4b28a30ddc9303371e24 assets/moremekanismprocessing/models/item/dirty_dust_coal.json
 5b378017b5ea5277ee9f4b28a30ddc9303371e24 assets/moremekanismprocessing/models/item/dirty_dust_cobalt.json
@@ -130,7 +127,6 @@ ae7377af623d46abc2667a63b109514c322ded9f assets/moremekanismprocessing/models/it
 21f0be9a626edf7216f6437ff7b8ed5e9961dad4 assets/moremekanismprocessing/models/item/dust_bismuth.json
 21f0be9a626edf7216f6437ff7b8ed5e9961dad4 assets/moremekanismprocessing/models/item/dust_bort.json
 21f0be9a626edf7216f6437ff7b8ed5e9961dad4 assets/moremekanismprocessing/models/item/dust_calorite.json
-21f0be9a626edf7216f6437ff7b8ed5e9961dad4 assets/moremekanismprocessing/models/item/dust_certus_quartz.json
 21f0be9a626edf7216f6437ff7b8ed5e9961dad4 assets/moremekanismprocessing/models/item/dust_cinnabar.json
 21f0be9a626edf7216f6437ff7b8ed5e9961dad4 assets/moremekanismprocessing/models/item/dust_cobalt.json
 21f0be9a626edf7216f6437ff7b8ed5e9961dad4 assets/moremekanismprocessing/models/item/dust_crimson_iron.json
@@ -178,7 +174,6 @@ ae7377af623d46abc2667a63b109514c322ded9f assets/moremekanismprocessing/models/it
 6e9d5b058c7fd36feb5e750dccd60729d2b2b482 assets/moremekanismprocessing/models/item/shard_bismuth.json
 6e9d5b058c7fd36feb5e750dccd60729d2b2b482 assets/moremekanismprocessing/models/item/shard_bort.json
 6e9d5b058c7fd36feb5e750dccd60729d2b2b482 assets/moremekanismprocessing/models/item/shard_calorite.json
-6e9d5b058c7fd36feb5e750dccd60729d2b2b482 assets/moremekanismprocessing/models/item/shard_certus_quartz.json
 6e9d5b058c7fd36feb5e750dccd60729d2b2b482 assets/moremekanismprocessing/models/item/shard_cinnabar.json
 6e9d5b058c7fd36feb5e750dccd60729d2b2b482 assets/moremekanismprocessing/models/item/shard_coal.json
 6e9d5b058c7fd36feb5e750dccd60729d2b2b482 assets/moremekanismprocessing/models/item/shard_cobalt.json
@@ -215,7 +210,6 @@ d1e59dc3a439404ad231afd193b5fe799dbf2b39 assets/moremekanismprocessing/models/it
 ae7377af623d46abc2667a63b109514c322ded9f assets/moremekanismprocessing/models/item/tungsten_nugget.json
 d1e59dc3a439404ad231afd193b5fe799dbf2b39 assets/moremekanismprocessing/models/item/zinc_ingot.json
 ae7377af623d46abc2667a63b109514c322ded9f assets/moremekanismprocessing/models/item/zinc_nugget.json
-75486234aa76675b5df3dba88af0d972577165a7 data/appliedenergistics2/tags/items/dusts/certus_quartz.json
 ee8fa6ecac1a852ade5dfa8b1792cabade310017 data/forge/tags/blocks/ores.json
 38d89f965565f305a7a57e2c3afa7632e914efb7 data/forge/tags/blocks/ores/aluminum.json
 26aba9da470eb10ea895b8f17fbd82c28c22851f data/forge/tags/blocks/ores/amethyst.json
@@ -223,7 +217,7 @@ ee8fa6ecac1a852ade5dfa8b1792cabade310017 data/forge/tags/blocks/ores.json
 d953135e5df3917042145d2043914a2761501870 data/forge/tags/blocks/ores/titanium.json
 ebc6f0809dfb683b71f8295451148de6e45df904 data/forge/tags/blocks/ores/uranium.json
 ebc6f0809dfb683b71f8295451148de6e45df904 data/forge/tags/blocks/ores/yellorite.json
-63a96c99ab8c84bbde92a379b589b2c36c5c5d4c data/forge/tags/items/dusts.json
+f78dc19fb07444bd29497561bd403a633d004ca4 data/forge/tags/items/dusts.json
 aa86f1dad26e9e05414c18425ac8a6f19ea51dde data/forge/tags/items/dusts/aluminum.json
 2c9a4ded8a161f1794d6be85c985a2fad2273283 data/forge/tags/items/dusts/amethyst.json
 f366e76c80ae3ae68c8194080c8527b88b6cfe47 data/forge/tags/items/dusts/apatite.json
@@ -231,7 +225,6 @@ eaef7189c0beafbc6576a0523f65899df6831b5f data/forge/tags/items/dusts/azure_silve
 8af29267110c12b91a3cdd34d0fff6dae3908bd6 data/forge/tags/items/dusts/bismuth.json
 cbcb904a8ff0f822078929c453c1d2588c7c16c7 data/forge/tags/items/dusts/bort.json
 a7e5ee2cff348a85bc421edac13d89480d30c711 data/forge/tags/items/dusts/calorite.json
-75486234aa76675b5df3dba88af0d972577165a7 data/forge/tags/items/dusts/certus_quartz.json
 712b67dcd722659e226c77b7e63aaf883295c51e data/forge/tags/items/dusts/cinnabar.json
 142651286d10818310fb5d44491d26a47ddaf402 data/forge/tags/items/dusts/coal.json
 ba71ee731a9fd9faa895a4fd6b8904ec33e84094 data/forge/tags/items/dusts/cobalt.json
@@ -315,7 +308,6 @@ e6fa7e20ab60f2d584a7e55c23629c16c654e1a9 data/forge/tags/items/nuggets/tungsten.
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/bismuth.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/bort.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/calorite.json
-74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/certus_quartz.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/cinnabar.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/coal.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/cobalt.json
@@ -364,7 +356,7 @@ acec296c2f61c557342ef0ef4d9b272dfcfab171 data/forge/tags/items/raw_materials/alu
 896882a024e3e988cdb8f394a9e1110f752f3211 data/forge/tags/items/raw_materials/titanium.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/raw_materials/tungsten.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/raw_materials/zinc.json
-55bf4a4cefcacf38683bad75d8be0f4ed418e82d data/mekanism/tags/items/clumps.json
+bb3bc033f9a1f06c319805821e96f9407e85f6a4 data/mekanism/tags/items/clumps.json
 91c69235881ea78fd310326bef6387e9d22b2224 data/mekanism/tags/items/clumps/aluminum.json
 3639d5a8a1b42cd6f774b357c14ed91a3cf70a27 data/mekanism/tags/items/clumps/amethyst.json
 881cab51023744f662c5eb7454608d421762d827 data/mekanism/tags/items/clumps/apatite.json
@@ -372,7 +364,6 @@ acec296c2f61c557342ef0ef4d9b272dfcfab171 data/forge/tags/items/raw_materials/alu
 fa1510dffb6d7f35c6e22a63d42a14ae08516114 data/mekanism/tags/items/clumps/bismuth.json
 147a68ae821220e9cf7274bf27b3d67a577ac763 data/mekanism/tags/items/clumps/bort.json
 9e6c68f766b4c3998efb2d257c0bfed4ca98dd0f data/mekanism/tags/items/clumps/calorite.json
-0bdb0607cea1bb4a50620c504da5989b5fc568f2 data/mekanism/tags/items/clumps/certus_quartz.json
 70d2a65264b584378f0590578b0eed4dda44e8a8 data/mekanism/tags/items/clumps/cinnabar.json
 c55745878e4a559c1f7db49b0af49c8f702a0641 data/mekanism/tags/items/clumps/coal.json
 cdd3127e073dcb65d26b13017f4ed63b73fd0355 data/mekanism/tags/items/clumps/cobalt.json
@@ -401,7 +392,7 @@ b75c2276a2507608a2524c5963992ce2be8807c6 data/mekanism/tags/items/clumps/silver.
 27bc04f061718d7b3ab2c4b28ebacfe95326b1fd data/mekanism/tags/items/clumps/titanium.json
 6cf41eeedb750111738d3801afa2e2aef5cb91a2 data/mekanism/tags/items/clumps/tungsten.json
 422d5e826d14848574d928b83221cb7428d062e6 data/mekanism/tags/items/clumps/zinc.json
-eaded2ecc8b08f7a2f734ae5918f577b1ff45297 data/mekanism/tags/items/crystals.json
+e8cb70b682fbf72e55668b5ac708ba5030b4bbbb data/mekanism/tags/items/crystals.json
 4824985e8be3eb3d6160e880e2ac7353d7bfb1f9 data/mekanism/tags/items/crystals/aluminum.json
 f656c496093ef3edd70a1ecd4205594c5e9ceeda data/mekanism/tags/items/crystals/amethyst.json
 94090566a5e52560e5b5749855264fd55be73f87 data/mekanism/tags/items/crystals/apatite.json
@@ -409,7 +400,6 @@ c8b98b8ceb7c10ac14ee3cf6861b5cb47c6eb6c0 data/mekanism/tags/items/crystals/azure
 37fa0c5a3f2cb9a95c50508d454ede1cf1e7448f data/mekanism/tags/items/crystals/bismuth.json
 0f35d083e17c1cf0ac6bb1966af6b3e9949e7124 data/mekanism/tags/items/crystals/bort.json
 41f5a5c58765fb733122d510402cfc0b5896c6c8 data/mekanism/tags/items/crystals/calorite.json
-fd155dcc6833db335460a63b6ed1d66187beca33 data/mekanism/tags/items/crystals/certus_quartz.json
 51fb37019c010833484ddce93d7eefa714ad4b18 data/mekanism/tags/items/crystals/cinnabar.json
 5e8f59a3b57ae24840e129f2e710811f2bb4150b data/mekanism/tags/items/crystals/coal.json
 ad93a04b2f5b72e434c35c2362d4333d023d6cd7 data/mekanism/tags/items/crystals/cobalt.json
@@ -438,7 +428,7 @@ d1134400816e5e7da744d0838674a53d8103dd3d data/mekanism/tags/items/crystals/sulfu
 e2a7b7aa9c644d0765bd6ba18dfc2e4901ee1bd3 data/mekanism/tags/items/crystals/titanium.json
 19906b7b49246abf57365d62999bdc79e2cecc91 data/mekanism/tags/items/crystals/tungsten.json
 981183787b2a82aa33c81ec44abb620fae1062d6 data/mekanism/tags/items/crystals/zinc.json
-4d407f1802e73d5263f0c8e35b53deb66d3e5ef0 data/mekanism/tags/items/dirty_dusts.json
+6166c6e2a70a9a69d34d930443b577b8a68d4238 data/mekanism/tags/items/dirty_dusts.json
 47549f25f53cceb1853cb045705bf3cccc39847b data/mekanism/tags/items/dirty_dusts/aluminum.json
 1d16484d36a3746ca3b3ab3bf0774b0fb9548d27 data/mekanism/tags/items/dirty_dusts/amethyst.json
 2fcecc80ad22c7ab4efaf079c8a21d91a0b5ac3c data/mekanism/tags/items/dirty_dusts/apatite.json
@@ -446,7 +436,6 @@ e2a7b7aa9c644d0765bd6ba18dfc2e4901ee1bd3 data/mekanism/tags/items/crystals/titan
 e815eefb97ad0432f9030b821439645aef7507cf data/mekanism/tags/items/dirty_dusts/bismuth.json
 479cbf2878b97ae4108d15de03933224c45204b7 data/mekanism/tags/items/dirty_dusts/bort.json
 1c78a9eda1ef913efe9f194e7f3268b51a230723 data/mekanism/tags/items/dirty_dusts/calorite.json
-7d6a3547c709ad41939aec56a95cf2bbc205c714 data/mekanism/tags/items/dirty_dusts/certus_quartz.json
 1ef4e8c954c66bfc7d2dae52c04a3d87552859de data/mekanism/tags/items/dirty_dusts/cinnabar.json
 46abcff9f24eb6d5e30928f4097837ab0c0808c6 data/mekanism/tags/items/dirty_dusts/coal.json
 2e274de102bd99a4f3db281a3d5fe63e32f73fe3 data/mekanism/tags/items/dirty_dusts/cobalt.json
@@ -475,7 +464,7 @@ fc252b97be1fedfba0ce83605f9df97154a6e3a3 data/mekanism/tags/items/dirty_dusts/su
 602d8ac41490ceb59c7cb169d5b2dccb067a89d8 data/mekanism/tags/items/dirty_dusts/titanium.json
 b71c31663707e3e46df99a0eece361b465670579 data/mekanism/tags/items/dirty_dusts/tungsten.json
 24eda7b56d3e10225f4d436dadb38abb44d19459 data/mekanism/tags/items/dirty_dusts/zinc.json
-48112eef1bda59e4d89c388012223998e36c918e data/mekanism/tags/items/shards.json
+16bc33ea110bb8ce93dd9a0e684d782411cb6d0f data/mekanism/tags/items/shards.json
 2436649e76d26936a983783569e5ab58249df2fd data/mekanism/tags/items/shards/aluminum.json
 d0af51a2eaa56cd520610958c38ddb6d862db96a data/mekanism/tags/items/shards/amethyst.json
 90d0348b92814ca69bc933319c2f73d5412e0653 data/mekanism/tags/items/shards/apatite.json
@@ -483,7 +472,6 @@ d0af51a2eaa56cd520610958c38ddb6d862db96a data/mekanism/tags/items/shards/amethys
 c092a0b1441e7ea7a479c9b4b45404111a68e2b7 data/mekanism/tags/items/shards/bismuth.json
 99b1d587e2e6fc59da07bf2b56e3b5fa603d3640 data/mekanism/tags/items/shards/bort.json
 87ccee92c0ee261776b632d465ebc7f62fc7d089 data/mekanism/tags/items/shards/calorite.json
-9f9344a652b86cfd56211ea70dbd252a03248940 data/mekanism/tags/items/shards/certus_quartz.json
 f792a2189389df835abffc0b65df30e661230d28 data/mekanism/tags/items/shards/cinnabar.json
 7b57847e459b8552723d3bfeff9451649ce49b3c data/mekanism/tags/items/shards/coal.json
 7ca17ab0cd0c32245f2115e2d4b1ac9789801b33 data/mekanism/tags/items/shards/cobalt.json
@@ -512,8 +500,8 @@ a477f7b748a2b7e6ca0d38c66f3f798b0fcc9c4a data/mekanism/tags/items/shards/silver.
 4895031fe6032d5235d39402a1334e9298c0c250 data/mekanism/tags/items/shards/titanium.json
 ee1a4097fd7d3ed7e1157153e53196f5c2a574e5 data/mekanism/tags/items/shards/tungsten.json
 53b456a3b2c3d3f6d71ed320bb0a602e09dda755 data/mekanism/tags/items/shards/zinc.json
-523eac7ea1d68d54c45ecd79d13a9302a52e8f04 data/mekanism/tags/mekanism/slurry/clean.json
-dfd76d10282f3e39fa60f55034b0cdff46e2ee0e data/mekanism/tags/mekanism/slurry/dirty.json
+22603374a91c53b1fbd6e06edca45dc4e8444817 data/mekanism/tags/mekanism/slurry/clean.json
+8bcaf6898c85ec92eb1e119abf079f3391c41ec5 data/mekanism/tags/mekanism/slurry/dirty.json
 df0adb00b1c481558ec25d2f8df4b82e3abdfaef data/moremekanismprocessing/recipes/processing/aluminum/clump/from_ore.json
 f073b4216cf5d27d5573b94da354c315186b3773 data/moremekanismprocessing/recipes/processing/aluminum/clump/from_raw_ore.json
 c4add5d61dec42011370eaab49ce53dae7473709 data/moremekanismprocessing/recipes/processing/aluminum/clump/from_shard.json
@@ -626,16 +614,6 @@ dfa905dd0c2d57efb668569d63280b49f746600a data/moremekanismprocessing/recipes/pro
 f49d106e956bf286d8cee9100b4eaebea66650e1 data/moremekanismprocessing/recipes/processing/calorite/slurry/clean.json
 58a0dd254473c4e5653ab28aac541ffa8eafe154 data/moremekanismprocessing/recipes/processing/calorite/slurry/dirty/ore.json
 2d6c44ccf43ea0ae36df776db96cd227124c0be2 data/moremekanismprocessing/recipes/processing/calorite/slurry/dirty/raw_ore.json
-9a8e29b6d48f8a965283ddd66ec4e1288cc8e7b5 data/moremekanismprocessing/recipes/processing/certus_quartz/clump/from_ore.json
-e308edfc49478d6006bb97316496fa507e90e325 data/moremekanismprocessing/recipes/processing/certus_quartz/clump/from_shard.json
-fb2d3c57c6ff123505a08a5dba39b3e8b6e56c0a data/moremekanismprocessing/recipes/processing/certus_quartz/crystal/from_slurry.json
-fe4da84b752b9e129613c83ae0e02086a9280c6a data/moremekanismprocessing/recipes/processing/certus_quartz/dirty_dust/from_clump.json
-254ec0539b6f5059ee043b1cc15b6eeaa6b01574 data/moremekanismprocessing/recipes/processing/certus_quartz/dust/from_dirty_dust.json
-2e44d9c8317675345e4465f66f61d11a47d80f02 data/moremekanismprocessing/recipes/processing/certus_quartz/dust/from_ore.json
-b77236f4a1838032c2a9b9b9916914fb72425d0d data/moremekanismprocessing/recipes/processing/certus_quartz/shard/from_crystal.json
-f1c957d4c6b60b1cee40244319de63be332589ad data/moremekanismprocessing/recipes/processing/certus_quartz/shard/from_ore.json
-a5a647344017d373f9219351562524ed98d3a3bd data/moremekanismprocessing/recipes/processing/certus_quartz/slurry/clean.json
-cdec154d146c44a80d9507f6935e3fa5eee943d3 data/moremekanismprocessing/recipes/processing/certus_quartz/slurry/dirty/ore.json
 afb452a46a5735908fb4f955aeca619a665ed061 data/moremekanismprocessing/recipes/processing/cinnabar/clump/from_ore.json
 525726fcf0d1c780e849c46c44da1c59f08dbdf2 data/moremekanismprocessing/recipes/processing/cinnabar/clump/from_shard.json
 0117765b7f656634fcf09e97be066adbc5a56915 data/moremekanismprocessing/recipes/processing/cinnabar/crystal/from_slurry.json

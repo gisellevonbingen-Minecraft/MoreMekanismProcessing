@@ -118,10 +118,6 @@
       "required": false
     },
     {
-      "id": "moremekanismprocessing:dirty_dust_certus_quartz",
-      "required": false
-    },
-    {
       "id": "moremekanismprocessing:dirty_dust_coal",
       "required": false
     },

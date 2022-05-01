@@ -41,7 +41,6 @@ public enum MaterialType
 	TITANIUM(new MaterialTypeBuilder("titanium").resultShape(MaterialResultShape.INGOT).displayName("Titanium").color(0x405060)),
 	TUNGSTEN(new MaterialTypeBuilder("tungsten").resultShape(MaterialResultShape.INGOT).displayName("Tungsten").color(0x333333)),
 	ZINC(new MaterialTypeBuilder("zinc").resultShape(MaterialResultShape.INGOT).displayName("Zinc").color(0xCCCC8E)),
-	CERTUSQUARTZ(new MaterialTypeBuilder("certus_quartz").resultShape(MaterialResultShape.DUST).displayName("Certus Quartz").color(0xCCE5FF)),
 
 	COAL(new MaterialTypeBuilder("coal").respect(true).resultShape(MaterialResultShape.DUST).displayName("Coal").color(0x2D2D2D).presetItem(MaterialState.DUST, MekanismItems.COAL_DUST)),
 	LAPIS(new MaterialTypeBuilder("lapis").respect(true).resultShape(MaterialResultShape.DUST).displayName("Lapis Lazuli").color(0x2C69C8).presetItem(MaterialState.DUST, MekanismItems.LAPIS_LAZULI_DUST)),

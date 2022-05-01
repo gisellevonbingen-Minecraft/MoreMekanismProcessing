@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "moremekanismprocessing:crystal_certus_quartz",
-      "required": false
-    }
-  ]
-}
