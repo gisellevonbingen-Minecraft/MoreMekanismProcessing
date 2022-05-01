@@ -13,7 +13,7 @@ import net.minecraft.world.item.Items;
 public enum MaterialType
 {
 	ALUMINUM(new MaterialTypeBuilder("aluminum").resultShape(MaterialResultShape.INGOT).displayName("Aluminum").color(0xA0C4D8)),
-	AMETHYST(new MaterialTypeBuilder("amethyst").resultShape(MaterialResultShape.GEM).displayName("Amethyst").color(0xCC33CC)),
+	AMETHYST(new MaterialTypeBuilder("amethyst").resultShape(MaterialResultShape.GEM).displayName("Amethyst").color(0xCC33CC).presetItem(MaterialState.GEM, Items.AMETHYST_SHARD)),
 	APATITE(new MaterialTypeBuilder("apatite").resultShape(MaterialResultShape.GEM).displayName("Apatite").color(0x3595B2)),
 	AZURESILER(new MaterialTypeBuilder("azure_silver").resultShape(MaterialResultShape.INGOT).displayName("Azure Silver").color(0xCE9CF3)),
 	BISMUTH(new MaterialTypeBuilder("bismuth").resultShape(MaterialResultShape.INGOT).displayName("Bismuth").color(0xE8D8E8)),
@@ -34,7 +34,8 @@ public enum MaterialType
 	PLATINUM(new MaterialTypeBuilder("platinum").resultShape(MaterialResultShape.INGOT).displayName("Platinum").color(0xA0F0FF)),
 	RUBY(new MaterialTypeBuilder("ruby").resultShape(MaterialResultShape.GEM).displayName("Ruby").color(0xCC3333)),
 	SAPPHIRE(new MaterialTypeBuilder("sapphire").resultShape(MaterialResultShape.GEM).displayName("Sapphire").color(0x3333CC)),
-	SILICON(new MaterialTypeBuilder("silicon").resultShape(MaterialResultShape.INGOT).displayName("Silicon").color(0x9F616F)),
+	OSTRUM(new MaterialTypeBuilder("ostrum").resultShape(MaterialResultShape.INGOT).displayName("Ostrum").color(0x9F616F)),
+	CALORITE(new MaterialTypeBuilder("calorite").resultShape(MaterialResultShape.INGOT).displayName("Calorite").color(0xC44249)),
 	SILVER(new MaterialTypeBuilder("silver").resultShape(MaterialResultShape.INGOT).displayName("Silver").color(0xD8E4ED)),
 	SULFUR(new MaterialTypeBuilder("sulfur").resultShape(MaterialResultShape.DUST).displayName("Sulfur").color(0xD8CC51).presetItem(MaterialState.DUST, MekanismItems.SULFUR_DUST)),
 	TITANIUM(new MaterialTypeBuilder("titanium").resultShape(MaterialResultShape.INGOT).displayName("Titanium").color(0x405060)),

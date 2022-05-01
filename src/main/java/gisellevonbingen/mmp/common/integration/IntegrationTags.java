@@ -11,6 +11,10 @@ public class IntegrationTags
 {
 	public static final ResourceLocation NAME_ORES_YELLORITE = new ResourceLocation("forge", "ores/yellorite");
 	public static final ResourceLocation NAME_ORES_URANIUM = new ResourceLocation("forge", "ores/uranium");
+	public static final ResourceLocation NAME_ORES_ALUMINUM = new ResourceLocation("forge", "ores/aluminum");
+	public static final ResourceLocation NAME_ORES_TITANIUM = new ResourceLocation("forge", "ores/titanium");
+	public static final ResourceLocation NAME_RAW_MATERIALS_ALUMINUM = new ResourceLocation("forge", "raw_materials/aluminum");
+	public static final ResourceLocation NAME_RAW_MATERIALS_TITANIUM = new ResourceLocation("forge", "raw_materials/titanium");
 
 	public static void initialize()
 	{
@@ -22,6 +26,8 @@ public class IntegrationTags
 	{
 		public static final TagKey<Block> ORES_YELLORITE = BlockTags.create(NAME_ORES_YELLORITE);
 		public static final TagKey<Block> ORES_URANIUM = BlockTags.create(NAME_ORES_URANIUM);
+		public static final TagKey<Block> ORES_ALUMINUM = BlockTags.create(NAME_ORES_ALUMINUM);
+		public static final TagKey<Block> ORES_TITANIUM = BlockTags.create(NAME_ORES_TITANIUM);;
 
 		public static void initialize()
 		{
@@ -34,6 +40,10 @@ public class IntegrationTags
 	{
 		public static final TagKey<Item> ORES_YELLORITE = ItemTags.create(NAME_ORES_YELLORITE);
 		public static final TagKey<Item> ORES_URANIUM = ItemTags.create(NAME_ORES_URANIUM);
+		public static final TagKey<Item> ORES_ALUMINUM = ItemTags.create(NAME_ORES_ALUMINUM);
+		public static final TagKey<Item> ORES_TITANIUM = ItemTags.create(NAME_ORES_TITANIUM);
+		public static final TagKey<Item> RAW_MATERIALS_ALUMINUM = ItemTags.create(NAME_RAW_MATERIALS_ALUMINUM);
+		public static final TagKey<Item> RAW_MATERIALS_TITANIUM = ItemTags.create(NAME_RAW_MATERIALS_TITANIUM);
 
 		public static void initialize()
 		{
