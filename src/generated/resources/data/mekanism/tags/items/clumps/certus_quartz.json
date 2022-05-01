@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "moremekanismprocessing:clump_certus_quartz",
-      "required": false
-    }
-  ]
-}
