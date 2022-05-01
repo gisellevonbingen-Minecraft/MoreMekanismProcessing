@@ -15,7 +15,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -29,9 +28,7 @@ public class MoreMekanismProcessing
 
 	public MoreMekanismProcessing()
 	{
-		ModLoadingContext modLoadingContext = ModLoadingContext.get();
-		ModContainer activeContainer = modLoadingContext.getActiveContainer();
-		MoreMekanismProcessingConfigs.read(activeContainer);
+		MoreMekanismProcessingConfigs.register(ModLoadingContext.get());
 
 		DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> ClientHandler::new);
 
