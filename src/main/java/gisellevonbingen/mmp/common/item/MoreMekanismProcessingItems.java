@@ -7,10 +7,13 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import gisellevonbingen.mmp.common.MoreMekanismProcessing;
+import gisellevonbingen.mmp.common.config.MoreMekanismProcessingConfigs;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
+import gisellevonbingen.mmp.common.util.LauncherUtil;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -118,6 +121,26 @@ public class MoreMekanismProcessingItems
 		}
 
 		return 2;
+	}
+
+	public static boolean testProcessingLevel(MaterialType materialType, MaterialState materialState)
+	{
+		if (LauncherUtil.isRunDevData() == true)
+		{
+			return true;
+		}
+
+		ConfigValue<Integer> configValue = MoreMekanismProcessingConfigs.Common.processingLevels.get(materialType);
+
+		if (configValue == null)
+		{
+			return true;
+		}
+
+		int processingLevel = configValue.get();
+		int requireLevel = getProcessingLevel(materialState);
+
+		return processingLevel >= requireLevel;
 	}
 
 	public static void registerOreType(DeferredRegister<Item> registry, MaterialType materialType)
