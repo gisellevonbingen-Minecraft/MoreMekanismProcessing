@@ -1,5 +1,6 @@
 package gisellevonbingen.mmp.common.slurry;
 
+import gisellevonbingen.mmp.common.item.MoreMekanismProcessingItems;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
 import mekanism.api.chemical.slurry.Slurry;
@@ -52,6 +53,22 @@ public class MoreMekanismProcessingSlurry extends Slurry
 	public String getStatedDescriptionId()
 	{
 		return makeDescriptionId(this.getSlurryType());
+	}
+
+	@Override
+	public boolean isHidden()
+	{
+		MaterialState crystal = MaterialState.CRYSTAL;
+
+		if (MoreMekanismProcessingItems.testProcessingLevel(this.materialType, crystal) == false)
+		{
+			return true;
+		}
+		else
+		{
+			return super.isHidden();
+		}
+
 	}
 
 	public static String makeDescriptionId(String slurryType)

@@ -3,7 +3,9 @@ package gisellevonbingen.mmp.common.item;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 
 public class ItemStatedMaterial extends Item
@@ -17,6 +19,16 @@ public class ItemStatedMaterial extends Item
 
 		this.materialType = materialType;
 		this.materialState = materialState;
+	}
+
+	@Override
+	public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> list)
+	{
+		if (MoreMekanismProcessingItems.testProcessingLevel(this.materialType, this.materialState) == true)
+		{
+			super.fillItemCategory(group, list);
+		}
+
 	}
 
 	@Override

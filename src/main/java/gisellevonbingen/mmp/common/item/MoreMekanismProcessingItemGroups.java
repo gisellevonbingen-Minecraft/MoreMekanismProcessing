@@ -1,6 +1,7 @@
 package gisellevonbingen.mmp.common.item;
 
 import gisellevonbingen.mmp.common.MoreMekanismProcessing;
+import mekanism.common.registries.MekanismBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
@@ -14,13 +15,25 @@ public class MoreMekanismProcessingItemGroups
 		NonNullList<ItemStack> itemStacks = NonNullList.create();
 		int iconIndex = 0;
 		long lastMillis = 0L;
+		ItemStack fallbackIcon = null;
 		ItemStack icon = null;
 
 		@Override
 		public ItemStack makeIcon()
 		{
-			this.iconIndex = this.iconIndex % this.itemStacks.size();
-			return this.itemStacks.get(this.iconIndex);
+			int size = this.itemStacks.size();
+
+			if (size > 0)
+			{
+				this.iconIndex = this.iconIndex % size;
+				return this.itemStacks.get(this.iconIndex);
+			}
+			else if (this.fallbackIcon == null)
+			{
+				this.fallbackIcon = new ItemStack(MekanismBlocks.CHEMICAL_DISSOLUTION_CHAMBER);
+			}
+
+			return this.fallbackIcon;
 		}
 
 		@Override
