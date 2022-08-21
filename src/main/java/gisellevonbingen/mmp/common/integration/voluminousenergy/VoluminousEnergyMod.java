@@ -53,10 +53,8 @@ public class VoluminousEnergyMod extends IntegrationMod
 		super.addItemTags(generator);
 
 		generator.tag(MaterialState.RAW_ITEM.getStateItemTag(MaterialType.ALUMINUM), BAUXITE_RAW_ITEM);
-		generator.tag(MaterialState.RAW_STORAGE_BLOCKS.getStateItemTag(MaterialType.ALUMINUM), BAUXITE_RAW_STORAGE_BLOCK);
 
 		generator.tag(MaterialState.RAW_ITEM.getStateItemTag(MaterialType.TITANIUM), RUTILE_RAW_ITEM);
-		generator.tag(MaterialState.RAW_STORAGE_BLOCKS.getStateItemTag(MaterialType.TITANIUM), RUTILE_RAW_STORAGE_BLOCK);
 	}
 
 	@Override
