@@ -6,6 +6,7 @@ import java.util.List;
 import com.google.common.collect.Lists;
 
 import gisellevonbingen.mmp.common.integration.biggerreactors.BiggerReactorsMod;
+import gisellevonbingen.mmp.common.integration.bluepower.BluePowerMod;
 import gisellevonbingen.mmp.common.integration.extremereactors.ExtremeReactors2Mod;
 import gisellevonbingen.mmp.common.integration.iceandfire.IceAndFireMod;
 import gisellevonbingen.mmp.common.integration.libvulpes.LibVulpesMod;
@@ -19,6 +20,7 @@ public class MoreMekanismProcessingIntagrations
 	public static final BiggerReactorsMod BiggerReactors = new BiggerReactorsMod();
 	public static final LibVulpesMod LibVulpes = new LibVulpesMod();
 	public static final VoluminousEnergyMod VoluminousEnergy = new VoluminousEnergyMod();
+	public static final BluePowerMod BluePower = new BluePowerMod();
 
 	public static void initialize()
 	{
@@ -29,6 +31,7 @@ public class MoreMekanismProcessingIntagrations
 		MODS.add(BiggerReactors);
 		MODS.add(LibVulpes);
 		MODS.add(VoluminousEnergy);
+		MODS.add(BluePower);
 		MODS.forEach(m -> m.initialize());
 	}
 

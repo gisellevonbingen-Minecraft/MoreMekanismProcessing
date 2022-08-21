@@ -1,0 +1,31 @@
+{
+  "type": "mekanism:dissolution",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:storage_blocks/raw_titanium",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "materialType": "titanium",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:storage_blocks/raw_titanium"
+    }
+  },
+  "gasInput": {
+    "amount": 2,
+    "gas": "mekanism:sulfuric_acid"
+  },
+  "output": {
+    "slurry": "moremekanismprocessing:dirty_titanium",
+    "amount": 6000,
+    "chemicalType": "slurry"
+  }
+}

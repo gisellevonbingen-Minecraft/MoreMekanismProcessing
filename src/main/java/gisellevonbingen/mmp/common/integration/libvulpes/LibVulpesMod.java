@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 public class LibVulpesMod extends IntegrationMod
 {
 	public static final String MODID = "libvulpes";
+
 	public static final ResourceLocation RUTILE_ORE = rl("orerutile");
 
 	public LibVulpesMod()

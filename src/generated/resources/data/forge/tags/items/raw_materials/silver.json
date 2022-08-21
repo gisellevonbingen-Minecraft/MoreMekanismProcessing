@@ -1,4 +1,9 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    {
+      "id": "bluepower:silver_raw",
+      "required": false
+    }
+  ]
 }

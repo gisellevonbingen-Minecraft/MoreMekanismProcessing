@@ -1,0 +1,31 @@
+{
+  "type": "mekanism:dissolution",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:storage_blocks/raw_nickel",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "materialType": "nickel",
+      "requireLevel": 5,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:storage_blocks/raw_nickel"
+    }
+  },
+  "gasInput": {
+    "amount": 2,
+    "gas": "mekanism:sulfuric_acid"
+  },
+  "output": {
+    "slurry": "moremekanismprocessing:dirty_nickel",
+    "amount": 6000,
+    "chemicalType": "slurry"
+  }
+}

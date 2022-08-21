@@ -14,7 +14,7 @@ issueTrackerURL="https://github.com/gisellevonbingen/Minecraft-MoreMekanismProce
 [[dependencies.moremekanismprocessing]]
     modId="forge"
     mandatory=true
-    versionRange="[40,)"
+    versionRange="[40.1.46,)"
     ordering="NONE"
     side="BOTH"
 
@@ -28,6 +28,6 @@ issueTrackerURL="https://github.com/gisellevonbingen/Minecraft-MoreMekanismProce
 [[dependencies.moremekanismprocessing]]
     modId="mekanism"
     mandatory=true
-    versionRange="[10.2.0,)"
+    versionRange="[10.2.5,)"
     ordering="AFTER"
     side="BOTH"

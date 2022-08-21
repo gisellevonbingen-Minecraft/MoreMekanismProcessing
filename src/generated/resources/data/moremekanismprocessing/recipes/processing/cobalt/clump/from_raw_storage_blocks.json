@@ -1,0 +1,30 @@
+{
+  "type": "mekanism:purifying",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:storage_blocks/raw_cobalt",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "materialType": "cobalt",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:storage_blocks/raw_cobalt"
+    }
+  },
+  "chemicalInput": {
+    "amount": 2,
+    "gas": "mekanism:oxygen"
+  },
+  "output": {
+    "item": "moremekanismprocessing:clump_cobalt",
+    "count": 18
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "mekanism:injecting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:storage_blocks/raw_ostrum",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "materialType": "ostrum",
+      "requireLevel": 4,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:storage_blocks/raw_ostrum"
+    }
+  },
+  "chemicalInput": {
+    "amount": 2,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "item": "moremekanismprocessing:shard_ostrum",
+    "count": 24
+  }
+}

@@ -9,7 +9,7 @@ import com.google.common.collect.Lists;
 public enum MaterialResultShape
 {
 	DUST(null, Lists.newArrayList(MaterialState.ORE, MaterialState.CRYSTAL, MaterialState.SHARD, MaterialState.CLUMP, MaterialState.DIRTY_DUST, MaterialState.DUST)),
-	INGOT(DUST, Lists.newArrayList(MaterialState.RAW, MaterialState.INGOT, MaterialState.NUGGET)),
+	INGOT(DUST, Lists.newArrayList(MaterialState.RAW_ITEM, MaterialState.INGOT, MaterialState.NUGGET)),
 	GEM(DUST, Lists.newArrayList(MaterialState.GEM)),
 	// EOL
 	;

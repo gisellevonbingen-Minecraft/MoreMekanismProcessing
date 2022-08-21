@@ -30,11 +30,19 @@
       "required": false
     },
     {
+      "id": "voluminousenergy:raw_bauxite_block",
+      "required": false
+    },
+    {
       "id": "voluminousenergy:rutileore",
       "required": false
     },
     {
       "id": "voluminousenergy:deepslate_rutile_ore",
+      "required": false
+    },
+    {
+      "id": "voluminousenergy:raw_rutile_block",
       "required": false
     }
   ]

@@ -1,0 +1,30 @@
+{
+  "type": "mekanism:purifying",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:storage_blocks/raw_nickel",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "materialType": "nickel",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:storage_blocks/raw_nickel"
+    }
+  },
+  "chemicalInput": {
+    "amount": 2,
+    "gas": "mekanism:oxygen"
+  },
+  "output": {
+    "item": "moremekanismprocessing:clump_nickel",
+    "count": 18
+  }
+}

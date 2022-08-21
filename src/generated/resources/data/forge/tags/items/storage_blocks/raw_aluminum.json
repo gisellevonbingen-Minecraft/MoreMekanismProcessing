@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "voluminousenergy:raw_bauxite_block",
+      "required": false
+    },
+    {
+      "id": "voluminousenergy:raw_bauxite_block",
+      "required": false
+    }
+  ]
+}
