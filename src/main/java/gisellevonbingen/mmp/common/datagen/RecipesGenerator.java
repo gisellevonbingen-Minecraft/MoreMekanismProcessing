@@ -271,7 +271,7 @@ public class RecipesGenerator extends RecipeProvider
 
 			if (this.canProcess(MaterialState.RAW_STORAGE_BLOCKS) == true)
 			{
-				this.buildItemToItemStack(MaterialState.RAW_ITEM, 1, MaterialState.DUST, 12, ItemStackToItemStackRecipeBuilder::enriching);
+				this.buildItemToItemStack(MaterialState.RAW_STORAGE_BLOCKS, 1, MaterialState.DUST, 12, ItemStackToItemStackRecipeBuilder::enriching);
 			}
 
 			if (this.canProcess(MaterialState.DUST) == true)

@@ -1,0 +1,26 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:storage_blocks/raw_aluminum",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "materialType": "aluminum",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:storage_blocks/raw_aluminum"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_aluminum",
+    "count": 12
+  }
+}
