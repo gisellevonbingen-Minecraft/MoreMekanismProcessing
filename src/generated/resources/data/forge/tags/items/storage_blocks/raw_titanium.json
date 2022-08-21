@@ -4,10 +4,6 @@
     {
       "id": "voluminousenergy:raw_rutile_block",
       "required": false
-    },
-    {
-      "id": "voluminousenergy:raw_rutile_block",
-      "required": false
     }
   ]
 }

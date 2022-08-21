@@ -210,7 +210,7 @@ d1e59dc3a439404ad231afd193b5fe799dbf2b39 assets/moremekanismprocessing/models/it
 ae7377af623d46abc2667a63b109514c322ded9f assets/moremekanismprocessing/models/item/tungsten_nugget.json
 d1e59dc3a439404ad231afd193b5fe799dbf2b39 assets/moremekanismprocessing/models/item/zinc_ingot.json
 ae7377af623d46abc2667a63b109514c322ded9f assets/moremekanismprocessing/models/item/zinc_nugget.json
-53dff8a65ce7e5f21957722123db202e97a6150e data/forge/tags/blocks/ores.json
+ee8fa6ecac1a852ade5dfa8b1792cabade310017 data/forge/tags/blocks/ores.json
 38d89f965565f305a7a57e2c3afa7632e914efb7 data/forge/tags/blocks/ores/aluminum.json
 26aba9da470eb10ea895b8f17fbd82c28c22851f data/forge/tags/blocks/ores/amethyst.json
 576a874d9d186c596d3aba663b160aa5d6357602 data/forge/tags/blocks/ores/sapphire.json
@@ -302,7 +302,7 @@ db4e3094ae27ac7d5b398f3280650e813521a60a data/forge/tags/items/nuggets/ostrum.js
 ab6a8da07b287b11a2968f99afa34b8fab7a49fb data/forge/tags/items/nuggets/titanium.json
 e6fa7e20ab60f2d584a7e55c23629c16c654e1a9 data/forge/tags/items/nuggets/tungsten.json
 62529c1cc1b8e0c031df576fa860a36169c9677e data/forge/tags/items/nuggets/zinc.json
-9d7376139012e75213069a59f93ff7953d629aee data/forge/tags/items/ores.json
+ee8fa6ecac1a852ade5dfa8b1792cabade310017 data/forge/tags/items/ores.json
 38d89f965565f305a7a57e2c3afa7632e914efb7 data/forge/tags/items/ores/aluminum.json
 26aba9da470eb10ea895b8f17fbd82c28c22851f data/forge/tags/items/ores/amethyst.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/forge/tags/items/ores/apatite.json
@@ -358,8 +358,8 @@ acec296c2f61c557342ef0ef4d9b272dfcfab171 data/forge/tags/items/raw_materials/alu
 896882a024e3e988cdb8f394a9e1110f752f3211 data/forge/tags/items/raw_materials/titanium.json
 f4065f264557b08ee40f3f20541853e5a2f7fc48 data/forge/tags/items/raw_materials/tungsten.json
 217cf3c1d2b48ef899f2a1b877e8fe1409261cb1 data/forge/tags/items/raw_materials/zinc.json
-b90085db6b697b0b967a3e01174b8f1122531882 data/forge/tags/items/storage_blocks/raw_aluminum.json
-855c355a76adba602a781a9e4473e7f91eadb94a data/forge/tags/items/storage_blocks/raw_titanium.json
+c7e1c9c5f0f2c3efaf8b0fc902ac70e6ab2037a9 data/forge/tags/items/storage_blocks/raw_aluminum.json
+241aa16575f7ef7e7f7c1f3298129ea400c34ff8 data/forge/tags/items/storage_blocks/raw_titanium.json
 bb3bc033f9a1f06c319805821e96f9407e85f6a4 data/mekanism/tags/items/clumps.json
 91c69235881ea78fd310326bef6387e9d22b2224 data/mekanism/tags/items/clumps/aluminum.json
 3639d5a8a1b42cd6f774b357c14ed91a3cf70a27 data/mekanism/tags/items/clumps/amethyst.json

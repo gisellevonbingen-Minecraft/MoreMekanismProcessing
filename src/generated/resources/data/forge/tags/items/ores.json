@@ -2,34 +2,6 @@
   "replace": false,
   "values": [
     {
-      "id": "voluminousenergy:raw_bauxite",
-      "required": false
-    },
-    {
-      "id": "voluminousenergy:raw_bauxite_block",
-      "required": false
-    },
-    {
-      "id": "voluminousenergy:raw_rutile",
-      "required": false
-    },
-    {
-      "id": "voluminousenergy:raw_rutile_block",
-      "required": false
-    },
-    {
-      "id": "bluepower:silver_raw",
-      "required": false
-    },
-    {
-      "id": "bluepower:zinc_raw",
-      "required": false
-    },
-    {
-      "id": "bluepower:tungsten_raw",
-      "required": false
-    },
-    {
       "id": "iceandfire:sapphire_ore",
       "required": false
     },
@@ -58,19 +30,11 @@
       "required": false
     },
     {
-      "id": "voluminousenergy:raw_bauxite_block",
-      "required": false
-    },
-    {
       "id": "voluminousenergy:rutileore",
       "required": false
     },
     {
       "id": "voluminousenergy:deepslate_rutile_ore",
-      "required": false
-    },
-    {
-      "id": "voluminousenergy:raw_rutile_block",
       "required": false
     }
   ]
