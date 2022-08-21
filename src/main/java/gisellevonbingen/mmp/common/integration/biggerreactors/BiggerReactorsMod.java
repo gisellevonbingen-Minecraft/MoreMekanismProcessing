@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 public class BiggerReactorsMod extends IntegrationMod
 {
 	public static final String MODID = "biggerreactors";
+
 	public static final ResourceLocation YELLORITE_ORE = rl("yellorite_ore");
 
 	public BiggerReactorsMod()
