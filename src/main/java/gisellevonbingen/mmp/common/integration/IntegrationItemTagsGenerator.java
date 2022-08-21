@@ -35,7 +35,7 @@ public class IntegrationItemTagsGenerator extends ItemTagsProvider
 	protected void addTags()
 	{
 		MoreMekanismProcessingIntagrations.getMods().forEach(m -> m.addItemTags(this));
-		this.copyOres();
+		this.copyTags();
 	}
 
 	@Override
@@ -44,9 +44,9 @@ public class IntegrationItemTagsGenerator extends ItemTagsProvider
 		super.copy(blockTag, itemTag);
 	}
 
-	protected void copyOres()
+	protected void copyTags()
 	{
-		for (TagKey<Block> blockTag : this.blockTagsGenerator.getOreTags())
+		for (TagKey<Block> blockTag : this.blockTagsGenerator.getTags())
 		{
 			TagKey<Item> itemTag = ItemTags.create(blockTag.location());
 			this.copy(blockTag, (TagKey<Item>) itemTag);

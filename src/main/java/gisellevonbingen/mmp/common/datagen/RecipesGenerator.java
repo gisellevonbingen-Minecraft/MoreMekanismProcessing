@@ -148,14 +148,17 @@ public class RecipesGenerator extends RecipeProvider
 
 				if (this.canProcess(MaterialState.ORE) == true)
 				{
-					GasStackIngredient sulfuricAcid = IngredientCreatorAccess.gas().from(MekanismGases.SULFURIC_ACID.get(), 1);
-					this.buildChemicalDissolution(MaterialState.ORE, 1, dirtySlurry, 1000, sulfuricAcid);
+					GasStackIngredient sulfuricAcid1 = IngredientCreatorAccess.gas().from(MekanismGases.SULFURIC_ACID.get(), 1);
+					this.buildChemicalDissolution(MaterialState.ORE, 1, dirtySlurry, 1000, sulfuricAcid1);
 				}
 
-				if (this.canProcess(MaterialState.RAW) == true)
+				if (this.canProcess(MaterialState.RAW_ITEM) == true)
 				{
-					GasStackIngredient sulfuricAcid = IngredientCreatorAccess.gas().from(MekanismGases.SULFURIC_ACID.get(), 1);
-					this.buildChemicalDissolution(MaterialState.RAW, 3, dirtySlurry, 2000, sulfuricAcid);
+					GasStackIngredient sulfuricAcid1 = IngredientCreatorAccess.gas().from(MekanismGases.SULFURIC_ACID.get(), 1);
+					this.buildChemicalDissolution(MaterialState.RAW_ITEM, 3, dirtySlurry, 2000, sulfuricAcid1);
+
+					GasStackIngredient sulfuricAcid2 = IngredientCreatorAccess.gas().from(MekanismGases.SULFURIC_ACID.get(), 2);
+					this.buildChemicalDissolution(MaterialState.RAW_STORAGE_BLOCKS, 1, dirtySlurry, 6000, sulfuricAcid2);
 				}
 
 				this.buildChemicalWashing(water, dirtySlurry, cleanSlurry);
@@ -181,10 +184,13 @@ public class RecipesGenerator extends RecipeProvider
 					this.buildItemStackGasToItemStack(MaterialState.ORE, 1, MaterialState.SHARD, 4, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
 				}
 
-				if (this.canProcess(MaterialState.RAW) == true)
+				if (this.canProcess(MaterialState.RAW_ITEM) == true)
 				{
-					GasStackIngredient hydrogenChloride = IngredientCreatorAccess.gas().from(MekanismGases.HYDROGEN_CHLORIDE.get(), 1);
-					this.buildItemStackGasToItemStack(MaterialState.RAW, 3, MaterialState.SHARD, 8, hydrogenChloride, ItemStackChemicalToItemStackRecipeBuilder::injecting);
+					GasStackIngredient hydrogenChloride1 = IngredientCreatorAccess.gas().from(MekanismGases.HYDROGEN_CHLORIDE.get(), 1);
+					this.buildItemStackGasToItemStack(MaterialState.RAW_ITEM, 3, MaterialState.SHARD, 8, hydrogenChloride1, ItemStackChemicalToItemStackRecipeBuilder::injecting);
+
+					GasStackIngredient hydrogenChloride2 = IngredientCreatorAccess.gas().from(MekanismGases.HYDROGEN_CHLORIDE.get(), 2);
+					this.buildItemStackGasToItemStack(MaterialState.RAW_STORAGE_BLOCKS, 1, MaterialState.SHARD, 24, hydrogenChloride2, ItemStackChemicalToItemStackRecipeBuilder::injecting);
 				}
 
 				if (this.canProcess(MaterialState.CLUMP) == true)
@@ -207,10 +213,13 @@ public class RecipesGenerator extends RecipeProvider
 					this.buildItemStackGasToItemStack(MaterialState.ORE, 1, MaterialState.CLUMP, 3, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
 				}
 
-				if (this.canProcess(MaterialState.RAW) == true)
+				if (this.canProcess(MaterialState.RAW_ITEM) == true)
 				{
-					GasStackIngredient oxygen = IngredientCreatorAccess.gas().from(MekanismGases.OXYGEN.get(), 1);
-					this.buildItemStackGasToItemStack(MaterialState.RAW, 1, MaterialState.CLUMP, 2, oxygen, ItemStackChemicalToItemStackRecipeBuilder::purifying);
+					GasStackIngredient oxygen1 = IngredientCreatorAccess.gas().from(MekanismGases.OXYGEN.get(), 1);
+					this.buildItemStackGasToItemStack(MaterialState.RAW_ITEM, 1, MaterialState.CLUMP, 2, oxygen1, ItemStackChemicalToItemStackRecipeBuilder::purifying);
+
+					GasStackIngredient oxygen2 = IngredientCreatorAccess.gas().from(MekanismGases.OXYGEN.get(), 2);
+					this.buildItemStackGasToItemStack(MaterialState.RAW_STORAGE_BLOCKS, 1, MaterialState.CLUMP, 18, oxygen2, ItemStackChemicalToItemStackRecipeBuilder::purifying);
 				}
 
 				if (this.canProcess(MaterialState.DIRTY_DUST) == true)
@@ -256,25 +265,14 @@ public class RecipesGenerator extends RecipeProvider
 
 			}
 
-			if (this.canProcess(MaterialState.RAW) == true)
+			if (this.canProcess(MaterialState.RAW_ITEM) == true)
 			{
-				if (this.materialType.getResultShape() == MaterialResultShape.GEM)
-				{
-					if (this.canProcess(MaterialState.GEM) == true)
-					{
-						this.buildItemToItemStack(MaterialState.RAW, 3, MaterialState.GEM, 4, ItemStackToItemStackRecipeBuilder::enriching);
-					}
+				this.buildItemToItemStack(MaterialState.RAW_ITEM, 3, MaterialState.DUST, 4, ItemStackToItemStackRecipeBuilder::enriching);
+			}
 
-				}
-				else
-				{
-					if (this.canProcess(MaterialState.DUST) == true)
-					{
-						this.buildItemToItemStack(MaterialState.RAW, 3, MaterialState.DUST, 4, ItemStackToItemStackRecipeBuilder::enriching);
-					}
-
-				}
-
+			if (this.canProcess(MaterialState.RAW_STORAGE_BLOCKS) == true)
+			{
+				this.buildItemToItemStack(MaterialState.RAW_STORAGE_BLOCKS, 1, MaterialState.DUST, 12, ItemStackToItemStackRecipeBuilder::enriching);
 			}
 
 			if (this.canProcess(MaterialState.DUST) == true)
@@ -455,12 +453,24 @@ public class RecipesGenerator extends RecipeProvider
 
 		public ItemStackIngredient getTaggedItemStackIngredient(MaterialState materialState)
 		{
-			return this.getTaggedItemStackIngredient(materialState, 1);
+			TagKey<Item> tag = this.getTag(materialState);
+			return this.getTaggedItemStackIngredient(tag);
 		}
 
 		public ItemStackIngredient getTaggedItemStackIngredient(MaterialState materialState, int amount)
 		{
-			return IngredientCreatorAccess.item().from(this.getTag(materialState), amount);
+			TagKey<Item> tag = this.getTag(materialState);
+			return this.getTaggedItemStackIngredient(tag, amount);
+		}
+
+		public ItemStackIngredient getTaggedItemStackIngredient(TagKey<Item> tag)
+		{
+			return this.getTaggedItemStackIngredient(tag, 1);
+		}
+
+		public ItemStackIngredient getTaggedItemStackIngredient(TagKey<Item> tag, int amount)
+		{
+			return IngredientCreatorAccess.item().from(tag, amount);
 		}
 
 		public TagKey<Item> getTag(MaterialState materialState)

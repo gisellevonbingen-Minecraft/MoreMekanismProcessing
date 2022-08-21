@@ -19,24 +19,18 @@ public class DataGenerators
 		DataGenerator generator = event.getGenerator();
 		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
-		if (event.includeServer() == true)
-		{
-			BlockTagsGenerator blockTagsGenerator = new BlockTagsGenerator(generator, existingFileHelper);
-			generator.addProvider(true, blockTagsGenerator);
-			generator.addProvider(true, new ItemTagsGenerator(generator, blockTagsGenerator, existingFileHelper));
-			generator.addProvider(true, new SlurryTagGenerator(generator, existingFileHelper));
-			generator.addProvider(true, new RecipesGenerator(generator));
-			generator.addProvider(true, new LanguagesGenerator(generator));
+		BlockTagsGenerator blockTagsGenerator = new BlockTagsGenerator(generator, existingFileHelper);
+		generator.addProvider(event.includeServer(), blockTagsGenerator);
+		generator.addProvider(event.includeServer(), new ItemTagsGenerator(generator, blockTagsGenerator, existingFileHelper));
+		generator.addProvider(event.includeServer(), new SlurryTagGenerator(generator, existingFileHelper));
+		generator.addProvider(event.includeServer(), new RecipesGenerator(generator));
+		generator.addProvider(event.includeServer(), new LanguagesGenerator(generator));
 
-			IntegrationBlockTagsGenerator integrationBlockTagsGenerator = new IntegrationBlockTagsGenerator(generator, existingFileHelper);
-			generator.addProvider(true, integrationBlockTagsGenerator);
-			generator.addProvider(true, new IntegrationItemTagsGenerator(generator, integrationBlockTagsGenerator, existingFileHelper));
-		}
+		IntegrationBlockTagsGenerator integrationBlockTagsGenerator = new IntegrationBlockTagsGenerator(generator, existingFileHelper);
+		generator.addProvider(true, integrationBlockTagsGenerator);
+		generator.addProvider(true, new IntegrationItemTagsGenerator(generator, integrationBlockTagsGenerator, existingFileHelper));
 
-		if (event.includeClient() == true)
-		{
-			generator.addProvider(true, new ItemModelGenerator(generator, new EmptyExistingFileHelper()));
-		}
+		generator.addProvider(event.includeClient(), new ItemModelGenerator(generator, new EmptyExistingFileHelper()));
 
 		MoreMekanismProcessingIntagrations.getMods().forEach(m -> m.addDataGenerator(event));
 	}

@@ -35,9 +35,9 @@ public class IntegrationBlockTagsGenerator extends BlockTagsProvider
 		MoreMekanismProcessingIntagrations.getMods().forEach(m -> m.addBlockTags(this));
 	}
 
-	public List<TagKey<Block>> getOreTags()
+	public List<TagKey<Block>> getTags()
 	{
-		return Lists.newArrayList(this.oreTags);
+		return Lists.newArrayList(this.tags.keySet());
 	}
 
 	public void tagOres(TagKey<Block> tag, ResourceLocation blockName)
