@@ -1,20 +1,20 @@
 {
   "type": "mekanism:injecting",
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
   "conditions": [
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "emerald",
-      "requireLevel": 5,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 5
     }
   ],
   "itemInput": {
     "ingredient": {
       "tag": "mekanism:crystals/emerald"
     }
-  },
-  "chemicalInput": {
-    "amount": 1,
-    "gas": "mekanism:hydrogen_chloride"
   },
   "output": {
     "item": "moremekanismprocessing:shard_emerald"

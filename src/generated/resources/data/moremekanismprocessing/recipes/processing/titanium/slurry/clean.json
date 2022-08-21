@@ -2,21 +2,21 @@
   "type": "mekanism:washing",
   "conditions": [
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "titanium",
-      "requireLevel": 5,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 5
     }
   ],
   "fluidInput": {
     "amount": 5,
     "fluid": "minecraft:water"
   },
+  "output": {
+    "amount": 1,
+    "slurry": "moremekanismprocessing:clean_titanium"
+  },
   "slurryInput": {
     "amount": 1,
     "slurry": "moremekanismprocessing:dirty_titanium"
-  },
-  "output": {
-    "slurry": "moremekanismprocessing:clean_titanium",
-    "amount": 1
   }
 }

@@ -2,31 +2,31 @@
   "type": "mekanism:dissolution",
   "conditions": [
     {
+      "type": "forge:not",
       "value": {
-        "tag": "forge:raw_materials/titanium",
-        "type": "forge:tag_empty"
-      },
-      "type": "forge:not"
+        "type": "forge:tag_empty",
+        "tag": "forge:raw_materials/titanium"
+      }
     },
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "titanium",
-      "requireLevel": 5,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 5
     }
   ],
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:sulfuric_acid"
+  },
   "itemInput": {
     "amount": 3,
     "ingredient": {
       "tag": "forge:raw_materials/titanium"
     }
   },
-  "gasInput": {
-    "amount": 1,
-    "gas": "mekanism:sulfuric_acid"
-  },
   "output": {
-    "slurry": "moremekanismprocessing:dirty_titanium",
     "amount": 2000,
-    "chemicalType": "slurry"
+    "chemicalType": "slurry",
+    "slurry": "moremekanismprocessing:dirty_titanium"
   }
 }

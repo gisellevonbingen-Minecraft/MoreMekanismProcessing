@@ -2,30 +2,30 @@
   "type": "mekanism:dissolution",
   "conditions": [
     {
+      "type": "forge:not",
       "value": {
-        "tag": "forge:ores/quartz",
-        "type": "forge:tag_empty"
-      },
-      "type": "forge:not"
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/quartz"
+      }
     },
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "quartz",
-      "requireLevel": 5,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 5
     }
   ],
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:sulfuric_acid"
+  },
   "itemInput": {
     "ingredient": {
       "tag": "forge:ores/quartz"
     }
   },
-  "gasInput": {
-    "amount": 1,
-    "gas": "mekanism:sulfuric_acid"
-  },
   "output": {
-    "slurry": "moremekanismprocessing:dirty_quartz",
     "amount": 1000,
-    "chemicalType": "slurry"
+    "chemicalType": "slurry",
+    "slurry": "moremekanismprocessing:dirty_quartz"
   }
 }

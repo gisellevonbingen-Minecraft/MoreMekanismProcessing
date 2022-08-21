@@ -2,21 +2,21 @@
   "type": "mekanism:washing",
   "conditions": [
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "draconium",
-      "requireLevel": 5,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 5
     }
   ],
   "fluidInput": {
     "amount": 5,
     "fluid": "minecraft:water"
   },
+  "output": {
+    "amount": 1,
+    "slurry": "moremekanismprocessing:clean_draconium"
+  },
   "slurryInput": {
     "amount": 1,
     "slurry": "moremekanismprocessing:dirty_draconium"
-  },
-  "output": {
-    "slurry": "moremekanismprocessing:clean_draconium",
-    "amount": 1
   }
 }

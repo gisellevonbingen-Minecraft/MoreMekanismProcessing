@@ -1,17 +1,21 @@
 {
   "type": "mekanism:injecting",
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
   "conditions": [
     {
+      "type": "forge:not",
       "value": {
-        "tag": "forge:ores/green_sapphire",
-        "type": "forge:tag_empty"
-      },
-      "type": "forge:not"
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/green_sapphire"
+      }
     },
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "green_sapphire",
-      "requireLevel": 4,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 4
     }
   ],
   "itemInput": {
@@ -19,12 +23,8 @@
       "tag": "forge:ores/green_sapphire"
     }
   },
-  "chemicalInput": {
-    "amount": 1,
-    "gas": "mekanism:hydrogen_chloride"
-  },
   "output": {
-    "item": "moremekanismprocessing:shard_green_sapphire",
-    "count": 4
+    "count": 4,
+    "item": "moremekanismprocessing:shard_green_sapphire"
   }
 }

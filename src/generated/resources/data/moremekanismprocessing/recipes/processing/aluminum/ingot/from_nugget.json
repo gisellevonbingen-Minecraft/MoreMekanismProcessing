@@ -1,20 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "moremekanismprocessing:aluminum_ingot",
-  "result": {
-    "item": "moremekanismprocessing:aluminum_ingot"
+  "key": {
+    "#": {
+      "tag": "forge:nuggets/aluminum"
+    },
+    "*": {
+      "item": "moremekanismprocessing:aluminum_nugget"
+    }
   },
   "pattern": [
     "###",
     "#*#",
     "###"
   ],
-  "key": {
-    "*": {
-      "item": "moremekanismprocessing:aluminum_nugget"
-    },
-    "#": {
-      "tag": "forge:nuggets/aluminum"
-    }
+  "result": {
+    "item": "moremekanismprocessing:aluminum_ingot"
   }
 }

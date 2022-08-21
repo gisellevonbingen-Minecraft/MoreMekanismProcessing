@@ -1,20 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "moremekanismprocessing:zinc_ingot",
-  "result": {
-    "item": "moremekanismprocessing:zinc_ingot"
+  "key": {
+    "#": {
+      "tag": "forge:nuggets/zinc"
+    },
+    "*": {
+      "item": "moremekanismprocessing:zinc_nugget"
+    }
   },
   "pattern": [
     "###",
     "#*#",
     "###"
   ],
-  "key": {
-    "*": {
-      "item": "moremekanismprocessing:zinc_nugget"
-    },
-    "#": {
-      "tag": "forge:nuggets/zinc"
-    }
+  "result": {
+    "item": "moremekanismprocessing:zinc_ingot"
   }
 }

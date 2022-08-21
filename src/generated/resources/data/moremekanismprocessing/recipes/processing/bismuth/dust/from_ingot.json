@@ -2,9 +2,9 @@
   "type": "mekanism:crushing",
   "conditions": [
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "bismuth",
-      "requireLevel": 2,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 2
     }
   ],
   "input": {

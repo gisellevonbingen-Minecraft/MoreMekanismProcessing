@@ -2,16 +2,16 @@
   "type": "mekanism:enriching",
   "conditions": [
     {
+      "type": "forge:not",
       "value": {
-        "tag": "forge:ores/desh",
-        "type": "forge:tag_empty"
-      },
-      "type": "forge:not"
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/desh"
+      }
     },
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "desh",
-      "requireLevel": 2,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 2
     }
   ],
   "input": {
@@ -20,7 +20,7 @@
     }
   },
   "output": {
-    "item": "moremekanismprocessing:dust_desh",
-    "count": 2
+    "count": 2,
+    "item": "moremekanismprocessing:dust_desh"
   }
 }

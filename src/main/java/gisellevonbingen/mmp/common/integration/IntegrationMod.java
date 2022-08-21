@@ -1,7 +1,7 @@
 package gisellevonbingen.mmp.common.integration;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.data.event.GatherDataEvent;
 
 public abstract class IntegrationMod
 {

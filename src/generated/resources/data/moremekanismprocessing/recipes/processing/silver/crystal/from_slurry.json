@@ -1,13 +1,13 @@
 {
   "type": "mekanism:crystallizing",
+  "chemicalType": "slurry",
   "conditions": [
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "silver",
-      "requireLevel": 5,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 5
     }
   ],
-  "chemicalType": "slurry",
   "input": {
     "amount": 200,
     "slurry": "moremekanismprocessing:clean_silver"

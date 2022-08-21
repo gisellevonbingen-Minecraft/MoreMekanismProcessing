@@ -1,9 +1,3 @@
 {
-  "replace": false,
-  "values": [
-    {
-      "id": "iceandfire:sapphire_ore",
-      "required": false
-    }
-  ]
+  "values": []
 }

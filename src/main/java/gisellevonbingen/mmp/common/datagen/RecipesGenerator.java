@@ -47,6 +47,7 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.NotCondition;
 import net.minecraftforge.common.crafting.conditions.TagEmptyCondition;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class RecipesGenerator extends RecipeProvider
 {
@@ -469,7 +470,7 @@ public class RecipesGenerator extends RecipeProvider
 
 		public String getGroup(MaterialState stateOutput)
 		{
-			return stateOutput.getItem(this.materialType).getRegistryName().toString();
+			return ForgeRegistries.ITEMS.getKey(stateOutput.getItem(this.materialType)).toString();
 		}
 
 		public MaterialType getMaterialType()

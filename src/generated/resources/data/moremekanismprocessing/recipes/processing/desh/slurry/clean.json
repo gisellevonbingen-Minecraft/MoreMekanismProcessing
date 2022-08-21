@@ -2,21 +2,21 @@
   "type": "mekanism:washing",
   "conditions": [
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "desh",
-      "requireLevel": 5,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 5
     }
   ],
   "fluidInput": {
     "amount": 5,
     "fluid": "minecraft:water"
   },
+  "output": {
+    "amount": 1,
+    "slurry": "moremekanismprocessing:clean_desh"
+  },
   "slurryInput": {
     "amount": 1,
     "slurry": "moremekanismprocessing:dirty_desh"
-  },
-  "output": {
-    "slurry": "moremekanismprocessing:clean_desh",
-    "amount": 1
   }
 }

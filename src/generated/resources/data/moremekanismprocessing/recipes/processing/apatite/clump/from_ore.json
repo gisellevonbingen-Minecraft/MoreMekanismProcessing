@@ -1,17 +1,21 @@
 {
   "type": "mekanism:purifying",
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
   "conditions": [
     {
+      "type": "forge:not",
       "value": {
-        "tag": "forge:ores/apatite",
-        "type": "forge:tag_empty"
-      },
-      "type": "forge:not"
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/apatite"
+      }
     },
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "apatite",
-      "requireLevel": 3,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 3
     }
   ],
   "itemInput": {
@@ -19,12 +23,8 @@
       "tag": "forge:ores/apatite"
     }
   },
-  "chemicalInput": {
-    "amount": 1,
-    "gas": "mekanism:oxygen"
-  },
   "output": {
-    "item": "moremekanismprocessing:clump_apatite",
-    "count": 3
+    "count": 3,
+    "item": "moremekanismprocessing:clump_apatite"
   }
 }

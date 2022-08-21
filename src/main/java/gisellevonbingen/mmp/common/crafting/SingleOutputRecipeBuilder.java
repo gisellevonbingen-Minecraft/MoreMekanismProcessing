@@ -5,6 +5,7 @@ import com.google.gson.JsonObject;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public abstract class SingleOutputRecipeBuilder extends RecipeBuilder
 {
@@ -58,7 +59,7 @@ public abstract class SingleOutputRecipeBuilder extends RecipeBuilder
 			JsonObject resultJson = new JsonObject();
 
 			ItemStack result = this.result;
-			resultJson.addProperty("item", result.getItem().getRegistryName().toString());
+			resultJson.addProperty("item", ForgeRegistries.ITEMS.getKey(result.getItem()).toString());
 
 			if (result.getCount() > 1)
 			{

@@ -2,21 +2,21 @@
   "type": "mekanism:washing",
   "conditions": [
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "niter",
-      "requireLevel": 5,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 5
     }
   ],
   "fluidInput": {
     "amount": 5,
     "fluid": "minecraft:water"
   },
+  "output": {
+    "amount": 1,
+    "slurry": "moremekanismprocessing:clean_niter"
+  },
   "slurryInput": {
     "amount": 1,
     "slurry": "moremekanismprocessing:dirty_niter"
-  },
-  "output": {
-    "slurry": "moremekanismprocessing:clean_niter",
-    "amount": 1
   }
 }

@@ -2,21 +2,21 @@
   "type": "mekanism:washing",
   "conditions": [
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "ostrum",
-      "requireLevel": 5,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 5
     }
   ],
   "fluidInput": {
     "amount": 5,
     "fluid": "minecraft:water"
   },
+  "output": {
+    "amount": 1,
+    "slurry": "moremekanismprocessing:clean_ostrum"
+  },
   "slurryInput": {
     "amount": 1,
     "slurry": "moremekanismprocessing:dirty_ostrum"
-  },
-  "output": {
-    "slurry": "moremekanismprocessing:clean_ostrum",
-    "amount": 1
   }
 }

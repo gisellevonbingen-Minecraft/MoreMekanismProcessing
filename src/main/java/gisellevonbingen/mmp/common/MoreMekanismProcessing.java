@@ -3,7 +3,6 @@ package gisellevonbingen.mmp.common;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import gisellevonbingen.mmp.client.ClientHandler;
 import gisellevonbingen.mmp.common.block.MoreMekanismProcessingBlocks;
 import gisellevonbingen.mmp.common.config.MoreMekanismProcessingConfigs;
 import gisellevonbingen.mmp.common.crafting.conditions.MoreMekanismProcessingConditions;
@@ -12,9 +11,7 @@ import gisellevonbingen.mmp.common.integration.MoreMekanismProcessingIntagration
 import gisellevonbingen.mmp.common.item.MoreMekanismProcessingItems;
 import gisellevonbingen.mmp.common.slurry.MoreMekanismProcessingSlurries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -29,8 +26,6 @@ public class MoreMekanismProcessing
 	public MoreMekanismProcessing()
 	{
 		MoreMekanismProcessingConfigs.register(ModLoadingContext.get());
-
-		DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> ClientHandler::new);
 
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		modEventBus.register(new DataGenerators());

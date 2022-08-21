@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
   "group": "moremekanismprocessing:silver_nugget",
-  "result": {
-    "item": "moremekanismprocessing:silver_nugget",
-    "count": 9
-  },
   "ingredients": [
     {
       "item": "moremekanismprocessing:silver_ingot"
     }
-  ]
+  ],
+  "result": {
+    "count": 9,
+    "item": "moremekanismprocessing:silver_nugget"
+  }
 }

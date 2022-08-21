@@ -9,7 +9,6 @@ import mekanism.common.tags.MekanismTags;
 import net.minecraft.Util;
 import net.minecraft.locale.Language;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -140,11 +139,11 @@ public enum MaterialState
 	{
 		if (Language.getInstance().has(translationKey) == true)
 		{
-			return new TranslatableComponent(translationKey);
+			return Component.translatable(translationKey);
 		}
 		else
 		{
-			return new TranslatableComponent(statedDescriptionId, new TranslatableComponent(materialType.getDescriptionId()));
+			return Component.translatable(statedDescriptionId, Component.translatable(materialType.getDescriptionId()));
 		}
 
 	}

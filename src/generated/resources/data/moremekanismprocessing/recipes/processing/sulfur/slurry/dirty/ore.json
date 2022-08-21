@@ -2,30 +2,30 @@
   "type": "mekanism:dissolution",
   "conditions": [
     {
+      "type": "forge:not",
       "value": {
-        "tag": "forge:ores/sulfur",
-        "type": "forge:tag_empty"
-      },
-      "type": "forge:not"
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/sulfur"
+      }
     },
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "sulfur",
-      "requireLevel": 5,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 5
     }
   ],
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:sulfuric_acid"
+  },
   "itemInput": {
     "ingredient": {
       "tag": "forge:ores/sulfur"
     }
   },
-  "gasInput": {
-    "amount": 1,
-    "gas": "mekanism:sulfuric_acid"
-  },
   "output": {
-    "slurry": "moremekanismprocessing:dirty_sulfur",
     "amount": 1000,
-    "chemicalType": "slurry"
+    "chemicalType": "slurry",
+    "slurry": "moremekanismprocessing:dirty_sulfur"
   }
 }

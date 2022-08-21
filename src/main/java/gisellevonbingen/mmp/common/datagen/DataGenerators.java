@@ -6,9 +6,9 @@ import gisellevonbingen.mmp.common.integration.IntegrationItemTagsGenerator;
 import gisellevonbingen.mmp.common.integration.MoreMekanismProcessingIntagrations;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators
@@ -19,23 +19,23 @@ public class DataGenerators
 		DataGenerator generator = event.getGenerator();
 		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
-		if (event.includeServer())
+		if (event.includeServer() == true)
 		{
 			BlockTagsGenerator blockTagsGenerator = new BlockTagsGenerator(generator, existingFileHelper);
-			generator.addProvider(blockTagsGenerator);
-			generator.addProvider(new ItemTagsGenerator(generator, blockTagsGenerator, existingFileHelper));
-			generator.addProvider(new SlurryTagGenerator(generator, existingFileHelper));
-			generator.addProvider(new RecipesGenerator(generator));
-			generator.addProvider(new LanguagesGenerator(generator));
+			generator.addProvider(true, blockTagsGenerator);
+			generator.addProvider(true, new ItemTagsGenerator(generator, blockTagsGenerator, existingFileHelper));
+			generator.addProvider(true, new SlurryTagGenerator(generator, existingFileHelper));
+			generator.addProvider(true, new RecipesGenerator(generator));
+			generator.addProvider(true, new LanguagesGenerator(generator));
 
 			IntegrationBlockTagsGenerator integrationBlockTagsGenerator = new IntegrationBlockTagsGenerator(generator, existingFileHelper);
-			generator.addProvider(integrationBlockTagsGenerator);
-			generator.addProvider(new IntegrationItemTagsGenerator(generator, integrationBlockTagsGenerator, existingFileHelper));
+			generator.addProvider(true, integrationBlockTagsGenerator);
+			generator.addProvider(true, new IntegrationItemTagsGenerator(generator, integrationBlockTagsGenerator, existingFileHelper));
 		}
 
-		if (event.includeClient())
+		if (event.includeClient() == true)
 		{
-			generator.addProvider(new ItemModelGenerator(generator, new EmptyExistingFileHelper()));
+			generator.addProvider(true, new ItemModelGenerator(generator, new EmptyExistingFileHelper()));
 		}
 
 		MoreMekanismProcessingIntagrations.getMods().forEach(m -> m.addDataGenerator(event));

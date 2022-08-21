@@ -2,9 +2,9 @@
   "type": "mekanism:crushing",
   "conditions": [
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "sapphire",
-      "requireLevel": 2,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 2
     }
   ],
   "input": {

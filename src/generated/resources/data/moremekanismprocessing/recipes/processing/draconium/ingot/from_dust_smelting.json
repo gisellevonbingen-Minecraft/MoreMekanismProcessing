@@ -2,17 +2,17 @@
   "type": "minecraft:smelting",
   "conditions": [
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "draconium",
-      "requireLevel": 2,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 2
     }
   ],
-  "result": {
-    "item": "moremekanismprocessing:draconium_ingot"
-  },
+  "cookingtime": 200,
+  "experience": 0.3,
   "ingredient": {
     "tag": "forge:dusts/draconium"
   },
-  "experience": 0.3,
-  "cookingtime": 200
+  "result": {
+    "item": "moremekanismprocessing:draconium_ingot"
+  }
 }

@@ -1,20 +1,20 @@
 {
   "type": "mekanism:purifying",
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
   "conditions": [
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "peridot",
-      "requireLevel": 4,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 4
     }
   ],
   "itemInput": {
     "ingredient": {
       "tag": "mekanism:shards/peridot"
     }
-  },
-  "chemicalInput": {
-    "amount": 1,
-    "gas": "mekanism:oxygen"
   },
   "output": {
     "item": "moremekanismprocessing:clump_peridot"

@@ -1,20 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "moremekanismprocessing:iridium_ingot",
-  "result": {
-    "item": "moremekanismprocessing:iridium_ingot"
+  "key": {
+    "#": {
+      "tag": "forge:nuggets/iridium"
+    },
+    "*": {
+      "item": "moremekanismprocessing:iridium_nugget"
+    }
   },
   "pattern": [
     "###",
     "#*#",
     "###"
   ],
-  "key": {
-    "*": {
-      "item": "moremekanismprocessing:iridium_nugget"
-    },
-    "#": {
-      "tag": "forge:nuggets/iridium"
-    }
+  "result": {
+    "item": "moremekanismprocessing:iridium_ingot"
   }
 }

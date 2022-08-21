@@ -2,16 +2,16 @@
   "type": "mekanism:enriching",
   "conditions": [
     {
+      "type": "forge:not",
       "value": {
-        "tag": "forge:raw_materials/crimson_iron",
-        "type": "forge:tag_empty"
-      },
-      "type": "forge:not"
+        "type": "forge:tag_empty",
+        "tag": "forge:raw_materials/crimson_iron"
+      }
     },
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "crimson_iron",
-      "requireLevel": 2,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 2
     }
   ],
   "input": {
@@ -21,7 +21,7 @@
     }
   },
   "output": {
-    "item": "moremekanismprocessing:dust_crimson_iron",
-    "count": 4
+    "count": 4,
+    "item": "moremekanismprocessing:dust_crimson_iron"
   }
 }

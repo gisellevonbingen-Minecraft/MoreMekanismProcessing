@@ -2,9 +2,9 @@
   "type": "mekanism:enriching",
   "conditions": [
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "crimson_iron",
-      "requireLevel": 3,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 3
     }
   ],
   "input": {

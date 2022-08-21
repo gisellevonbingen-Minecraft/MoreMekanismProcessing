@@ -1,20 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "moremekanismprocessing:cobalt_ingot",
-  "result": {
-    "item": "moremekanismprocessing:cobalt_ingot"
+  "key": {
+    "#": {
+      "tag": "forge:nuggets/cobalt"
+    },
+    "*": {
+      "item": "moremekanismprocessing:cobalt_nugget"
+    }
   },
   "pattern": [
     "###",
     "#*#",
     "###"
   ],
-  "key": {
-    "*": {
-      "item": "moremekanismprocessing:cobalt_nugget"
-    },
-    "#": {
-      "tag": "forge:nuggets/cobalt"
-    }
+  "result": {
+    "item": "moremekanismprocessing:cobalt_ingot"
   }
 }

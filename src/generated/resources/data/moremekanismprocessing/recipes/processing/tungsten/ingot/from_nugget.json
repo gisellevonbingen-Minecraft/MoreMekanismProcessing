@@ -1,20 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "moremekanismprocessing:tungsten_ingot",
-  "result": {
-    "item": "moremekanismprocessing:tungsten_ingot"
+  "key": {
+    "#": {
+      "tag": "forge:nuggets/tungsten"
+    },
+    "*": {
+      "item": "moremekanismprocessing:tungsten_nugget"
+    }
   },
   "pattern": [
     "###",
     "#*#",
     "###"
   ],
-  "key": {
-    "*": {
-      "item": "moremekanismprocessing:tungsten_nugget"
-    },
-    "#": {
-      "tag": "forge:nuggets/tungsten"
-    }
+  "result": {
+    "item": "moremekanismprocessing:tungsten_ingot"
   }
 }

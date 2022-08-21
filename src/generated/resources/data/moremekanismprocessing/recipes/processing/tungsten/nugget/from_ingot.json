@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
   "group": "moremekanismprocessing:tungsten_nugget",
-  "result": {
-    "item": "moremekanismprocessing:tungsten_nugget",
-    "count": 9
-  },
   "ingredients": [
     {
       "item": "moremekanismprocessing:tungsten_ingot"
     }
-  ]
+  ],
+  "result": {
+    "count": 9,
+    "item": "moremekanismprocessing:tungsten_nugget"
+  }
 }

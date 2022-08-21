@@ -1,20 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "moremekanismprocessing:platinum_ingot",
-  "result": {
-    "item": "moremekanismprocessing:platinum_ingot"
+  "key": {
+    "#": {
+      "tag": "forge:nuggets/platinum"
+    },
+    "*": {
+      "item": "moremekanismprocessing:platinum_nugget"
+    }
   },
   "pattern": [
     "###",
     "#*#",
     "###"
   ],
-  "key": {
-    "*": {
-      "item": "moremekanismprocessing:platinum_nugget"
-    },
-    "#": {
-      "tag": "forge:nuggets/platinum"
-    }
+  "result": {
+    "item": "moremekanismprocessing:platinum_ingot"
   }
 }

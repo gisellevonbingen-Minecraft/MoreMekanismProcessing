@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
   "group": "moremekanismprocessing:platinum_nugget",
-  "result": {
-    "item": "moremekanismprocessing:platinum_nugget",
-    "count": 9
-  },
   "ingredients": [
     {
       "item": "moremekanismprocessing:platinum_ingot"
     }
-  ]
+  ],
+  "result": {
+    "count": 9,
+    "item": "moremekanismprocessing:platinum_nugget"
+  }
 }

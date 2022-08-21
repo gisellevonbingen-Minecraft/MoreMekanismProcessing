@@ -2,16 +2,16 @@
   "type": "mekanism:enriching",
   "conditions": [
     {
+      "type": "forge:not",
       "value": {
-        "tag": "forge:ores/amethyst",
-        "type": "forge:tag_empty"
-      },
-      "type": "forge:not"
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/amethyst"
+      }
     },
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "amethyst",
-      "requireLevel": 2,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 2
     }
   ],
   "input": {
@@ -20,7 +20,7 @@
     }
   },
   "output": {
-    "item": "minecraft:amethyst_shard",
-    "count": 2
+    "count": 2,
+    "item": "minecraft:amethyst_shard"
   }
 }

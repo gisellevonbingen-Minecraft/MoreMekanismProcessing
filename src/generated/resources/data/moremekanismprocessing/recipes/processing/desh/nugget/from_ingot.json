@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
   "group": "moremekanismprocessing:desh_nugget",
-  "result": {
-    "item": "moremekanismprocessing:desh_nugget",
-    "count": 9
-  },
   "ingredients": [
     {
       "item": "moremekanismprocessing:desh_ingot"
     }
-  ]
+  ],
+  "result": {
+    "count": 9,
+    "item": "moremekanismprocessing:desh_nugget"
+  }
 }

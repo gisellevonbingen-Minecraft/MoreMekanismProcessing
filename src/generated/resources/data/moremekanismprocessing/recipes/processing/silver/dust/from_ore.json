@@ -2,16 +2,16 @@
   "type": "mekanism:enriching",
   "conditions": [
     {
+      "type": "forge:not",
       "value": {
-        "tag": "forge:ores/silver",
-        "type": "forge:tag_empty"
-      },
-      "type": "forge:not"
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/silver"
+      }
     },
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "silver",
-      "requireLevel": 2,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 2
     }
   ],
   "input": {
@@ -20,7 +20,7 @@
     }
   },
   "output": {
-    "item": "moremekanismprocessing:dust_silver",
-    "count": 2
+    "count": 2,
+    "item": "moremekanismprocessing:dust_silver"
   }
 }

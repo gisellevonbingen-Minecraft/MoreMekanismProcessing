@@ -82,7 +82,7 @@ repositories {
     }
     maven {
         name "CurseForge"
-        url = "https://www.cursemaven.com"
+        url "https://www.cursemaven.com"
     }
 }
 
@@ -90,8 +90,8 @@ dependencies {
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
 
     // JEI
-    compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
-    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
 
     // Jade
     implementation fg.deobf("curse.maven:jade-324717:${jade_file}")
@@ -101,13 +101,13 @@ dependencies {
     //implementation fg.deobf("slimeknights.tconstruct:TConstruct:${mc_version}-${tconstruct_version}")
 
     // Refined Storage
-    compileOnly fg.deobf("curse.maven:refined-storage-243076:${refined_storage_file}")
+    // compileOnly fg.deobf("curse.maven:refined-storage-243076:${refined_storage_file}")
 
     // Mekanism
-    implementation fg.deobf("mekanism:Mekanism:${mekanism_version}")
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:additions")
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:generators")
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:tools")
+    implementation fg.deobf("mekanism:Mekanism:${mc_version}-${mekanism_version}")
+    runtimeOnly fg.deobf("mekanism:Mekanism:${mc_version}-${mekanism_version}:additions")
+    runtimeOnly fg.deobf("mekanism:Mekanism:${mc_version}-${mekanism_version}:generators")
+    runtimeOnly fg.deobf("mekanism:Mekanism:${mc_version}-${mekanism_version}:tools")
 }
 
 jar {

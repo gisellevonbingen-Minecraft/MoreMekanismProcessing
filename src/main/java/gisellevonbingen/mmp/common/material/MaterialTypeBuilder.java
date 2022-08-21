@@ -7,7 +7,7 @@ import mekanism.common.Mekanism;
 import mekanism.common.registration.WrappedRegistryObject;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.registries.IForgeRegistryEntry;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class MaterialTypeBuilder
 {
@@ -45,9 +45,9 @@ public class MaterialTypeBuilder
 		return this.presetItem(state, new ResourceLocation(modid, itemName));
 	}
 
-	public MaterialTypeBuilder presetItem(MaterialState state, IForgeRegistryEntry<Item> holder)
+	public MaterialTypeBuilder presetItem(MaterialState state, Item item)
 	{
-		return this.presetItem(state, holder.getRegistryName());
+		return this.presetItem(state, ForgeRegistries.ITEMS.getKey(item));
 	}
 
 	public MaterialTypeBuilder presetItem(MaterialState state, WrappedRegistryObject<Item> holder)
@@ -97,12 +97,12 @@ public class MaterialTypeBuilder
 		this.color = color;
 		return this;
 	}
-	
+
 	public boolean respect()
 	{
 		return this.respect;
 	}
-	
+
 	public MaterialTypeBuilder respect(boolean respect)
 	{
 		this.respect = respect;

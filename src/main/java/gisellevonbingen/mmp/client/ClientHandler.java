@@ -4,26 +4,23 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import gisellevonbingen.mmp.client.renderer.color.CommonItemColor;
+import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import gisellevonbingen.mmp.common.item.MoreMekanismProcessingItems;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.client.event.ColorHandlerEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.RegistryObject;
 
+@Mod.EventBusSubscriber(modid = MoreMekanismProcessing.MODID, value = Dist.CLIENT, bus = Bus.MOD)
 public class ClientHandler
 {
-	public ClientHandler()
-	{
-		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-		modEventBus.register(this);
-	}
-
 	@SubscribeEvent
-	public void registerItemColors(ColorHandlerEvent.Item event)
+	public static void registerItemColors(RegisterColorHandlersEvent.Item event)
 	{
 		for (Entry<MaterialType, Map<MaterialState, RegistryObject<Item>>> entry : MoreMekanismProcessingItems.PROCESSING_ITEMS.entrySet())
 		{
@@ -31,7 +28,7 @@ public class ClientHandler
 
 			for (RegistryObject<Item> item : entry.getValue().values())
 			{
-				event.getItemColors().register(itemColor, item.get());
+				event.register(itemColor, item.get());
 			}
 
 		}

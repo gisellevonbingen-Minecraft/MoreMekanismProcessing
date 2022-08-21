@@ -33,7 +33,7 @@ public class ProcessingLevelCondition implements ICondition
 	}
 
 	@Override
-	public boolean test()
+	public boolean test(IContext context)
 	{
 		if (this.materialType == null)
 		{

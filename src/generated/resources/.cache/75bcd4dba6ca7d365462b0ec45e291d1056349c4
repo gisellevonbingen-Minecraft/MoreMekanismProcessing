@@ -1,0 +1,8 @@
+// 1.19.2	2022-08-21T12:29:33.0826805	Tags for minecraft:block
+717965473e365fa4beb1d9328db50593ab672220 data/forge/tags/blocks/ores.json
+76fb4d5c41e2ea389d2ba34c042bbb0463ec6f2e data/forge/tags/blocks/ores/aluminum.json
+ba8922c9b25ba08aa639088241ccb4cf7ce24279 data/forge/tags/blocks/ores/amethyst.json
+1d29e78fb56bd5dcd15a84d0f9ab65a5a3fbbe5a data/forge/tags/blocks/ores/sapphire.json
+557e1174d29fb79c1893177fff781c2ddd6fb56e data/forge/tags/blocks/ores/titanium.json
+881501073c99f7d36e5e3c456313782af2214a5e data/forge/tags/blocks/ores/uranium.json
+881501073c99f7d36e5e3c456313782af2214a5e data/forge/tags/blocks/ores/yellorite.json

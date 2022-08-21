@@ -2,17 +2,17 @@
   "type": "minecraft:smelting",
   "conditions": [
     {
+      "type": "moremekanismprocessing:processing_level",
       "materialType": "ostrum",
-      "requireLevel": 2,
-      "type": "moremekanismprocessing:processing_level"
+      "requireLevel": 2
     }
   ],
-  "result": {
-    "item": "moremekanismprocessing:ostrum_ingot"
-  },
+  "cookingtime": 200,
+  "experience": 0.3,
   "ingredient": {
     "tag": "forge:dusts/ostrum"
   },
-  "experience": 0.3,
-  "cookingtime": 200
+  "result": {
+    "item": "moremekanismprocessing:ostrum_ingot"
+  }
 }

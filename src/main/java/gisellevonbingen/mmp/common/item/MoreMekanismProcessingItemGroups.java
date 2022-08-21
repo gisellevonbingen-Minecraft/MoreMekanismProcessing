@@ -4,7 +4,6 @@ import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import mekanism.common.registries.MekanismBlocks;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
@@ -69,7 +68,7 @@ public class MoreMekanismProcessingItemGroups
 		@Override
 		public Component getDisplayName()
 		{
-			return new TextComponent(MoreMekanismProcessing.MODANME);
+			return Component.literal(MoreMekanismProcessing.MODANME);
 		};
 
 	};

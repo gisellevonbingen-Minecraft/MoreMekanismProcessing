@@ -13,6 +13,7 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemModelGenerator extends ItemModelProvider
 {
@@ -37,7 +38,7 @@ public class ItemModelGenerator extends ItemModelProvider
 				if (materialState.hasOwnItem() == true && materialType.getPresetItem(materialState) == null)
 				{
 					Item item = materialState.getItem(materialType);
-					ItemModelBuilder builder = this.singleTexture(item.getRegistryName().getPath(), this.mcLoc("item/generated"), "layer0", this.getTexture(materialState));
+					ItemModelBuilder builder = this.singleTexture(ForgeRegistries.ITEMS.getKey(item).getPath(), this.mcLoc("item/generated"), "layer0", this.getTexture(materialState));
 
 					if (hasOverlay.contains(materialState) == true)
 					{

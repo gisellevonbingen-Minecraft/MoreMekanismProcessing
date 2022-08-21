@@ -1,20 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "moremekanismprocessing:ostrum_ingot",
-  "result": {
-    "item": "moremekanismprocessing:ostrum_ingot"
+  "key": {
+    "#": {
+      "tag": "forge:nuggets/ostrum"
+    },
+    "*": {
+      "item": "moremekanismprocessing:ostrum_nugget"
+    }
   },
   "pattern": [
     "###",
     "#*#",
     "###"
   ],
-  "key": {
-    "*": {
-      "item": "moremekanismprocessing:ostrum_nugget"
-    },
-    "#": {
-      "tag": "forge:nuggets/ostrum"
-    }
+  "result": {
+    "item": "moremekanismprocessing:ostrum_ingot"
   }
 }
