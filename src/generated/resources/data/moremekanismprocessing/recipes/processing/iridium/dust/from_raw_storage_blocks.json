@@ -1,0 +1,26 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:storage_blocks/raw_iridium",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "materialType": "iridium",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:storage_blocks/raw_iridium"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_iridium",
+    "count": 12
+  }
+}
