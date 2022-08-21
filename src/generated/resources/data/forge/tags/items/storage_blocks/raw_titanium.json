@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "voluminousenergy:raw_rutile_block",
+      "required": false
+    }
+  ]
+}

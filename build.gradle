@@ -82,7 +82,7 @@ repositories {
     }
     maven {
         name "CurseForge"
-        url = "https://www.cursemaven.com"
+        url "https://www.cursemaven.com"
     }
 }
 
@@ -104,10 +104,10 @@ dependencies {
     compileOnly fg.deobf("curse.maven:refined-storage-243076:${refined_storage_file}")
 
     // Mekanism
-    implementation fg.deobf("mekanism:Mekanism:${mekanism_version}")
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:additions")
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:generators")
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:tools")
+    implementation fg.deobf("mekanism:Mekanism:${mc_version}-${mekanism_version}")
+    runtimeOnly fg.deobf("mekanism:Mekanism:${mc_version}-${mekanism_version}:additions")
+    runtimeOnly fg.deobf("mekanism:Mekanism:${mc_version}-${mekanism_version}:generators")
+    runtimeOnly fg.deobf("mekanism:Mekanism:${mc_version}-${mekanism_version}:tools")
 }
 
 jar {

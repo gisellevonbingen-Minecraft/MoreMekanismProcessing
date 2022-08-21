@@ -21,37 +21,75 @@ import net.minecraftforge.common.Tags;
 
 public enum MaterialState
 {
-	ORE("ore", Tags.Items.ORES, false),
-	RAW("raw_ore", Tags.Items.RAW_MATERIALS, false),
-	DUST("dust", Tags.Items.DUSTS),
-	DIRTY_DUST("dirty_dust", MekanismTags.Items.DIRTY_DUSTS),
-	CLUMP("clump", MekanismTags.Items.CLUMPS),
-	SHARD("shard", MekanismTags.Items.SHARDS),
-	CRYSTAL("crystal", MekanismTags.Items.CRYSTALS),
-	INGOT("ingot", Tags.Items.INGOTS),
-	GEM("gem", Tags.Items.GEMS),
-	NUGGET("nugget", Tags.Items.NUGGETS),;
+	ORE(new MaterialStateBuilder("ore", Tags.Items.ORES).hasOwnItem(false)),
+	RAW_STORAGE_BLOCKS(new MaterialStateBuilder("raw_storage_blocks", Tags.Items.STORAGE_BLOCKS).tagPrefix("raw_").hasOwnItem(false)),
+	RAW_ITEM(new MaterialStateBuilder("raw_ore", Tags.Items.RAW_MATERIALS).hasOwnItem(false)),
+	DUST(new MaterialStateBuilder("dust", Tags.Items.DUSTS)),
+	DIRTY_DUST(new MaterialStateBuilder("dirty_dust", MekanismTags.Items.DIRTY_DUSTS)),
+	CLUMP(new MaterialStateBuilder("clump", MekanismTags.Items.CLUMPS)),
+	SHARD(new MaterialStateBuilder("shard", MekanismTags.Items.SHARDS)),
+	CRYSTAL(new MaterialStateBuilder("crystal", MekanismTags.Items.CRYSTALS)),
+	INGOT(new MaterialStateBuilder("ingot", Tags.Items.INGOTS)),
+	GEM(new MaterialStateBuilder("gem", Tags.Items.GEMS)),
+	NUGGET(new MaterialStateBuilder("nugget", Tags.Items.NUGGETS)),;
+
+	public static class MaterialStateBuilder
+	{
+		private final String baseName;
+		private final TagKey<Item> categoryTag;
+
+		private boolean hasOwnItem;
+		private String tagPrefix;
+
+		public MaterialStateBuilder(String baseName, TagKey<Item> categoryTag)
+		{
+			this.baseName = baseName;
+			this.categoryTag = categoryTag;
+
+			this.hasOwnItem = true;
+			this.tagPrefix = "";
+		}
+
+		public MaterialStateBuilder hasOwnItem(boolean hasOwnItem)
+		{
+			this.hasOwnItem = hasOwnItem;
+			return this;
+		}
+
+		public MaterialStateBuilder tagPrefix(String tagPrefix)
+		{
+			this.tagPrefix = tagPrefix;
+			return this;
+		}
+
+	}
 
 	private String baseName;
 	private TagKey<Item> categoryTag;
+
 	private boolean hasOwnItem;
+	private String tagPrefix;
 
-	MaterialState(String baseName, TagKey<Item> categoryTag)
+	MaterialState(MaterialStateBuilder builder)
 	{
-		this(baseName, categoryTag, true);
-	}
+		this.baseName = builder.baseName;
+		this.categoryTag = builder.categoryTag;
 
-	MaterialState(String baseName, TagKey<Item> categoryTag, boolean hasOwnItem)
-	{
-		this.baseName = baseName;
-		this.categoryTag = categoryTag;
-		this.hasOwnItem = hasOwnItem;
+		this.hasOwnItem = builder.hasOwnItem;
+		this.tagPrefix = builder.tagPrefix;
 	}
 
 	public ResourceLocation getStateTagName(MaterialType materialType)
 	{
 		ResourceLocation categoryTagName = this.getCategoryTag().location();
-		return new ResourceLocation(categoryTagName.getNamespace(), categoryTagName.getPath() + "/" + materialType.getBaseName());
+		String tagPrefix = this.getTagPrefix();
+
+		StringBuilder pathBuilder = new StringBuilder();
+		pathBuilder.append(categoryTagName.getPath());
+		pathBuilder.append("/");
+		pathBuilder.append(tagPrefix);
+		pathBuilder.append(materialType.getBaseName());
+		return new ResourceLocation(categoryTagName.getNamespace(), pathBuilder.toString());
 	}
 
 	public TagKey<Item> getStateItemTag(MaterialType materialType)
@@ -162,6 +200,11 @@ public enum MaterialState
 	public boolean hasOwnItem()
 	{
 		return this.hasOwnItem;
+	}
+
+	public String getTagPrefix()
+	{
+		return this.tagPrefix;
 	}
 
 }

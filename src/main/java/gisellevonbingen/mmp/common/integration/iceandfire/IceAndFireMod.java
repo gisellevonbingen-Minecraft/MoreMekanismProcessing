@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 public class IceAndFireMod extends IntegrationMod
 {
 	public static final String MODID = "iceandfire";
+
 	public static final ResourceLocation AMYTHEST_ORE = rl("amythest_ore");
 	public static final ResourceLocation SAPPHIRE_ORE = rl("sapphire_ore");
 
