@@ -1,4 +1,4 @@
-// 1.19.2	2022-08-21T12:29:33.09244	Recipes
+// 1.19.2	2022-08-21T12:32:22.9244225	Recipes
 c7daec151751da86b73ab1db956b8e44bb31bab8 data/moremekanismprocessing/recipes/processing/aluminum/clump/from_ore.json
 3d2eba6161c58652e57b4f962878c712add70750 data/moremekanismprocessing/recipes/processing/aluminum/clump/from_raw_ore.json
 0a1ed5f51fc90b2ea084f9cc0a8f510c1139b344 data/moremekanismprocessing/recipes/processing/aluminum/clump/from_shard.json
@@ -293,10 +293,10 @@ cda0a172c1e58e074419b7bf7b3007fdb194be19 data/moremekanismprocessing/recipes/pro
 381d644b40aa5f77fcc0e82f93be27da796e1c2a data/moremekanismprocessing/recipes/processing/lithium/clump/from_shard.json
 83ec5568048e3ec9b31e648a08f25ce71c2c78f1 data/moremekanismprocessing/recipes/processing/lithium/crystal/from_slurry.json
 f9d8c2d24ddce2b6fc1a8e8ba9aeb676326cfd3e data/moremekanismprocessing/recipes/processing/lithium/dirty_dust/from_clump.json
-3b194b6f9e19d61ad8cb6905ae4a64d87a7d28c5 data/moremekanismprocessing/recipes/processing/lithium/dust/from_dirty_dust.json
-8dff548e8e85b02c30448cfeed3f07477ca4b08a data/moremekanismprocessing/recipes/processing/lithium/dust/from_ingot.json
-0005069a00f123101562507e0a0e5df0e19dc495 data/moremekanismprocessing/recipes/processing/lithium/dust/from_ore.json
-13ff1264b793e04f8e64abcf4b394941d8683019 data/moremekanismprocessing/recipes/processing/lithium/dust/from_raw_ore.json
+50ad7a7238406c048fa8c17b2b797e59dd59cd1e data/moremekanismprocessing/recipes/processing/lithium/dust/from_dirty_dust.json
+de7ee45d28155ef84e666a36c4c26eefa2161ddc data/moremekanismprocessing/recipes/processing/lithium/dust/from_ingot.json
+acedf0dd5f073b091527d4691af45f62f009903d data/moremekanismprocessing/recipes/processing/lithium/dust/from_ore.json
+e9c8a7216d1451e36acd440656898b79c97f2a2c data/moremekanismprocessing/recipes/processing/lithium/dust/from_raw_ore.json
 f8a613bf7113984bdfeee7e623f8f1f3c2bc1d99 data/moremekanismprocessing/recipes/processing/lithium/ingot/from_dust_blasting.json
 adf91f6965e9b595ca9233b5c1d01e3b0ca96bbf data/moremekanismprocessing/recipes/processing/lithium/ingot/from_dust_smelting.json
 96dde89211bfbd539bbb03c45be503fe261960b0 data/moremekanismprocessing/recipes/processing/lithium/ingot/from_nugget.json

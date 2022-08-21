@@ -27,7 +27,7 @@ public enum MaterialType
 	ELECTROTINE(new MaterialTypeBuilder("electrotine").resultShape(MaterialResultShape.DUST).displayName("Electrotine").color(0x0CB4F8)),
 	GREENSAPPHIRE(new MaterialTypeBuilder("green_sapphire").resultShape(MaterialResultShape.GEM).displayName("Green Sapphire").color(0x33CC33)),
 	IRIDIUM(new MaterialTypeBuilder("iridium").resultShape(MaterialResultShape.INGOT).displayName("Iridium").color(0xD8D8C4)),
-	LITHIUM(new MaterialTypeBuilder("lithium").resultShape(MaterialResultShape.INGOT).displayName("Lithium").color(0x808080)),
+	LITHIUM(new MaterialTypeBuilder("lithium").resultShape(MaterialResultShape.INGOT).displayName("Lithium").color(0x808080).presetItem(MaterialState.DUST, MekanismItems.LITHIUM_DUST)),
 	NICKEL(new MaterialTypeBuilder("nickel").resultShape(MaterialResultShape.INGOT).displayName("Nickel").color(0xE5E09E)),
 	NITER(new MaterialTypeBuilder("niter").resultShape(MaterialResultShape.GEM).displayName("Niter").color(0xB8AFAF)),
 	PERIDOT(new MaterialTypeBuilder("peridot").resultShape(MaterialResultShape.GEM).displayName("Peridot").color(0x66FF66)),

@@ -1,4 +1,4 @@
-// 1.19.2	2022-08-21T12:29:33.0895127	Item Models: moremekanismprocessing
+// 1.19.2	2022-08-21T12:32:22.93711	Item Models: moremekanismprocessing
 90ea890e6dd18b3b615f8a1e5dba9493a40d1324 assets/moremekanismprocessing/models/item/aluminum_ingot.json
 cd87257445c5814cacbcda2f9c77ac1e85ed3acd assets/moremekanismprocessing/models/item/aluminum_nugget.json
 90ea890e6dd18b3b615f8a1e5dba9493a40d1324 assets/moremekanismprocessing/models/item/azure_silver_ingot.json
@@ -136,7 +136,6 @@ cd87257445c5814cacbcda2f9c77ac1e85ed3acd assets/moremekanismprocessing/models/it
 326cc9b24d900b53fe93fedc81187eae60c423f7 assets/moremekanismprocessing/models/item/dust_electrotine.json
 326cc9b24d900b53fe93fedc81187eae60c423f7 assets/moremekanismprocessing/models/item/dust_green_sapphire.json
 326cc9b24d900b53fe93fedc81187eae60c423f7 assets/moremekanismprocessing/models/item/dust_iridium.json
-326cc9b24d900b53fe93fedc81187eae60c423f7 assets/moremekanismprocessing/models/item/dust_lithium.json
 326cc9b24d900b53fe93fedc81187eae60c423f7 assets/moremekanismprocessing/models/item/dust_nickel.json
 326cc9b24d900b53fe93fedc81187eae60c423f7 assets/moremekanismprocessing/models/item/dust_niter.json
 326cc9b24d900b53fe93fedc81187eae60c423f7 assets/moremekanismprocessing/models/item/dust_ostrum.json

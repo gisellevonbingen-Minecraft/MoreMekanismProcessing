@@ -1,3 +1,48 @@
 {
-  "values": []
+  "values": [
+    {
+      "id": "voluminousenergy:raw_bauxite",
+      "required": false
+    },
+    {
+      "id": "voluminousenergy:raw_rutile",
+      "required": false
+    },
+    {
+      "id": "iceandfire:sapphire_ore",
+      "required": false
+    },
+    {
+      "id": "iceandfire:amythest_ore",
+      "required": false
+    },
+    {
+      "id": "bigreactors:yellorite_ore",
+      "required": false
+    },
+    {
+      "id": "biggerreactors:yellorite_ore",
+      "required": false
+    },
+    {
+      "id": "libvulpes:orerutile",
+      "required": false
+    },
+    {
+      "id": "voluminousenergy:bauxiteore",
+      "required": false
+    },
+    {
+      "id": "voluminousenergy:deepslate_bauxite_ore",
+      "required": false
+    },
+    {
+      "id": "voluminousenergy:rutileore",
+      "required": false
+    },
+    {
+      "id": "voluminousenergy:deepslate_rutile_ore",
+      "required": false
+    }
+  ]
 }
