@@ -13,7 +13,7 @@ public class MoreMekanismProcessingTags
 {
 	public static class Blocks
 	{
-		
+
 	}
 
 	public static class Items

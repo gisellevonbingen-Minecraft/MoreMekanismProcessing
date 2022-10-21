@@ -7,7 +7,6 @@ import javax.annotation.Nullable;
 
 import com.google.common.base.Strings;
 import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -86,10 +85,10 @@ public abstract class RecipeBuilder
 
 				for (ICondition condition : this.conditions)
 				{
-					conditionsArray.add((JsonElement) CraftingHelper.serialize(condition));
+					conditionsArray.add(CraftingHelper.serialize(condition));
 				}
 
-				json.add("conditions", (JsonElement) conditionsArray);
+				json.add("conditions", conditionsArray);
 			}
 
 		}
@@ -110,12 +109,14 @@ public abstract class RecipeBuilder
 			return new ArrayList<>(this.conditions);
 		}
 
+		@Override
 		@Nullable
 		public JsonObject serializeAdvancement()
 		{
 			return null;
 		}
 
+		@Override
 		@Nullable
 		public ResourceLocation getAdvancementId()
 		{

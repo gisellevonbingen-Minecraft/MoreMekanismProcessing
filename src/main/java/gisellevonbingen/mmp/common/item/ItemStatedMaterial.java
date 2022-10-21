@@ -20,7 +20,7 @@ public class ItemStatedMaterial extends Item
 		this.materialType = materialType;
 		this.materialState = materialState;
 	}
-	
+
 	@Override
 	public void fillItemCategory(CreativeModeTab group, NonNullList<ItemStack> list)
 	{

@@ -40,7 +40,7 @@ public class ProcessingLevelCondition implements ICondition
 			return true;
 		}
 
-		int level = (int) MoreMekanismProcessingConfigs.Common.processingLevels.get(this.materialType).get();
+		int level = MoreMekanismProcessingConfigs.Common.processingLevels.get(this.materialType).get();
 		return level >= this.requireLevel;
 	}
 

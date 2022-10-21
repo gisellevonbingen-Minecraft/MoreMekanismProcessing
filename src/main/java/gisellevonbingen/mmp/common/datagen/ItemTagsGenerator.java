@@ -31,7 +31,7 @@ public class ItemTagsGenerator extends ItemTagsProvider
 			{
 				TagAppender<Item> builderCategory = this.tag(materialState.getCategoryTag());
 				TagAppender<Item> builderState = this.tag(materialState.getStateItemTag(materialType));
-				
+
 				if (materialState.hasOwnItem() == true)
 				{
 					ResourceLocation itemName = materialState.getItemName(materialType);

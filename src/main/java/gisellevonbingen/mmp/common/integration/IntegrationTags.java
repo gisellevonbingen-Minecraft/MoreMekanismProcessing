@@ -25,7 +25,7 @@ public class IntegrationTags
 		public static final TagKey<Block> ORES_YELLORITE = BlockTags.create(NAME_ORES_YELLORITE);
 		public static final TagKey<Block> ORES_URANIUM = BlockTags.create(NAME_ORES_URANIUM);
 		public static final TagKey<Block> ORES_ALUMINUM = BlockTags.create(NAME_ORES_ALUMINUM);
-		public static final TagKey<Block> ORES_TITANIUM = BlockTags.create(NAME_ORES_TITANIUM);;
+		public static final TagKey<Block> ORES_TITANIUM = BlockTags.create(NAME_ORES_TITANIUM);
 
 		public static void initialize()
 		{
