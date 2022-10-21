@@ -77,6 +77,7 @@ public class ShapedRecipeBuilder extends SingleOutputRecipeBuilder
 			this.keys = new HashMap<>(builder.keys);
 		}
 
+		@Override
 		public void serializeRecipeData(JsonObject json)
 		{
 			super.serializeRecipeData(json);

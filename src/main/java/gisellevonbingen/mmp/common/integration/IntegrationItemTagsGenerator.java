@@ -49,7 +49,7 @@ public class IntegrationItemTagsGenerator extends ItemTagsProvider
 		for (TagKey<Block> blockTag : this.blockTagsGenerator.getTags())
 		{
 			TagKey<Item> itemTag = ItemTags.create(blockTag.location());
-			this.copy(blockTag, (TagKey<Item>) itemTag);
+			this.copy(blockTag, itemTag);
 		}
 
 	}
