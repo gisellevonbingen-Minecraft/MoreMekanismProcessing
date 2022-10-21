@@ -97,12 +97,12 @@ public class MaterialTypeBuilder
 		this.color = color;
 		return this;
 	}
-	
+
 	public boolean respect()
 	{
 		return this.respect;
 	}
-	
+
 	public MaterialTypeBuilder respect(boolean respect)
 	{
 		this.respect = respect;

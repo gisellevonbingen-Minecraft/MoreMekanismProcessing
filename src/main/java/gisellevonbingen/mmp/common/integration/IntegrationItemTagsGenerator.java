@@ -49,7 +49,7 @@ public class IntegrationItemTagsGenerator extends ItemTagsProvider
 		for (INamedTag<Block> blockTag : this.blockTagsGenerator.getOreTags())
 		{
 			INamedTag<Item> itemTag = ItemTags.bind(blockTag.getName().toString());
-			this.copy(blockTag, (INamedTag<Item>) itemTag);
+			this.copy(blockTag, itemTag);
 		}
 
 	}

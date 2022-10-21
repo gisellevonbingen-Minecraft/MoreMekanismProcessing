@@ -51,6 +51,7 @@ public abstract class SingleOutputRecipeBuilder extends RecipeBuilder
 			this.result = builder.getOutput().copy();
 		}
 
+		@Override
 		public void serializeRecipeData(JsonObject json)
 		{
 			super.serializeRecipeData(json);

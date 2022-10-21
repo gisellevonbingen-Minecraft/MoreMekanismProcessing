@@ -35,7 +35,7 @@ public class CommonConfig
 			{
 				ResourceLocation dustTag = MaterialState.DUST.getStateTagName(materialType);
 				builder.comment("exist for modpacks, set greater than 2 to enable this material recipes", "less than or equals 2 is use Mekanism Default Recipes", "    warning : when enabled, ore block can infinitely regenerate using Mekanism Combiner Default Recipe", "    propose remove/override Mekanism Combiner Default Recipe", "    e.g.) \"ingredient\":{\"tag\":\"" + dustTag + "\"}},\"amount\":8");
-				processingLevel = 0; 
+				processingLevel = 0;
 			}
 
 			this.processingLevels.put(materialType, builder.defineInRange("processingLevel", processingLevel, 0, 5));

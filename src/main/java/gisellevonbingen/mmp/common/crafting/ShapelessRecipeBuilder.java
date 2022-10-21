@@ -47,7 +47,7 @@ public class ShapelessRecipeBuilder extends SingleOutputRecipeBuilder
 
 	public IRecipeSerializer<?> getType()
 	{
-		return (IRecipeSerializer<?>) IRecipeSerializer.SHAPELESS_RECIPE;
+		return IRecipeSerializer.SHAPELESS_RECIPE;
 	}
 
 	public static class Result extends SingleOutputRecipeResult

@@ -33,8 +33,7 @@ public class VoluminousEnergyMod extends IntegrationMod
 		generator.tagOres(IntegrationTags.Blocks.ORES_ALUMINUM, BAUXITE_ORE);
 		generator.tagOres(IntegrationTags.Blocks.ORES_TITANIUM, RUTILE_ORE);
 	}
-	
-	
+
 	@Override
 	public void addItemTags(IntegrationItemTagsGenerator generator)
 	{
