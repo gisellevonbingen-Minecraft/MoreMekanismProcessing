@@ -38,13 +38,13 @@ public class VoluminousEnergyMod extends IntegrationMod
 	{
 		super.addBlockTags(generator);
 
-		generator.tagOres(IntegrationTags.Blocks.ORES_ALUMINUM, BAUXITE_ORE);
-		generator.tagOres(IntegrationTags.Blocks.ORES_ALUMINUM, BAUXITE_DEEPSLATE_ORE);
-		generator.tag(MaterialState.RAW_STORAGE_BLOCKS.getStateBlockTag(MaterialType.ALUMINUM), BAUXITE_RAW_STORAGE_BLOCK);
+		generator.tagOresOptional(IntegrationTags.Blocks.ORES_ALUMINUM, BAUXITE_ORE);
+		generator.tagOresOptional(IntegrationTags.Blocks.ORES_ALUMINUM, BAUXITE_DEEPSLATE_ORE);
+		generator.tagOptional(MaterialState.RAW_STORAGE_BLOCKS.getStateBlockTag(MaterialType.ALUMINUM), BAUXITE_RAW_STORAGE_BLOCK);
 
-		generator.tagOres(IntegrationTags.Blocks.ORES_TITANIUM, RUTILE_ORE);
-		generator.tagOres(IntegrationTags.Blocks.ORES_TITANIUM, RUTILE_DEEPSLATE_ORE);
-		generator.tag(MaterialState.RAW_STORAGE_BLOCKS.getStateBlockTag(MaterialType.TITANIUM), RUTILE_RAW_STORAGE_BLOCK);
+		generator.tagOresOptional(IntegrationTags.Blocks.ORES_TITANIUM, RUTILE_ORE);
+		generator.tagOresOptional(IntegrationTags.Blocks.ORES_TITANIUM, RUTILE_DEEPSLATE_ORE);
+		generator.tagOptional(MaterialState.RAW_STORAGE_BLOCKS.getStateBlockTag(MaterialType.TITANIUM), RUTILE_RAW_STORAGE_BLOCK);
 	}
 
 	@Override
@@ -52,9 +52,9 @@ public class VoluminousEnergyMod extends IntegrationMod
 	{
 		super.addItemTags(generator);
 
-		generator.tag(MaterialState.RAW_ITEM.getStateItemTag(MaterialType.ALUMINUM), BAUXITE_RAW_ITEM);
+		generator.tagOptional(MaterialState.RAW_ITEM.getStateItemTag(MaterialType.ALUMINUM), BAUXITE_RAW_ITEM);
 
-		generator.tag(MaterialState.RAW_ITEM.getStateItemTag(MaterialType.TITANIUM), RUTILE_RAW_ITEM);
+		generator.tagOptional(MaterialState.RAW_ITEM.getStateItemTag(MaterialType.TITANIUM), RUTILE_RAW_ITEM);
 	}
 
 	@Override

@@ -34,7 +34,7 @@ import mekanism.api.recipes.ingredients.ItemStackIngredient;
 import mekanism.api.recipes.ingredients.creator.IngredientCreatorAccess;
 import mekanism.common.registration.impl.SlurryRegistryObject;
 import mekanism.common.registries.MekanismGases;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.resources.ResourceLocation;
@@ -51,13 +51,13 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class RecipesGenerator extends RecipeProvider
 {
-	public RecipesGenerator(DataGenerator generator)
+	public RecipesGenerator(PackOutput output)
 	{
-		super(generator);
+		super(output);
 	}
 
 	@Override
-	protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
+	protected void buildRecipes(Consumer<FinishedRecipe> consumer)
 	{
 		for (MaterialType materialType : MaterialType.values())
 		{

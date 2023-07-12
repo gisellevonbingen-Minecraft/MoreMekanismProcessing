@@ -30,9 +30,9 @@ public class BluePowerMod extends IntegrationMod
 	{
 		super.addItemTags(generator);
 
-		generator.tag(MaterialState.RAW_ITEM.getStateItemTag(MaterialType.SILVER), SILVER_RAW_ITEM);
-		generator.tag(MaterialState.RAW_ITEM.getStateItemTag(MaterialType.ZINC), ZINC_RAW_ITEM);
-		generator.tag(MaterialState.RAW_ITEM.getStateItemTag(MaterialType.TUNGSTEN), TUNGSTEN_RAW_ITEM);
+		generator.tagOptional(MaterialState.RAW_ITEM.getStateItemTag(MaterialType.SILVER), SILVER_RAW_ITEM);
+		generator.tagOptional(MaterialState.RAW_ITEM.getStateItemTag(MaterialType.ZINC), ZINC_RAW_ITEM);
+		generator.tagOptional(MaterialState.RAW_ITEM.getStateItemTag(MaterialType.TUNGSTEN), TUNGSTEN_RAW_ITEM);
 	}
 
 	@Override

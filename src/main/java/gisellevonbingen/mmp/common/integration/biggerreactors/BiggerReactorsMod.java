@@ -27,8 +27,8 @@ public class BiggerReactorsMod extends IntegrationMod
 	{
 		super.addBlockTags(generator);
 
-		generator.tagOres(IntegrationTags.Blocks.ORES_YELLORITE, YELLORITE_ORE);
-		generator.tagOres(IntegrationTags.Blocks.ORES_URANIUM, YELLORITE_ORE);
+		generator.tagOresOptional(IntegrationTags.Blocks.ORES_YELLORITE, YELLORITE_ORE);
+		generator.tagOresOptional(IntegrationTags.Blocks.ORES_URANIUM, YELLORITE_ORE);
 	}
 
 	@Override

@@ -1,24 +1,24 @@
 package gisellevonbingen.mmp.common.datagen;
 
-import gisellevonbingen.mmp.common.MoreMekanismProcessing;
+import java.util.concurrent.CompletableFuture;
+
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
-import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class ItemTagsGenerator extends ItemTagsProvider
+public class ItemTagsGenerator extends AbstractItemTagsGenerator
 {
-	public ItemTagsGenerator(DataGenerator p_i244817_1_, BlockTagsProvider p_i244817_2_, ExistingFileHelper p_i244817_4_)
+	public ItemTagsGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, BlockTagsGenerator blockTagsGenerator, ExistingFileHelper existingFileHelper)
 	{
-		super(p_i244817_1_, p_i244817_2_, MoreMekanismProcessing.MODID, p_i244817_4_);
+		super(output, lookupProvider, blockTagsGenerator, existingFileHelper);
 	}
 
 	@Override
-	protected void addTags()
+	protected void addTags(HolderLookup.Provider lookupProvider)
 	{
 		this.buildStatedMaterials();
 	}

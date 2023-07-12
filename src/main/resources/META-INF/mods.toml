@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[43,)"
+loaderVersion="[47,)"
 license="MIT"
 issueTrackerURL="https://github.com/gisellevonbingen/Minecraft-MoreMekanismProcessing/issues"
 
@@ -14,20 +14,20 @@ issueTrackerURL="https://github.com/gisellevonbingen/Minecraft-MoreMekanismProce
 [[dependencies.moremekanismprocessing]]
     modId="forge"
     mandatory=true
-    versionRange="[43,)"
+    versionRange="[47.0.45,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.moremekanismprocessing]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.2,)"
+    versionRange="[1.20.1,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.moremekanismprocessing]]
     modId="mekanism"
     mandatory=true
-    versionRange="[10.3.2,)"
+    versionRange="[10.3.9,)"
     ordering="AFTER"
     side="BOTH"

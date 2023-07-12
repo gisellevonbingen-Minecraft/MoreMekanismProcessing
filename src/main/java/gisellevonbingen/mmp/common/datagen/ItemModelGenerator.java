@@ -3,11 +3,13 @@ package gisellevonbingen.mmp.common.datagen;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.jetbrains.annotations.Nullable;
+
 import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
 import mekanism.common.Mekanism;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
@@ -17,9 +19,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemModelGenerator extends ItemModelProvider
 {
-	public ItemModelGenerator(DataGenerator generator, ExistingFileHelper existingFileHelper)
+	public ItemModelGenerator(PackOutput output, @Nullable ExistingFileHelper existingFileHelper)
 	{
-		super(generator, MoreMekanismProcessing.MODID, existingFileHelper);
+		super(output, MoreMekanismProcessing.MODID, existingFileHelper);
 	}
 
 	@Override

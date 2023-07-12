@@ -1,31 +1,34 @@
 package gisellevonbingen.mmp.common.item;
 
+import java.util.List;
+import java.util.function.Supplier;
+
 import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import mekanism.common.registries.MekanismBlocks;
-import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.registries.RegistryObject;
 
 public class MoreMekanismProcessingItemGroups
 {
-	public static final CreativeModeTab tabMoreMekanismProcessing = new CreativeModeTab(MoreMekanismProcessing.MODID)
+	public static final CreativeModeTab tabMoreMekanismProcessing = CreativeModeTab.builder().title(Component.literal(MoreMekanismProcessing.MODANME)).icon(new Supplier<ItemStack>()
 	{
-		NonNullList<ItemStack> itemStacks = NonNullList.create();
 		int iconIndex = 0;
 		long lastMillis = 0L;
 		ItemStack icon = null;
 		ItemStack fallbackIcon = null;
 
-		@Override
 		public ItemStack makeIcon()
 		{
-			int size = this.itemStacks.size();
+			List<RegistryObject<Item>> entries = MoreMekanismProcessingItems.REGISTER.getEntries().stream().toList();
+			int size = entries.size();
 
 			if (size > 0)
 			{
 				this.iconIndex = this.iconIndex % size;
-				return this.itemStacks.get(this.iconIndex);
+				return new ItemStack(entries.get(this.iconIndex).get());
 			}
 			else if (this.fallbackIcon == null)
 			{
@@ -36,7 +39,7 @@ public class MoreMekanismProcessingItemGroups
 		}
 
 		@Override
-		public ItemStack getIconItem()
+		public ItemStack get()
 		{
 			long millis = System.currentTimeMillis();
 
@@ -55,22 +58,12 @@ public class MoreMekanismProcessingItemGroups
 
 			return this.icon;
 		};
-
-		@Override
-		public void fillItemList(NonNullList<ItemStack> list)
+	}).displayItems((parameters, output) ->
+	{
+		MoreMekanismProcessingItems.REGISTER.getEntries().stream().map(RegistryObject<Item>::get).filter(item ->
 		{
-			this.itemStacks.clear();
-			super.fillItemList(this.itemStacks);
-
-			list.addAll(this.itemStacks);
-		};
-
-		@Override
-		public Component getDisplayName()
-		{
-			return Component.literal(MoreMekanismProcessing.MODANME);
-		};
-
-	};
+			return item instanceof ItemStatedMaterial i ? MoreMekanismProcessingItems.testProcessingLevel(i.getMaterialType(), i.getOreState()) : true;
+		});
+	}).build();
 
 }

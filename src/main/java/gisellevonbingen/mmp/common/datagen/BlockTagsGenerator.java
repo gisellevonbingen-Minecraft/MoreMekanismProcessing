@@ -1,19 +1,22 @@
 package gisellevonbingen.mmp.common.datagen;
 
-import gisellevonbingen.mmp.common.MoreMekanismProcessing;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import java.util.concurrent.CompletableFuture;
+
+import org.jetbrains.annotations.Nullable;
+
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class BlockTagsGenerator extends BlockTagsProvider
+public class BlockTagsGenerator extends AbstractBlockTagsGenerator
 {
-	public BlockTagsGenerator(DataGenerator p_i244820_1_, ExistingFileHelper p_i244820_3_)
+	public BlockTagsGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper)
 	{
-		super(p_i244820_1_, MoreMekanismProcessing.MODID, p_i244820_3_);
+		super(output, lookupProvider, existingFileHelper);
 	}
 
 	@Override
-	protected void addTags()
+	public void addTags(HolderLookup.Provider lookupProvider)
 	{
 
 	}

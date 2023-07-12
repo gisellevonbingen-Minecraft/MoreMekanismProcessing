@@ -6,14 +6,14 @@ import gisellevonbingen.mmp.common.material.MaterialType;
 import gisellevonbingen.mmp.common.slurry.MoreMekanismProcessingSlurries;
 import gisellevonbingen.mmp.common.slurry.MoreMekanismProcessingSlurry;
 import gisellevonbingen.mmp.common.slurry.MoreMekanismProcessingSlurryBuilder;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
 public class LanguagesGenerator extends LanguageProvider
 {
-	public LanguagesGenerator(DataGenerator generator)
+	public LanguagesGenerator(PackOutput output)
 	{
-		super(generator, MoreMekanismProcessing.MODID, "en_us");
+		super(output, MoreMekanismProcessing.MODID, "en_us");
 	}
 
 	@Override

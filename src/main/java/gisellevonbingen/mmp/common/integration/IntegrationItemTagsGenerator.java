@@ -1,85 +1,44 @@
 package gisellevonbingen.mmp.common.integration;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 
-import gisellevonbingen.mmp.common.MoreMekanismProcessing;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.ItemTagsProvider;
+import gisellevonbingen.mmp.common.datagen.AbstractBlockTagsGenerator;
+import gisellevonbingen.mmp.common.datagen.AbstractItemTagsGenerator;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.Tags.Items;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class IntegrationItemTagsGenerator extends ItemTagsProvider
+public class IntegrationItemTagsGenerator extends AbstractItemTagsGenerator
 {
-	protected final IntegrationBlockTagsGenerator blockTagsGenerator;
-	private final Map<TagKey<Item>, List<ResourceLocation>> tags;
-	private final List<TagKey<Item>> oreTags;
-
-	public IntegrationItemTagsGenerator(DataGenerator generator, IntegrationBlockTagsGenerator blockTagsGenerator, ExistingFileHelper existingFileHelper)
+	public IntegrationItemTagsGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, AbstractBlockTagsGenerator blockTagsGenerator, ExistingFileHelper existingFileHelper)
 	{
-		super(generator, blockTagsGenerator, MoreMekanismProcessing.MODID, existingFileHelper);
-
-		this.blockTagsGenerator = blockTagsGenerator;
-		this.tags = new HashMap<>();
-		this.oreTags = new ArrayList<>();
+		super(output, lookupProvider, blockTagsGenerator, existingFileHelper);
 	}
 
 	@Override
-	protected void addTags()
+	protected void addTags(HolderLookup.Provider lookupProvider)
 	{
 		MoreMekanismProcessingIntagrations.getMods().forEach(m -> m.addItemTags(this));
 		this.copyTags();
 	}
 
-	@Override
-	public void copy(TagKey<Block> blockTag, TagKey<Item> itemTag)
-	{
-		super.copy(blockTag, itemTag);
-	}
-
 	protected void copyTags()
 	{
-		for (TagKey<Block> blockTag : this.blockTagsGenerator.getTags())
+		this.blockTagGenerator.streamTags().forEach(blockTag ->
 		{
 			TagKey<Item> itemTag = ItemTags.create(blockTag.location());
 			this.copy(blockTag, itemTag);
-		}
+		});
 
 	}
 
-	public void tagOres(TagKey<Item> tag, ResourceLocation blockName)
+	public void tagOptional(TagKey<Item> tag, ResourceLocation blockName)
 	{
-		this.targOres0(Items.ORES, blockName);
-		this.targOres0(tag, blockName);
-	}
-
-	private void targOres0(TagKey<Item> tag, ResourceLocation blockName)
-	{
-		if (this.oreTags.contains(tag) == false)
-		{
-			this.oreTags.add(tag);
-		}
-
-		this.tag(tag, blockName);
-	}
-
-	public void tag(TagKey<Item> tag, ResourceLocation blockName)
-	{
-		List<ResourceLocation> list = this.tags.computeIfAbsent(tag, t -> new ArrayList<>());
-
-		if (list.contains(blockName) == false)
-		{
-			this.tag(tag).addOptional(blockName);
-			list.add(blockName);
-		}
-
+		this.tag(tag).addOptional(blockName);
 	}
 
 }
