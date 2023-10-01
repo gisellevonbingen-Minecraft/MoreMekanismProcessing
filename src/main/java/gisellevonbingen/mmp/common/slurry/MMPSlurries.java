@@ -12,9 +12,8 @@ import mekanism.api.chemical.slurry.SlurryBuilder;
 import mekanism.common.registration.impl.SlurryRegistryObject;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.eventbus.api.IEventBus;
 
-public class MoreMekanismProcessingSlurries
+public class MMPSlurries
 {
 	public static final SlurryDeferredRegister2 SLURRIES = new SlurryDeferredRegister2(MoreMekanismProcessing.MODID);
 	public static final Map<MaterialType, SlurryRegistryObject<Slurry, Slurry>> MAP = new HashMap<>();
@@ -24,22 +23,15 @@ public class MoreMekanismProcessingSlurries
 		return MAP.get(materialType);
 	}
 
-	public static void register(IEventBus eventBus)
+	static
 	{
-		register(eventBus, SLURRIES);
-	}
-
-	public static void register(IEventBus eventBus, SlurryDeferredRegister2 register)
-	{
-		register.register(eventBus);
-
 		for (MaterialType materialType : MaterialType.values())
 		{
 			MaterialState crystal = MaterialState.CRYSTAL;
 
 			if (materialType.getResultShape().canProcess(crystal) == true)
 			{
-				SlurryRegistryObject<Slurry, Slurry> registryObject = register.register(materialType, new SlurryBuildOperator(materialType));
+				SlurryRegistryObject<Slurry, Slurry> registryObject = SLURRIES.register(materialType, new SlurryBuildOperator(materialType));
 				MAP.put(materialType, registryObject);
 			}
 

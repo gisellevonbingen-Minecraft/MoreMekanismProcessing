@@ -6,7 +6,7 @@ import org.jetbrains.annotations.Nullable;
 
 import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import gisellevonbingen.mmp.common.material.MaterialType;
-import gisellevonbingen.mmp.common.slurry.MoreMekanismProcessingSlurries;
+import gisellevonbingen.mmp.common.slurry.MMPSlurries;
 import mekanism.api.chemical.slurry.Slurry;
 import mekanism.api.datagen.tag.ChemicalTagsProvider.SlurryTagsProvider;
 import mekanism.common.registration.impl.SlurryRegistryObject;
@@ -30,7 +30,7 @@ public class SlurryTagGenerator extends SlurryTagsProvider
 
 		for (MaterialType materialType : MaterialType.values())
 		{
-			SlurryRegistryObject<Slurry, Slurry> registry = MoreMekanismProcessingSlurries.getSlurryRegistry(materialType);
+			SlurryRegistryObject<Slurry, Slurry> registry = MMPSlurries.getSlurryRegistry(materialType);
 
 			if (registry != null)
 			{

@@ -1,7 +1,7 @@
 package gisellevonbingen.mmp.common.integration.voluminousenergy;
 
-import gisellevonbingen.mmp.common.integration.IntegrationBlockTagsGenerator;
-import gisellevonbingen.mmp.common.integration.IntegrationItemTagsGenerator;
+import gisellevonbingen.mmp.common.datagen.BlockTagsGenerator;
+import gisellevonbingen.mmp.common.datagen.ItemTagsGenerator;
 import gisellevonbingen.mmp.common.integration.IntegrationMod;
 import gisellevonbingen.mmp.common.integration.IntegrationTags;
 import gisellevonbingen.mmp.common.material.MaterialState;
@@ -34,7 +34,7 @@ public class VoluminousEnergyMod extends IntegrationMod
 	}
 
 	@Override
-	public void addBlockTags(IntegrationBlockTagsGenerator generator)
+	public void addBlockTags(BlockTagsGenerator generator)
 	{
 		super.addBlockTags(generator);
 
@@ -48,7 +48,7 @@ public class VoluminousEnergyMod extends IntegrationMod
 	}
 
 	@Override
-	public void addItemTags(IntegrationItemTagsGenerator generator)
+	public void addItemTags(ItemTagsGenerator generator)
 	{
 		super.addItemTags(generator);
 

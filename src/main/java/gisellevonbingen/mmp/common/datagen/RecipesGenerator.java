@@ -14,9 +14,9 @@ import gisellevonbingen.mmp.common.crafting.conditions.ProcessingLevelCondition;
 import gisellevonbingen.mmp.common.material.MaterialResultShape;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
-import gisellevonbingen.mmp.common.slurry.MoreMekanismProcessingSlurries;
-import gisellevonbingen.mmp.common.slurry.MoreMekanismProcessingSlurry;
-import gisellevonbingen.mmp.common.slurry.MoreMekanismProcessingSlurryBuilder;
+import gisellevonbingen.mmp.common.slurry.MMPSlurries;
+import gisellevonbingen.mmp.common.slurry.MMPSlurry;
+import gisellevonbingen.mmp.common.slurry.MMPSlurryBuilder;
 import gisellevonbingen.mmp.common.util.ThreeFunction;
 import mekanism.api.chemical.gas.Gas;
 import mekanism.api.chemical.gas.GasStack;
@@ -141,7 +141,7 @@ public class RecipesGenerator extends RecipeProvider
 		{
 			if (this.canProcess(MaterialState.CRYSTAL) == true)
 			{
-				SlurryRegistryObject<Slurry, Slurry> slurryRegistry = MoreMekanismProcessingSlurries.getSlurryRegistry(this.materialType);
+				SlurryRegistryObject<Slurry, Slurry> slurryRegistry = MMPSlurries.getSlurryRegistry(this.materialType);
 				Slurry dirtySlurry = slurryRegistry.getDirtySlurry();
 				Slurry cleanSlurry = slurryRegistry.getCleanSlurry();
 				FluidStackIngredient water = IngredientCreatorAccess.fluid().from(Fluids.WATER, 5);
@@ -339,7 +339,7 @@ public class RecipesGenerator extends RecipeProvider
 			ChemicalCrystallizerRecipeBuilder builder = ChemicalCrystallizerRecipeBuilder.crystallizing(slurryInput, output);
 
 			this.applyCondition(builder::addCondition);
-			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from(MoreMekanismProcessingSlurry.SLURRY)));
+			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from(MMPSlurry.SLURRY)));
 		}
 
 		public void buildChemicalWashing(FluidStackIngredient fluidInput, Slurry slurryInput, Slurry slurryOutput)
@@ -349,7 +349,7 @@ public class RecipesGenerator extends RecipeProvider
 			FluidSlurryToSlurryRecipeBuilder builder = FluidSlurryToSlurryRecipeBuilder.washing(fluidInput, slurryStackInput, slurryStackOutput);
 
 			this.applyCondition(builder::addCondition);
-			builder.build(this.consumer, this.getRecipeName(MoreMekanismProcessingSlurry.SLURRY, MoreMekanismProcessingSlurryBuilder.CLEAN));
+			builder.build(this.consumer, this.getRecipeName(MMPSlurry.SLURRY, MMPSlurryBuilder.CLEAN));
 		}
 
 		public void buildChemicalDissolution(MaterialState stateInput, int inputCount, Slurry slurryOutput, int outputAmount, GasStackIngredient gasInput)
@@ -359,7 +359,7 @@ public class RecipesGenerator extends RecipeProvider
 			ChemicalDissolutionRecipeBuilder builder = ChemicalDissolutionRecipeBuilder.dissolution(itemInput, gasInput, slurryStackOutput);
 
 			this.applyConditionWithState(builder::addCondition, stateInput);
-			builder.build(this.consumer, this.getRecipeName(MoreMekanismProcessingSlurry.SLURRY, MoreMekanismProcessingSlurryBuilder.DIRTY + "/" + stateInput.getBaseName()));
+			builder.build(this.consumer, this.getRecipeName(MMPSlurry.SLURRY, MMPSlurryBuilder.DIRTY + "/" + stateInput.getBaseName()));
 		}
 
 		public void buildItemStackGasToItemStack(MaterialState stateInput, int inputCount, MaterialState stateOutput, int outputCount, GasStackIngredient gasInput, ThreeFunction<ItemStackIngredient, GasStackIngredient, ItemStack, ItemStackChemicalToItemStackRecipeBuilder<Gas, GasStack, GasStackIngredient>> function)

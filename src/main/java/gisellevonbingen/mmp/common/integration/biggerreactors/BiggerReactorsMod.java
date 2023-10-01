@@ -1,6 +1,6 @@
 package gisellevonbingen.mmp.common.integration.biggerreactors;
 
-import gisellevonbingen.mmp.common.integration.IntegrationBlockTagsGenerator;
+import gisellevonbingen.mmp.common.datagen.BlockTagsGenerator;
 import gisellevonbingen.mmp.common.integration.IntegrationMod;
 import gisellevonbingen.mmp.common.integration.IntegrationTags;
 import net.minecraft.resources.ResourceLocation;
@@ -23,7 +23,7 @@ public class BiggerReactorsMod extends IntegrationMod
 	}
 
 	@Override
-	public void addBlockTags(IntegrationBlockTagsGenerator generator)
+	public void addBlockTags(BlockTagsGenerator generator)
 	{
 		super.addBlockTags(generator);
 

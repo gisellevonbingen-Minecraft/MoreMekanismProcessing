@@ -47,6 +47,11 @@ public class ItemModelGenerator extends ItemModelProvider
 						builder.texture("layer1", this.getMekanismTexture(materialState.getBaseName() + "_overlay"));
 					}
 
+					if (materialState == MaterialState.DIRTY_DUST)
+					{
+						builder.texture("layer2", MoreMekanismProcessing.rl("item/" + materialState.getBaseName() + "_overlay2"));
+					}
+
 				}
 
 			}

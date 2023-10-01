@@ -3,9 +3,7 @@ package gisellevonbingen.mmp.common.datagen;
 import java.util.concurrent.CompletableFuture;
 
 import gisellevonbingen.mmp.common.data.EmptyExistingFileHelper;
-import gisellevonbingen.mmp.common.integration.IntegrationBlockTagsGenerator;
-import gisellevonbingen.mmp.common.integration.IntegrationItemTagsGenerator;
-import gisellevonbingen.mmp.common.integration.MoreMekanismProcessingIntagrations;
+import gisellevonbingen.mmp.common.integration.MMPIntagrations;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -32,13 +30,9 @@ public class DataGenerators
 		generator.addProvider(event.includeServer(), new RecipesGenerator(output));
 		generator.addProvider(event.includeServer(), new LanguagesGenerator(output));
 
-		IntegrationBlockTagsGenerator integrationBlockTagsGenerator = new IntegrationBlockTagsGenerator(output, lookupProvider, existingFileHelper);
-		generator.addProvider(event.includeServer(), integrationBlockTagsGenerator);
-		generator.addProvider(event.includeServer(), new IntegrationItemTagsGenerator(output, lookupProvider, integrationBlockTagsGenerator, existingFileHelper));
-
 		generator.addProvider(event.includeClient(), new ItemModelGenerator(output, new EmptyExistingFileHelper()));
 
-		MoreMekanismProcessingIntagrations.getMods().forEach(m -> m.addDataGenerator(event));
+		MMPIntagrations.getMods().forEach(m -> m.addDataGenerator(event));
 	}
 
 }

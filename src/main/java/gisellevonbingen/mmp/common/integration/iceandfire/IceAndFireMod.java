@@ -1,6 +1,6 @@
 package gisellevonbingen.mmp.common.integration.iceandfire;
 
-import gisellevonbingen.mmp.common.integration.IntegrationBlockTagsGenerator;
+import gisellevonbingen.mmp.common.datagen.BlockTagsGenerator;
 import gisellevonbingen.mmp.common.integration.IntegrationMod;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
@@ -25,7 +25,7 @@ public class IceAndFireMod extends IntegrationMod
 	}
 
 	@Override
-	public void addBlockTags(IntegrationBlockTagsGenerator generator)
+	public void addBlockTags(BlockTagsGenerator generator)
 	{
 		super.addBlockTags(generator);
 

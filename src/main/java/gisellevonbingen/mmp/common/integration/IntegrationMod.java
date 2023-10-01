@@ -1,5 +1,7 @@
 package gisellevonbingen.mmp.common.integration;
 
+import gisellevonbingen.mmp.common.datagen.BlockTagsGenerator;
+import gisellevonbingen.mmp.common.datagen.ItemTagsGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.data.event.GatherDataEvent;
 
@@ -24,12 +26,12 @@ public abstract class IntegrationMod
 
 	}
 
-	public void addBlockTags(IntegrationBlockTagsGenerator generator)
+	public void addBlockTags(BlockTagsGenerator generator)
 	{
 
 	}
 
-	public void addItemTags(IntegrationItemTagsGenerator generator)
+	public void addItemTags(ItemTagsGenerator generator)
 	{
 
 	}

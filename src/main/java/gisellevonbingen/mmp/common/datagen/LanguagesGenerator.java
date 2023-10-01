@@ -3,9 +3,9 @@ package gisellevonbingen.mmp.common.datagen;
 import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
-import gisellevonbingen.mmp.common.slurry.MoreMekanismProcessingSlurries;
-import gisellevonbingen.mmp.common.slurry.MoreMekanismProcessingSlurry;
-import gisellevonbingen.mmp.common.slurry.MoreMekanismProcessingSlurryBuilder;
+import gisellevonbingen.mmp.common.slurry.MMPSlurries;
+import gisellevonbingen.mmp.common.slurry.MMPSlurry;
+import gisellevonbingen.mmp.common.slurry.MMPSlurryBuilder;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
@@ -30,7 +30,7 @@ public class LanguagesGenerator extends LanguageProvider
 		this.add(statedCommentPrefix + (statedCommentLine++), "Items can override this rule thought by declare that item's translation");
 		this.add(statedCommentPrefix + (statedCommentLine++), "    e.g.) '" + MaterialState.INGOT.getItem(MaterialType.COBALT).getDescriptionId() + "' : 'Blue Metal'");
 		this.add(statedCommentPrefix + (statedCommentLine++), "So is slurry");
-		this.add(statedCommentPrefix + (statedCommentLine++), "    e.g.) '" + MoreMekanismProcessingSlurries.getSlurryRegistry(MaterialType.COBALT).getCleanSlurry().getTranslationKey() + "' : 'Clean Blue Metal Slurry'");
+		this.add(statedCommentPrefix + (statedCommentLine++), "    e.g.) '" + MMPSlurries.getSlurryRegistry(MaterialType.COBALT).getCleanSlurry().getTranslationKey() + "' : 'Clean Blue Metal Slurry'");
 
 		this.add(MaterialState.ORE.getStatedDescriptionId(), "%s Ore");
 		this.add(MaterialState.RAW_ITEM.getStatedDescriptionId(), "Raw %s");
@@ -42,8 +42,8 @@ public class LanguagesGenerator extends LanguageProvider
 		this.add(MaterialState.INGOT.getStatedDescriptionId(), "%s Ingot");
 		this.add(MaterialState.NUGGET.getStatedDescriptionId(), "%s Nugget");
 		this.add(MaterialState.GEM.getStatedDescriptionId(), "%s Gem");
-		this.add(MoreMekanismProcessingSlurry.makeDescriptionId(MoreMekanismProcessingSlurryBuilder.DIRTY), "Dirty %s Slurry");
-		this.add(MoreMekanismProcessingSlurry.makeDescriptionId(MoreMekanismProcessingSlurryBuilder.CLEAN), "Clean %s Slurry");
+		this.add(MMPSlurry.makeDescriptionId(MMPSlurryBuilder.DIRTY), "Dirty %s Slurry");
+		this.add(MMPSlurry.makeDescriptionId(MMPSlurryBuilder.CLEAN), "Clean %s Slurry");
 
 		String materialTypeCommentPrefix = MaterialType.makeDescriptionId("_comment");
 		int materialTypeCommentLine = 0;

@@ -13,6 +13,14 @@
       "required": false
     },
     {
+      "id": "bigreactors:yellorite_ore",
+      "required": false
+    },
+    {
+      "id": "biggerreactors:yellorite_ore",
+      "required": false
+    },
+    {
       "id": "biggerreactors:yellorite_ore",
       "required": false
     },

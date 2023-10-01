@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import gisellevonbingen.mmp.common.MoreMekanismProcessing;
-import gisellevonbingen.mmp.common.config.MoreMekanismProcessingConfigs;
+import gisellevonbingen.mmp.common.config.MMPConfigs;
 import mekanism.common.registries.MekanismItems;
 import net.minecraft.Util;
 import net.minecraft.resources.ResourceLocation;
@@ -111,7 +111,7 @@ public enum MaterialType
 
 	public int getColor()
 	{
-		Integer color = MoreMekanismProcessingConfigs.Client.parsedColors.get(this);
+		Integer color = MMPConfigs.CLIENT.parsedColors.get(this);
 		return color != null ? color : this.getDefaultColor();
 	}
 

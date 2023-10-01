@@ -3,8 +3,8 @@ package gisellevonbingen.mmp.common.material;
 import org.apache.commons.lang3.NotImplementedException;
 
 import gisellevonbingen.mmp.common.MoreMekanismProcessing;
-import gisellevonbingen.mmp.common.item.MoreMekanismProcessingItems;
-import gisellevonbingen.mmp.common.tag.MoreMekanismProcessingTags;
+import gisellevonbingen.mmp.common.item.MMPItems;
+import gisellevonbingen.mmp.common.tag.MMPTags;
 import mekanism.common.tags.MekanismTags;
 import net.minecraft.Util;
 import net.minecraft.locale.Language;
@@ -95,7 +95,7 @@ public enum MaterialState
 	{
 		if (this.hasOwnItem() == true)
 		{
-			return MoreMekanismProcessingTags.Items.getProcessingItemTag(materialType, this);
+			return MMPTags.Items.getProcessingItemTag(materialType, this);
 		}
 		else
 		{
@@ -131,7 +131,7 @@ public enum MaterialState
 	{
 		if (this.hasOwnItem() == true)
 		{
-			return MoreMekanismProcessingItems.getProcessingItemName(materialType, this);
+			return MMPItems.getProcessingItemName(materialType, this);
 		}
 		else
 		{
@@ -144,7 +144,7 @@ public enum MaterialState
 	{
 		if (this.hasOwnItem() == true)
 		{
-			return MoreMekanismProcessingItems.getProcessingItem(materialType, this);
+			return MMPItems.getProcessingItem(materialType, this);
 		}
 		else
 		{

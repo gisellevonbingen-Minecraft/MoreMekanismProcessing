@@ -1,6 +1,6 @@
 package gisellevonbingen.mmp.common.integration.bluepower;
 
-import gisellevonbingen.mmp.common.integration.IntegrationItemTagsGenerator;
+import gisellevonbingen.mmp.common.datagen.ItemTagsGenerator;
 import gisellevonbingen.mmp.common.integration.IntegrationMod;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
@@ -26,7 +26,7 @@ public class BluePowerMod extends IntegrationMod
 	}
 
 	@Override
-	public void addItemTags(IntegrationItemTagsGenerator generator)
+	public void addItemTags(ItemTagsGenerator generator)
 	{
 		super.addItemTags(generator);
 

@@ -15,29 +15,29 @@ import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 
 @Mod.EventBusSubscriber
-public class MoreMekanismProcessingConfigs
+public class MMPConfigs
 {
 	public static final Map<ModConfig.Type, ForgeConfigSpec> SPECS;
 
-	public static final CommonConfig Common;
-	public static final ForgeConfigSpec CommonSpec;
+	public static final CommonConfig COMMON;
+	public static final ForgeConfigSpec COMMON_SPEC;
 
-	public static final ClientConfig Client;
-	public static final ForgeConfigSpec ClientSpec;
+	public static final ClientConfig CLIENT;
+	public static final ForgeConfigSpec CLIENT_SPEC;
 
 	static
 	{
 		SPECS = new HashMap<>();
 
 		Pair<CommonConfig, ForgeConfigSpec> common = new ForgeConfigSpec.Builder().configure(CommonConfig::new);
-		Common = common.getLeft();
-		CommonSpec = common.getRight();
-		SPECS.put(ModConfig.Type.COMMON, CommonSpec);
+		COMMON = common.getLeft();
+		COMMON_SPEC = common.getRight();
+		SPECS.put(ModConfig.Type.COMMON, COMMON_SPEC);
 
 		Pair<ClientConfig, ForgeConfigSpec> client = new ForgeConfigSpec.Builder().configure(ClientConfig::new);
-		Client = client.getLeft();
-		ClientSpec = client.getRight();
-		SPECS.put(ModConfig.Type.CLIENT, ClientSpec);
+		CLIENT = client.getLeft();
+		CLIENT_SPEC = client.getRight();
+		SPECS.put(ModConfig.Type.CLIENT, CLIENT_SPEC);
 	}
 
 	public static void register(ModLoadingContext modLoadingContext)
@@ -83,9 +83,9 @@ public class MoreMekanismProcessingConfigs
 
 	public static void parseConfig(ModConfigEvent event)
 	{
-		if (event.getConfig().getSpec() == ClientSpec)
+		if (event.getConfig().getSpec() == CLIENT_SPEC)
 		{
-			Client.parseConfig();
+			CLIENT.parseConfig();
 		}
 
 	}

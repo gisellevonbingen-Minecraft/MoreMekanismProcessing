@@ -1,19 +1,19 @@
 package gisellevonbingen.mmp.common.slurry;
 
-import gisellevonbingen.mmp.common.item.MoreMekanismProcessingItems;
+import gisellevonbingen.mmp.common.item.MMPItems;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
 import mekanism.api.chemical.slurry.Slurry;
 import net.minecraft.network.chat.Component;
 
-public class MoreMekanismProcessingSlurry extends Slurry
+public class MMPSlurry extends Slurry
 {
 	public static final String SLURRY = "slurry";
 
 	private final MaterialType materialType;
 	private final String slurryType;
 
-	public MoreMekanismProcessingSlurry(MoreMekanismProcessingSlurryBuilder builder)
+	public MMPSlurry(MMPSlurryBuilder builder)
 	{
 		super(builder);
 
@@ -60,7 +60,7 @@ public class MoreMekanismProcessingSlurry extends Slurry
 	{
 		MaterialState crystal = MaterialState.CRYSTAL;
 
-		if (MoreMekanismProcessingItems.testProcessingLevel(this.materialType, crystal) == false)
+		if (MMPItems.testProcessingLevel(this.materialType, crystal) == false)
 		{
 			return true;
 		}

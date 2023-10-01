@@ -12,7 +12,7 @@ import gisellevonbingen.mmp.common.integration.iceandfire.IceAndFireMod;
 import gisellevonbingen.mmp.common.integration.libvulpes.LibVulpesMod;
 import gisellevonbingen.mmp.common.integration.voluminousenergy.VoluminousEnergyMod;
 
-public class MoreMekanismProcessingIntagrations
+public class MMPIntagrations
 {
 	private static final List<IntegrationMod> MODS = new ArrayList<>();
 	public static final IceAndFireMod IceAndFire = new IceAndFireMod();

@@ -21,7 +21,8 @@ public class CommonConfig
 
 		builder.pop();
 
-		builder.comment("processingLevel : set ores processing max level", "    5 : can into up x5 (able all procssing)", "    4 : can into up x4 (disable ore dissolution, slurry crystalizing)", "    3 : can into up x3 (disable injecting)", "    2 : can into up x2 (disable purifying and clumps crushing)", "    1 : reserved (currently same with 0)", "    0 : disable all processing in this mod", "disabled processing items are hided your world");
+		builder.comment("processingLevel : set ores processing max level", "    5 : can into up x5 (able all procssing)", "    4 : can into up x4 (disable ore dissolution, slurry crystalizing)", "    3 : can into up x3 (disable injecting)", "    2 : can into up x2 (disable purifying and clumps crushing)", "    1 : reserved (currently same with 0)", "    0 : disable all processing in this mod",
+				"disabled processing items are hided your world");
 		builder.push("ores");
 
 		this.processingLevels = new HashMap<>();
@@ -34,8 +35,9 @@ public class CommonConfig
 			if (materialType.isRespectMekanism() == true)
 			{
 				ResourceLocation dustTag = MaterialState.DUST.getStateTagName(materialType);
-				builder.comment("exist for modpacks, set greater than 2 to enable this material recipes", "less than or equals 2 is use Mekanism Default Recipes", "    warning : when enabled, ore block can infinitely regenerate using Mekanism Combiner Default Recipe", "    propose remove/override Mekanism Combiner Default Recipe", "    e.g.) \"ingredient\":{\"tag\":\"" + dustTag + "\"}},\"amount\":8");
-				processingLevel = 0; 
+				builder.comment("exist for modpacks, set greater than 2 to enable this material recipes", "less than or equals 2 is use Mekanism Default Recipes", "    warning : when enabled, ore block can infinitely regenerate using Mekanism Combiner Default Recipe", "    propose remove/override Mekanism Combiner Default Recipe",
+						"    e.g.) \"ingredient\":{\"tag\":\"" + dustTag + "\"}},\"amount\":8");
+				processingLevel = 0;
 			}
 
 			this.processingLevels.put(materialType, builder.defineInRange("processingLevel", processingLevel, 0, 5));

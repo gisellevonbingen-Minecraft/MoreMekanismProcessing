@@ -3,13 +3,13 @@ package gisellevonbingen.mmp.common;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import gisellevonbingen.mmp.common.block.MoreMekanismProcessingBlocks;
-import gisellevonbingen.mmp.common.config.MoreMekanismProcessingConfigs;
-import gisellevonbingen.mmp.common.crafting.conditions.MoreMekanismProcessingConditions;
+import gisellevonbingen.mmp.common.config.MMPConfigs;
+import gisellevonbingen.mmp.common.crafting.conditions.MMPCraftingConditions;
 import gisellevonbingen.mmp.common.datagen.DataGenerators;
-import gisellevonbingen.mmp.common.integration.MoreMekanismProcessingIntagrations;
-import gisellevonbingen.mmp.common.item.MoreMekanismProcessingItems;
-import gisellevonbingen.mmp.common.slurry.MoreMekanismProcessingSlurries;
+import gisellevonbingen.mmp.common.integration.MMPIntagrations;
+import gisellevonbingen.mmp.common.item.MMPCreativeModeTabs;
+import gisellevonbingen.mmp.common.item.MMPItems;
+import gisellevonbingen.mmp.common.slurry.MMPSlurries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -25,17 +25,17 @@ public class MoreMekanismProcessing
 
 	public MoreMekanismProcessing()
 	{
-		MoreMekanismProcessingConfigs.register(ModLoadingContext.get());
+		MMPConfigs.register(ModLoadingContext.get());
 
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		modEventBus.register(new DataGenerators());
-		modEventBus.register(MoreMekanismProcessingConfigs.class);
+		modEventBus.register(MMPConfigs.class);
 
-		MoreMekanismProcessingBlocks.register(modEventBus);
-		MoreMekanismProcessingItems.register(modEventBus);
-		MoreMekanismProcessingSlurries.register(modEventBus);
-		MoreMekanismProcessingConditions.register();
-		MoreMekanismProcessingIntagrations.initialize();
+		MMPItems.ITEMS.register(modEventBus);
+		MMPSlurries.SLURRIES.register(modEventBus);
+		MMPCreativeModeTabs.TABS.register(modEventBus);
+		MMPCraftingConditions.register();
+		MMPIntagrations.initialize();
 	}
 
 	public static ResourceLocation rl(String path)
