@@ -5,36 +5,36 @@ import java.util.Map;
 
 import org.apache.commons.lang3.tuple.Pair;
 
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.config.ModConfigEvent;
-import net.minecraftforge.fml.loading.FMLEnvironment;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModLoadingContext;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.event.config.ModConfigEvent;
+import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MMPConfigs
 {
-	public static final Map<ModConfig.Type, ForgeConfigSpec> SPECS;
+	public static final Map<ModConfig.Type, ModConfigSpec> SPECS;
 
 	public static final CommonConfig COMMON;
-	public static final ForgeConfigSpec COMMON_SPEC;
+	public static final ModConfigSpec COMMON_SPEC;
 
 	public static final ClientConfig CLIENT;
-	public static final ForgeConfigSpec CLIENT_SPEC;
+	public static final ModConfigSpec CLIENT_SPEC;
 
 	static
 	{
 		SPECS = new HashMap<>();
 
-		Pair<CommonConfig, ForgeConfigSpec> common = new ForgeConfigSpec.Builder().configure(CommonConfig::new);
+		Pair<CommonConfig, ModConfigSpec> common = new ModConfigSpec.Builder().configure(CommonConfig::new);
 		COMMON = common.getLeft();
 		COMMON_SPEC = common.getRight();
 		SPECS.put(ModConfig.Type.COMMON, COMMON_SPEC);
 
-		Pair<ClientConfig, ForgeConfigSpec> client = new ForgeConfigSpec.Builder().configure(ClientConfig::new);
+		Pair<ClientConfig, ModConfigSpec> client = new ModConfigSpec.Builder().configure(ClientConfig::new);
 		CLIENT = client.getLeft();
 		CLIENT_SPEC = client.getRight();
 		SPECS.put(ModConfig.Type.CLIENT, CLIENT_SPEC);
@@ -60,7 +60,7 @@ public class MMPConfigs
 
 	public static void register(ModLoadingContext modLoadingContext, ModConfig.Type type)
 	{
-		ForgeConfigSpec spec = SPECS.get(type);
+		ModConfigSpec spec = SPECS.get(type);
 
 		if (spec != null)
 		{

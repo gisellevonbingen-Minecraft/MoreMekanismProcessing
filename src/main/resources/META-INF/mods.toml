@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[${forge_loader_version},)"
+loaderVersion="[${neoforge_loader_version},)"
 license="${mod_license}"
 issueTrackerURL="${mod_issues}"
 
@@ -12,23 +12,22 @@ issueTrackerURL="${mod_issues}"
     logoFile="icon.png"
     description='''${mod_description}'''
 
-[[dependencies.gravitationalmodulatingunittweaks]]
+[[dependencies.${mod_id}]]
     modId="minecraft"
-    mandatory=true
+    type="required"
     versionRange="[${mc_version},)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.gravitationalmodulatingunittweaks]]
-    modId="forge"
-    mandatory=true
-    versionRange="[${forge_api_version},)"
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="${neoforge_api_version_range}"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.gravitationalmodulatingunittweaks]]
+[[dependencies.${mod_id}]]
     modId="mekanism"
-    mandatory=true
-    versionRange="${mekanism_version_range}"
+    type="required"
     ordering="AFTER"
     side="BOTH"

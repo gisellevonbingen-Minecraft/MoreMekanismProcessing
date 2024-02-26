@@ -13,7 +13,7 @@ import mekanism.common.registration.impl.SlurryRegistryObject;
 import mekanism.common.tags.MekanismTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class SlurryTagGenerator extends SlurryTagsProvider
 {

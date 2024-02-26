@@ -1,13 +1,13 @@
 {
-  "type": "mekanism:crystallizing",
-  "chemicalType": "slurry",
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "moremekanismprocessing:processing_level",
       "materialType": "sulfur",
       "requireLevel": 5
     }
   ],
+  "type": "mekanism:crystallizing",
+  "chemicalType": "slurry",
   "input": {
     "amount": 200,
     "slurry": "moremekanismprocessing:clean_sulfur"

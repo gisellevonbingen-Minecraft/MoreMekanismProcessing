@@ -1,10 +1,9 @@
 {
-  "type": "mekanism:enriching",
-  "conditions": [
+  "neoforge:conditions": [
     {
-      "type": "forge:not",
+      "type": "neoforge:not",
       "value": {
-        "type": "forge:tag_empty",
+        "type": "neoforge:tag_empty",
         "tag": "forge:ores/peridot"
       }
     },
@@ -14,6 +13,7 @@
       "requireLevel": 2
     }
   ],
+  "type": "mekanism:enriching",
   "input": {
     "ingredient": {
       "tag": "forge:ores/peridot"

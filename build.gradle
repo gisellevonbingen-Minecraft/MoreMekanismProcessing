@@ -1,126 +1,91 @@
-buildscript {
-    repositories {
-        maven { url "https://maven.minecraftforge.net" }
-        maven { url "https://repo.spongepowered.org/maven" }
-    }
-    dependencies {
-        classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "5.1.+", changing: true
-        classpath "org.spongepowered:mixingradle:0.7.+"
-    }
-}
-
 plugins {
-	id "java"
-	id "eclipse"
-	id "maven-publish"
-    id "net.minecraftforge.gradle" version "5.1.+"
-    id "org.parchmentmc.librarian.forgegradle" version "1.+"
+    id "net.neoforged.gradle.userdev" version "7.0.80"
 }
 
-apply plugin: "org.spongepowered.mixin"
+apply plugin: "java-library"
+apply plugin: "maven-publish"
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = rootProject.archives_base_name
 version = "${rootProject.mc_version}-${rootProject.mod_version}"
 group = rootProject.maven_group
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
-println("Java: " + System.getProperty("java.version") + " JVM: " + System.getProperty("java.vm.version") + "(" + System.getProperty("java.vendor") + ") Arch: " + System.getProperty("os.arch"))
+repositories {
+	maven {
+		name "JEI"
+		url "https://dvs1.progwml6.com/files/maven"
+	}
+	maven {
+		name "ModMaven"
+		url "https://modmaven.dev"
+	}
+	maven {
+		name "CurseForge"
+		url "https://www.cursemaven.com"
+	}
+	maven {
+		name "Local"
+		url uri("${projectDir}/libs")
+	}
+}
 
-minecraft {
-    mappings channel: "parchment", version: "${parchment_version}-${mc_version}"
+runs {
+	configureEach {
+		systemProperty "forge.logging.markers", "REGISTRIES"
+		systemProperty "forge.logging.console.level", "debug"
 
-    // accessTransformer = file("src/main/resources/META-INF/accesstransformer.cfg")
+		modSource project.sourceSets.main
+	}
 
-    runs {
-        client {
-            workingDirectory project.file("run")
+	client {
+		systemProperty "forge.enabledGameTestNamespaces", project.mod_id
+	}
 
-            property "forge.logging.markers", "REGISTRIES"
-            property "forge.logging.console.level", "debug"
+	server {
+		systemProperty "forge.enabledGameTestNamespaces", project.mod_id
+		programArgument '--nogui'
+	}
 
-            mods {
-                modClientRun {
-                    source sourceSets.main
-                }
-            }
-        }
+	gameTestServer {
+		systemProperty "forge.enabledGameTestNamespaces", project.mod_id
+	}
 
-        server {
-            workingDirectory project.file("run")
-
-            property "forge.logging.markers", "REGISTRIES"
-            property "forge.logging.console.level", "debug"
-
-            mods {
-                modServerRun {
-                    source sourceSets.main
-                }
-            }
-        }
-
-        data {
-            workingDirectory project.file("run")
-
-            property "forge.logging.markers", "REGISTRIES"
-            property "forge.logging.console.level", "debug"
-            args "--mod", "${mod_id}", "--all", "--output", file("src/generated/resources/"), "--existing", file("src/main/resources/")
-
-            mods {
-                modDataRun {
-                    source sourceSets.main
-                }
-            }
-        }
-    }
+	data {
+		programArguments.addAll "--mod", project.mod_id, "--all", "--output", file("src/generated/resources/").getAbsolutePath(), "--existing", file("src/main/resources/").getAbsolutePath()
+	}
 }
 
 sourceSets.main.resources { srcDir "src/generated/resources" }
 
-repositories {
-    maven {
-        name "JEI"
-        url "https://dvs1.progwml6.com/files/maven"
-    }
-    maven {
-        name "ModMaven"
-        url "https://modmaven.dev"
-    }
-    maven {
-        name "CurseForge"
-        url "https://www.cursemaven.com"
-    }
-}
-
 dependencies {
     // Mod
-    minecraft "net.minecraftforge:forge:${mc_version}-${forge_api_version}"
+    implementation "net.neoforged:neoforge:${neoforge_api_version}"
 
-    // Implementation
-    implementation fg.deobf("mekanism:Mekanism:${mc_version}-${mekanism_version}")
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mc_version}-${mekanism_version}:additions")
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mc_version}-${mekanism_version}:generators")
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mc_version}-${mekanism_version}:tools")
+    // Required
+    implementation "mekanism:Mekanism:${mc_version}-${mekanism_version}"
+    runtimeOnly "mekanism:Mekanism:${mc_version}-${mekanism_version}:additions"
+    runtimeOnly "mekanism:Mekanism:${mc_version}-${mekanism_version}:generators"
+    runtimeOnly "mekanism:Mekanism:${mc_version}-${mekanism_version}:tools"
 
     // Runtiem Only
-    implementation fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
-    implementation fg.deobf("curse.maven:the-one-probe-245211:${top_file}")
-    implementation fg.deobf("curse.maven:jade-324717:${jade_file}")
+    implementation "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
 }
 
-def resourceTargets = ["META-INF/mods.toml", "fabric.mod.json"]
-def intoTargets = ["$rootDir/out/production/resources/", "$rootDir/out/production/${project.name}.main/", "$rootDir/bin/main/"]
-def replaceProperties = [mc_version: mc_version,
-	mod_id: mod_id, mod_version: mod_version, mod_name: mod_name, mod_description: mod_description, mod_license: mod_license, mod_homepage: mod_homepage, mod_source: mod_source, mod_issues: mod_issues,
-	forge_api_version: forge_api_version, forge_loader_version: forge_loader_version,
-	mekanism_version: mekanism_version, mekanism_version_range: mekanism_version_range
-]
-
-processResources {
+tasks.withType(ProcessResources).configureEach {
+    var resourceTargets = ["META-INF/mods.toml", "*.json"]
+    var intoTargets = ["$rootDir/out/production/resources/", "$rootDir/out/production/${project.name}.main/", "$rootDir/bin/main/"]
+    var replaceProperties = [mc_version: mc_version,
+        mod_id: mod_id, mod_version: mod_version, mod_name: mod_name, mod_description: mod_description, mod_license: mod_license, mod_homepage: mod_homepage, mod_source: mod_source, mod_issues: mod_issues,
+        neoforge_api_version: neoforge_api_version, neoforge_api_version_range: neoforge_api_version_range, neoforge_loader_version: neoforge_loader_version,
+        mekanism_version_range: mekanism_version_range
+    ]
 	inputs.properties replaceProperties
-	replaceProperties.put "project", project
 
 	filesMatching(resourceTargets) {
-		expand replaceProperties
+		expand replaceProperties + [project: project]
 	}
 
 	intoTargets.each { target ->
@@ -136,23 +101,6 @@ processResources {
 	}
 }
 
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
 	options.encoding = "UTF-8"
-	options.release = 17
 }
-
-jar {
-    manifest {
-        attributes([
-                "Specification-Title"     : "${mod_id}",
-                "Specification-Vendor"    : "gisellevonbingen",
-                "Specification-Version"   : "1",
-                "Implementation-Title"    : project.name,
-                "Implementation-Version"  : "${mod_version}",
-                "Implementation-Vendor"   : "gisellevonbingen",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
-        ])
-    }
-}
-
-jar.finalizedBy("reobfJar")

@@ -1,12 +1,12 @@
 {
-  "type": "mekanism:enriching",
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "moremekanismprocessing:processing_level",
       "materialType": "apatite",
       "requireLevel": 2
     }
   ],
+  "type": "mekanism:enriching",
   "input": {
     "ingredient": {
       "tag": "forge:dusts/apatite"

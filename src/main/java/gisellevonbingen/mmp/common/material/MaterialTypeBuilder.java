@@ -3,11 +3,10 @@ package gisellevonbingen.mmp.common.material;
 import java.util.HashMap;
 import java.util.Map;
 
-import mekanism.common.Mekanism;
-import mekanism.common.registration.WrappedRegistryObject;
+import mekanism.common.registration.impl.ItemRegistryObject;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.registries.ForgeRegistries;
 
 public class MaterialTypeBuilder
 {
@@ -40,24 +39,14 @@ public class MaterialTypeBuilder
 		return this;
 	}
 
-	public MaterialTypeBuilder presetItem(MaterialState state, String modid, String itemName)
-	{
-		return this.presetItem(state, new ResourceLocation(modid, itemName));
-	}
-
 	public MaterialTypeBuilder presetItem(MaterialState state, Item item)
 	{
-		return this.presetItem(state, ForgeRegistries.ITEMS.getKey(item));
+		return this.presetItem(state, BuiltInRegistries.ITEM.getKey(item));
 	}
 
-	public MaterialTypeBuilder presetItem(MaterialState state, WrappedRegistryObject<Item> holder)
+	public MaterialTypeBuilder presetItem(MaterialState state, ItemRegistryObject<Item> holder)
 	{
-		return this.presetItem(state, Mekanism.MODID, holder);
-	}
-
-	public MaterialTypeBuilder presetItem(MaterialState state, String modid, WrappedRegistryObject<Item> holder)
-	{
-		return this.presetItem(state, modid, holder.getInternalRegistryName());
+		return this.presetItem(state, holder.getKey().location());
 	}
 
 	public String baseName()

@@ -4,17 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 import gisellevonbingen.mmp.common.material.MaterialType;
-import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
+import net.neoforged.neoforge.common.ModConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec.ConfigValue;
 
 public class ClientConfig
 {
 	public static final int RADIX = 16;
 
-	public final Map<MaterialType, ForgeConfigSpec.ConfigValue<String>> colors;
+	public final Map<MaterialType, ModConfigSpec.ConfigValue<String>> colors;
 	public final Map<MaterialType, Integer> parsedColors;
 
-	public ClientConfig(ForgeConfigSpec.Builder builder)
+	public ClientConfig(ModConfigSpec.Builder builder)
 	{
 		builder.comment("color : ores rgb color");
 		builder.push("ores");

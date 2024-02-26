@@ -3,7 +3,7 @@ package gisellevonbingen.mmp.common.integration;
 import gisellevonbingen.mmp.common.datagen.BlockTagsGenerator;
 import gisellevonbingen.mmp.common.datagen.ItemTagsGenerator;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.data.event.GatherDataEvent;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 public abstract class IntegrationMod
 {

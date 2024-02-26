@@ -2,13 +2,14 @@ package gisellevonbingen.mmp.common.item;
 
 import java.util.List;
 
-import mekanism.api.providers.IItemProvider;
 import mekanism.common.registries.MekanismBlocks;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 public class MMPCreativeModeTab extends CreativeModeTab
 {
+	private List<? extends Item> items;
 	private int iconIndex = 0;
 	private long lastMillis = 0L;
 	private ItemStack icon = null;
@@ -21,13 +22,17 @@ public class MMPCreativeModeTab extends CreativeModeTab
 
 	public ItemStack makeIcon()
 	{
-		List<IItemProvider> entries = MMPItems.ITEMS.getAllItems();
-		int size = entries.size();
+		if (this.items == null)
+		{
+			this.items = MMPItems.ITEMS.getEntries().stream().map(i -> i.get()).toList();
+		}
+		
+		int size = this.items.size();
 
 		if (size > 0)
 		{
 			this.iconIndex = this.iconIndex % size;
-			return entries.get(this.iconIndex).getItemStack();
+			return items.get(this.iconIndex).getDefaultInstance();
 		}
 		else if (this.fallbackIcon == null)
 		{

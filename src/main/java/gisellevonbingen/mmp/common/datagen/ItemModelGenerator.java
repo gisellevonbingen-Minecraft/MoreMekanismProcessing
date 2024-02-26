@@ -9,13 +9,13 @@ import gisellevonbingen.mmp.common.MoreMekanismProcessing;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
 import mekanism.common.Mekanism;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class ItemModelGenerator extends ItemModelProvider
 {
@@ -40,7 +40,7 @@ public class ItemModelGenerator extends ItemModelProvider
 				if (materialState.hasOwnItem() == true && materialType.getPresetItem(materialState) == null)
 				{
 					Item item = materialState.getItem(materialType);
-					ItemModelBuilder builder = this.singleTexture(ForgeRegistries.ITEMS.getKey(item).getPath(), this.mcLoc("item/generated"), "layer0", this.getTexture(materialState));
+					ItemModelBuilder builder = this.singleTexture(BuiltInRegistries.ITEM.getKey(item).getPath(), this.mcLoc("item/generated"), "layer0", this.getTexture(materialState));
 
 					if (hasOverlay.contains(materialState) == true)
 					{

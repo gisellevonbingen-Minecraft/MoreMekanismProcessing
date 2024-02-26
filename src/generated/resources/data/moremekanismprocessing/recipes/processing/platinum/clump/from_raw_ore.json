@@ -1,14 +1,9 @@
 {
-  "type": "mekanism:purifying",
-  "chemicalInput": {
-    "amount": 1,
-    "gas": "mekanism:oxygen"
-  },
-  "conditions": [
+  "neoforge:conditions": [
     {
-      "type": "forge:not",
+      "type": "neoforge:not",
       "value": {
-        "type": "forge:tag_empty",
+        "type": "neoforge:tag_empty",
         "tag": "forge:raw_materials/platinum"
       }
     },
@@ -18,6 +13,11 @@
       "requireLevel": 3
     }
   ],
+  "type": "mekanism:purifying",
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
   "itemInput": {
     "ingredient": {
       "tag": "forge:raw_materials/platinum"

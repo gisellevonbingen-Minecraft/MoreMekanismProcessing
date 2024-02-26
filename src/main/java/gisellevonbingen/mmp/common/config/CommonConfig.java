@@ -6,14 +6,14 @@ import java.util.Map;
 import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.common.ForgeConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
 public class CommonConfig
 {
-	public final ForgeConfigSpec.BooleanValue showOreNotExistRecipes;
-	public final Map<MaterialType, ForgeConfigSpec.ConfigValue<Integer>> processingLevels;
+	public final ModConfigSpec.BooleanValue showOreNotExistRecipes;
+	public final Map<MaterialType, ModConfigSpec.ConfigValue<Integer>> processingLevels;
 
-	public CommonConfig(ForgeConfigSpec.Builder builder)
+	public CommonConfig(ModConfigSpec.Builder builder)
 	{
 		builder.push("general");
 

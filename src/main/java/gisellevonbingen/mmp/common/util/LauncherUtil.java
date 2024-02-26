@@ -1,8 +1,8 @@
 package gisellevonbingen.mmp.common.util;
 
-import net.minecraftforge.fml.loading.FMLLoader;
-import net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler;
-import net.minecraftforge.fml.loading.targets.ForgeDataUserdevLaunchHandler;
+import net.neoforged.fml.loading.FMLLoader;
+import net.neoforged.fml.loading.targets.ForgeClientUserdevLaunchHandler;
+import net.neoforged.fml.loading.targets.ForgeDataUserdevLaunchHandler;
 
 public class LauncherUtil
 {

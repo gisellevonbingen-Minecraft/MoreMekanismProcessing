@@ -1,10 +1,9 @@
 {
-  "type": "mekanism:dissolution",
-  "conditions": [
+  "neoforge:conditions": [
     {
-      "type": "forge:not",
+      "type": "neoforge:not",
       "value": {
-        "type": "forge:tag_empty",
+        "type": "neoforge:tag_empty",
         "tag": "forge:storage_blocks/raw_silver"
       }
     },
@@ -14,6 +13,7 @@
       "requireLevel": 5
     }
   ],
+  "type": "mekanism:dissolution",
   "gasInput": {
     "amount": 2,
     "gas": "mekanism:sulfuric_acid"

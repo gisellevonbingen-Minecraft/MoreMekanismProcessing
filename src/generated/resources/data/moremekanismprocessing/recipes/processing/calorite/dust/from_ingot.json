@@ -1,12 +1,12 @@
 {
-  "type": "mekanism:crushing",
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "moremekanismprocessing:processing_level",
       "materialType": "calorite",
       "requireLevel": 2
     }
   ],
+  "type": "mekanism:crushing",
   "input": {
     "ingredient": {
       "tag": "forge:ingots/calorite"

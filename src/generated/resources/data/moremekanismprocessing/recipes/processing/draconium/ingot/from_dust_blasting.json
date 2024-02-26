@@ -1,18 +1,18 @@
 {
-  "type": "minecraft:blasting",
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "moremekanismprocessing:processing_level",
       "materialType": "draconium",
       "requireLevel": 2
     }
   ],
+  "type": "minecraft:blasting",
+  "category": "misc",
   "cookingtime": 100,
   "experience": 0.3,
+  "group": "moremekanismprocessing:draconium_ingot",
   "ingredient": {
     "tag": "forge:dusts/draconium"
   },
-  "result": {
-    "item": "moremekanismprocessing:draconium_ingot"
-  }
+  "result": "moremekanismprocessing:draconium_ingot"
 }

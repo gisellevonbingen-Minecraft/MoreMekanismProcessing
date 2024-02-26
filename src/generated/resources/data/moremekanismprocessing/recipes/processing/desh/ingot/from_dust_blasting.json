@@ -1,18 +1,18 @@
 {
-  "type": "minecraft:blasting",
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "moremekanismprocessing:processing_level",
       "materialType": "desh",
       "requireLevel": 2
     }
   ],
+  "type": "minecraft:blasting",
+  "category": "misc",
   "cookingtime": 100,
   "experience": 0.3,
+  "group": "moremekanismprocessing:desh_ingot",
   "ingredient": {
     "tag": "forge:dusts/desh"
   },
-  "result": {
-    "item": "moremekanismprocessing:desh_ingot"
-  }
+  "result": "moremekanismprocessing:desh_ingot"
 }

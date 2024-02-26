@@ -1,16 +1,16 @@
 {
-  "type": "mekanism:injecting",
-  "chemicalInput": {
-    "amount": 1,
-    "gas": "mekanism:hydrogen_chloride"
-  },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "moremekanismprocessing:processing_level",
       "materialType": "apatite",
       "requireLevel": 5
     }
   ],
+  "type": "mekanism:injecting",
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
   "itemInput": {
     "ingredient": {
       "tag": "mekanism:crystals/apatite"

@@ -1,12 +1,12 @@
 {
-  "type": "mekanism:enriching",
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "moremekanismprocessing:processing_level",
       "materialType": "tungsten",
       "requireLevel": 3
     }
   ],
+  "type": "mekanism:enriching",
   "input": {
     "ingredient": {
       "tag": "mekanism:dirty_dusts/tungsten"

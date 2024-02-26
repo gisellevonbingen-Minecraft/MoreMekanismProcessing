@@ -13,10 +13,10 @@ import gisellevonbingen.mmp.common.material.MaterialType;
 import gisellevonbingen.mmp.common.util.LauncherUtil;
 import mekanism.common.registration.impl.ItemDeferredRegister;
 import mekanism.common.registration.impl.ItemRegistryObject;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.common.ModConfigSpec.ConfigValue;
 
 public class MMPItems
 {
@@ -61,7 +61,7 @@ public class MMPItems
 
 		if (presetName != null)
 		{
-			return ForgeRegistries.ITEMS.getValue(presetName);
+			return BuiltInRegistries.ITEM.get(presetName);
 		}
 		else
 		{

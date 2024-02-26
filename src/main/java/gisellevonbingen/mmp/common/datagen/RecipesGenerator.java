@@ -3,13 +3,11 @@ package gisellevonbingen.mmp.common.datagen;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
 
 import gisellevonbingen.mmp.common.MoreMekanismProcessing;
-import gisellevonbingen.mmp.common.crafting.CookingRecipeBuilder;
-import gisellevonbingen.mmp.common.crafting.ShapedRecipeBuilder;
-import gisellevonbingen.mmp.common.crafting.ShapelessRecipeBuilder;
 import gisellevonbingen.mmp.common.crafting.conditions.ProcessingLevelCondition;
 import gisellevonbingen.mmp.common.material.MaterialResultShape;
 import gisellevonbingen.mmp.common.material.MaterialState;
@@ -34,20 +32,29 @@ import mekanism.api.recipes.ingredients.ItemStackIngredient;
 import mekanism.api.recipes.ingredients.creator.IngredientCreatorAccess;
 import mekanism.common.registration.impl.SlurryRegistryObject;
 import mekanism.common.registries.MekanismGases;
+import net.minecraft.core.NonNullList;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.AbstractCookingRecipe;
+import net.minecraft.world.item.crafting.BlastingRecipe;
+import net.minecraft.world.item.crafting.CookingBookCategory;
+import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.ShapedRecipe;
+import net.minecraft.world.item.crafting.ShapedRecipePattern;
+import net.minecraft.world.item.crafting.ShapelessRecipe;
+import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraftforge.common.crafting.conditions.ICondition;
-import net.minecraftforge.common.crafting.conditions.NotCondition;
-import net.minecraftforge.common.crafting.conditions.TagEmptyCondition;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.common.conditions.ICondition;
+import net.neoforged.neoforge.common.conditions.NotCondition;
+import net.neoforged.neoforge.common.conditions.TagEmptyCondition;
 
 public class RecipesGenerator extends RecipeProvider
 {
@@ -57,11 +64,11 @@ public class RecipesGenerator extends RecipeProvider
 	}
 
 	@Override
-	protected void buildRecipes(Consumer<FinishedRecipe> consumer)
+	protected void buildRecipes(RecipeOutput output)
 	{
 		for (MaterialType materialType : MaterialType.values())
 		{
-			new OreRecipesGenerator(materialType, consumer).build();
+			new OreRecipesGenerator(materialType, output).build();
 		}
 
 	}
@@ -74,13 +81,13 @@ public class RecipesGenerator extends RecipeProvider
 	public static class OreRecipesGenerator
 	{
 		private MaterialType materialType;
-		private Consumer<FinishedRecipe> consumer;
+		private RecipeOutput output;
 		private List<ICondition> conditions;
 
-		public OreRecipesGenerator(MaterialType materialType, Consumer<FinishedRecipe> consumer)
+		public OreRecipesGenerator(MaterialType materialType, RecipeOutput output)
 		{
 			this.materialType = materialType;
-			this.consumer = consumer;
+			this.output = output;
 			this.conditions = new ArrayList<>();
 		}
 
@@ -91,7 +98,7 @@ public class RecipesGenerator extends RecipeProvider
 
 		public void applyProcssingLevelCondition(int processingLevel, Runnable runnable)
 		{
-			this.applyCondition(new ProcessingLevelCondition(this.materialType, processingLevel), runnable);
+			this.applyCondition(new ProcessingLevelCondition(this.materialType.getBaseName(), processingLevel), runnable);
 		}
 
 		public void applyCondition(ICondition condition, Runnable runnable)
@@ -106,6 +113,13 @@ public class RecipesGenerator extends RecipeProvider
 				this.conditions.remove(condition);
 			}
 
+		}
+
+		public ICondition[] collect(Consumer<Consumer<ICondition>> consumer)
+		{
+			List<ICondition> list = new ArrayList<>();
+			consumer.accept(list::add);
+			return list.toArray(ICondition[]::new);
 		}
 
 		public void applyConditionWithState(Consumer<ICondition> consumer, MaterialState state)
@@ -129,10 +143,10 @@ public class RecipesGenerator extends RecipeProvider
 
 		public void build()
 		{
-			this.applyProcssingLevelCondition(5, () -> this.buildProcessingLevel5());
-			this.applyProcssingLevelCondition(4, () -> this.buildProcessingLevel4());
-			this.applyProcssingLevelCondition(3, () -> this.buildProcessingLevel3());
-			this.applyProcssingLevelCondition(2, () -> this.buildProcessingLevel2());
+			this.applyProcssingLevelCondition(5, this::buildProcessingLevel5);
+			this.applyProcssingLevelCondition(4, this::buildProcessingLevel4);
+			this.applyProcssingLevelCondition(3, this::buildProcessingLevel3);
+			this.applyProcssingLevelCondition(2, this::buildProcessingLevel2);
 
 			this.buildOthers();
 		}
@@ -339,7 +353,7 @@ public class RecipesGenerator extends RecipeProvider
 			ChemicalCrystallizerRecipeBuilder builder = ChemicalCrystallizerRecipeBuilder.crystallizing(slurryInput, output);
 
 			this.applyCondition(builder::addCondition);
-			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from(MMPSlurry.SLURRY)));
+			builder.build(this.output, this.getRecipeName(stateOutput, this.from(MMPSlurry.SLURRY)));
 		}
 
 		public void buildChemicalWashing(FluidStackIngredient fluidInput, Slurry slurryInput, Slurry slurryOutput)
@@ -349,7 +363,7 @@ public class RecipesGenerator extends RecipeProvider
 			FluidSlurryToSlurryRecipeBuilder builder = FluidSlurryToSlurryRecipeBuilder.washing(fluidInput, slurryStackInput, slurryStackOutput);
 
 			this.applyCondition(builder::addCondition);
-			builder.build(this.consumer, this.getRecipeName(MMPSlurry.SLURRY, MMPSlurryBuilder.CLEAN));
+			builder.build(this.output, this.getRecipeName(MMPSlurry.SLURRY, MMPSlurryBuilder.CLEAN));
 		}
 
 		public void buildChemicalDissolution(MaterialState stateInput, int inputCount, Slurry slurryOutput, int outputAmount, GasStackIngredient gasInput)
@@ -359,7 +373,7 @@ public class RecipesGenerator extends RecipeProvider
 			ChemicalDissolutionRecipeBuilder builder = ChemicalDissolutionRecipeBuilder.dissolution(itemInput, gasInput, slurryStackOutput);
 
 			this.applyConditionWithState(builder::addCondition, stateInput);
-			builder.build(this.consumer, this.getRecipeName(MMPSlurry.SLURRY, MMPSlurryBuilder.DIRTY + "/" + stateInput.getBaseName()));
+			builder.build(this.output, this.getRecipeName(MMPSlurry.SLURRY, MMPSlurryBuilder.DIRTY + "/" + stateInput.getBaseName()));
 		}
 
 		public void buildItemStackGasToItemStack(MaterialState stateInput, int inputCount, MaterialState stateOutput, int outputCount, GasStackIngredient gasInput, ThreeFunction<ItemStackIngredient, GasStackIngredient, ItemStack, ItemStackChemicalToItemStackRecipeBuilder<Gas, GasStack, GasStackIngredient>> function)
@@ -369,7 +383,7 @@ public class RecipesGenerator extends RecipeProvider
 			ItemStackChemicalToItemStackRecipeBuilder<Gas, GasStack, GasStackIngredient> builder = function.apply(itemInput, gasInput, output);
 
 			this.applyConditionWithState(builder::addCondition, stateInput);
-			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from(stateInput)));
+			builder.build(this.output, this.getRecipeName(stateOutput, this.from(stateInput)));
 		}
 
 		public void buildItemToItemStack(MaterialState stateInput, int inputCount, MaterialState stateOutput, int outputCount, BiFunction<ItemStackIngredient, ItemStack, ItemStackToItemStackRecipeBuilder> function)
@@ -379,56 +393,59 @@ public class RecipesGenerator extends RecipeProvider
 			ItemStackToItemStackRecipeBuilder builder = function.apply(itemInput, output);
 
 			this.applyConditionWithState(builder::addCondition, stateInput);
-			builder.build(this.consumer, this.getRecipeName(stateOutput, this.from(stateInput)));
+			builder.build(this.output, this.getRecipeName(stateOutput, this.from(stateInput)));
 		}
 
 		public void buildCook(MaterialState stateInput, MaterialState stateOutput)
 		{
 			Ingredient itemInput = this.getTaggedIngredient(stateInput);
-			Item output = stateOutput.getItem(this.materialType);
-			ResourceLocation recipeName = this.getRecipeName(stateOutput, this.from(stateInput));
-			CookingRecipeBuilder builder = new CookingRecipeBuilder(recipeName);
-			builder.setOutput(output);
-			builder.setIngredient(itemInput);
-			builder.setExperience(0.3F);
-			this.applyConditionWithState(builder::addCondition, stateInput);
+			String group = this.getGroup(stateOutput);
+			ItemStack output = new ItemStack(stateOutput.getItem(this.materialType));
+			float experience = 0.3F;
 
-			this.consumer.accept(builder.getSmelting());
-			this.consumer.accept(builder.getBlasting());
+			List<AbstractCookingRecipe> list = new ArrayList<>();
+			list.add(new SmeltingRecipe(group, CookingBookCategory.MISC, itemInput, output, experience, 200));
+			list.add(new BlastingRecipe(group, CookingBookCategory.MISC, itemInput, output, experience, 100));
+
+			for (AbstractCookingRecipe recipe : list)
+			{
+				ResourceLocation recipeName = this.getRecipeName(stateOutput, this.from(stateInput, BuiltInRegistries.RECIPE_SERIALIZER.getKey(recipe.getSerializer()).getPath()));
+				this.output.accept(recipeName, recipe, null, this.collect(t -> this.applyConditionWithState(t, stateInput)));
+			}
+
 		}
 
 		public void buildIngotFromNugget()
 		{
 			MaterialState stateInput = MaterialState.NUGGET;
 			MaterialState stateOutput = MaterialState.INGOT;
-			Item itemOutput = stateOutput.getItem(this.materialType);
+			ItemStack output = new ItemStack(stateOutput.getItem(this.materialType));
 
-			ResourceLocation recipeName = this.getRecipeName(stateOutput, this.from(stateInput));
-			ShapedRecipeBuilder builder = new ShapedRecipeBuilder(recipeName);
-			builder.setGroup(this.getGroup(stateOutput));
-			builder.setOutput(itemOutput);
-			builder.addPattern("###", "#*#", "###");
-			builder.addKey('#', this.getTaggedIngredient(stateInput));
-			builder.addKey('*', this.getExcatIngredient(stateInput));
+			ShapedRecipePattern pattern = ShapedRecipePattern.of(Map.of('#', this.getTaggedIngredient(stateInput), //
+					'*', this.getExcatIngredient(stateInput)), //
+					"###", "#*#", "###");
 
-			this.applyConditionWithState(builder::addCondition, stateInput);
-			this.consumer.accept(builder.getResult());
+			this.output.accept(this.getRecipeName(stateOutput, this.from(stateInput)), new ShapedRecipe(//
+					this.getGroup(stateOutput), //
+					CraftingBookCategory.MISC, //
+					pattern, //
+					output), null, this.collect(t -> this.applyConditionWithState(t, stateInput)));
 		}
 
 		public void buildNuggetFromIngot()
 		{
 			MaterialState stateInput = MaterialState.INGOT;
 			MaterialState stateOutput = MaterialState.NUGGET;
-			Item itemOutput = stateOutput.getItem(this.materialType);
+			ItemStack output = new ItemStack(stateOutput.getItem(this.materialType), 9);
 
-			ResourceLocation recipeName = this.getRecipeName(stateOutput, this.from(stateInput));
-			ShapelessRecipeBuilder builder = new ShapelessRecipeBuilder(recipeName);
-			builder.setGroup(this.getGroup(stateOutput));
-			builder.setOutput(itemOutput, 9);
-			builder.add(this.getExcatIngredient(stateInput));
+			List<Ingredient> ingredients = new ArrayList<>();
+			ingredients.add(this.getExcatIngredient(stateInput));
 
-			this.applyConditionWithState(builder::addCondition, stateInput);
-			this.consumer.accept(builder.getResult());
+			this.output.accept(this.getRecipeName(stateOutput, this.from(stateInput)), new ShapelessRecipe(//
+					this.getGroup(stateOutput), //
+					CraftingBookCategory.MISC, //
+					output, //
+					NonNullList.copyOf(ingredients)), null, this.collect(t -> this.applyConditionWithState(t, stateInput)));
 		}
 
 		public ResourceLocation getRecipeName(MaterialState stateOutput, String name)
@@ -480,7 +497,7 @@ public class RecipesGenerator extends RecipeProvider
 
 		public String getGroup(MaterialState stateOutput)
 		{
-			return ForgeRegistries.ITEMS.getKey(stateOutput.getItem(this.materialType)).toString();
+			return BuiltInRegistries.ITEM.getKey(stateOutput.getItem(this.materialType)).toString();
 		}
 
 		public MaterialType getMaterialType()
@@ -488,9 +505,9 @@ public class RecipesGenerator extends RecipeProvider
 			return this.materialType;
 		}
 
-		public Consumer<FinishedRecipe> getConsumer()
+		public RecipeOutput getConsumer()
 		{
-			return this.consumer;
+			return this.output;
 		}
 
 	}

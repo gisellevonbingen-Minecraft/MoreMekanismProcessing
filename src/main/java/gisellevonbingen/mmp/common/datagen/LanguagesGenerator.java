@@ -7,7 +7,7 @@ import gisellevonbingen.mmp.common.slurry.MMPSlurries;
 import gisellevonbingen.mmp.common.slurry.MMPSlurry;
 import gisellevonbingen.mmp.common.slurry.MMPSlurryBuilder;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.LanguageProvider;
+import net.neoforged.neoforge.common.data.LanguageProvider;
 
 public class LanguagesGenerator extends LanguageProvider
 {
