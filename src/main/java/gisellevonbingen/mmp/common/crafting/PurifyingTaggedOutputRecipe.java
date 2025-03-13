@@ -25,7 +25,7 @@ public class PurifyingTaggedOutputRecipe extends BasicPurifyingRecipe implements
 
 	public PurifyingTaggedOutputRecipe(ItemStackIngredient itemInput, ChemicalStackIngredient chemicalInput, ItemStackIngredient output, boolean perTickUsage)
 	{
-		super(itemInput, chemicalInput, MekanismItems.ATOMIC_ALLOY.getItemStack(), perTickUsage);
+		super(itemInput, chemicalInput, MekanismItems.ATOMIC_ALLOY.asStack(), perTickUsage);
 		this.output = output;
 	}
 

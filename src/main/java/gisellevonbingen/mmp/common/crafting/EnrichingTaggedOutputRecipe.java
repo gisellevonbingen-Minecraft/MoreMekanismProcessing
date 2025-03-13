@@ -23,7 +23,7 @@ public class EnrichingTaggedOutputRecipe extends BasicEnrichingRecipe implements
 
 	public EnrichingTaggedOutputRecipe(ItemStackIngredient input, ItemStackIngredient output)
 	{
-		super(input, MekanismItems.ATOMIC_ALLOY.getItemStack());
+		super(input, MekanismItems.ATOMIC_ALLOY.asStack());
 		this.output = output;
 	}
 

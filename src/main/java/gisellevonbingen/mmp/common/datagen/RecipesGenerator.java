@@ -34,6 +34,7 @@ import mekanism.api.recipes.ingredients.ItemStackIngredient;
 import mekanism.api.recipes.ingredients.creator.IngredientCreatorAccess;
 import mekanism.common.registration.impl.SlurryRegistryObject;
 import mekanism.common.registries.MekanismChemicals;
+import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -57,6 +58,7 @@ import net.minecraft.world.level.material.Fluids;
 import net.neoforged.neoforge.common.conditions.ICondition;
 import net.neoforged.neoforge.common.conditions.NotCondition;
 import net.neoforged.neoforge.common.conditions.TagEmptyCondition;
+import net.neoforged.neoforge.fluids.FluidStack;
 
 public class RecipesGenerator extends RecipeProvider
 {
@@ -158,31 +160,31 @@ public class RecipesGenerator extends RecipeProvider
 			if (this.canProcess(MaterialState.CRYSTAL) == true)
 			{
 				SlurryRegistryObject<Chemical, Chemical> chemicalRegistry = MMPChemicals.getSlurryRegistry(this.materialType);
-				Chemical dirtySlurry = chemicalRegistry.getDirtySlurry();
-				Chemical cleanSlurry = chemicalRegistry.getCleanSlurry();
-				FluidStackIngredient water = IngredientCreatorAccess.fluid().from(Fluids.WATER, 5);
+				Holder<Chemical> dirtySlurry = chemicalRegistry;
+				Holder<Chemical> cleanSlurry = chemicalRegistry.getCleanSlurry();
+				FluidStackIngredient water = IngredientCreatorAccess.fluid().from(new FluidStack(Fluids.WATER, 5));
 
 				if (this.canProcess(MaterialState.ORE) == true)
 				{
-					ChemicalStackIngredient sulfuricAcid1 = IngredientCreatorAccess.chemicalStack().from(MekanismChemicals.SULFURIC_ACID.get(), 1);
+					ChemicalStackIngredient sulfuricAcid1 = IngredientCreatorAccess.chemicalStack().fromHolder(MekanismChemicals.SULFURIC_ACID, 1);
 					this.buildChemicalDissolution(MaterialState.ORE, 1, dirtySlurry, 1000, sulfuricAcid1);
 				}
 
 				if (this.canProcess(MaterialState.RAW_ITEM) == true)
 				{
-					ChemicalStackIngredient sulfuricAcid1 = IngredientCreatorAccess.chemicalStack().from(MekanismChemicals.SULFURIC_ACID.get(), 1);
+					ChemicalStackIngredient sulfuricAcid1 = IngredientCreatorAccess.chemicalStack().fromHolder(MekanismChemicals.SULFURIC_ACID, 1);
 					this.buildChemicalDissolution(MaterialState.RAW_ITEM, 3, dirtySlurry, 2000, sulfuricAcid1);
 
-					ChemicalStackIngredient sulfuricAcid2 = IngredientCreatorAccess.chemicalStack().from(MekanismChemicals.SULFURIC_ACID.get(), 2);
+					ChemicalStackIngredient sulfuricAcid2 = IngredientCreatorAccess.chemicalStack().fromHolder(MekanismChemicals.SULFURIC_ACID, 2);
 					this.buildChemicalDissolution(MaterialState.RAW_STORAGE_BLOCKS, 1, dirtySlurry, 6000, sulfuricAcid2);
 				}
 
 				this.buildChemicalWashing(water, dirtySlurry, cleanSlurry);
-				this.buildChemicalCrystallizing(IngredientCreatorAccess.chemicalStack().from(cleanSlurry, 200), MaterialState.CRYSTAL, 1);
+				this.buildChemicalCrystallizing(IngredientCreatorAccess.chemicalStack().fromHolder(cleanSlurry, 200), MaterialState.CRYSTAL, 1);
 
 				if (this.canProcess(MaterialState.SHARD) == true)
 				{
-					ChemicalStackIngredient hydrogenChloride = IngredientCreatorAccess.chemicalStack().from(MekanismChemicals.HYDROGEN_CHLORIDE.get(), 1);
+					ChemicalStackIngredient hydrogenChloride = IngredientCreatorAccess.chemicalStack().fromHolder(MekanismChemicals.HYDROGEN_CHLORIDE, 1);
 					this.buildItemStackChemicalToItemStack(MaterialState.CRYSTAL, 1, MaterialState.SHARD, 1, hydrogenChloride, ItemStackChemicalToTaggedOutputRecipeBuilder::injecting);
 				}
 
@@ -196,22 +198,22 @@ public class RecipesGenerator extends RecipeProvider
 			{
 				if (this.canProcess(MaterialState.ORE) == true)
 				{
-					ChemicalStackIngredient hydrogenChloride = IngredientCreatorAccess.chemicalStack().from(MekanismChemicals.HYDROGEN_CHLORIDE.get(), 1);
+					ChemicalStackIngredient hydrogenChloride = IngredientCreatorAccess.chemicalStack().fromHolder(MekanismChemicals.HYDROGEN_CHLORIDE, 1);
 					this.buildItemStackChemicalToItemStack(MaterialState.ORE, 1, MaterialState.SHARD, 4, hydrogenChloride, ItemStackChemicalToTaggedOutputRecipeBuilder::injecting);
 				}
 
 				if (this.canProcess(MaterialState.RAW_ITEM) == true)
 				{
-					ChemicalStackIngredient hydrogenChloride1 = IngredientCreatorAccess.chemicalStack().from(MekanismChemicals.HYDROGEN_CHLORIDE.get(), 1);
+					ChemicalStackIngredient hydrogenChloride1 = IngredientCreatorAccess.chemicalStack().fromHolder(MekanismChemicals.HYDROGEN_CHLORIDE, 1);
 					this.buildItemStackChemicalToItemStack(MaterialState.RAW_ITEM, 3, MaterialState.SHARD, 8, hydrogenChloride1, ItemStackChemicalToTaggedOutputRecipeBuilder::injecting);
 
-					ChemicalStackIngredient hydrogenChloride2 = IngredientCreatorAccess.chemicalStack().from(MekanismChemicals.HYDROGEN_CHLORIDE.get(), 2);
+					ChemicalStackIngredient hydrogenChloride2 = IngredientCreatorAccess.chemicalStack().fromHolder(MekanismChemicals.HYDROGEN_CHLORIDE, 2);
 					this.buildItemStackChemicalToItemStack(MaterialState.RAW_STORAGE_BLOCKS, 1, MaterialState.SHARD, 24, hydrogenChloride2, ItemStackChemicalToTaggedOutputRecipeBuilder::injecting);
 				}
 
 				if (this.canProcess(MaterialState.CLUMP) == true)
 				{
-					ChemicalStackIngredient oxygen = IngredientCreatorAccess.chemicalStack().from(MekanismChemicals.OXYGEN.get(), 1);
+					ChemicalStackIngredient oxygen = IngredientCreatorAccess.chemicalStack().fromHolder(MekanismChemicals.OXYGEN, 1);
 					this.buildItemStackChemicalToItemStack(MaterialState.SHARD, 1, MaterialState.CLUMP, 1, oxygen, ItemStackChemicalToTaggedOutputRecipeBuilder::purifying);
 				}
 
@@ -225,16 +227,16 @@ public class RecipesGenerator extends RecipeProvider
 			{
 				if (this.canProcess(MaterialState.ORE) == true)
 				{
-					ChemicalStackIngredient oxygen = IngredientCreatorAccess.chemicalStack().from(MekanismChemicals.OXYGEN.get(), 1);
+					ChemicalStackIngredient oxygen = IngredientCreatorAccess.chemicalStack().fromHolder(MekanismChemicals.OXYGEN, 1);
 					this.buildItemStackChemicalToItemStack(MaterialState.ORE, 1, MaterialState.CLUMP, 3, oxygen, ItemStackChemicalToTaggedOutputRecipeBuilder::purifying);
 				}
 
 				if (this.canProcess(MaterialState.RAW_ITEM) == true)
 				{
-					ChemicalStackIngredient oxygen1 = IngredientCreatorAccess.chemicalStack().from(MekanismChemicals.OXYGEN.get(), 1);
+					ChemicalStackIngredient oxygen1 = IngredientCreatorAccess.chemicalStack().fromHolder(MekanismChemicals.OXYGEN, 1);
 					this.buildItemStackChemicalToItemStack(MaterialState.RAW_ITEM, 1, MaterialState.CLUMP, 2, oxygen1, ItemStackChemicalToTaggedOutputRecipeBuilder::purifying);
 
-					ChemicalStackIngredient oxygen2 = IngredientCreatorAccess.chemicalStack().from(MekanismChemicals.OXYGEN.get(), 2);
+					ChemicalStackIngredient oxygen2 = IngredientCreatorAccess.chemicalStack().fromHolder(MekanismChemicals.OXYGEN, 2);
 					this.buildItemStackChemicalToItemStack(MaterialState.RAW_STORAGE_BLOCKS, 1, MaterialState.CLUMP, 18, oxygen2, ItemStackChemicalToTaggedOutputRecipeBuilder::purifying);
 				}
 
@@ -358,9 +360,9 @@ public class RecipesGenerator extends RecipeProvider
 			builder.build(this.output, this.getRecipeName(stateOutput, this.from(MMPSlurry.SLURRY)));
 		}
 
-		public void buildChemicalWashing(FluidStackIngredient fluidInput, Chemical chemicalInput, Chemical chemicalOutput)
+		public void buildChemicalWashing(FluidStackIngredient fluidInput, Holder<Chemical> chemicalInput, Holder<Chemical> chemicalOutput)
 		{
-			ChemicalStackIngredient chemicalStackInput = IngredientCreatorAccess.chemicalStack().from(chemicalInput, 1);
+			ChemicalStackIngredient chemicalStackInput = IngredientCreatorAccess.chemicalStack().fromHolder(chemicalInput, 1);
 			ChemicalStack chemicalStackOutput = new ChemicalStack(chemicalOutput, 1);
 			FluidChemicalToChemicalRecipeBuilder builder = FluidChemicalToChemicalRecipeBuilder.washing(fluidInput, chemicalStackInput, chemicalStackOutput);
 
@@ -368,7 +370,7 @@ public class RecipesGenerator extends RecipeProvider
 			builder.build(this.output, this.getRecipeName(MMPSlurry.SLURRY, MMPSlurryBuilder.CLEAN));
 		}
 
-		public void buildChemicalDissolution(MaterialState stateInput, int inputCount, Chemical chemicalOutput, int outputAmount, ChemicalStackIngredient chemicalInput)
+		public void buildChemicalDissolution(MaterialState stateInput, int inputCount, Holder<Chemical> chemicalOutput, int outputAmount, ChemicalStackIngredient chemicalInput)
 		{
 			ItemStackIngredient itemInput = this.getTaggedItemStackIngredient(stateInput, inputCount);
 			ChemicalStack chemicalStackOutput = new ChemicalStack(chemicalOutput, outputAmount);

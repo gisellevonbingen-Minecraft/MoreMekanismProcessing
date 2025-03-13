@@ -49,7 +49,7 @@ public class MMPItems
 			}
 
 			ItemRegistryObject<Item> registryObject = map.get(materialState);
-			return registryObject != null ? registryObject.getRegistryName() : null;
+			return registryObject != null ? registryObject.getId() : null;
 		}
 
 	}

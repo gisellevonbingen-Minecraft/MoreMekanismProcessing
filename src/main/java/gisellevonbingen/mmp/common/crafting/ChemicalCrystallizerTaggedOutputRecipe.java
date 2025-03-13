@@ -33,7 +33,7 @@ public class ChemicalCrystallizerTaggedOutputRecipe extends BasicChemicalCrystal
 
 	public ChemicalCrystallizerTaggedOutputRecipe(ChemicalStackIngredient input, ItemStackIngredient output)
 	{
-		super(input, MekanismItems.ATOMIC_ALLOY.getItemStack());
+		super(input, MekanismItems.ATOMIC_ALLOY.asStack());
 		this.output = output;
 	}
 

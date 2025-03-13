@@ -23,7 +23,7 @@ public class CrushingTaggedOutputRecipe extends BasicCrushingRecipe implements I
 
 	public CrushingTaggedOutputRecipe(ItemStackIngredient input, ItemStackIngredient output)
 	{
-		super(input, MekanismItems.ATOMIC_ALLOY.getItemStack());
+		super(input, MekanismItems.ATOMIC_ALLOY.asStack());
 		this.output = output;
 	}
 

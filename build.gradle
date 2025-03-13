@@ -1,5 +1,5 @@
 plugins {
-    id "net.neoforged.gradle.userdev" version "7.0.145"
+    id "net.neoforged.gradle.userdev" version "7.0.183"
 }
 
 apply plugin: "java-library"

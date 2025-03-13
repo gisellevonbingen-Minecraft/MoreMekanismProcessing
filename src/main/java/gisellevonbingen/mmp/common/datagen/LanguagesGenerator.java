@@ -30,7 +30,7 @@ public class LanguagesGenerator extends LanguageProvider
 		this.add(statedCommentPrefix + (statedCommentLine++), "Items can override this rule thought by declare that item's translation");
 		this.add(statedCommentPrefix + (statedCommentLine++), "    e.g.) '" + MaterialState.INGOT.getItem(MaterialType.COBALT).getDescriptionId() + "' : 'Blue Metal'");
 		this.add(statedCommentPrefix + (statedCommentLine++), "So is slurry");
-		this.add(statedCommentPrefix + (statedCommentLine++), "    e.g.) '" + MMPChemicals.getSlurryRegistry(MaterialType.COBALT).getCleanSlurry().getTranslationKey() + "' : 'Clean Blue Metal Slurry'");
+		this.add(statedCommentPrefix + (statedCommentLine++), "    e.g.) '" + MMPChemicals.getSlurryRegistry(MaterialType.COBALT).getCleanSlurry().get().getTranslationKey() + "' : 'Clean Blue Metal Slurry'");
 
 		this.add(MaterialState.ORE.getStatedDescriptionId(), "%s Ore");
 		this.add(MaterialState.RAW_ITEM.getStatedDescriptionId(), "Raw %s");

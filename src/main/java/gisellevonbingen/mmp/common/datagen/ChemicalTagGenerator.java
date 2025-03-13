@@ -34,8 +34,8 @@ public class ChemicalTagGenerator extends ChemicalTagsProvider
 
 			if (registry != null)
 			{
-				dirty.addOptional(registry.getDirtySlurry().getRegistryName());
-				clean.addOptional(registry.getCleanSlurry().getRegistryName());
+				dirty.addOptional(registry.getId());
+				clean.addOptional(registry.getCleanSlurry().getId());
 			}
 
 		}
