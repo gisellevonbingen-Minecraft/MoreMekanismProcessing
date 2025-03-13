@@ -2,7 +2,6 @@ package gisellevonbingen.mmp.common.chemical;
 
 import java.util.function.UnaryOperator;
 
-import gisellevonbingen.mmp.common.material.MaterialState;
 import gisellevonbingen.mmp.common.material.MaterialType;
 import mekanism.api.chemical.Chemical;
 import mekanism.api.chemical.ChemicalBuilder;
@@ -27,7 +26,6 @@ public class ChemicalDeferredRegister2 extends ChemicalDeferredRegister
 	public DeferredChemical<Chemical> register(MMPSlurryBuilder builder, MaterialType materialType, UnaryOperator<ChemicalBuilder> builderModifier)
 	{
 		builder.materialType(materialType);
-		builder.ore(MaterialState.ORE.getStateTag(materialType));
 		return this.register(builder, builderModifier);
 	}
 

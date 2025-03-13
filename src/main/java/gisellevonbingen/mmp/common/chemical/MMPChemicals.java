@@ -10,8 +10,6 @@ import gisellevonbingen.mmp.common.material.MaterialType;
 import mekanism.api.chemical.Chemical;
 import mekanism.api.chemical.ChemicalBuilder;
 import mekanism.common.registration.impl.SlurryRegistryObject;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
 
 public class MMPChemicals
 {
@@ -51,8 +49,7 @@ public class MMPChemicals
 		@Override
 		public ChemicalBuilder apply(ChemicalBuilder builder)
 		{
-			TagKey<Item> tag = MaterialState.ORE.getStateTag(this.materialType);
-			return builder.ore(tag);
+			return builder;
 		}
 
 		public MaterialType getOreType()

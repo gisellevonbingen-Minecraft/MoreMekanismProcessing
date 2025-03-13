@@ -32,6 +32,7 @@ public class DataGenerators
 		generator.addProvider(event.includeServer(), new ChemicalTagGenerator(output, lookupProvider, existingFileHelper));
 		generator.addProvider(event.includeServer(), new RecipesGenerator(output, lookupProvider));
 		generator.addProvider(event.includeServer(), new LanguagesGenerator(output));
+		generator.addProvider(event.includeServer(), new DataMapGenerator(output, lookupProvider));
 
 		generator.addProvider(event.includeClient(), new ItemModelGenerator(output, new EmptyExistingFileHelper()));
 
