@@ -1,0 +1,109 @@
+{
+  "values": {
+    "moremekanismprocessing:clean_aluminum": {
+      "representation": "c:ores/aluminum"
+    },
+    "moremekanismprocessing:clean_amethyst": {
+      "representation": "c:ores/amethyst"
+    },
+    "moremekanismprocessing:clean_apatite": {
+      "representation": "c:ores/apatite"
+    },
+    "moremekanismprocessing:clean_azure_silver": {
+      "representation": "c:ores/azure_silver"
+    },
+    "moremekanismprocessing:clean_bismuth": {
+      "representation": "c:ores/bismuth"
+    },
+    "moremekanismprocessing:clean_bort": {
+      "representation": "c:ores/bort"
+    },
+    "moremekanismprocessing:clean_calorite": {
+      "representation": "c:ores/calorite"
+    },
+    "moremekanismprocessing:clean_cinnabar": {
+      "representation": "c:ores/cinnabar"
+    },
+    "moremekanismprocessing:clean_coal": {
+      "representation": "c:ores/coal"
+    },
+    "moremekanismprocessing:clean_cobalt": {
+      "representation": "c:ores/cobalt"
+    },
+    "moremekanismprocessing:clean_crimson_iron": {
+      "representation": "c:ores/crimson_iron"
+    },
+    "moremekanismprocessing:clean_desh": {
+      "representation": "c:ores/desh"
+    },
+    "moremekanismprocessing:clean_diamond": {
+      "representation": "c:ores/diamond"
+    },
+    "moremekanismprocessing:clean_dilithium": {
+      "representation": "c:ores/dilithium"
+    },
+    "moremekanismprocessing:clean_draconium": {
+      "representation": "c:ores/draconium"
+    },
+    "moremekanismprocessing:clean_electrotine": {
+      "representation": "c:ores/electrotine"
+    },
+    "moremekanismprocessing:clean_emerald": {
+      "representation": "c:ores/emerald"
+    },
+    "moremekanismprocessing:clean_green_sapphire": {
+      "representation": "c:ores/green_sapphire"
+    },
+    "moremekanismprocessing:clean_iridium": {
+      "representation": "c:ores/iridium"
+    },
+    "moremekanismprocessing:clean_lapis": {
+      "representation": "c:ores/lapis"
+    },
+    "moremekanismprocessing:clean_lithium": {
+      "representation": "c:ores/lithium"
+    },
+    "moremekanismprocessing:clean_nickel": {
+      "representation": "c:ores/nickel"
+    },
+    "moremekanismprocessing:clean_niter": {
+      "representation": "c:ores/niter"
+    },
+    "moremekanismprocessing:clean_ostrum": {
+      "representation": "c:ores/ostrum"
+    },
+    "moremekanismprocessing:clean_peridot": {
+      "representation": "c:ores/peridot"
+    },
+    "moremekanismprocessing:clean_platinum": {
+      "representation": "c:ores/platinum"
+    },
+    "moremekanismprocessing:clean_quartz": {
+      "representation": "c:ores/quartz"
+    },
+    "moremekanismprocessing:clean_redstone": {
+      "representation": "c:ores/redstone"
+    },
+    "moremekanismprocessing:clean_ruby": {
+      "representation": "c:ores/ruby"
+    },
+    "moremekanismprocessing:clean_sapphire": {
+      "representation": "c:ores/sapphire"
+    },
+    "moremekanismprocessing:clean_silver": {
+      "representation": "c:ores/silver"
+    },
+    "moremekanismprocessing:clean_sulfur": {
+      "representation": "c:ores/sulfur"
+    },
+    "moremekanismprocessing:clean_titanium": {
+      "representation": "c:ores/titanium"
+    },
+    "moremekanismprocessing:clean_tungsten": {
+      "representation": "c:ores/tungsten"
+    },
+    "moremekanismprocessing:clean_zinc": {
+      "representation": "c:ores/zinc"
+    }
+  }
+}
