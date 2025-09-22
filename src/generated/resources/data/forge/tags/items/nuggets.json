@@ -13,6 +13,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:boron_nugget",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:cobalt_nugget",
       "required": false
     },
@@ -34,6 +38,10 @@
     },
     {
       "id": "moremekanismprocessing:lithium_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:magnesium_nugget",
       "required": false
     },
     {
@@ -62,6 +70,10 @@
     },
     {
       "id": "moremekanismprocessing:tungsten_nugget",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:thorium_nugget",
       "required": false
     },
     {

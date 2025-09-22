@@ -13,6 +13,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:boron_ingot",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:cobalt_ingot",
       "required": false
     },
@@ -34,6 +38,10 @@
     },
     {
       "id": "moremekanismprocessing:lithium_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:magnesium_ingot",
       "required": false
     },
     {
@@ -62,6 +70,10 @@
     },
     {
       "id": "moremekanismprocessing:tungsten_ingot",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:thorium_ingot",
       "required": false
     },
     {

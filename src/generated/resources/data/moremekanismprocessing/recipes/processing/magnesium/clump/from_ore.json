@@ -1,0 +1,30 @@
+{
+  "type": "mekanism:purifying",
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/magnesium"
+      }
+    },
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "magnesium",
+      "requireLevel": 3
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/magnesium"
+    }
+  },
+  "output": {
+    "count": 3,
+    "item": "moremekanismprocessing:clump_magnesium"
+  }
+}

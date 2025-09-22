@@ -1,0 +1,27 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:raw_materials/thorium"
+      }
+    },
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "thorium",
+      "requireLevel": 2
+    }
+  ],
+  "input": {
+    "amount": 3,
+    "ingredient": {
+      "tag": "forge:raw_materials/thorium"
+    }
+  },
+  "output": {
+    "count": 4,
+    "item": "moremekanismprocessing:dust_thorium"
+  }
+}

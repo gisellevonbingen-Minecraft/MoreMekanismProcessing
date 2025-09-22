@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:blasting",
+  "conditions": [
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "thorium",
+      "requireLevel": 2
+    }
+  ],
+  "cookingtime": 100,
+  "experience": 0.3,
+  "ingredient": {
+    "tag": "forge:dusts/thorium"
+  },
+  "result": {
+    "item": "moremekanismprocessing:thorium_ingot"
+  }
+}

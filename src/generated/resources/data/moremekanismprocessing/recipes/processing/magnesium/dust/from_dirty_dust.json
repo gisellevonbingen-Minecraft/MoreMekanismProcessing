@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "magnesium",
+      "requireLevel": 3
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:dirty_dusts/magnesium"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_magnesium"
+  }
+}

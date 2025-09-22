@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mekanism:item/dirty_dust",
+    "layer1": "mekanism:item/dirty_dust_overlay",
+    "layer2": "moremekanismprocessing:item/dirty_dust_overlay2"
+  }
+}

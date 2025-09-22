@@ -1,0 +1,30 @@
+{
+  "type": "mekanism:purifying",
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/thorium"
+      }
+    },
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "thorium",
+      "requireLevel": 3
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/thorium"
+    }
+  },
+  "output": {
+    "count": 3,
+    "item": "moremekanismprocessing:clump_thorium"
+  }
+}
