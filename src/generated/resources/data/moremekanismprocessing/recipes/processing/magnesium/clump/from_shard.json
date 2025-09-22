@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:purifying",
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "conditions": [
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "magnesium",
+      "requireLevel": 4
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "mekanism:shards/magnesium"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:clump_magnesium"
+  }
+}

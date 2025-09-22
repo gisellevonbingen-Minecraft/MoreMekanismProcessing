@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "moremekanismprocessing:magnesium_nugget",
+  "ingredients": [
+    {
+      "item": "moremekanismprocessing:magnesium_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "moremekanismprocessing:magnesium_nugget"
+  }
+}

@@ -1,8 +1,3 @@
 {
-  "values": [
-    {
-      "id": "voluminousenergy:raw_rutile",
-      "required": false
-    }
-  ]
+  "values": []
 }

@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:washing",
+  "conditions": [
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "boron",
+      "requireLevel": 5
+    }
+  ],
+  "fluidInput": {
+    "amount": 5,
+    "fluid": "minecraft:water"
+  },
+  "output": {
+    "amount": 1,
+    "slurry": "moremekanismprocessing:clean_boron"
+  },
+  "slurryInput": {
+    "amount": 1,
+    "slurry": "moremekanismprocessing:dirty_boron"
+  }
+}

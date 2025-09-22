@@ -17,6 +17,7 @@ public enum MaterialType
 	APATITE(new MaterialTypeBuilder("apatite").resultShape(MaterialResultShape.GEM).displayName("Apatite").color(0x3595B2)),
 	AZURESILER(new MaterialTypeBuilder("azure_silver").resultShape(MaterialResultShape.INGOT).displayName("Azure Silver").color(0xCE9CF3)),
 	BISMUTH(new MaterialTypeBuilder("bismuth").resultShape(MaterialResultShape.INGOT).displayName("Bismuth").color(0xE8D8E8)),
+	BORON(new MaterialTypeBuilder("boron").resultShape(MaterialResultShape.INGOT).displayName("Boron").color(0x7C7C7C)),
 	BORT(new MaterialTypeBuilder("bort").resultShape(MaterialResultShape.GEM).displayName("Bort").color(0x7495AF)),
 	CINNABAR(new MaterialTypeBuilder("cinnabar").resultShape(MaterialResultShape.GEM).displayName("Cinnabar").color(0x990F0F)),
 	COBALT(new MaterialTypeBuilder("cobalt").resultShape(MaterialResultShape.INGOT).displayName("Cobalt").color(0x1E66BF)),
@@ -28,6 +29,7 @@ public enum MaterialType
 	GREENSAPPHIRE(new MaterialTypeBuilder("green_sapphire").resultShape(MaterialResultShape.GEM).displayName("Green Sapphire").color(0x33CC33)),
 	IRIDIUM(new MaterialTypeBuilder("iridium").resultShape(MaterialResultShape.INGOT).displayName("Iridium").color(0xD8D8C4)),
 	LITHIUM(new MaterialTypeBuilder("lithium").resultShape(MaterialResultShape.INGOT).displayName("Lithium").color(0x808080).presetItem(MaterialState.DUST, MekanismItems.LITHIUM_DUST)),
+	MAGNESIUM(new MaterialTypeBuilder("magnesium").resultShape(MaterialResultShape.INGOT).displayName("Magnesium").color(0xE7B9E5)),
 	NICKEL(new MaterialTypeBuilder("nickel").resultShape(MaterialResultShape.INGOT).displayName("Nickel").color(0xE5E09E)),
 	NITER(new MaterialTypeBuilder("niter").resultShape(MaterialResultShape.GEM).displayName("Niter").color(0xB8AFAF)),
 	PERIDOT(new MaterialTypeBuilder("peridot").resultShape(MaterialResultShape.GEM).displayName("Peridot").color(0x66FF66)),
@@ -40,6 +42,7 @@ public enum MaterialType
 	SULFUR(new MaterialTypeBuilder("sulfur").resultShape(MaterialResultShape.DUST).displayName("Sulfur").color(0xD8CC51).presetItem(MaterialState.DUST, MekanismItems.SULFUR_DUST)),
 	TITANIUM(new MaterialTypeBuilder("titanium").resultShape(MaterialResultShape.INGOT).displayName("Titanium").color(0x405060)),
 	TUNGSTEN(new MaterialTypeBuilder("tungsten").resultShape(MaterialResultShape.INGOT).displayName("Tungsten").color(0x333333)),
+	THORIUM(new MaterialTypeBuilder("thorium").resultShape(MaterialResultShape.INGOT).displayName("Thorium").color(0x2E2E2E)),
 	ZINC(new MaterialTypeBuilder("zinc").resultShape(MaterialResultShape.INGOT).displayName("Zinc").color(0xCCCC8E)),
 
 	COAL(new MaterialTypeBuilder("coal").respect(true).resultShape(MaterialResultShape.DUST).displayName("Coal").color(0x2D2D2D).presetItem(MaterialState.DUST, MekanismItems.COAL_DUST)),

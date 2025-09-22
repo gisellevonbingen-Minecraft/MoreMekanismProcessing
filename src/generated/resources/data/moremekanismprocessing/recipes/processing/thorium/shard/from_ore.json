@@ -1,0 +1,30 @@
+{
+  "type": "mekanism:injecting",
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/thorium"
+      }
+    },
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "thorium",
+      "requireLevel": 4
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/thorium"
+    }
+  },
+  "output": {
+    "count": 4,
+    "item": "moremekanismprocessing:shard_thorium"
+  }
+}

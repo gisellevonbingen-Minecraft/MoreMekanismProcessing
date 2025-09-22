@@ -1,0 +1,30 @@
+{
+  "type": "mekanism:purifying",
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:raw_materials/boron"
+      }
+    },
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "boron",
+      "requireLevel": 3
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:raw_materials/boron"
+    }
+  },
+  "output": {
+    "count": 2,
+    "item": "moremekanismprocessing:clump_boron"
+  }
+}

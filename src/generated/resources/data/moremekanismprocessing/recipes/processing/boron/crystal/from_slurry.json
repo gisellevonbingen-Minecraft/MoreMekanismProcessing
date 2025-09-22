@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:crystallizing",
+  "chemicalType": "slurry",
+  "conditions": [
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "boron",
+      "requireLevel": 5
+    }
+  ],
+  "input": {
+    "amount": 200,
+    "slurry": "moremekanismprocessing:clean_boron"
+  },
+  "output": {
+    "item": "moremekanismprocessing:crystal_boron"
+  }
+}

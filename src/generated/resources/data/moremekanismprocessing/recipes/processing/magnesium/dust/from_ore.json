@@ -1,0 +1,26 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/magnesium"
+      }
+    },
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "magnesium",
+      "requireLevel": 2
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/magnesium"
+    }
+  },
+  "output": {
+    "count": 2,
+    "item": "moremekanismprocessing:dust_magnesium"
+  }
+}

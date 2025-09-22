@@ -1,0 +1,31 @@
+{
+  "type": "mekanism:dissolution",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/magnesium"
+      }
+    },
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "magnesium",
+      "requireLevel": 5
+    }
+  ],
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:sulfuric_acid"
+  },
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/magnesium"
+    }
+  },
+  "output": {
+    "amount": 1000,
+    "chemicalType": "slurry",
+    "slurry": "moremekanismprocessing:dirty_magnesium"
+  }
+}

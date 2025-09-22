@@ -1,12 +1,3 @@
 {
-  "values": [
-    {
-      "id": "voluminousenergy:bauxiteore",
-      "required": false
-    },
-    {
-      "id": "voluminousenergy:deepslate_bauxite_ore",
-      "required": false
-    }
-  ]
+  "values": []
 }
