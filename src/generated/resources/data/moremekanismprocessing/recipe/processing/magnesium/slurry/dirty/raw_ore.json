@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:raw_materials/magnesium"
+      }
+    },
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "magnesium",
+      "requireLevel": 5
+    }
+  ],
+  "type": "mekanism:dissolution",
+  "chemical_input": {
+    "amount": 1,
+    "chemical": "mekanism:sulfuric_acid"
+  },
+  "item_input": {
+    "count": 3,
+    "tag": "c:raw_materials/magnesium"
+  },
+  "output": {
+    "amount": 2000,
+    "id": "moremekanismprocessing:dirty_magnesium"
+  },
+  "per_tick_usage": true
+}

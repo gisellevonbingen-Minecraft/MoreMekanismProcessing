@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "moremekanismprocessing:thorium_ingot",
+  "key": {
+    "#": {
+      "tag": "c:nuggets/thorium"
+    },
+    "*": {
+      "item": "moremekanismprocessing:thorium_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "#*#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "moremekanismprocessing:thorium_ingot"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "thorium",
+      "requireLevel": 5
+    }
+  ],
+  "type": "mekanism:washing",
+  "chemical_input": {
+    "amount": 1,
+    "chemical": "moremekanismprocessing:dirty_thorium"
+  },
+  "fluid_input": {
+    "amount": 5,
+    "fluid": "minecraft:water"
+  },
+  "output": {
+    "amount": 1,
+    "id": "moremekanismprocessing:clean_thorium"
+  }
+}

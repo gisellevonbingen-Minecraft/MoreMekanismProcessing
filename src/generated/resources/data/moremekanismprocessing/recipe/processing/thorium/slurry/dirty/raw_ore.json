@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:raw_materials/thorium"
+      }
+    },
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "thorium",
+      "requireLevel": 5
+    }
+  ],
+  "type": "mekanism:dissolution",
+  "chemical_input": {
+    "amount": 1,
+    "chemical": "mekanism:sulfuric_acid"
+  },
+  "item_input": {
+    "count": 3,
+    "tag": "c:raw_materials/thorium"
+  },
+  "output": {
+    "amount": 2000,
+    "id": "moremekanismprocessing:dirty_thorium"
+  },
+  "per_tick_usage": true
+}

@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:storage_blocks/raw_boron"
+      }
+    },
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "boron",
+      "requireLevel": 3
+    }
+  ],
+  "type": "moremekanismprocessing:tag_purifying",
+  "chemical_input": {
+    "amount": 2,
+    "chemical": "mekanism:oxygen"
+  },
+  "item_input": {
+    "count": 1,
+    "tag": "c:storage_blocks/raw_boron"
+  },
+  "output": {
+    "count": 18,
+    "tag": "c:clumps/boron"
+  },
+  "per_tick_usage": true
+}

@@ -1,0 +1,18 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "thorium",
+      "requireLevel": 5
+    }
+  ],
+  "type": "moremekanismprocessing:tag_crystallizing",
+  "input": {
+    "amount": 200,
+    "chemical": "moremekanismprocessing:clean_thorium"
+  },
+  "output": {
+    "count": 1,
+    "tag": "c:crystals/thorium"
+  }
+}

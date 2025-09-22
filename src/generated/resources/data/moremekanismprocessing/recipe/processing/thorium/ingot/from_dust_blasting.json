@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "thorium",
+      "requireLevel": 2
+    },
+    {
+      "type": "moremekanismprocessing:cooking_dust_into_ingot",
+      "materialType": "thorium"
+    }
+  ],
+  "type": "moremekanismprocessing:tag_blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "group": "moremekanismprocessing:thorium_ingot",
+  "ingredient": {
+    "tag": "c:dusts/thorium"
+  },
+  "result": {
+    "count": 1,
+    "tag": "c:ingots/thorium"
+  }
+}

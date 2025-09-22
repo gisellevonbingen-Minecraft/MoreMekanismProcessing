@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "moremekanismprocessing:boron_ingot",
+  "key": {
+    "#": {
+      "tag": "c:nuggets/boron"
+    },
+    "*": {
+      "item": "moremekanismprocessing:boron_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "#*#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "moremekanismprocessing:boron_ingot"
+  }
+}

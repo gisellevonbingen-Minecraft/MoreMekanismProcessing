@@ -1,0 +1,18 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "magnesium",
+      "requireLevel": 5
+    }
+  ],
+  "type": "moremekanismprocessing:tag_crystallizing",
+  "input": {
+    "amount": 200,
+    "chemical": "moremekanismprocessing:clean_magnesium"
+  },
+  "output": {
+    "count": 1,
+    "tag": "c:crystals/magnesium"
+  }
+}

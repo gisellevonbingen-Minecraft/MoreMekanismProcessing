@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "moremekanismprocessing:boron_nugget",
+  "ingredients": [
+    {
+      "item": "moremekanismprocessing:boron_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "moremekanismprocessing:boron_nugget"
+  }
+}

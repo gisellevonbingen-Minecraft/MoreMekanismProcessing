@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "boron",
+      "requireLevel": 2
+    },
+    {
+      "type": "moremekanismprocessing:cooking_dust_into_ingot",
+      "materialType": "boron"
+    }
+  ],
+  "type": "moremekanismprocessing:tag_blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "group": "moremekanismprocessing:boron_ingot",
+  "ingredient": {
+    "tag": "c:dusts/boron"
+  },
+  "result": {
+    "count": 1,
+    "tag": "c:ingots/boron"
+  }
+}

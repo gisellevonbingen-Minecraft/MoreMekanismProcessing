@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "moremekanismprocessing:magnesium_ingot",
+  "key": {
+    "#": {
+      "tag": "c:nuggets/magnesium"
+    },
+    "*": {
+      "item": "moremekanismprocessing:magnesium_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "#*#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "moremekanismprocessing:magnesium_ingot"
+  }
+}

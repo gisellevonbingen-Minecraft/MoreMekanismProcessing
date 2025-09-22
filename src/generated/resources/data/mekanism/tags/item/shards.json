@@ -21,6 +21,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:shard_boron",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:shard_bort",
       "required": false
     },
@@ -62,6 +66,10 @@
     },
     {
       "id": "moremekanismprocessing:shard_lithium",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_magnesium",
       "required": false
     },
     {
@@ -110,6 +118,10 @@
     },
     {
       "id": "moremekanismprocessing:shard_tungsten",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:shard_thorium",
       "required": false
     },
     {

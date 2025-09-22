@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "magnesium",
+      "requireLevel": 2
+    },
+    {
+      "type": "moremekanismprocessing:cooking_dust_into_ingot",
+      "materialType": "magnesium"
+    }
+  ],
+  "type": "moremekanismprocessing:tag_smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "group": "moremekanismprocessing:magnesium_ingot",
+  "ingredient": {
+    "tag": "c:dusts/magnesium"
+  },
+  "result": {
+    "count": 1,
+    "tag": "c:ingots/magnesium"
+  }
+}

@@ -15,6 +15,9 @@
     "moremekanismprocessing:clean_bismuth": {
       "representation": "c:ores/bismuth"
     },
+    "moremekanismprocessing:clean_boron": {
+      "representation": "c:ores/boron"
+    },
     "moremekanismprocessing:clean_bort": {
       "representation": "c:ores/bort"
     },
@@ -63,6 +66,9 @@
     "moremekanismprocessing:clean_lithium": {
       "representation": "c:ores/lithium"
     },
+    "moremekanismprocessing:clean_magnesium": {
+      "representation": "c:ores/magnesium"
+    },
     "moremekanismprocessing:clean_nickel": {
       "representation": "c:ores/nickel"
     },
@@ -95,6 +101,9 @@
     },
     "moremekanismprocessing:clean_sulfur": {
       "representation": "c:ores/sulfur"
+    },
+    "moremekanismprocessing:clean_thorium": {
+      "representation": "c:ores/thorium"
     },
     "moremekanismprocessing:clean_titanium": {
       "representation": "c:ores/titanium"
