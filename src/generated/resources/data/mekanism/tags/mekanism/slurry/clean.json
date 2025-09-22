@@ -22,6 +22,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:clean_boron",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:clean_bort",
       "required": false
     },
@@ -63,6 +67,10 @@
     },
     {
       "id": "moremekanismprocessing:clean_lithium",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:clean_magnesium",
       "required": false
     },
     {
@@ -111,6 +119,10 @@
     },
     {
       "id": "moremekanismprocessing:clean_tungsten",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:clean_thorium",
       "required": false
     },
     {

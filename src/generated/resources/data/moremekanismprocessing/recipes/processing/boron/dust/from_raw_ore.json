@@ -1,0 +1,27 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:raw_materials/boron",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "materialType": "boron",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "amount": 3,
+    "ingredient": {
+      "tag": "forge:raw_materials/boron"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_boron",
+    "count": 4
+  }
+}

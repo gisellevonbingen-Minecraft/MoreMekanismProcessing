@@ -22,6 +22,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:dirty_dust_boron",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:dirty_dust_bort",
       "required": false
     },
@@ -63,6 +67,10 @@
     },
     {
       "id": "moremekanismprocessing:dirty_dust_lithium",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_magnesium",
       "required": false
     },
     {
@@ -111,6 +119,10 @@
     },
     {
       "id": "moremekanismprocessing:dirty_dust_tungsten",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:dirty_dust_thorium",
       "required": false
     },
     {

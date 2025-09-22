@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "moremekanismprocessing:thorium_nugget",
+  "result": {
+    "item": "moremekanismprocessing:thorium_nugget",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "moremekanismprocessing:thorium_ingot"
+    }
+  ]
+}
