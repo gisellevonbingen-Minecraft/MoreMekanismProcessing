@@ -21,17 +21,20 @@
 * Aluminium
 * Azure Silver
 * Bismuth
+* Boron
 * Cobalt
 * Crimson
 * Desh
 * Draconium
 * Iridium
 * Lithium (lithium dust can mixable with mekanism:dust_lithium)
+* Magnesium
 * Nickel
 * Platinum
 * Silver
 * Titanium
 * Tungsten
+* Thorium
 * Zinc
 
 ### ~1.16.5
@@ -99,6 +102,12 @@
 * Dilithium Gem
 * Titanium Ingot (Fix Tags)
 <br>Add 'forge:ores/titanium' to Rutile Ore
+
+## NuclearCraft-Neoteric
+
+* Boron Ingot
+* Magnesium Ingot
+* Thorium Ingot
 
 ## Proejct Red
 
