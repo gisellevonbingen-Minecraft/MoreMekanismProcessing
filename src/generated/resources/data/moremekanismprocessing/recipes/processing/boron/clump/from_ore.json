@@ -1,0 +1,30 @@
+{
+  "type": "mekanism:purifying",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:ores/boron",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "materialType": "boron",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/boron"
+    }
+  },
+  "gasInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "output": {
+    "item": "moremekanismprocessing:clump_boron",
+    "count": 3
+  }
+}

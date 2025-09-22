@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "moremekanismprocessing:boron_ingot",
+      "required": false
+    }
+  ]
+}

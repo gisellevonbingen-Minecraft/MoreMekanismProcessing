@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "moremekanismprocessing:magnesium_ingot",
+      "required": false
+    }
+  ]
+}

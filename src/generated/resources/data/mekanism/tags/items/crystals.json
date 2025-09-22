@@ -22,6 +22,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:crystal_boron",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:crystal_bort",
       "required": false
     },
@@ -66,6 +70,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:crystal_magnesium",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:crystal_nickel",
       "required": false
     },
@@ -107,6 +115,10 @@
     },
     {
       "id": "moremekanismprocessing:crystal_tungsten",
+      "required": false
+    },
+    {
+      "id": "moremekanismprocessing:crystal_thorium",
       "required": false
     },
     {
