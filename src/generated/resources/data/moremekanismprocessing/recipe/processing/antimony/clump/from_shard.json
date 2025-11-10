@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "antimony",
+      "requireLevel": 4
+    }
+  ],
+  "type": "moremekanismprocessing:tag_purifying",
+  "chemical_input": {
+    "amount": 1,
+    "chemical": "mekanism:oxygen"
+  },
+  "item_input": {
+    "count": 1,
+    "tag": "c:shards/antimony"
+  },
+  "output": {
+    "count": 1,
+    "tag": "c:clumps/antimony"
+  },
+  "per_tick_usage": true
+}

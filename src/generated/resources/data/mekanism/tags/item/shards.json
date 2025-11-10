@@ -9,6 +9,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:shard_antimony",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:shard_apatite",
       "required": false
     },

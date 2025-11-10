@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "antimony",
+      "requireLevel": 2
+    },
+    {
+      "type": "moremekanismprocessing:cooking_dust_into_ingot",
+      "materialType": "antimony"
+    }
+  ],
+  "type": "moremekanismprocessing:tag_blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "group": "moremekanismprocessing:antimony_ingot",
+  "ingredient": {
+    "tag": "c:dusts/antimony"
+  },
+  "result": {
+    "count": 1,
+    "tag": "c:ingots/antimony"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "moremekanismprocessing:antimony_nugget",
+  "ingredients": [
+    {
+      "item": "moremekanismprocessing:antimony_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "moremekanismprocessing:antimony_nugget"
+  }
+}

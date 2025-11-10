@@ -5,6 +5,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:antimony_nugget",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:azure_silver_nugget",
       "required": false
     },

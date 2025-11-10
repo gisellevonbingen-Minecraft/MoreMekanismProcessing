@@ -9,6 +9,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:crystal_antimony",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:crystal_apatite",
       "required": false
     },

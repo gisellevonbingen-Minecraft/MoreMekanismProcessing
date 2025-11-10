@@ -18,6 +18,7 @@ public enum MaterialType
 {
 	ALUMINUM(new MaterialTypeBuilder("aluminum").resultShape(MaterialResultShape.INGOT).displayName("Aluminum").color(0xA0C4D8)),
 	AMETHYST(new MaterialTypeBuilder("amethyst").resultShape(MaterialResultShape.GEM).displayName("Amethyst").color(0xCC33CC).presetItem(MaterialState.GEM, Items.AMETHYST_SHARD)),
+	ANTIMONY(new MaterialTypeBuilder("antimony").resultShape(MaterialResultShape.INGOT).displayName("Antimony").color(0xC5C5D6)),
 	APATITE(new MaterialTypeBuilder("apatite").resultShape(MaterialResultShape.GEM).displayName("Apatite").color(0x3595B2)),
 	AZURESILER(new MaterialTypeBuilder("azure_silver").resultShape(MaterialResultShape.INGOT).displayName("Azure Silver").color(0xCE9CF3)),
 	BISMUTH(new MaterialTypeBuilder("bismuth").resultShape(MaterialResultShape.INGOT).displayName("Bismuth").color(0xE8D8E8)),

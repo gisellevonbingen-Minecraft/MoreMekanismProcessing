@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ores/antimony"
+      }
+    },
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "antimony",
+      "requireLevel": 5
+    }
+  ],
+  "type": "mekanism:dissolution",
+  "chemical_input": {
+    "amount": 1,
+    "chemical": "mekanism:sulfuric_acid"
+  },
+  "item_input": {
+    "count": 1,
+    "tag": "c:ores/antimony"
+  },
+  "output": {
+    "amount": 1000,
+    "id": "moremekanismprocessing:dirty_antimony"
+  },
+  "per_tick_usage": true
+}

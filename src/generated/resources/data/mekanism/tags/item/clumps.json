@@ -9,6 +9,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:clump_antimony",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:clump_apatite",
       "required": false
     },

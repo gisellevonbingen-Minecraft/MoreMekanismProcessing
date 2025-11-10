@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ores/antimony"
+      }
+    },
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "antimony",
+      "requireLevel": 4
+    }
+  ],
+  "type": "moremekanismprocessing:tag_injecting",
+  "chemical_input": {
+    "amount": 1,
+    "chemical": "mekanism:hydrogen_chloride"
+  },
+  "item_input": {
+    "count": 1,
+    "tag": "c:ores/antimony"
+  },
+  "output": {
+    "count": 4,
+    "tag": "c:shards/antimony"
+  },
+  "per_tick_usage": true
+}

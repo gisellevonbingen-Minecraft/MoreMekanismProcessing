@@ -9,6 +9,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:dirty_dust_antimony",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:dirty_dust_apatite",
       "required": false
     },

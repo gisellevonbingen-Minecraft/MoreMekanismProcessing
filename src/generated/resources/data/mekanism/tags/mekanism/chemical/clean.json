@@ -9,6 +9,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:clean_antimony",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:clean_apatite",
       "required": false
     },

@@ -6,6 +6,9 @@
     "moremekanismprocessing:clean_amethyst": {
       "representation": "c:ores/amethyst"
     },
+    "moremekanismprocessing:clean_antimony": {
+      "representation": "c:ores/antimony"
+    },
     "moremekanismprocessing:clean_apatite": {
       "representation": "c:ores/apatite"
     },

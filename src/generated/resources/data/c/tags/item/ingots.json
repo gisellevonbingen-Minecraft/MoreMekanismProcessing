@@ -5,6 +5,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:antimony_ingot",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:azure_silver_ingot",
       "required": false
     },

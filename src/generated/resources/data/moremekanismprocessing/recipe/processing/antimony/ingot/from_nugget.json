@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "moremekanismprocessing:antimony_ingot",
+  "key": {
+    "#": {
+      "tag": "c:nuggets/antimony"
+    },
+    "*": {
+      "item": "moremekanismprocessing:antimony_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "#*#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "moremekanismprocessing:antimony_ingot"
+  }
+}
