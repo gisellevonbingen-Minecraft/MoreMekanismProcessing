@@ -46,6 +46,10 @@
 * Ostrum
 * Calorite
 
+### 1.21.1~
+
+* Antimony
+
 ## Dusts
 
 * Electrotine
@@ -137,11 +141,15 @@
 * Desh Ingot
 * Silicon Ingot
 
-## Beyond Earth (1.18~)
+## Beyond Earth, Ad Astra (1.18~)
 
 * Desh Ingot
 * Ostrum Ingot
 * Calorite Ingot
+
+## Modern Industrialization (1.21.1~)
+
+* Antimony Ingot
 
 ## Thermal Foundation
 
