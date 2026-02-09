@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mekanism:item/clump",
+    "layer1": "mekanism:item/clump_overlay"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "moremekanismprocessing:palladium_ingot",
+  "result": {
+    "item": "moremekanismprocessing:palladium_ingot"
+  },
+  "pattern": [
+    "###",
+    "#*#",
+    "###"
+  ],
+  "key": {
+    "*": {
+      "item": "moremekanismprocessing:palladium_nugget"
+    },
+    "#": {
+      "tag": "forge:nuggets/palladium"
+    }
+  }
+}

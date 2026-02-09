@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "materialType": "palladium",
+      "requireLevel": 3,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:dirty_dusts/palladium"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_palladium"
+  }
+}

@@ -76,6 +76,10 @@
     {
       "id": "moremekanismprocessing:zinc_ingot",
       "required": false
+    },
+    {
+      "id": "moremekanismprocessing:palladium_ingot",
+      "required": false
     }
   ]
 }

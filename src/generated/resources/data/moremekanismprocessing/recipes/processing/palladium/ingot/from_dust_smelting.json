@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:smelting",
+  "conditions": [
+    {
+      "materialType": "palladium",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "result": {
+    "item": "moremekanismprocessing:palladium_ingot"
+  },
+  "ingredient": {
+    "tag": "forge:dusts/palladium"
+  },
+  "experience": 0.3,
+  "cookingtime": 200
+}

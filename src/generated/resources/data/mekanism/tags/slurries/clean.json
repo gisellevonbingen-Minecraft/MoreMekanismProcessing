@@ -126,6 +126,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:clean_palladium",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:clean_coal",
       "required": false
     },
