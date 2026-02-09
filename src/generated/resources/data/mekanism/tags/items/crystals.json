@@ -130,6 +130,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:crystal_palladium",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:crystal_coal",
       "required": false
     },

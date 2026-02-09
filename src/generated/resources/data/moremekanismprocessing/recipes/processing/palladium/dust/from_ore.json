@@ -1,0 +1,26 @@
+{
+  "type": "mekanism:enriching",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:ores/palladium",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "materialType": "palladium",
+      "requireLevel": 2,
+      "type": "moremekanismprocessing:processing_level"
+    }
+  ],
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/palladium"
+    }
+  },
+  "output": {
+    "item": "moremekanismprocessing:dust_palladium",
+    "count": 2
+  }
+}
