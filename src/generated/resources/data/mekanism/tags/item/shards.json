@@ -133,6 +133,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:shard_palladium",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:shard_coal",
       "required": false
     },

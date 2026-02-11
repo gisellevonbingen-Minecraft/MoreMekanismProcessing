@@ -1,4 +1,4 @@
-// 1.21.1	2025-11-10T21:31:57.5190371	Tags for minecraft:item mod id moremekanismprocessing
+// 1.21.1	2026-02-11T22:11:38.1239749	Tags for minecraft:item mod id moremekanismprocessing
 e0280310ba1577e643065a3fd2cf68d62b966eec data/c/tags/item/clumps/aluminum.json
 5ecbc03738e097e15aa4514d9ff650d195dd3157 data/c/tags/item/clumps/amethyst.json
 4a4e8b37e75baa35feb274714d294a17bf797799 data/c/tags/item/clumps/antimony.json
@@ -26,6 +26,7 @@ e82b306dc80a643584d7a2b1ad5c373d80db3c1a data/c/tags/item/clumps/green_sapphire.
 e14734ca2f4f7420bca06ba0acf194e063c03ec2 data/c/tags/item/clumps/nickel.json
 2435ec9ce0f21cf409f09fa349d46806746c4ab2 data/c/tags/item/clumps/niter.json
 098f2f88c97bed202de1c48dfcbe7c6a61916b38 data/c/tags/item/clumps/ostrum.json
+26ca29964bc309f6c0b28fb2ab81e65b357b68b2 data/c/tags/item/clumps/palladium.json
 090fb535d2c7d09ae86c5eb150bcebee5000e71f data/c/tags/item/clumps/peridot.json
 20d8ea533a36d11f042e422ef41a779a8c99e2c6 data/c/tags/item/clumps/platinum.json
 80626f3142631d2e3dd72afb749d1ee76d1f9254 data/c/tags/item/clumps/quartz.json
@@ -65,6 +66,7 @@ cc4436a06bb8d8563548fe762bed06b1c9a13f1d data/c/tags/item/crystals/iridium.json
 a6143bb69e56d50c03d40fcfdef74fc4a04c3d5d data/c/tags/item/crystals/nickel.json
 a22389fbb2193015ea33e6ccaec22858442a5f9e data/c/tags/item/crystals/niter.json
 f974d8f80608cc06da0eaa90f8b7c61ac0cd6258 data/c/tags/item/crystals/ostrum.json
+ce7781d387e785f56e9d9d718aea631b93428c4d data/c/tags/item/crystals/palladium.json
 3ccb2224480d579cca94115a9e8a73be2e49de0c data/c/tags/item/crystals/peridot.json
 83162d22ca88c1da0f58ad3ab06e902dbd50df9a data/c/tags/item/crystals/platinum.json
 ed954f776c583e406394bc14c737ef7f36d07258 data/c/tags/item/crystals/quartz.json
@@ -104,6 +106,7 @@ dd88ec287890465d709a2f9cde65ec7b90f56a3d data/c/tags/item/dirty_dusts/magnesium.
 afcb404fb315b56912fe55cf371bee7e01a0b257 data/c/tags/item/dirty_dusts/nickel.json
 236f3e1313975c1c31ef4d030e34ed2575e28a8d data/c/tags/item/dirty_dusts/niter.json
 0fe1046a461379f96b6a7d74201588372767b1d3 data/c/tags/item/dirty_dusts/ostrum.json
+a3af70899a64c98a63fe41c909b2aa102652c7c6 data/c/tags/item/dirty_dusts/palladium.json
 2898d03c847b625f1759b3e68d7fb109bd0914aa data/c/tags/item/dirty_dusts/peridot.json
 ca02a3ee0ba3130aecca88d023b3f940be9d6c08 data/c/tags/item/dirty_dusts/platinum.json
 aec8416139342722307d7d582e1e33d8222e4497 data/c/tags/item/dirty_dusts/quartz.json
@@ -116,7 +119,7 @@ aec8416139342722307d7d582e1e33d8222e4497 data/c/tags/item/dirty_dusts/quartz.jso
 70be1b5523f10aef1bfe62f44fe0593e9baf2d79 data/c/tags/item/dirty_dusts/titanium.json
 7dc4b889dffef5c75525f3cf392799d8fe2638cf data/c/tags/item/dirty_dusts/tungsten.json
 eeb15a8b746ede4c52a9115adbfe828dc9d9964e data/c/tags/item/dirty_dusts/zinc.json
-f2007d214a435ee2d342e10510b61fbfcb36f3d1 data/c/tags/item/dusts.json
+7d81fcb70ecb651ec90bc97747f745a5a57903e7 data/c/tags/item/dusts.json
 48e0026e7c23c1987541bb5e127b395723c4551e data/c/tags/item/dusts/aluminum.json
 54c550bef3518d8adffdd6c01961aabe79393d18 data/c/tags/item/dusts/amethyst.json
 319bc0a1cb910810d109beece56e402a78229fbe data/c/tags/item/dusts/antimony.json
@@ -144,6 +147,7 @@ c517aa1f688953633d58f935a2856c76c3e995cd data/c/tags/item/dusts/lithium.json
 49f7cc09bff5c8fbef7496c0a675a9f3811b44e2 data/c/tags/item/dusts/nickel.json
 c9e7737a9120d730ea3c3a5441f51f099a293570 data/c/tags/item/dusts/niter.json
 4f4198237121a892dc6e6f0cd95dce3a3e92ced9 data/c/tags/item/dusts/ostrum.json
+0adb79e335c3bf9da019747e354623998fabfdc5 data/c/tags/item/dusts/palladium.json
 bf83f208b4d0dd2e50aac64bbbb0180b7866d4b5 data/c/tags/item/dusts/peridot.json
 dd03a18fcaaa36e669c966a02c347fdc35ec554b data/c/tags/item/dusts/platinum.json
 00a6c2ee139262b23da470e9c335380c724d42dd data/c/tags/item/dusts/quartz.json
@@ -167,7 +171,7 @@ fb1e0358ca9b8ea9568145e8d280fab5c6cde4a1 data/c/tags/item/gems/dilithium.json
 e7a5d0e65886a80b8c676c9d2f44d077cc6ae7a1 data/c/tags/item/gems/peridot.json
 9f6bcfa2efb2c3152f44328036e8fe4727c83e5c data/c/tags/item/gems/ruby.json
 4445cdf7df2aa8346ca8cff970dd11dd90df7fcf data/c/tags/item/gems/sapphire.json
-cf8849a7c769ea7764c68e36a617c33044b898a0 data/c/tags/item/ingots.json
+2e7cb0308dd06f841e57c2e921c022fc04a2fcb2 data/c/tags/item/ingots.json
 6c2b477f9241ce98478ffe6330bea7fe30da6a5f data/c/tags/item/ingots/aluminum.json
 97f37e276704b9aacfd40808c62d65ebcbc46f3b data/c/tags/item/ingots/antimony.json
 3f4d4332e5d00c92131b8cc72c91dd803cdd65c2 data/c/tags/item/ingots/azure_silver.json
@@ -183,13 +187,14 @@ d8fbc091a591e1cfa7fdb6b5ee8c7d9d526f3f4a data/c/tags/item/ingots/iridium.json
 6f354c0b28b322070972da4301dc6244135322a9 data/c/tags/item/ingots/magnesium.json
 6133ca5165c79f43e5c58de96c4a703edccfff38 data/c/tags/item/ingots/nickel.json
 7fa7754f2595c3737c476f5f8a5404f4493d2543 data/c/tags/item/ingots/ostrum.json
+5f15326b3f71b74cdda36f90b9616ff97d670682 data/c/tags/item/ingots/palladium.json
 a04536a05da89958b75baa565876af088e8437f8 data/c/tags/item/ingots/platinum.json
 986afad5331ac3314fb5ee097039b366c8d6aa0a data/c/tags/item/ingots/silver.json
 0ec67afb010c21f935d6b1f37bf48036de219b46 data/c/tags/item/ingots/thorium.json
 d0518fb1b475a12bef7e14bbd2cb97434d10aa1d data/c/tags/item/ingots/titanium.json
 1a5ab206cb894b613d16a85bec4fc764f5dc00da data/c/tags/item/ingots/tungsten.json
 398d54adf5f5f926d6df68864413678ce8adca9f data/c/tags/item/ingots/zinc.json
-9b9e5a0222ee42eb6ed839a8177a2473635836ba data/c/tags/item/nuggets.json
+2f743052adb5d6f794a6a53cf50a1ea826a3457c data/c/tags/item/nuggets.json
 3f7da9f73689d033e89cfba9b33376cb25c6a056 data/c/tags/item/nuggets/aluminum.json
 0bdc6d94b702cfd9eaa2d9bd406c34ded79cc2a3 data/c/tags/item/nuggets/antimony.json
 67b4897643a13c46fe9ecddf3dae149ed38d447d data/c/tags/item/nuggets/azure_silver.json
@@ -205,6 +210,7 @@ f1029563d2cfef584e96b24d27a402c38d7c08d4 data/c/tags/item/nuggets/iridium.json
 50469fd1ac97500633a9884b8def703deb5eeb6c data/c/tags/item/nuggets/magnesium.json
 7d29f633596fdc7c78c78fb646e0e6382ad47897 data/c/tags/item/nuggets/nickel.json
 a9351b0b20fb93714e37b5b27837a5252520f317 data/c/tags/item/nuggets/ostrum.json
+9aea739762212dcca8e5a4d9407ec77c57530606 data/c/tags/item/nuggets/palladium.json
 423d45a5e70b7ad6e864ad5a8b7a7c74a1936027 data/c/tags/item/nuggets/platinum.json
 e4e3c1d221f17e7884470366799654f589eac324 data/c/tags/item/nuggets/silver.json
 9830bde1f0f52d547b8472de565388e10ea707da data/c/tags/item/nuggets/thorium.json
@@ -239,6 +245,7 @@ ba8922c9b25ba08aa639088241ccb4cf7ce24279 data/c/tags/item/ores/amethyst.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/ores/nickel.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/ores/niter.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/ores/ostrum.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/ores/palladium.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/ores/peridot.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/ores/platinum.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/ores/quartz.json
@@ -269,6 +276,7 @@ ffbe1e522e904d766009e7583d3e02fa18cdf965 data/c/tags/item/raw_materials/aluminum
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/raw_materials/magnesium.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/raw_materials/nickel.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/raw_materials/ostrum.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/raw_materials/palladium.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/raw_materials/platinum.json
 93e302b9d7144dd69ae62cb21ed004d9f9a97006 data/c/tags/item/raw_materials/silver.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/raw_materials/thorium.json
@@ -302,6 +310,7 @@ b987057dfd06f25e16769eb32021ef74d4fb8232 data/c/tags/item/shards/magnesium.json
 0cd14c1923c5417e8f0b029acb9ce2f69f2baa6b data/c/tags/item/shards/nickel.json
 31e52bbba715334b3098f88427211a08e58dff8d data/c/tags/item/shards/niter.json
 8729e1e0579534e7a88b7fce1831bbca56a0d37a data/c/tags/item/shards/ostrum.json
+d3b0cee11cdbe2adc3d5117a60b42c51de179f4a data/c/tags/item/shards/palladium.json
 3597982605ffa2fb3de2ed147639c5f09b734701 data/c/tags/item/shards/peridot.json
 f96bdedbaceb9cc3b415be87ebb3313aa4345df3 data/c/tags/item/shards/platinum.json
 b2aaa31a1bb4c70e5976375a5a8ec9c4c191c558 data/c/tags/item/shards/quartz.json
@@ -330,13 +339,14 @@ b2aaa31a1bb4c70e5976375a5a8ec9c4c191c558 data/c/tags/item/shards/quartz.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/storage_blocks/raw_magnesium.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/storage_blocks/raw_nickel.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/storage_blocks/raw_ostrum.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/storage_blocks/raw_palladium.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/storage_blocks/raw_platinum.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/storage_blocks/raw_silver.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/storage_blocks/raw_thorium.json
 96974778c420f394348644c360feb2846f5a9aa5 data/c/tags/item/storage_blocks/raw_titanium.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/storage_blocks/raw_tungsten.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/item/storage_blocks/raw_zinc.json
-6bb5f68855ef82226125ac36d554818e19d286c4 data/mekanism/tags/item/clumps.json
-9daf1781ac285f1349ba248ca41366c8034d218c data/mekanism/tags/item/crystals.json
-61f829b71bc0a945e0e83f31020b0e290c685a29 data/mekanism/tags/item/dirty_dusts.json
-6c2ee2d9301951553047028eca2b64b259773b8d data/mekanism/tags/item/shards.json
+4a1cbd3bc8c9895308ef69d084c3a8f205fb8df2 data/mekanism/tags/item/clumps.json
+a22db2bf9a6f51030f3fbc85c0e83cf06b6ff092 data/mekanism/tags/item/crystals.json
+31c786324c1d4f89213d5f6cef264a62988ecacd data/mekanism/tags/item/dirty_dusts.json
+a0f56d1433750532c5ffb021e0dce06614383980 data/mekanism/tags/item/shards.json

@@ -81,6 +81,9 @@
     "moremekanismprocessing:clean_ostrum": {
       "representation": "c:ores/ostrum"
     },
+    "moremekanismprocessing:clean_palladium": {
+      "representation": "c:ores/palladium"
+    },
     "moremekanismprocessing:clean_peridot": {
       "representation": "c:ores/peridot"
     },

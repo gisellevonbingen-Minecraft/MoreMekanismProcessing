@@ -133,6 +133,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:clump_palladium",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:clump_coal",
       "required": false
     },

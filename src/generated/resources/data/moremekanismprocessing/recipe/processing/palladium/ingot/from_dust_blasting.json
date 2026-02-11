@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "palladium",
+      "requireLevel": 2
+    },
+    {
+      "type": "moremekanismprocessing:cooking_dust_into_ingot",
+      "materialType": "palladium"
+    }
+  ],
+  "type": "moremekanismprocessing:tag_blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "group": "moremekanismprocessing:palladium_ingot",
+  "ingredient": {
+    "tag": "c:dusts/palladium"
+  },
+  "result": {
+    "count": 1,
+    "tag": "c:ingots/palladium"
+  }
+}

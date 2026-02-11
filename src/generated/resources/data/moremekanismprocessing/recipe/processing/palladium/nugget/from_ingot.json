@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "moremekanismprocessing:palladium_nugget",
+  "ingredients": [
+    {
+      "item": "moremekanismprocessing:palladium_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "moremekanismprocessing:palladium_nugget"
+  }
+}

@@ -83,6 +83,10 @@
     {
       "id": "moremekanismprocessing:zinc_nugget",
       "required": false
+    },
+    {
+      "id": "moremekanismprocessing:palladium_nugget",
+      "required": false
     }
   ]
 }

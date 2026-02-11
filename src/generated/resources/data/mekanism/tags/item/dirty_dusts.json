@@ -133,6 +133,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:dirty_dust_palladium",
+      "required": false
+    },
+    {
       "id": "moremekanismprocessing:dirty_dust_coal",
       "required": false
     },

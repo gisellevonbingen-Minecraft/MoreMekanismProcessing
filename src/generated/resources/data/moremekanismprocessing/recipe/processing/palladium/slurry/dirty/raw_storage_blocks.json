@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:storage_blocks/raw_palladium"
+      }
+    },
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "palladium",
+      "requireLevel": 5
+    }
+  ],
+  "type": "mekanism:dissolution",
+  "chemical_input": {
+    "amount": 2,
+    "chemical": "mekanism:sulfuric_acid"
+  },
+  "item_input": {
+    "count": 1,
+    "tag": "c:storage_blocks/raw_palladium"
+  },
+  "output": {
+    "amount": 6000,
+    "id": "moremekanismprocessing:dirty_palladium"
+  },
+  "per_tick_usage": true
+}
