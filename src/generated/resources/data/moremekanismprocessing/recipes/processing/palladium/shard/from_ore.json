@@ -1,0 +1,30 @@
+{
+  "type": "mekanism:injecting",
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/palladium"
+      }
+    },
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "palladium",
+      "requireLevel": 4
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/palladium"
+    }
+  },
+  "output": {
+    "count": 4,
+    "item": "moremekanismprocessing:shard_palladium"
+  }
+}

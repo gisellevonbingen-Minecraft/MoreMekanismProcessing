@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:crystallizing",
+  "chemicalType": "slurry",
+  "conditions": [
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "palladium",
+      "requireLevel": 5
+    }
+  ],
+  "input": {
+    "amount": 200,
+    "slurry": "moremekanismprocessing:clean_palladium"
+  },
+  "output": {
+    "item": "moremekanismprocessing:crystal_palladium"
+  }
+}

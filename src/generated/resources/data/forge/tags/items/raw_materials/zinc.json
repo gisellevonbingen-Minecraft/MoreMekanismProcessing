@@ -1,3 +1,8 @@
 {
-  "values": []
+  "values": [
+    {
+      "id": "bluepower:zinc_raw",
+      "required": false
+    }
+  ]
 }

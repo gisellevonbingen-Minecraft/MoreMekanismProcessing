@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mekanism:item/shard",
+    "layer1": "mekanism:item/shard_overlay"
+  }
+}
