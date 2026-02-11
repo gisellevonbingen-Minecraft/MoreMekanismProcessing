@@ -129,6 +129,10 @@
       "required": false
     },
     {
+      "id": "moremekanismprocessing:dust_palladium",
+      "required": false
+    },
+    {
       "id": "mekanism:dust_coal",
       "required": false
     },

@@ -1,0 +1,30 @@
+{
+  "type": "mekanism:purifying",
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/palladium"
+      }
+    },
+    {
+      "type": "moremekanismprocessing:processing_level",
+      "materialType": "palladium",
+      "requireLevel": 3
+    }
+  ],
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/palladium"
+    }
+  },
+  "output": {
+    "count": 3,
+    "item": "moremekanismprocessing:clump_palladium"
+  }
+}
