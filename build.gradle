@@ -1,30 +1,28 @@
 buildscript {
     repositories {
-        maven { url "https://maven.minecraftforge.net" }
-        maven { url "https://repo.spongepowered.org/maven" }
+        maven { url = "https://maven.minecraftforge.net" }
+        maven { url = "https://repo.spongepowered.org/maven" }
     }
     dependencies {
-        classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "5.1.+", changing: true
         classpath "org.spongepowered:mixingradle:0.7.+"
     }
 }
 
 plugins {
-	id "java"
-	id "eclipse"
-	id "maven-publish"
-    id "net.minecraftforge.gradle" version "5.1.+"
+    id "net.minecraftforge.gradle" version "[6.0,6.2)"
     id "org.parchmentmc.librarian.forgegradle" version "1.+"
 }
 
+apply plugin: "java"
+apply plugin: "maven-publish"
 apply plugin: "org.spongepowered.mixin"
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = rootProject.archives_base_name
 version = "${rootProject.mc_version}-${rootProject.mod_version}"
 group = rootProject.maven_group
-
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
-println("Java: " + System.getProperty("java.version") + " JVM: " + System.getProperty("java.vm.version") + "(" + System.getProperty("java.vendor") + ") Arch: " + System.getProperty("os.arch"))
 
 minecraft {
     mappings channel: "parchment", version: "${parchment_version}-${mc_version}"
